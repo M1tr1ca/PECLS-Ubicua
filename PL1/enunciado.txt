@@ -1,0 +1,142 @@
+PECL1
+Creación de un dispositivo IoT para la
+captación de datos de una ciudad 4.0
+Se desea incorporar nuevos sensores a un sistema existente que permite la gestión de
+sensores y actuadores ubicados en distintas calles de Madrid.
+La red actual cuenta con más de 200 estaciones interconectadas entre sí. Para poder
+tener monitorizada la ciudad y poder tomar decisiones en tiempo real, el proyecto
+permite la conexión de 4 tipos deferentes de redes de sensores:
+ Estaciones meteorológicas.
+ Contadores de tráfico.
+ Semáforos.
+ Pantallas de información.
+El sistema cuenta con 3 servicios interconectados entre sí:
+ Base de datos MariaDB donde el sistema almacena la información recibida.
+ Bróker MQTT Mosquitto el cual permite la conexión entre la red de sensores y el
+servidor de forma bidireccional.
+ Servidor Tomcat.
+Las estaciones se comunicarán con el sistema por medio del Broker MQTT, con el cual
+intercambiarán información en formato JSON. A continuación, se muestra la estructura
+básica de mensajes aceptada por el servidor:
+{
+"sensor_id":"WS_BAR_01",
+"sensor_type":"XXXX",
+"street_id":"ST_0478",
+"timestamp":"2025-09-18T09:37:28.225646",
+"location":{
+"latitude":40.45409486,
+"longitude":-3.60391176,
+"altitude_meters":646.19,
+"district":"Barajas",
+"neighborhood":"Barajas"
+},
+"data":{ … }
+}
+Dado que existen distintas tipologías de sensores, la etiqueta “sensor_type” especificará
+el tipo de red de sensores que está transmitiendo la información. Además, se ha incluido
+en el mensaje anterior la etiqueta data que contendrá información específica de cada
+tipología.
+A continuación, se muestra cada una de las tipologías de datos en mayor detalle.
+Estaciones meteorológicas
+El objetivo principal de este tipo de estaciones de sensores es monitorizar las variables
+meteorológicas de la zona. Entre los valores recopilados se encuentran la temperatura,
+la humedad o la presión atmosférica entre otros.
+Para poder enviar información al sistema será necesario especificar en el JSON base el
+valor de la variable sensor_type como "weather". Además, la estructura de la etiqueta
+data seguirá la siguiente estructura:
+{
+…..
+"sensor_type":"weather",
+"data":{
+"temperature_celsius":17.9,
+"humidity_percent":64.9,
+"air_quality_index":79,
+"wind_speed_kmh":8.0,
+"wind_direction_degrees":17,
+"atmospheric_pressure_hpa":992.7,
+"uv_index":2
+}
+Contadores de tráfico
+Este tipo de red de sensores permite hacer un seguimiento del tráfico de la calle.
+Para poder enviar información al sistema, la estructura de mensajes enviados será la
+siguiente:
+{
+……
+"sensor_type":""traffic_counter",
+"data":{
+"vehicle_count":46,
+"pedestrian_count":181,
+"bicycle_count":9,
+"direction":"east",
+"counter_type":"mixed",
+"technology":"magnetic",
+"average_speed_kmh":27.6,
+"occupancy_percentage":100,
+"traffic_density":"high"
+}
+}
+Semáforos
+El sistema permite la monitorización y control de los semáforos. Esto permite la
+incorporación de agentes externos que permitan añadir inteligencia extra al
+funcionamiento en caso de ser necesario. Este tipo de redes de sensores permiten
+conocer el color del semáforo, el tiempo restante hasta el cambio de color, incluso la
+tipología del semáforo entre otros datos.
+Para poder enviar información al sistema, la estructura de mensajes enviados será la
+siguiente:
+{
+……
+"sensor_type":""traffic_light",
+"data":{
+"current_state":"green",
+"cycle_position_seconds":7,
+"time_remaining_seconds":46,
+"cycle_duration_seconds":120,
+"traffic_light_type":"vehicle_only",
+"circulation_direction":"bidirectional",
+"pedestrian_waiting":false,
+"pedestrian_button_pressed":false,
+"malfunction_detected":false,
+"cycle_count":8,
+"state_changed":true,
+"last_state_change":"2025-09-18T09:50:39.549745"
+}
+Pantallas de información
+Por último, el sistema cuenta con una red de pantallas distribuidas por la ciudad con
+diferente propósito como puede ser informar del estado del tráfico o de las condiciones
+meteorológicas de la zona.
+Para poder enviar información al sistema, la estructura de mensajes enviados será la
+siguiente:
+{
+……
+"sensor_type":""information_display",
+"data":{
+"display_status":"active",
+"current_message":"Desvío temporal",
+"content_type":"traffic",
+"brightness_level":78,
+"display_type":"lcd_panel",
+"display_size_inches":55.0,
+"supports_color":true,
+"temperature_celsius":41.0,
+"energy_consumption_watts":153.5,
+"last_content_update":"2025-09-18T09:53:28.874874"
+}
+}
+Trabajo a realizar
+Se pide realizar un nuevo módulo hardware de alguna de las tipologías anteriores y su
+incorporación al sistema existente. Para que su desarrollo sea válido se deberán cumplir
+los siguientes requisitos:
+ La nueva estación debe contar con nueva información que identifique a la
+estación. Por ejemplo, los datos serán de una calle de Alcalá de Henares. Estos
+datos serán proporcionados por los profesores.
+ Debe contener al menos 3 sensores y/o actuadores.
+ Debe conectarse mediante el bróker MQTT al proyecto existente y poder
+mantener comunicación bidireccional entre el sensor y los servidores y al
+contrario.
+La elección del tipo de estación será libre, quedando la elección en manos del alumno.
+Cabe destacar que la complejidad de los sensores no es la misma para todos los
+sistemas, por lo que se valorará positivamente los sistemas con mayor complejidad.
+Entregable
+Para que la entrega se considere válida se debe subir a la plataforma con fecha límite
+el 30 de octubre de 2025 el código desarrollado, así como un pequeño vídeo donde se
+muestre el comportamiento en tiempo real.

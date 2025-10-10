@@ -1,0 +1,45 @@
+{
+  "mqtt": {
+    "broker": "localhost",
+    "port": 1883,
+    "username": "",
+    "password": "",
+    "keepalive": 60,
+    "qos": 1
+  },
+  "station": {
+    "sensor_id": "WS_ALC_01",
+    "sensor_type": "weather",
+    "street_id": "ST_ALC_001",
+    "location": {
+      "latitude": 40.4823,
+      "longitude": -3.3618,
+      "altitude_meters": 588.0,
+      "district": "Alcalá de Henares",
+      "neighborhood": "Centro"
+    }
+  },
+  "sensors": {
+    "reading_interval_seconds": 30,
+    "temperature_range": [-10, 40],
+    "humidity_range": [20, 90],
+    "pressure_range": [980, 1050],
+    "wind_speed_max": 50
+  },
+  "actuators": {
+    "led_rgb": {
+      "enabled": true,
+      "auto_mode": true
+    },
+    "cooling_fan": {
+      "enabled": true,
+      "auto_mode": true,
+      "temperature_threshold": 35
+    },
+    "heater": {
+      "enabled": true,
+      "auto_mode": true,
+      "temperature_threshold": 5
+    }
+  }
+}

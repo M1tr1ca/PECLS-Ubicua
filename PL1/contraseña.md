@@ -1,0 +1,2 @@
+ssid:cubicuz
+password:estoesesparta
