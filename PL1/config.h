@@ -1,7 +1,7 @@
-// ============================================
+
 // CONFIGURACIÓN WIFI
 // ============================================
-const char* ssid = "ssid";                    // Cambia por tu red WiFi
+const char* ssid = "cubicuz";                    // Cambia por tu red WiFi
 const char* password = "estoesesparta";       // Cambia por tu contraseña
 const char* hostname = "cubicua";
 IPAddress ip(192, 168, 1, 200);
@@ -36,17 +36,13 @@ const char* NEIGHBORHOOD = "Centro";
 // ============================================
 // CONFIGURACIÓN DE PINES - SENSORES
 // ============================================
-// BME280 - Sensores I2C (2 unidades)
-#define BME_SDA 21          // BME280 I2C SDA (ambos sensores en mismo bus)
-#define BME_SCL 22          // BME280 I2C SCL (ambos sensores en mismo bus)
-// Direcciones I2C de los BME280
-#define BME280_ADDRESS_1 0x76  // BME280 #1 (dirección por defecto)
-#define BME280_ADDRESS_2 0x77  // BME280 #2 (dirección alternativa)
+// BME280 - Sensor I2C (temperatura, humedad, presión)
+#define BME_SDA 21          // BME280 I2C SDA
+#define BME_SCL 22          // BME280 I2C SCL
+#define BME280_ADDRESS 0x76 // Dirección I2C del BME280 (por defecto)
 
-// MQ-135 - Sensores analógicos de calidad del aire (3 unidades)
-#define MQ135_PIN_1 34      // MQ-135 sensor #1
-#define MQ135_PIN_2 35      // MQ-135 sensor #2
-#define MQ135_PIN_3 39      // MQ-135 sensor #3
+// MQ-135 - Sensor analógico de calidad del aire
+#define MQ135_PIN 34        // MQ-135 sensor analógico
 
 // Sensor UV simulado (opcional, para completar datos meteorológicos)
 #define UV_SENSOR_PIN 36    // Sensor UV analógico (opcional)

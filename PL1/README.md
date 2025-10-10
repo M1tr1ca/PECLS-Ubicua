@@ -16,11 +16,11 @@ Este proyecto implementa una **Estación Meteorológica IoT** completa que forma
 ### 🎯 Objetivos Cumplidos
 
 ✅ **Identificación única de la estación** con datos de Alcalá de Henares  
-✅ **8 componentes implementados** (5 sensores + 3 actuadores - supera el mínimo de 3)  
+✅ **5 componentes implementados** (2 sensores + 3 actuadores - supera el mínimo de 3)  
 ✅ **Comunicación bidireccional MQTT** con el sistema  
 ✅ **Formato JSON correcto** según especificaciones  
 ✅ **Control automático inteligente** de actuadores  
-✅ **Sensores de alta calidad** BME280 con redundancia  
+✅ **Sensores de alta calidad** BME280 todo-en-uno  
 
 ---
 
@@ -33,11 +33,10 @@ Este proyecto implementa una **Estación Meteorológica IoT** completa que forma
 │  ┌──────────────┐      ┌──────────────┐       │
 │  │   SENSORES   │      │  ACTUADORES  │       │
 │  ├──────────────┤      ├──────────────┤       │
-│  │ BME280 #1    │      │ LED RGB      │       │
-│  │ BME280 #2    │      │ Ventilador   │       │
-│  │ MQ-135 #1    │      │ Calefactor   │       │
-│  │ MQ-135 #2    │      └──────────────┘       │
-│  │ MQ-135 #3    │                              │
+│  │ BME280       │      │ LED RGB      │       │
+│  │   (3 en 1)   │      │ Ventilador   │       │
+│  │ MQ-135       │      │ Calefactor   │       │
+│  │   (Aire)     │      └──────────────┘       │
 │  └──────────────┘                              │
 │                                                 │
 │         ESP32 (Microcontrolador)               │
@@ -66,8 +65,8 @@ Este proyecto implementa una **Estación Meteorológica IoT** completa que forma
 | Componente | Cantidad | Función |
 |------------|----------|---------|
 | **ESP32** | 1 | Microcontrolador principal |
-| **BME280** | 2 | Sensor de temperatura, humedad y presión atmosférica |
-| **MQ-135** | 3 | Sensor de calidad del aire (CO2, NH3, NOx, alcohol, benceno, humo) |
+| **BME280** | 1 | Sensor de temperatura, humedad y presión atmosférica (3 en 1) |
+| **MQ-135** | 1 | Sensor de calidad del aire (CO2, NH3, NOx, alcohol, benceno, humo) |
 | **LED RGB** | 1 | Indicador visual de estado |
 | **Ventilador 5V** | 1 | Control de temperatura |
 | **Módulo Relay** | 2 | Control de actuadores |
@@ -79,15 +78,14 @@ Este proyecto implementa una **Estación Meteorológica IoT** completa que forma
 
 #### Sensores
 ```
-BME280 #1 (0x76) y #2 (0x77)
-  SDA      → GPIO 21 (I2C compartido)
-  SCL      → GPIO 22 (I2C compartido)
+BME280 (0x76)
+  SDA      → GPIO 21 (I2C)
+  SCL      → GPIO 22 (I2C)
   VCC      → 3.3V
   GND      → GND
 
-MQ-135 #1  → GPIO 34 (ADC1_CH6)
-MQ-135 #2  → GPIO 35 (ADC1_CH7)
-MQ-135 #3  → GPIO 39 (ADC1_CH3)
+MQ-135
+  AO       → GPIO 34 (ADC1_CH6)
   VCC      → 5V (o 3.3V según modelo)
   GND      → GND
 ```

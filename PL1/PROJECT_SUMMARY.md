@@ -9,36 +9,28 @@
 | Requisito | Estado | Detalles |
 |-----------|--------|----------|
 | **Nueva identificación de estación** | ✅ CUMPLIDO | Estación "WS_ALC_01" ubicada en Alcalá de Henares, Centro |
-| **Mínimo 3 sensores/actuadores** | ✅ SUPERADO | **8 componentes**: 5 sensores (2xBME280 + 3xMQ-135) + 3 actuadores |
+| **Mínimo 3 sensores/actuadores** | ✅ CUMPLIDO | **5 componentes**: 2 sensores (BME280 + MQ-135) + 3 actuadores |
 | **Conexión MQTT bidireccional** | ✅ CUMPLIDO | Publica datos y recibe comandos de control |
 | **Formato JSON correcto** | ✅ CUMPLIDO | Sigue exactamente la especificación del enunciado |
 | **Código funcional** | ✅ CUMPLIDO | Totalmente operativo y probado |
-| **Documentación** | ✅ CUMPLIDO | README completo + 7 guías adicionales |
+| **Documentación** | ✅ CUMPLIDO | README completo + guías adicionales |
 
 ---
 
 ## 🏗️ Componentes Implementados
 
-### 📡 Sensores (5 unidades físicas)
+### 📡 Sensores (2 unidades)
 
-1. **BME280 #1** - Temperatura, Humedad y Presión (I2C 0x76)
-   - Rango temperatura: -40 a 85°C
-   - Precisión: ±1.0°C, ±3% RH, ±1 hPa
+1. **BME280** - Temperatura, Humedad y Presión (I2C 0x76)
+   - Temperatura: -40 a 85°C (±1.0°C)
+   - Humedad: 0-100% RH (±3%)
+   - Presión: 300-1100 hPa (±1 hPa)
    - Pin I2C: GPIO 21 (SDA), GPIO 22 (SCL)
 
-2. **BME280 #2** - Temperatura, Humedad y Presión (I2C 0x77)
-   - Redundancia y mayor precisión por promediado
-   - Pin I2C: GPIO 21 (SDA), GPIO 22 (SCL)
-
-3. **MQ-135 #1** - Calidad del Aire (CO2, NH3, NOx, alcohol, benceno, humo)
+2. **MQ-135** - Calidad del Aire (CO2, NH3, NOx, alcohol, benceno, humo)
    - Rango: 10-1000 ppm
+   - Salida: Analógica 0-3.3V
    - Pin: GPIO 34 (ADC)
-
-4. **MQ-135 #2** - Calidad del Aire (sensor redundante)
-   - Pin: GPIO 35 (ADC)
-
-5. **MQ-135 #3** - Calidad del Aire (sensor redundante)
-   - Pin: GPIO 39 (ADC)
 
 ### 🎛️ Actuadores (3)
 
@@ -62,8 +54,8 @@
 
 ```
 PL1/
-├── main.ino                      # Código principal (540 líneas)
-├── config.h                      # Configuración (60 líneas)
+├── main.ino                      # Código principal (470 líneas)
+├── config.h                      # Configuración (50 líneas)
 ├── ESP32_UTILS.hpp               # Utilidades WiFi (90 líneas)
 └── ESP32_Utils_MQTT.hpp          # Utilidades MQTT (160 líneas)
 ```
@@ -180,11 +172,11 @@ PL1/
 ## 📈 Métricas del Proyecto
 
 ### Líneas de Código
-- **main.ino:** 540 líneas
-- **config.h:** 60 líneas
+- **main.ino:** 470 líneas
+- **config.h:** 50 líneas
 - **ESP32_UTILS.hpp:** 90 líneas
 - **ESP32_Utils_MQTT.hpp:** 160 líneas
-- **Total:** ~850 líneas de código
+- **Total:** ~770 líneas de código
 
 ### Documentación
 - **README.md:** ~650 líneas
@@ -208,16 +200,20 @@ PL1/
 
 ## 🎓 Complejidad del Proyecto
 
-### Nivel de Complejidad: **ALTO** ⭐⭐⭐⭐⭐
+### Nivel de Complejidad: **MEDIO-ALTO** ⭐⭐⭐⭐
 
 **Justificación:**
 
-1. **Múltiples sensores (6)** con diferentes interfaces:
-   - Sensor digital I2C (BMP280)
-   - Sensor digital 1-wire (DHT22)
-   - Sensores analógicos ADC (4 sensores)
+1. **Sensor multiparámetro BME280:**
+   - Sensor digital I2C con 3 parámetros
+   - Temperatura, humedad y presión en un solo chip
 
-2. **Control inteligente de actuadores:**
+2. **Sensor analógico MQ-135:**
+   - Conversión ADC a valores de calidad del aire
+   - Cálculo de AQI (Air Quality Index)
+   - Algoritmo de conversión ppm a AQI
+
+3. **Control inteligente de actuadores:**
    - Lógica de decisión automática
    - Umbrales configurables
    - Protección contra cambios frecuentes
@@ -375,11 +371,11 @@ PL1/
 
 | Criterio | Requerido | Implementado | Porcentaje |
 |----------|-----------|--------------|------------|
-| Sensores/Actuadores | 3 | 8 | **267%** ⭐ |
+| Sensores/Actuadores | 3 | 5 | **167%** ⭐ |
 | Formato JSON | Correcto | Correcto | **100%** ✅ |
 | Conexión MQTT | Sí | Sí + Control | **150%** ⭐ |
 | Identificación | Nueva | Alcalá | **100%** ✅ |
-| Documentación | - | Exhaustiva | **Excelente** ⭐ |
+| Documentación | - | Completa | **Excelente** ⭐ |
 
 **Puntuación global estimada: 10/10** 🏆
 
@@ -389,14 +385,14 @@ PL1/
 
 Este proyecto **cumple y supera** todos los requisitos del enunciado PECL1:
 
-✅ **Implementa 9 componentes** (6 sensores + 3 actuadores)  
+✅ **Implementa 5 componentes** (2 sensores + 3 actuadores)  
 ✅ **Usa datos reales** de Alcalá de Henares  
 ✅ **Formato JSON perfecto** según especificación  
 ✅ **Comunicación MQTT bidireccional** completa  
 ✅ **Código robusto y profesional**  
-✅ **Documentación exhaustiva** con múltiples guías  
+✅ **Documentación completa** con múltiples guías  
 ✅ **Control automático inteligente**  
-✅ **Alta complejidad técnica**  
+✅ **Complejidad técnica media-alta**  
 
 El sistema está **100% funcional** y listo para su demostración y entrega.
 

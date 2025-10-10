@@ -13,19 +13,16 @@
  * Este dispositivo IoT captura datos meteorológicos en tiempo real
  * y los envía a un broker MQTT siguiendo el formato JSON especificado.
  * 
- * Sensores implementados (5):
- * - BME280 #1: Temperatura, Humedad y Presión Atmosférica
- * - BME280 #2: Temperatura, Humedad y Presión Atmosférica (redundancia)
- * - MQ-135 #1: Calidad del aire (CO2, NH3, NOx, alcohol, benceno, humo)
- * - MQ-135 #2: Calidad del aire (sensor redundante)
- * - MQ-135 #3: Calidad del aire (sensor redundante)
+ * Sensores implementados (2):
+ * - BME280: Temperatura, Humedad y Presión Atmosférica (3 en 1)
+ * - MQ-135: Calidad del aire (CO2, NH3, NOx, alcohol, benceno, humo)
  * 
  * Actuadores implementados (3):
  * - LED RGB: Indicador visual de estado
  * - Ventilador: Control de temperatura
  * - Calefactor: Control de temperatura
  * 
- * Total: 8 componentes (5 sensores + 3 actuadores)
+ * Total: 5 componentes (2 sensores + 3 actuadores)
  * =====================================================
  */
 
@@ -41,8 +38,7 @@
 // ============================================
 // OBJETOS DE SENSORES
 // ============================================
-Adafruit_BME280 bme1;  // BME280 sensor #1 (dirección 0x76)
-Adafruit_BME280 bme2;  // BME280 sensor #2 (dirección 0x77)
+Adafruit_BME280 bme;  // BME280 sensor (dirección 0x76)
 
 // ============================================
 // VARIABLES GLOBALES
@@ -52,26 +48,16 @@ unsigned long lastPublishTime = 0;
 int messageCount = 0;
 
 // Variables de lecturas de sensores
-float temperature1 = 0.0;      // Temperatura BME280 #1
-float temperature2 = 0.0;      // Temperatura BME280 #2
-float temperature_avg = 0.0;   // Temperatura promedio
-float humidity1 = 0.0;         // Humedad BME280 #1
-float humidity2 = 0.0;         // Humedad BME280 #2
-float humidity_avg = 0.0;      // Humedad promedio
-float pressure1 = 0.0;         // Presión BME280 #1
-float pressure2 = 0.0;         // Presión BME280 #2
-float pressure_avg = 0.0;      // Presión promedio
-int airQuality1 = 0;           // AQI del MQ-135 #1
-int airQuality2 = 0;           // AQI del MQ-135 #2
-int airQuality3 = 0;           // AQI del MQ-135 #3
-int airQuality_avg = 0;        // AQI promedio
+float temperature = 0.0;       // Temperatura BME280
+float humidity = 0.0;          // Humedad BME280
+float pressure = 0.0;          // Presión BME280
+int airQuality = 0;            // AQI del MQ-135
 int uvIndex = 0;               // Índice UV (simulado/opcional)
 float windSpeed = 0.0;         // Velocidad del viento (simulado)
 int windDirection = 0;         // Dirección del viento (simulado)
 
 // Estados de sensores
-bool bme1_available = false;
-bool bme2_available = false;
+bool bme_available = false;
 
 // Estados de actuadores
 bool fanActive = false;
@@ -118,49 +104,26 @@ void InitSensors() {
     Wire.begin(BME_SDA, BME_SCL);
     delay(100);
     
-    // Inicializar BME280 #1 (dirección 0x76)
-    if (bme1.begin(BME280_ADDRESS_1)) {
-        Serial.println("✓ BME280 #1 inicializado (0x76)");
-        bme1.setSampling(Adafruit_BME280::MODE_NORMAL,
+    // Inicializar BME280
+    if (bme.begin(BME280_ADDRESS)) {
+        Serial.println("✓ BME280 inicializado correctamente");
+        bme.setSampling(Adafruit_BME280::MODE_NORMAL,
                         Adafruit_BME280::SAMPLING_X2,  // Temperatura
                         Adafruit_BME280::SAMPLING_X16, // Presión
                         Adafruit_BME280::SAMPLING_X1,  // Humedad
                         Adafruit_BME280::FILTER_X16,
                         Adafruit_BME280::STANDBY_MS_500);
-        bme1_available = true;
+        bme_available = true;
     } else {
-        Serial.println("⚠ BME280 #1 no encontrado (0x76)");
-        bme1_available = false;
-    }
-    
-    delay(100);
-    
-    // Inicializar BME280 #2 (dirección 0x77)
-    if (bme2.begin(BME280_ADDRESS_2)) {
-        Serial.println("✓ BME280 #2 inicializado (0x77)");
-        bme2.setSampling(Adafruit_BME280::MODE_NORMAL,
-                        Adafruit_BME280::SAMPLING_X2,  // Temperatura
-                        Adafruit_BME280::SAMPLING_X16, // Presión
-                        Adafruit_BME280::SAMPLING_X1,  // Humedad
-                        Adafruit_BME280::FILTER_X16,
-                        Adafruit_BME280::STANDBY_MS_500);
-        bme2_available = true;
-    } else {
-        Serial.println("⚠ BME280 #2 no encontrado (0x77)");
-        bme2_available = false;
-    }
-    
-    // Verificar que al menos un BME280 esté disponible
-    if (!bme1_available && !bme2_available) {
-        Serial.println("⚠ ADVERTENCIA: Ningún BME280 detectado. Usando valores simulados.");
+        Serial.println("⚠ BME280 no encontrado. Verifica las conexiones.");
+        Serial.println("⚠ Usando valores simulados.");
+        bme_available = false;
     }
     
     // Configurar pines analógicos para MQ-135
-    pinMode(MQ135_PIN_1, INPUT);
-    pinMode(MQ135_PIN_2, INPUT);
-    pinMode(MQ135_PIN_3, INPUT);
+    pinMode(MQ135_PIN, INPUT);
     pinMode(UV_SENSOR_PIN, INPUT);
-    Serial.println("✓ Sensores MQ-135 configurados");
+    Serial.println("✓ Sensor MQ-135 configurado");
     
     Serial.println("✓ Inicialización de sensores completada");
 }
@@ -194,119 +157,47 @@ void IndicateStatus(String status) {
 // ============================================
 
 /**
- * Lee la temperatura de ambos BME280 y calcula el promedio
+ * Lee la temperatura del BME280
  */
 float ReadTemperature() {
-    float temp1 = 20.0;  // Valor por defecto
-    float temp2 = 20.0;
-    int validReadings = 0;
-    
-    if (bme1_available) {
-        temp1 = bme1.readTemperature();
-        if (!isnan(temp1) && temp1 > -40 && temp1 < 85) {
-            temperature1 = temp1;
-            validReadings++;
+    if (bme_available) {
+        float temp = bme.readTemperature();
+        if (!isnan(temp) && temp > -40 && temp < 85) {
+            return temp;
         }
     }
     
-    if (bme2_available) {
-        temp2 = bme2.readTemperature();
-        if (!isnan(temp2) && temp2 > -40 && temp2 < 85) {
-            temperature2 = temp2;
-            validReadings++;
-        }
-    }
-    
-    // Calcular promedio si hay lecturas válidas
-    if (validReadings > 0) {
-        if (validReadings == 2) {
-            return (temperature1 + temperature2) / 2.0;
-        } else if (bme1_available) {
-            return temperature1;
-        } else {
-            return temperature2;
-        }
-    }
-    
-    // Si no hay sensores, simular valor
+    // Si no hay sensor o lectura inválida, simular valor
     return 20.0 + random(-5, 10) / 10.0;
 }
 
 /**
- * Lee la humedad de ambos BME280 y calcula el promedio
+ * Lee la humedad del BME280
  */
 float ReadHumidity() {
-    float hum1 = 60.0;  // Valor por defecto
-    float hum2 = 60.0;
-    int validReadings = 0;
-    
-    if (bme1_available) {
-        hum1 = bme1.readHumidity();
-        if (!isnan(hum1) && hum1 >= 0 && hum1 <= 100) {
-            humidity1 = hum1;
-            validReadings++;
+    if (bme_available) {
+        float hum = bme.readHumidity();
+        if (!isnan(hum) && hum >= 0 && hum <= 100) {
+            return hum;
         }
     }
     
-    if (bme2_available) {
-        hum2 = bme2.readHumidity();
-        if (!isnan(hum2) && hum2 >= 0 && hum2 <= 100) {
-            humidity2 = hum2;
-            validReadings++;
-        }
-    }
-    
-    // Calcular promedio si hay lecturas válidas
-    if (validReadings > 0) {
-        if (validReadings == 2) {
-            return (humidity1 + humidity2) / 2.0;
-        } else if (bme1_available) {
-            return humidity1;
-        } else {
-            return humidity2;
-        }
-    }
-    
-    // Si no hay sensores, simular valor
+    // Si no hay sensor o lectura inválida, simular valor
     return 60.0 + random(-10, 10);
 }
 
 /**
- * Lee la presión atmosférica de ambos BME280 y calcula el promedio
+ * Lee la presión atmosférica del BME280
  */
 float ReadPressure() {
-    float press1 = 1013.25;  // Presión estándar
-    float press2 = 1013.25;
-    int validReadings = 0;
-    
-    if (bme1_available) {
-        press1 = bme1.readPressure() / 100.0F;  // Convertir a hPa
-        if (!isnan(press1) && press1 > 800 && press1 < 1200) {
-            pressure1 = press1;
-            validReadings++;
+    if (bme_available) {
+        float press = bme.readPressure() / 100.0F;  // Convertir a hPa
+        if (!isnan(press) && press > 800 && press < 1200) {
+            return press;
         }
     }
     
-    if (bme2_available) {
-        press2 = bme2.readPressure() / 100.0F;  // Convertir a hPa
-        if (!isnan(press2) && press2 > 800 && press2 < 1200) {
-            pressure2 = press2;
-            validReadings++;
-        }
-    }
-    
-    // Calcular promedio si hay lecturas válidas
-    if (validReadings > 0) {
-        if (validReadings == 2) {
-            return (pressure1 + pressure2) / 2.0;
-        } else if (bme1_available) {
-            return pressure1;
-        } else {
-            return pressure2;
-        }
-    }
-    
-    // Si no hay sensores, simular valor
+    // Si no hay sensor o lectura inválida, simular valor
     return 1013.25 + random(-5, 5);
 }
 
@@ -314,9 +205,9 @@ float ReadPressure() {
  * Lee el sensor MQ-135 y convierte a AQI
  * Formula basada en la hoja de datos del MQ-135
  */
-int ReadMQ135(int pin) {
+int ReadAirQuality() {
     // Leer valor analógico (0-4095 en ESP32)
-    int sensorValue = analogRead(pin);
+    int sensorValue = analogRead(MQ135_PIN);
     
     // Convertir a voltaje (0-3.3V)
     float voltage = (sensorValue / 4095.0) * 3.3;
@@ -348,20 +239,6 @@ int ReadMQ135(int pin) {
     }
     
     return constrain(aqi, 0, 500);
-}
-
-/**
- * Lee los 3 sensores MQ-135 y calcula el promedio
- */
-int ReadAirQuality() {
-    airQuality1 = ReadMQ135(MQ135_PIN_1);
-    airQuality2 = ReadMQ135(MQ135_PIN_2);
-    airQuality3 = ReadMQ135(MQ135_PIN_3);
-    
-    // Calcular promedio de los 3 sensores
-    int average = (airQuality1 + airQuality2 + airQuality3) / 3;
-    
-    return average;
 }
 
 /**
@@ -403,12 +280,12 @@ void ReadAllSensors() {
     Serial.println("===========================================");
     
     // Leer sensores BME280
-    temperature_avg = ReadTemperature();
-    humidity_avg = ReadHumidity();
-    pressure_avg = ReadPressure();
+    temperature = ReadTemperature();
+    humidity = ReadHumidity();
+    pressure = ReadPressure();
     
-    // Leer sensores MQ-135
-    airQuality_avg = ReadAirQuality();
+    // Leer sensor MQ-135
+    airQuality = ReadAirQuality();
     
     // Leer sensor UV (opcional)
     uvIndex = ReadUVIndex();
@@ -417,28 +294,11 @@ void ReadAllSensors() {
     windSpeed = ReadWindSpeed();
     windDirection = ReadWindDirection();
     
-    Serial.println("Lecturas BME280:");
-    if (bme1_available) {
-        Serial.printf("  📟 BME280 #1: %.1f°C, %.1f%%, %.1f hPa\n", 
-                     temperature1, humidity1, pressure1);
-    }
-    if (bme2_available) {
-        Serial.printf("  📟 BME280 #2: %.1f°C, %.1f%%, %.1f hPa\n", 
-                     temperature2, humidity2, pressure2);
-    }
-    Serial.println("-------------------------------------------");
-    Serial.println("Promedios:");
-    Serial.printf("  🌡️  Temperatura: %.1f°C\n", temperature_avg);
-    Serial.printf("  💧 Humedad: %.1f%%\n", humidity_avg);
-    Serial.printf("  📏 Presión: %.1f hPa\n", pressure_avg);
-    Serial.println("-------------------------------------------");
-    Serial.println("Calidad del Aire (MQ-135):");
-    Serial.printf("  🏭 Sensor #1 (AQI): %d\n", airQuality1);
-    Serial.printf("  🏭 Sensor #2 (AQI): %d\n", airQuality2);
-    Serial.printf("  🏭 Sensor #3 (AQI): %d\n", airQuality3);
-    Serial.printf("  📊 Promedio AQI: %d\n", airQuality_avg);
-    Serial.println("-------------------------------------------");
-    Serial.println("Otros datos:");
+    Serial.println("Lecturas de sensores:");
+    Serial.printf("  🌡️  Temperatura: %.1f°C\n", temperature);
+    Serial.printf("  💧 Humedad: %.1f%%\n", humidity);
+    Serial.printf("  📏 Presión: %.1f hPa\n", pressure);
+    Serial.printf("  🏭 Calidad del Aire (AQI): %d\n", airQuality);
     Serial.printf("  ☀️  Índice UV: %d\n", uvIndex);
     Serial.printf("  💨 Viento: %.1f km/h @ %d°\n", windSpeed, windDirection);
     Serial.println("===========================================");
@@ -453,33 +313,33 @@ void ReadAllSensors() {
  */
 void ControlActuators() {
     // Control del ventilador por temperatura
-    if (temperature_avg > TEMP_FAN_THRESHOLD && !fanActive) {
+    if (temperature > TEMP_FAN_THRESHOLD && !fanActive) {
         digitalWrite(FAN_PIN, HIGH);
         fanActive = true;
         Serial.println("🌀 Ventilador: ACTIVADO (temp alta)");
-    } else if (temperature_avg <= TEMP_FAN_THRESHOLD - 2 && fanActive) {
+    } else if (temperature <= TEMP_FAN_THRESHOLD - 2 && fanActive) {
         digitalWrite(FAN_PIN, LOW);
         fanActive = false;
         Serial.println("🌀 Ventilador: DESACTIVADO");
     }
     
     // Control del calefactor por temperatura
-    if (temperature_avg < TEMP_HEATER_THRESHOLD && !heaterActive) {
+    if (temperature < TEMP_HEATER_THRESHOLD && !heaterActive) {
         digitalWrite(HEATER_PIN, HIGH);
         heaterActive = true;
         Serial.println("🔥 Calefactor: ACTIVADO (temp baja)");
-    } else if (temperature_avg >= TEMP_HEATER_THRESHOLD + 2 && heaterActive) {
+    } else if (temperature >= TEMP_HEATER_THRESHOLD + 2 && heaterActive) {
         digitalWrite(HEATER_PIN, LOW);
         heaterActive = false;
         Serial.println("🔥 Calefactor: DESACTIVADO");
     }
     
     // Control del LED RGB según condiciones
-    if (temperature_avg > 35 || uvIndex > 8) {
+    if (temperature > 35 || uvIndex > 8) {
         IndicateStatus("warning");  // Naranja: condiciones extremas
-    } else if (airQuality_avg > AQI_DANGEROUS) {
+    } else if (airQuality > AQI_DANGEROUS) {
         SetLED(128, 0, 128);  // Morado: mala calidad del aire
-    } else if (humidity_avg > HUMIDITY_HIGH) {
+    } else if (humidity > HUMIDITY_HIGH) {
         SetLED(0, 100, 200);  // Azul: humedad alta
     } else {
         IndicateStatus("ok");  // Verde: todo normal
@@ -522,12 +382,12 @@ String CreateJSONMessage() {
     
     // Datos meteorológicos
     JsonObject data = doc.createNestedObject("data");
-    data["temperature_celsius"] = round(temperature_avg * 10) / 10.0;
-    data["humidity_percent"] = round(humidity_avg * 10) / 10.0;
-    data["air_quality_index"] = airQuality_avg;
+    data["temperature_celsius"] = round(temperature * 10) / 10.0;
+    data["humidity_percent"] = round(humidity * 10) / 10.0;
+    data["air_quality_index"] = airQuality;
     data["wind_speed_kmh"] = round(windSpeed * 10) / 10.0;
     data["wind_direction_degrees"] = windDirection;
-    data["atmospheric_pressure_hpa"] = round(pressure_avg * 10) / 10.0;
+    data["atmospheric_pressure_hpa"] = round(pressure * 10) / 10.0;
     data["uv_index"] = uvIndex;
     
     // Información adicional de actuadores (extra)
