@@ -1,8 +1,8 @@
 
 // CONFIGURACIÓN WIFI
 // ============================================
-const char* ssid = "cubicuz";                    // Cambia por tu red WiFi
-const char* password = "estoesesparta";       // Cambia por tu contraseña
+const char* ssid = "cubicuz";                    // Nombre de tu red WiFi
+const char* password = "estoesesparta";          // Contraseña de tu red WiFi
 const char* hostname = "cubicua";
 IPAddress ip(192, 168, 1, 200);
 IPAddress gateway(192, 168, 1, 1);
@@ -41,36 +41,27 @@ const char* NEIGHBORHOOD = "Centro";
 #define BME_SCL 22          // BME280 I2C SCL
 #define BME280_ADDRESS 0x76 // Dirección I2C del BME280 (por defecto)
 
-// MQ-135 - Sensor analógico de calidad del aire
-#define MQ135_PIN 34        // MQ-135 sensor analógico
-
-// Sensor UV simulado (opcional, para completar datos meteorológicos)
-#define UV_SENSOR_PIN 36    // Sensor UV analógico (opcional)
+// MQ-135 - Sensor analógico de calidad del aire (CO2, NH3, NOx, alcohol, benceno, humo)
+#define MQ135_PIN 34        // Pin analógico para sensor MQ-135
 
 // ============================================
 // CONFIGURACIÓN DE PINES - ACTUADORES
 // ============================================
-#define LED_RED_PIN 25      // LED RGB - Rojo
-#define LED_GREEN_PIN 26    // LED RGB - Verde
-#define LED_BLUE_PIN 27     // LED RGB - Azul
-#define FAN_PIN 32          // Ventilador de enfriamiento
-#define HEATER_PIN 33       // Calefactor
+#define LED_RED_PIN 25      // LED indicador de estado (alertas y condiciones anormales)
 
 // ============================================
 // CONFIGURACIÓN DEL SISTEMA
 // ============================================
 #define READING_INTERVAL 30000  // Intervalo de lectura en ms (30 segundos)
 
-// Umbrales de actuadores
-#define TEMP_FAN_THRESHOLD 30.0     // Activar ventilador si temp > 30°C
-#define TEMP_HEATER_THRESHOLD 10.0  // Activar calefactor si temp < 10°C
-#define HUMIDITY_HIGH 80.0          // Umbral de humedad alta
-#define UV_HIGH 6                   // Índice UV alto
-#define AQI_DANGEROUS 150           // AQI peligroso
+// Umbrales de alertas
+#define TEMP_HIGH 35.0              // Temperatura alta (°C) para activar alerta LED
+#define HUMIDITY_HIGH 80.0          // Umbral de humedad alta (%) para activar alerta LED
+#define CAQI_DANGEROUS 75           // CAQI peligroso (nivel medio-alto, escala 0-150)
 
 // Configuración BME280
 #define SEALEVELPRESSURE_HPA (1013.25)  // Presión a nivel del mar para cálculo de altitud
 
-// Configuración MQ-135
+// Configuración MQ-135 para cálculo de CAQI
 #define MQ135_RL 10.0              // Resistencia de carga en kΩ
-#define MQ135_RO_CLEAN_AIR 3.6     // Ratio Ro en aire limpio
+#define MQ135_RO_CLEAN_AIR 3.6     // Ratio Rs/Ro en aire limpio (condiciones de calibración)

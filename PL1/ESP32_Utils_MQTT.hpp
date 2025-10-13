@@ -85,7 +85,7 @@ void OnMqttReceived(char* topic, byte* payload, unsigned int length) {
     
     // Parsear JSON si es el tópico de control
     if (String(topic) == TOPIC_SUBSCRIBE) {
-        DynamicJsonDocument doc(512);
+        DynamicJsonDocument doc(256);
         DeserializationError error = deserializeJson(doc, message);
         
         if (!error) {
@@ -95,25 +95,13 @@ void OnMqttReceived(char* topic, byte* payload, unsigned int length) {
                 Serial.print("🎮 Comando recibido: ");
                 Serial.println(command);
                 
-                // Ejemplos de comandos que se pueden implementar
+                // Comandos disponibles
                 if (command == "reset") {
                     Serial.println("⚡ Reiniciando dispositivo...");
                     delay(1000);
                     ESP.restart();
-                } else if (command == "read_now") {
-                    Serial.println("📊 Forzando lectura inmediata...");
-                    // Aquí se llamaría a la función de lectura
-                } else if (command == "fan_on" && doc.containsKey("value")) {
-                    digitalWrite(FAN_PIN, doc["value"].as<bool>() ? HIGH : LOW);
-                    Serial.println("🌀 Ventilador: " + String(doc["value"].as<bool>() ? "ON" : "OFF"));
-                } else if (command == "heater_on" && doc.containsKey("value")) {
-                    digitalWrite(HEATER_PIN, doc["value"].as<bool>() ? HIGH : LOW);
-                    Serial.println("🔥 Calefactor: " + String(doc["value"].as<bool>() ? "ON" : "OFF"));
-                } else if (command == "led_rgb" && doc.containsKey("r") && doc.containsKey("g") && doc.containsKey("b")) {
-                    analogWrite(LED_RED_PIN, doc["r"].as<int>());
-                    analogWrite(LED_GREEN_PIN, doc["g"].as<int>());
-                    analogWrite(LED_BLUE_PIN, doc["b"].as<int>());
-                    Serial.println("💡 LED RGB actualizado");
+                } else {
+                    Serial.println("⚠ Comando no reconocido");
                 }
             }
         } else {

@@ -1,441 +1,317 @@
-# 📚 ÍNDICE DE DOCUMENTACIÓN - PECL1
+# 📚 Índice de Documentación - Estación Meteorológica IoT
 
-## 🎯 Guía de Navegación Rápida
+## 📋 Guía de Navegación
 
-Este índice te ayudará a encontrar rápidamente la información que necesitas.
+Bienvenido a la documentación completa del proyecto **Estación Meteorológica IoT** para el curso de Computación Ubicua de la Universidad de Alcalá de Henares.
 
 ---
 
-## 📁 Estructura del Proyecto
+## 🗂️ Estructura de la Documentación
+
+### 📖 Documentación Principal
+
+#### 1. [README.md](README.md) - Descripción General del Proyecto
+**Contenido:**
+- Descripción general del sistema
+- Componentes hardware y software
+- Datos monitorizados
+- Configuración MQTT
+- Ubicación del sensor
+- Características principales
+- Estructura del proyecto
+
+**Para quién:**
+- Primeros pasos
+- Visión general rápida
+- Presentación del proyecto
+
+---
+
+#### 2. [ARQUITECTURA.md](ARQUITECTURA.md) - Documentación Técnica
+**Contenido:**
+- Arquitectura en 3 capas
+- Diagrama de conexiones hardware
+- Componentes software detallados
+- Flujo de datos completo
+- Algoritmo de cálculo CAQI
+- Sistema de alertas
+- Validación y manejo de errores
+- Optimizaciones implementadas
+
+**Para quién:**
+- Desarrolladores
+- Revisión técnica
+- Comprensión profunda del sistema
+
+---
+
+#### 3. [INSTALACION.md](INSTALACION.md) - Guía de Instalación
+**Contenido:**
+- Requisitos previos
+- Instalación paso a paso (Wokwi y Hardware Real)
+- Configuración de bibliotecas
+- Conexión del hardware
+- Compilación y carga del código
+- Verificación de la instalación
+- Solución de problemas detallada
+- Herramientas de monitoreo
+
+**Para quién:**
+- Instalación inicial
+- Configuración del entorno
+- Resolución de problemas
+
+---
+
+#### 4. [API_MQTT.md](API_MQTT.md) - Especificación API MQTT
+**Contenido:**
+- Configuración del broker MQTT
+- Estructura de tópicos
+- Formato JSON completo
+- Mensajes de control
+- Flujos de comunicación
+- Códigos de estado
+- Esquemas JSON (JSON Schema)
+- Ejemplos de uso en varios lenguajes
+- Índice CAQI detallado
+- Seguridad y optimización
+
+**Para quién:**
+- Integración con otros sistemas
+- Desarrollo de clientes MQTT
+- Análisis de datos
+
+---
+
+## 🎨 Diagramas Visuales
+
+### Carpeta: [drawio/](../drawio/)
+
+#### 1. [arquitectura_sistema.drawio](../drawio/arquitectura_sistema.drawio)
+**Diagrama de Arquitectura del Sistema**
+- Vista de 3 capas (Comunicación, Procesamiento, Sensores)
+- Módulos y sus interacciones
+- Especificaciones técnicas
+- Leyenda de componentes
+
+#### 2. [flujo_datos.drawio](../drawio/flujo_datos.drawio)
+**Diagrama de Flujo de Datos**
+- Ciclo completo de operación
+- 5 fases del sistema
+- Decisiones condicionales
+- Intervalos y umbrales
+
+#### 3. [comunicacion_mqtt.drawio](../drawio/comunicacion_mqtt.drawio)
+**Diagrama de Comunicación MQTT**
+- Secuencia de mensajes MQTT
+- Publicación y suscripción
+- Comandos de control
+- Configuración y QoS
+
+#### 4. [conexiones_hardware.drawio](../drawio/conexiones_hardware.drawio)
+**Diagrama de Conexiones Hardware**
+- Esquema de conexiones ESP32
+- Pines GPIO utilizados
+- Componentes necesarios
+- Especificaciones eléctricas
+
+#### 📋 [README.md - Diagramas](../drawio/README.md)
+Guía completa para usar, editar y exportar los diagramas.
+
+---
+
+## 🚀 Rutas de Aprendizaje
+
+### 👤 Usuario Nuevo (Nunca ha trabajado con IoT)
+
+1. ✅ [README.md](README.md) - Entender qué hace el proyecto
+2. ✅ [Diagrama de Arquitectura](../drawio/arquitectura_sistema.drawio) - Ver estructura visual
+3. ✅ [INSTALACION.md](INSTALACION.md) - Seguir instalación paso a paso
+4. ✅ Probar con Wokwi (simulador)
+
+### 🔧 Instalador/Configurador
+
+1. ✅ [INSTALACION.md](INSTALACION.md) - Guía completa
+2. ✅ [Diagrama de Conexiones](../drawio/conexiones_hardware.drawio) - Esquema físico
+3. ✅ [README.md](README.md) - Verificación final
+4. ✅ Sección "Troubleshooting" en INSTALACION.md
+
+### 💻 Desarrollador
+
+1. ✅ [README.md](README.md) - Visión general
+2. ✅ [ARQUITECTURA.md](ARQUITECTURA.md) - Detalles técnicos
+3. ✅ [Diagrama de Flujo](../drawio/flujo_datos.drawio) - Lógica del sistema
+4. ✅ [API_MQTT.md](API_MQTT.md) - Interfaz de comunicación
+5. ✅ Código fuente (main.ino, headers)
+
+### 🔌 Integrador de Sistemas
+
+1. ✅ [API_MQTT.md](API_MQTT.md) - Especificación completa
+2. ✅ [Diagrama MQTT](../drawio/comunicacion_mqtt.drawio) - Flujo de mensajes
+3. ✅ Ejemplos de clientes (Python, Node.js, etc.)
+4. ✅ JSON Schemas
+
+### 🎓 Estudiante (Entrega del Proyecto)
+
+1. ✅ [README.md](README.md) - Descripción para el informe
+2. ✅ [ARQUITECTURA.md](ARQUITECTURA.md) - Análisis técnico
+3. ✅ Todos los diagramas - Anexos visuales
+4. ✅ [INSTALACION.md](INSTALACION.md) - Manual de usuario
+
+---
+
+## 📊 Mapa Mental del Proyecto
 
 ```
-PL1/
+Estación Meteorológica IoT
 │
-├── 📄 Código Fuente (4 archivos)
-│   ├── main.ino                    ⭐ Código principal del ESP32
-│   ├── config.h                    ⚙️ Configuración WiFi y MQTT
-│   ├── ESP32_UTILS.hpp             📡 Funciones WiFi
-│   └── ESP32_Utils_MQTT.hpp        📨 Funciones MQTT
+├── 📖 Documentación
+│   ├── README.md (General)
+│   ├── ARQUITECTURA.md (Técnico)
+│   ├── INSTALACION.md (Práctico)
+│   └── API_MQTT.md (Integración)
 │
-├── 📖 Documentación Principal (6 archivos)
-│   ├── INDEX.md                    📚 Este archivo (índice)
-│   ├── README.md                   📘 Documentación principal
-│   ├── QUICK_START.md              ⚡ Inicio rápido (5 minutos)
-│   ├── INSTALLATION_GUIDE.md       🔧 Instalación detallada
-│   ├── EXAMPLES.md                 💡 Ejemplos y scripts
-│   └── PROJECT_SUMMARY.md          📊 Resumen ejecutivo
+├── 🎨 Diagramas
+│   ├── Arquitectura del Sistema
+│   ├── Flujo de Datos
+│   ├── Comunicación MQTT
+│   └── Conexiones Hardware
 │
-├── 📋 Especificaciones (1 archivo)
-│   └── JSON_SPECIFICATION.md       📄 Formato de datos JSON
+├── 💾 Código Fuente
+│   ├── main.ino (Principal)
+│   ├── ESP32_UTILS.hpp (WiFi)
+│   ├── ESP32_Utils_MQTT.hpp (MQTT)
+│   └── config.h (Configuración)
 │
-└── 📑 Referencia (3 archivos)
-    ├── config.json                 ⚙️ Configuración JSON
-    ├── enunciado.txt               📝 Enunciado original
-    └── instrucciones.txt           📖 Instrucciones adicionales
+└── ⚙️ Configuración
+    ├── config.h (C++)
+    └── config.json (JSON)
 ```
 
 ---
 
-## 🗺️ ¿Qué archivo leer según tu necesidad?
+## 🔍 Búsqueda Rápida por Tema
 
-### 🚀 "Quiero empezar YA, lo más rápido posible"
-→ **QUICK_START.md** (5 minutos)
+### Hardware
+- Componentes → [README.md](README.md#componentes-del-sistema)
+- Conexiones → [Diagrama Hardware](../drawio/conexiones_hardware.drawio)
+- Especificaciones → [ARQUITECTURA.md](ARQUITECTURA.md#diagrama-de-conexiones-hardware)
+- Lista de compras → [INSTALACION.md](INSTALACION.md#lista-de-componentes)
 
-### 📖 "Quiero entender todo el proyecto"
-→ **README.md** (lectura completa)
-
-### 🔧 "Necesito instalar hardware y software paso a paso"
-→ **INSTALLATION_GUIDE.md** (guía detallada)
-
-### 💻 "Quiero ver ejemplos de código y comandos"
-→ **EXAMPLES.md** (scripts Python, Node.js, bash)
-
-### 📊 "Necesito entender el formato de datos JSON"
-→ **JSON_SPECIFICATION.md** (especificación técnica)
-
-### 📋 "Quiero un resumen ejecutivo del proyecto"
-→ **PROJECT_SUMMARY.md** (resumen completo)
-
-### ⚙️ "Necesito cambiar configuración WiFi/MQTT"
-→ **config.h** (archivo de configuración)
-
-### 🐛 "Tengo un error y necesito solucionarlo"
-→ **INSTALLATION_GUIDE.md** → Sección "Troubleshooting"
-
----
-
-## 📘 Descripción Detallada de Cada Documento
-
-### 1️⃣ README.md (Documento Principal)
-**Contenido:**
-- Descripción general del proyecto
-- Arquitectura del sistema
-- Lista de hardware requerido
-- Conexiones de pines
-- Librerías necesarias
-- Configuración básica
-- Formato de datos JSON
-- Funcionamiento inteligente
-- Estructura del código
-- Pruebas y validación
-- Solución de problemas
-
-**Cuándo leerlo:** Primera vez que ves el proyecto
-
-**Tiempo de lectura:** 15-20 minutos
-
----
-
-### 2️⃣ QUICK_START.md (Inicio Rápido)
-**Contenido:**
-- Instalación express
-- Configuración mínima
-- 6 pasos para funcionar
-- Comandos rápidos MQTT
-- Solución de problemas básicos
-- Checklist de entrega
-
-**Cuándo leerlo:** Cuando tienes prisa o ya conoces Arduino/ESP32
-
-**Tiempo de lectura:** 3-5 minutos
-
----
-
-### 3️⃣ INSTALLATION_GUIDE.md (Guía de Instalación)
-**Contenido:**
-- Esquema de conexiones detallado
-- Instalación paso a paso
-- Configuración de Arduino IDE
-- Instalación de librerías
-- Conexión de cada sensor
-- Conexión de cada actuador
-- Calibración de sensores
-- Pruebas del sistema
-- Configurar broker MQTT propio
-- Troubleshooting detallado
-
-**Cuándo leerlo:** Primera instalación o problemas de hardware
-
-**Tiempo de lectura:** 20-30 minutos
-
----
-
-### 4️⃣ EXAMPLES.md (Ejemplos de Uso)
-**Contenido:**
-- Comandos MQTT básicos
-- Scripts Python completos
-- Scripts Node.js
-- Scripts Bash
-- Integración con bases de datos
-- APIs REST en PHP
-- Dashboard web HTML/JS
-- Casos de uso reales
-- Seguridad MQTT
-
-**Cuándo leerlo:** Cuando quieres extender funcionalidad
-
-**Tiempo de lectura:** 15-20 minutos
-
----
-
-### 5️⃣ JSON_SPECIFICATION.md (Especificación JSON)
-**Contenido:**
-- Formato completo del mensaje
-- Descripción de cada campo
-- Rangos válidos de valores
-- Validación con JSON Schema
-- Interpretación de índices (AQI, UV)
-- Escalas de medición
-- Manejo de errores
-- Tamaño de mensajes
-
-**Cuándo leerlo:** Para integración con otros sistemas
-
-**Tiempo de lectura:** 10-15 minutos
-
----
-
-### 6️⃣ PROJECT_SUMMARY.md (Resumen Ejecutivo)
-**Contenido:**
-- Estado del proyecto
-- Cumplimiento de requisitos
-- Componentes implementados
-- Tecnologías utilizadas
-- Métricas del proyecto
-- Nivel de complejidad
-- Comparativa con requisitos
-- Guion para vídeo
-- Conclusiones
-
-**Cuándo leerlo:** Para presentación o defensa del proyecto
-
-**Tiempo de lectura:** 10 minutos
-
----
-
-## 🎯 Rutas de Aprendizaje Recomendadas
-
-### 🟢 Principiante (Primera vez con ESP32/IoT)
-```
-1. README.md (visión general)
-   ↓
-2. INSTALLATION_GUIDE.md (instalación detallada)
-   ↓
-3. QUICK_START.md (puesta en marcha)
-   ↓
-4. EXAMPLES.md (explorar posibilidades)
-```
-
-### 🟡 Intermedio (Conoces ESP32)
-```
-1. QUICK_START.md (arrancar rápido)
-   ↓
-2. README.md (detalles técnicos)
-   ↓
-3. EXAMPLES.md (casos avanzados)
-```
-
-### 🔴 Avanzado (Solo necesitas el código)
-```
-1. main.ino + config.h (modificar y probar)
-   ↓
-2. JSON_SPECIFICATION.md (si integras con otros sistemas)
-```
-
----
-
-## 📑 Documentos por Categoría
-
-### 📚 Para Estudiar
-- README.md
-- INSTALLATION_GUIDE.md
-- JSON_SPECIFICATION.md
-
-### 🚀 Para Implementar
-- QUICK_START.md
-- config.h
-- main.ino
-
-### 💡 Para Inspirarse
-- EXAMPLES.md
-- PROJECT_SUMMARY.md
-
-### 🎓 Para Presentar/Entregar
-- PROJECT_SUMMARY.md
-- README.md
-- Vídeo (por grabar)
-
----
-
-## 🔍 Búsqueda Rápida de Temas
-
-### WiFi
-- **Configuración:** config.h (líneas 5-7)
-- **Conexión:** ESP32_UTILS.hpp
-- **Problemas:** INSTALLATION_GUIDE.md → Troubleshooting
-
-### MQTT
-- **Configuración:** config.h (líneas 13-18)
-- **Funciones:** ESP32_Utils_MQTT.hpp
-- **Comandos:** EXAMPLES.md → "Comandos MQTT"
-- **Formato:** JSON_SPECIFICATION.md
+### Software
+- Arquitectura → [ARQUITECTURA.md](ARQUITECTURA.md)
+- Flujo de datos → [Diagrama de Flujo](../drawio/flujo_datos.drawio)
+- Funciones → [ARQUITECTURA.md](ARQUITECTURA.md#componentes-software)
 
 ### Sensores
-- **Lista completa:** README.md → "Hardware Requerido"
-- **Conexiones:** INSTALLATION_GUIDE.md → "Conexiones"
-- **Calibración:** INSTALLATION_GUIDE.md → "Calibración"
-- **Lectura:** main.ino → función `ReadAllSensors()`
+- BME280 → [README.md](README.md#sensores), [ARQUITECTURA.md](ARQUITECTURA.md#esquema-de-conexión-bme280)
+- MQ-135 → [README.md](README.md#sensores), [ARQUITECTURA.md](ARQUITECTURA.md#algoritmo-de-cálculo-caqi)
+- Cálculo CAQI → [ARQUITECTURA.md](ARQUITECTURA.md#algoritmo-de-cálculo-caqi), [API_MQTT.md](API_MQTT.md#índice-caqi)
 
-### Actuadores
-- **Control:** main.ino → función `ControlActuators()`
-- **Manual:** EXAMPLES.md → "Control Remoto"
-- **Automático:** README.md → "Funcionamiento Inteligente"
-
-### JSON
-- **Formato:** JSON_SPECIFICATION.md
-- **Ejemplo:** README.md → "Formato de Datos"
-- **Creación:** main.ino → función `CreateJSONMessage()`
-- **Validación:** JSON_SPECIFICATION.md → "Validación"
+### Comunicación
+- MQTT → [API_MQTT.md](API_MQTT.md)
+- JSON → [API_MQTT.md](API_MQTT.md#formato-de-mensajes-json)
+- Tópicos → [API_MQTT.md](API_MQTT.md#tópicos-mqtt)
+- Diagrama → [Comunicación MQTT](../drawio/comunicacion_mqtt.drawio)
 
 ### Instalación
-- **Rápida:** QUICK_START.md
-- **Completa:** INSTALLATION_GUIDE.md
-- **Librerías:** README.md → "Software y Librerías"
+- Wokwi → [INSTALACION.md](INSTALACION.md#opción-1-simulador-wokwi)
+- Hardware Real → [INSTALACION.md](INSTALACION.md#opción-2-hardware-real)
+- Bibliotecas → [INSTALACION.md](INSTALACION.md#bibliotecas-requeridas)
+- Problemas → [INSTALACION.md](INSTALACION.md#solución-de-problemas)
 
-### Ejemplos
-- **Python:** EXAMPLES.md → "Scripts Python"
-- **Node.js:** EXAMPLES.md → "Node.js"
-- **Bash:** EXAMPLES.md → "Script Bash"
-- **Web:** EXAMPLES.md → "Dashboard Web"
-
----
-
-## 📊 Estadísticas del Proyecto
-
-| Aspecto | Cantidad |
-|---------|----------|
-| Archivos de código | 4 |
-| Archivos de documentación | 6 |
-| Total de líneas de código | ~850 |
-| Total de líneas de documentación | ~2,500 |
-| Sensores implementados | 6 |
-| Actuadores implementados | 3 |
-| Funciones principales | ~20 |
-| Comandos MQTT soportados | 5 |
+### Configuración
+- WiFi → [config.h](../config.h), [INSTALACION.md](INSTALACION.md#configurar-el-proyecto)
+- MQTT Broker → [API_MQTT.md](API_MQTT.md#configuración-del-broker-mqtt)
+- Umbrales → [ARQUITECTURA.md](ARQUITECTURA.md#sistema-de-alertas)
+- Parámetros → [config.json](../config.json)
 
 ---
 
-## ✅ Checklist de Lectura (Recomendado)
+## 📝 Glosario Rápido
 
-Para aprovechar al máximo la documentación:
-
-- [ ] Leer INDEX.md (este archivo) - 5 min
-- [ ] Leer README.md - 15 min
-- [ ] Leer QUICK_START.md - 5 min
-- [ ] Revisar config.h - 2 min
-- [ ] Leer main.ino (con comentarios) - 10 min
-- [ ] Consultar INSTALLATION_GUIDE.md según necesidad
-- [ ] Explorar EXAMPLES.md para ideas
-- [ ] Revisar JSON_SPECIFICATION.md para integración
-- [ ] Leer PROJECT_SUMMARY.md antes de entregar
-
-**Tiempo total recomendado:** 40-60 minutos
+| Término | Descripción | Dónde encontrar más |
+|---------|-------------|---------------------|
+| **ESP32** | Microcontrolador WiFi/Bluetooth | [README.md](README.md) |
+| **BME280** | Sensor de temp/humedad/presión | [ARQUITECTURA.md](ARQUITECTURA.md) |
+| **MQ-135** | Sensor de calidad del aire | [ARQUITECTURA.md](ARQUITECTURA.md) |
+| **MQTT** | Protocolo de mensajería IoT | [API_MQTT.md](API_MQTT.md) |
+| **CAQI** | Índice de calidad del aire | [API_MQTT.md](API_MQTT.md#índice-caqi) |
+| **QoS** | Quality of Service MQTT | [API_MQTT.md](API_MQTT.md#qos-quality-of-service) |
+| **I2C** | Bus de comunicación serial | [ARQUITECTURA.md](ARQUITECTURA.md) |
+| **ADC** | Convertidor analógico-digital | [ARQUITECTURA.md](ARQUITECTURA.md) |
+| **JSON** | Formato de datos | [API_MQTT.md](API_MQTT.md#formato-de-mensajes-json) |
 
 ---
 
-## 🎬 Para Grabar el Vídeo
+## 📞 Información de Contacto y Soporte
 
-**Documentos a tener abiertos:**
+### Proyecto
+- **Universidad**: Universidad de Alcalá de Henares
+- **Asignatura**: Computación Ubicua
+- **Práctica**: PECL1
+- **Tipo**: Estación Meteorológica IoT
 
-1. **PROJECT_SUMMARY.md** → Sección "Guion para Vídeo"
-2. **main.ino** → Para mostrar código
-3. **Serial Monitor** → Para mostrar funcionamiento
-4. **MQTT Explorer** → Para mostrar comunicación
-
-**Duración sugerida:** 3-5 minutos
-
----
-
-## 🆘 Soporte y Ayuda
-
-### Problemas Técnicos
-→ **INSTALLATION_GUIDE.md** → "Troubleshooting"
-
-### Dudas de Configuración
-→ **README.md** → "Configuración"
-
-### Ejemplos de Uso
-→ **EXAMPLES.md**
-
-### Formato de Datos
-→ **JSON_SPECIFICATION.md**
-
-### Entendimiento del Código
-→ **main.ino** (bien comentado)
+### Recursos Externos
+- [Documentación ESP32](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/)
+- [MQTT.org](https://mqtt.org/)
+- [Wokwi Simulator](https://wokwi.com/)
+- [Draw.io](https://app.diagrams.net/)
 
 ---
 
-## 📱 Acceso Rápido por Extensión
+## 📌 Actualizaciones del Documento
 
-### Código (.ino, .hpp, .h)
-```
-main.ino              - Código principal ESP32
-config.h              - Configuración del sistema
-ESP32_UTILS.hpp       - Utilidades WiFi
-ESP32_Utils_MQTT.hpp  - Utilidades MQTT
-```
-
-### Documentación (.md)
-```
-README.md                - Documentación principal
-QUICK_START.md           - Inicio rápido
-INSTALLATION_GUIDE.md    - Instalación detallada
-EXAMPLES.md              - Ejemplos prácticos
-JSON_SPECIFICATION.md    - Especificación de datos
-PROJECT_SUMMARY.md       - Resumen del proyecto
-INDEX.md                 - Este índice
-```
-
-### Configuración (.json, .txt)
-```
-config.json          - Configuración JSON de referencia
-enunciado.txt        - Enunciado original del proyecto
-instrucciones.txt    - Instrucciones adicionales
-```
+| Versión | Fecha | Cambios |
+|---------|-------|---------|
+| 1.0 | 13/10/2025 | Documentación inicial completa |
+| | | - README.md creado |
+| | | - ARQUITECTURA.md creado |
+| | | - INSTALACION.md creado |
+| | | - API_MQTT.md creado |
+| | | - Diagramas DrawIO creados |
+| | | - INDEX.md creado |
 
 ---
 
-## 🌟 Características Destacadas por Documento
+## ✅ Checklist de Documentación
 
-### README.md
-⭐ Vista general completa  
-⭐ Arquitectura del sistema  
-⭐ Funcionamiento inteligente  
+### Documentación Escrita
+- [x] README.md - Descripción general
+- [x] ARQUITECTURA.md - Detalles técnicos
+- [x] INSTALACION.md - Guía de instalación
+- [x] API_MQTT.md - Especificación API
+- [x] INDEX.md - Índice general (este archivo)
 
-### QUICK_START.md
-⭐ Puesta en marcha en 5 minutos  
-⭐ Comandos esenciales  
-⭐ Troubleshooting rápido  
+### Diagramas
+- [x] Arquitectura del sistema
+- [x] Flujo de datos
+- [x] Comunicación MQTT
+- [x] Conexiones hardware
+- [x] README de diagramas
 
-### INSTALLATION_GUIDE.md
-⭐ Guía paso a paso detallada  
-⭐ Esquemas de conexión  
-⭐ Calibración de sensores  
-
-### EXAMPLES.md
-⭐ Scripts completos funcionales  
-⭐ Múltiples lenguajes  
-⭐ Casos de uso reales  
-
-### JSON_SPECIFICATION.md
-⭐ Formato exacto de datos  
-⭐ Validación con schema  
-⭐ Interpretación de valores  
-
-### PROJECT_SUMMARY.md
-⭐ Resumen ejecutivo  
-⭐ Cumplimiento de requisitos  
-⭐ Guion para vídeo  
+### Código
+- [x] main.ino documentado
+- [x] ESP32_UTILS.hpp documentado
+- [x] ESP32_Utils_MQTT.hpp documentado
+- [x] config.h comentado
+- [x] config.json estructurado
 
 ---
 
-## 🎓 Para la Entrega
+## 🎯 Próximos Pasos Sugeridos
 
-### Documentos Obligatorios
-1. ✅ Código fuente (4 archivos .ino/.h/.hpp)
-2. ✅ README.md (documentación)
-3. ⏳ Vídeo demostración (3-5 min)
+Después de revisar la documentación:
 
-### Documentos Opcionales (pero recomendados)
-- INSTALLATION_GUIDE.md
-- EXAMPLES.md
-- PROJECT_SUMMARY.md
-- JSON_SPECIFICATION.md
+1. **Si eres nuevo**: Comienza con [README.md](README.md)
+2. **Para instalar**: Sigue [INSTALACION.md](INSTALACION.md)
+3. **Para desarrollar**: Lee [ARQUITECTURA.md](ARQUITECTURA.md)
+4. **Para integrar**: Consulta [API_MQTT.md](API_MQTT.md)
+5. **Para entender visualmente**: Abre los [Diagramas](../drawio/)
 
 ---
 
-## 📞 Información de Contacto del Proyecto
+*Documentación creada para el proyecto PECL1 - Computación Ubicua - Universidad de Alcalá de Henares*
 
-**Proyecto:** PECL1 - Estación Meteorológica IoT  
-**Asignatura:** Computación Ubicua  
-**Universidad:** UAH - Universidad de Alcalá de Henares  
-**Fecha límite:** 30 de octubre de 2025  
-**Estado:** ✅ Código completado - ⏳ Vídeo pendiente  
+**📅 Última actualización:** 13 de Octubre de 2025
 
----
-
-## 🏆 Conclusión
-
-Este índice te ha mostrado:
-- ✅ Todos los archivos del proyecto
-- ✅ Qué contiene cada documento
-- ✅ Cuándo leer cada uno
-- ✅ Rutas de aprendizaje recomendadas
-- ✅ Búsqueda rápida de temas
-
-**¡Todo está documentado y listo para usar!** 🎉
-
----
-
-**Índice de Documentación - Versión 1.0**  
-*Proyecto PECL1 - UAH - 10/10/2025*

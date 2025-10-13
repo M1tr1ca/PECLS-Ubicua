@@ -17,12 +17,10 @@
  * - BME280: Temperatura, Humedad y Presión Atmosférica (3 en 1)
  * - MQ-135: Calidad del aire (CO2, NH3, NOx, alcohol, benceno, humo)
  * 
- * Actuadores implementados (3):
- * - LED RGB: Indicador visual de estado
- * - Ventilador: Control de temperatura
- * - Calefactor: Control de temperatura
+ * Actuadores implementados (1):
+ * - LED Rojo: Indicador visual de alertas (temperatura alta, CAQI peligroso, humedad alta)
  * 
- * Total: 5 componentes (2 sensores + 3 actuadores)
+ * Total: 3 componentes (2 sensores + 1 actuador)
  * =====================================================
  */
 
@@ -30,7 +28,7 @@
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 #include <Wire.h>
-#include <Adafruit_BME280.h>
+#include <Adafruit_BME280.h>// Biblioteca para BME280
 #include "config.h"
 #include "ESP32_UTILS.hpp"
 #include "ESP32_Utils_MQTT.hpp"
@@ -51,17 +49,11 @@ int messageCount = 0;
 float temperature = 0.0;       // Temperatura BME280
 float humidity = 0.0;          // Humedad BME280
 float pressure = 0.0;          // Presión BME280
-int airQuality = 0;            // AQI del MQ-135
-int uvIndex = 0;               // Índice UV (simulado/opcional)
-float windSpeed = 0.0;         // Velocidad del viento (simulado)
-int windDirection = 0;         // Dirección del viento (simulado)
+int airQuality = 0;            // CAQI del MQ-135
 
 // Estados de sensores
 bool bme_available = false;
-
-// Estados de actuadores
-bool fanActive = false;
-bool heaterActive = false;
+bool mq135_available = false;
 
 // ============================================
 // FUNCIONES DE CONFIGURACIÓN
@@ -73,23 +65,16 @@ bool heaterActive = false;
 void InitPins() {
     Serial.println("Configurando pines...");
     
-    // Pines de actuadores como salida
+    // Pines de actuadores como salida, rojo si la temperatura o calidad del aire es alta
     pinMode(LED_RED_PIN, OUTPUT);
-    pinMode(LED_GREEN_PIN, OUTPUT);
-    pinMode(LED_BLUE_PIN, OUTPUT);
-    pinMode(FAN_PIN, OUTPUT);
-    pinMode(HEATER_PIN, OUTPUT);
     
-    // Pines de sensores analógicos como entrada
-    pinMode(UV_SENSOR_PIN, INPUT);
-    pinMode(WIND_SPEED_PIN, INPUT);
-    pinMode(WIND_DIR_PIN, INPUT);
-    pinMode(AIR_QUALITY_PIN, INPUT);
+    // Pines de sensores analógicos como entrada, lo hacemos en InitSensors()
+    //pinMode(MQ135_PIN, INPUT);
+
+    //BME280: Usa I2C (no necesita pinMode, se configura con Wire.begin())
     
-    // Estado inicial: apagado
-    digitalWrite(FAN_PIN, LOW);
-    digitalWrite(HEATER_PIN, LOW);
-    SetLED(0, 0, 0);
+    // Estado inicial: LED apagado
+    digitalWrite(LED_RED_PIN, LOW);
     
     Serial.println("✓ Pines configurados");
 }
@@ -104,37 +89,46 @@ void InitSensors() {
     Wire.begin(BME_SDA, BME_SCL);
     delay(100);
     
+    //BME_SDA y BME_SCL son los pines GPIO que se han definido en config.h para conectar el sensor
+
     // Inicializar BME280
     if (bme.begin(BME280_ADDRESS)) {
         Serial.println("✓ BME280 inicializado correctamente");
-        bme.setSampling(Adafruit_BME280::MODE_NORMAL,
-                        Adafruit_BME280::SAMPLING_X2,  // Temperatura
-                        Adafruit_BME280::SAMPLING_X16, // Presión
-                        Adafruit_BME280::SAMPLING_X1,  // Humedad
-                        Adafruit_BME280::FILTER_X16,
-                        Adafruit_BME280::STANDBY_MS_500);
+        bme.setSampling(Adafruit_BME280::MODE_NORMAL,  //El sensor toma mediciones continuamente
+                        Adafruit_BME280::SAMPLING_X2,  // Temperatura 2 veces por medición y la promedia
+                        Adafruit_BME280::SAMPLING_X16, // Presión 16 veces por medición y la promedia
+                        Adafruit_BME280::SAMPLING_X1,  // Humedad 1 vez por medición
+                        Adafruit_BME280::FILTER_X16,   //Filtro digital que suaviza las lecturas y elimina ruido
+                        Adafruit_BME280::STANDBY_MS_500);// Tiempo de espera entre mediciones 500ms
         bme_available = true;
     } else {
         Serial.println("⚠ BME280 no encontrado. Verifica las conexiones.");
-        Serial.println("⚠ Usando valores simulados.");
+        //Serial.println("⚠ Usando valores simulados.");
         bme_available = false;
     }
     
     // Configurar pines analógicos para MQ-135
     pinMode(MQ135_PIN, INPUT);
-    pinMode(UV_SENSOR_PIN, INPUT);
-    Serial.println("✓ Sensor MQ-135 configurado");
+    
+    // Verificar que el sensor MQ-135 responde
+    int testRead = analogRead(MQ135_PIN);
+    if (testRead > 0 && testRead < 4095) {
+        mq135_available = true;
+        Serial.println("✓ Sensor MQ-135 configurado y disponible");
+    } else {
+        mq135_available = false;
+        Serial.println("⚠ MQ-135: Señal inusual. Verifica las conexiones.");
+        //Serial.println("⚠ Usando valores simulados para calidad del aire.");
+    }
     
     Serial.println("✓ Inicialización de sensores completada");
 }
 
 /**
- * Control del LED RGB
+ * Control del LED Rojo
  */
-void SetLED(int r, int g, int b) {
-    analogWrite(LED_RED_PIN, r);
-    analogWrite(LED_GREEN_PIN, g);
-    analogWrite(LED_BLUE_PIN, b);
+void SetLED(bool state) {
+    digitalWrite(LED_RED_PIN, state ? HIGH : LOW);
 }
 
 /**
@@ -142,13 +136,9 @@ void SetLED(int r, int g, int b) {
  */
 void IndicateStatus(String status) {
     if (status == "ok") {
-        SetLED(0, 255, 0);  // Verde
-    } else if (status == "warning") {
-        SetLED(255, 165, 0);  // Naranja
-    } else if (status == "error") {
-        SetLED(255, 0, 0);  // Rojo
-    } else if (status == "connecting") {
-        SetLED(0, 0, 255);  // Azul
+        digitalWrite(LED_RED_PIN, LOW);  // Apagado: todo bien
+    } else if (status == "warning" || status == "error" || status == "connecting") {
+        digitalWrite(LED_RED_PIN, HIGH);  // Encendido: alerta o conectando
     }
 }
 
@@ -167,8 +157,9 @@ float ReadTemperature() {
         }
     }
     
-    // Si no hay sensor o lectura inválida, simular valor
-    return 20.0 + random(-5, 10) / 10.0;
+    // Si no hay sensor o lectura inválida, retornar error
+    Serial.println("⚠ Error: BME280 no disponible o lectura de temperatura inválida");
+    return -999.0;  // Valor de error
 }
 
 /**
@@ -182,8 +173,9 @@ float ReadHumidity() {
         }
     }
     
-    // Si no hay sensor o lectura inválida, simular valor
-    return 60.0 + random(-10, 10);
+    // Si no hay sensor o lectura inválida, retornar error
+    Serial.println("⚠ Error: BME280 no disponible o lectura de humedad inválida");
+    return -1.0;  // Valor de error
 }
 
 /**
@@ -197,77 +189,59 @@ float ReadPressure() {
         }
     }
     
-    // Si no hay sensor o lectura inválida, simular valor
-    return 1013.25 + random(-5, 5);
+    // Si no hay sensor o lectura inválida, retornar error
+    Serial.println("⚠ Error: BME280 no disponible o lectura de presión inválida");
+    return -1.0;  // Valor de error
 }
 
 /**
- * Lee el sensor MQ-135 y convierte a AQI
+ * Lee el sensor MQ-135 y convierte a CAQI
  * Formula basada en la hoja de datos del MQ-135
  */
 int ReadAirQuality() {
-    // Leer valor analógico (0-4095 en ESP32)
-    int sensorValue = analogRead(MQ135_PIN);
-    
-    // Convertir a voltaje (0-3.3V)
-    float voltage = (sensorValue / 4095.0) * 3.3;
-    
-    // Calcular resistencia del sensor
-    // Rs = [(Vc x RL) / Vout] - RL
-    float Rs = ((3.3 * MQ135_RL) / voltage) - MQ135_RL;
-    
-    // Calcular ratio Rs/Ro
-    float ratio = Rs / MQ135_RO_CLEAN_AIR;
-    
-    // Convertir a concentración de CO2 en ppm (fórmula aproximada)
-    // ppm = 116.6020682 * pow(ratio, -2.769034857)
-    float ppm = 116.6020682 * pow(ratio, -2.769034857);
-    
-    // Convertir ppm a AQI (Air Quality Index)
-    // Basado en estándares EPA de USA
-    int aqi;
-    if (ppm < 400) {
-        aqi = map(ppm, 0, 400, 0, 50);        // Buena (0-50)
-    } else if (ppm < 1000) {
-        aqi = map(ppm, 400, 1000, 51, 100);   // Moderada (51-100)
-    } else if (ppm < 2000) {
-        aqi = map(ppm, 1000, 2000, 101, 150); // Dañina para sensibles (101-150)
-    } else if (ppm < 5000) {
-        aqi = map(ppm, 2000, 5000, 151, 200); // Dañina (151-200)
-    } else {
-        aqi = map(ppm, 5000, 10000, 201, 300); // Muy dañina (201-300)
+    if (mq135_available) {
+        // Leer valor analógico (0-4095 en ESP32)
+        int sensorValue = analogRead(MQ135_PIN);
+        
+        // Verificar lectura válida
+        if (sensorValue > 0 && sensorValue < 4095) {
+            // Convertir a voltaje (0-3.3V)
+            float voltage = (sensorValue / 4095.0) * 3.3;
+            
+            // Calcular resistencia del sensor
+            // Rs = [(Vc x RL) / Vout] - RL
+            float Rs = ((3.3 * MQ135_RL) / voltage) - MQ135_RL;
+            
+            // Calcular ratio Rs/Ro
+            float ratio = Rs / MQ135_RO_CLEAN_AIR;
+            
+            // Convertir a concentración de CO2 en ppm (fórmula aproximada)
+            // ppm = 116.6020682 * pow(ratio, -2.769034857)
+            float ppm = 116.6020682 * pow(ratio, -2.769034857);
+            
+            // Convertir ppm a CAQI (Common Air Quality Index)
+            // Basado en normativa europea
+            int caqi;
+            if (ppm <= 600) {
+                // map convierte el valor de CO2 (entre 0-600 ppm) a la escala CAQI (0-25)
+                caqi = map(ppm, 0, 600, 0, 25);           // Muy bajo (0-25)
+            } else if (ppm <= 800) {
+                caqi = map(ppm, 600, 800, 26, 50);        // Bajo (26-50)
+            } else if (ppm <= 1000) {
+                caqi = map(ppm, 800, 1000, 51, 75);       // Medio (51-75)
+            } else if (ppm <= 1500) {
+                caqi = map(ppm, 1000, 1500, 76, 100);     // Alto (76-100)
+            } else {
+                caqi = map(ppm, 1500, 5000, 101, 150);    // Muy alto (>100)
+            }
+            
+            return constrain(caqi, 0, 150);
+        }
     }
     
-    return constrain(aqi, 0, 500);
-}
-
-/**
- * Calcula el índice UV desde el sensor analógico (opcional)
- */
-int ReadUVIndex() {
-    int sensorValue = analogRead(UV_SENSOR_PIN);
-    // Conversión aproximada (depende del sensor específico)
-    int uvIndex = map(sensorValue, 0, 4095, 0, 11);
-    return constrain(uvIndex, 0, 11);
-}
-
-/**
- * Lee la velocidad del viento (simulado para demostración)
- */
-float ReadWindSpeed() {
-    // En un sistema real, aquí irían las lecturas del anemómetro
-    // Por ahora, generamos datos simulados realistas
-    return random(0, 30) / 10.0;  // 0-3.0 km/h (viento ligero)
-}
-
-/**
- * Lee la dirección del viento (simulado para demostración)
- */
-int ReadWindDirection() {
-    // En un sistema real, aquí irían las lecturas de la veleta
-    // Por ahora, generamos datos simulados
-    int directions[] = {0, 45, 90, 135, 180, 225, 270, 315};
-    return directions[random(0, 8)];
+    // Si no hay sensor o lectura inválida, retornar error
+    Serial.println("⚠ Error: MQ-135 no disponible o lectura inválida");
+    return -1;  // Valor de error
 }
 
 /**
@@ -287,20 +261,11 @@ void ReadAllSensors() {
     // Leer sensor MQ-135
     airQuality = ReadAirQuality();
     
-    // Leer sensor UV (opcional)
-    uvIndex = ReadUVIndex();
-    
-    // Leer viento (simulado)
-    windSpeed = ReadWindSpeed();
-    windDirection = ReadWindDirection();
-    
     Serial.println("Lecturas de sensores:");
     Serial.printf("  🌡️  Temperatura: %.1f°C\n", temperature);
     Serial.printf("  💧 Humedad: %.1f%%\n", humidity);
     Serial.printf("  📏 Presión: %.1f hPa\n", pressure);
-    Serial.printf("  🏭 Calidad del Aire (AQI): %d\n", airQuality);
-    Serial.printf("  ☀️  Índice UV: %d\n", uvIndex);
-    Serial.printf("  💨 Viento: %.1f km/h @ %d°\n", windSpeed, windDirection);
+    Serial.printf("  🏭 Calidad del Aire (CAQI): %d\n", airQuality);
     Serial.println("===========================================");
 }
 
@@ -312,37 +277,11 @@ void ReadAllSensors() {
  * Controla los actuadores basándose en las lecturas
  */
 void ControlActuators() {
-    // Control del ventilador por temperatura
-    if (temperature > TEMP_FAN_THRESHOLD && !fanActive) {
-        digitalWrite(FAN_PIN, HIGH);
-        fanActive = true;
-        Serial.println("🌀 Ventilador: ACTIVADO (temp alta)");
-    } else if (temperature <= TEMP_FAN_THRESHOLD - 2 && fanActive) {
-        digitalWrite(FAN_PIN, LOW);
-        fanActive = false;
-        Serial.println("🌀 Ventilador: DESACTIVADO");
-    }
-    
-    // Control del calefactor por temperatura
-    if (temperature < TEMP_HEATER_THRESHOLD && !heaterActive) {
-        digitalWrite(HEATER_PIN, HIGH);
-        heaterActive = true;
-        Serial.println("🔥 Calefactor: ACTIVADO (temp baja)");
-    } else if (temperature >= TEMP_HEATER_THRESHOLD + 2 && heaterActive) {
-        digitalWrite(HEATER_PIN, LOW);
-        heaterActive = false;
-        Serial.println("🔥 Calefactor: DESACTIVADO");
-    }
-    
-    // Control del LED RGB según condiciones
-    if (temperature > 35 || uvIndex > 8) {
-        IndicateStatus("warning");  // Naranja: condiciones extremas
-    } else if (airQuality > AQI_DANGEROUS) {
-        SetLED(128, 0, 128);  // Morado: mala calidad del aire
-    } else if (humidity > HUMIDITY_HIGH) {
-        SetLED(0, 100, 200);  // Azul: humedad alta
+    // Control del LED rojo según condiciones
+    if (temperature > TEMP_HIGH || airQuality > CAQI_DANGEROUS || humidity > HUMIDITY_HIGH) {
+        digitalWrite(LED_RED_PIN, HIGH);  // Encendido: condiciones anormales
     } else {
-        IndicateStatus("ok");  // Verde: todo normal
+        digitalWrite(LED_RED_PIN, LOW);   // Apagado: todo normal
     }
 }
 
@@ -385,14 +324,7 @@ String CreateJSONMessage() {
     data["temperature_celsius"] = round(temperature * 10) / 10.0;
     data["humidity_percent"] = round(humidity * 10) / 10.0;
     data["air_quality_index"] = airQuality;
-    data["wind_speed_kmh"] = round(windSpeed * 10) / 10.0;
-    data["wind_direction_degrees"] = windDirection;
     data["atmospheric_pressure_hpa"] = round(pressure * 10) / 10.0;
-    data["uv_index"] = uvIndex;
-    
-    // Información adicional de actuadores (extra)
-    data["fan_active"] = fanActive;
-    data["heater_active"] = heaterActive;
     
     // Serializar a String
     String jsonString;

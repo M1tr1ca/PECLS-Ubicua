@@ -17,7 +17,7 @@ void ConnectWifi_STA(bool useStaticIP = false) {
     Serial.println("Conectando a WiFi...");
     Serial.println("===========================================");
     
-    WiFi.mode(WIFI_STA);
+    WiFi.mode(WIFI_STA);// Set station mode para conectarse a un router
     WiFi.setHostname(hostname);
     
     if (useStaticIP) {
@@ -55,6 +55,8 @@ void ConnectWifi_STA(bool useStaticIP = false) {
  * Conecta el ESP32 como Punto de Acceso (AP)
  * @param useStaticIP: true para configurar IP del AP
  */
+
+// [ ] Mierar si tiene que ser un AP o se conecta por WIFI
 void ConnectWifi_AP(bool useStaticIP = false) {
     Serial.println("");
     Serial.println("===========================================");

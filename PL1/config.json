@@ -24,22 +24,17 @@
     "temperature_range": [-10, 40],
     "humidity_range": [20, 90],
     "pressure_range": [980, 1050],
-    "wind_speed_max": 50
+    "air_quality_caqi_range": [0, 150]
   },
   "actuators": {
-    "led_rgb": {
-      "enabled": true,
-      "auto_mode": true
-    },
-    "cooling_fan": {
+    "led_alert": {
       "enabled": true,
       "auto_mode": true,
-      "temperature_threshold": 35
-    },
-    "heater": {
-      "enabled": true,
-      "auto_mode": true,
-      "temperature_threshold": 5
+      "triggers": {
+        "temperature_high": 35,
+        "humidity_high": 80,
+        "caqi_dangerous": 75
+      }
     }
   }
 }
