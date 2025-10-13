@@ -8,7 +8,7 @@
 // ============================================
 
 /**
- * Conecta el ESP32 a una red WiFi en modo Estación (STA)
+ * Conecta el ESP32 a una red WiFi en modo Estación (STA).
  * @param useStaticIP: true para usar IP estática, false para DHCP
  */
 void ConnectWifi_STA(bool useStaticIP = false) {
