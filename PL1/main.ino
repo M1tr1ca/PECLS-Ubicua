@@ -28,6 +28,7 @@
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 #include  <Wire.h> //Incluye protocolo de comunicación I^2C, el sensor transmitirá los datos en 1's y 0's (SDA), sincronizados con un reloj (SCL)
+//Wire.h establece por defecto el pin 21 para SDA y el pin 22 para SCL
 
 #include <Adafruit_BME280.h> //Librería que facilita el manejo del sensor (inicializa el sensor, lee datos, fórmulas de calibración...)
 #include "config.h"
@@ -84,12 +85,7 @@ void InitPins() {
  */
 void InitSensors() {
     Serial.println("Inicializando sensores...");
-    
-    // Inicializar comunicación I2C
-    Wire.begin(BME_SDA, BME_SCL);
-    delay(100);
-    
-    //BME_SDA y BME_SCL son los pines GPIO que se han definido en config.h para conectar el sensor
+ 
 
     // Inicializar BME280
     if(!sensor_bme280.begin(0x76)){ //Trata de inicializar el sensor en esa dirección de memoria que es la estándar para ese sensor en el I^2C
@@ -159,7 +155,7 @@ float ReadHumidity() {
  * Lee la presión atmosférica del BME280
  */
 float ReadPressure() {
-    pressure = sensor_bme280.readPressure() / 100.0F;
+    pressure = sensor_bme280.readPressure() / 100.0; //Por defecto se recibe en Pa, se divide entre 100 para convertirlo en hPa (medida típica)
     return pressure;//Si el sensor se desconectase, mandaría un valor NaN, o similar, hay que comprobarlo cuando recibe este valor
 }
 float ReadAltitude(){
