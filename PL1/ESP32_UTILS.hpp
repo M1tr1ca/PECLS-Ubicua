@@ -56,7 +56,7 @@ void ConnectWifi_STA(bool useStaticIP = false) {
  * @param useStaticIP: true para configurar IP del AP
  */
 
-// [ ] Mierar si tiene que ser un AP o se conecta por WIFI
+// [ ] Mirar si tiene que ser un AP o se conecta por WIFI
 void ConnectWifi_AP(bool useStaticIP = false) {
     Serial.println("");
     Serial.println("===========================================");
