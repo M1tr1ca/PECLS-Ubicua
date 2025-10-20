@@ -24,19 +24,18 @@
  * =====================================================
  */
 
-#include <WiFi.h>
+#include <WiFi.h>   
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
-#include <Wire.h>
-#include <Adafruit_BME280.h>// Biblioteca para BME280
+#include  <Wire.h> //Incluye protocolo de comunicación I^2C, el sensor transmitirá los datos en 1's y 0's (SDA), sincronizados con un reloj (SCL)
+
+#include <Adafruit_BME280.h> //Librería que facilita el manejo del sensor (inicializa el sensor, lee datos, fórmulas de calibración...)
 #include "config.h"
 #include "ESP32_UTILS.hpp"
 #include "ESP32_Utils_MQTT.hpp"
 
-// ============================================
-// OBJETOS DE SENSORES
-// ============================================
-Adafruit_BME280 bme;  // BME280 sensor (dirección 0x76)
+
+Adafruit_BME280 sensor_bme280; //Creamos una instancia del objeto para el sensor
 
 // ============================================
 // VARIABLES GLOBALES
@@ -49,6 +48,7 @@ int messageCount = 0;
 float temperature = 0.0;       // Temperatura BME280
 float humidity = 0.0;          // Humedad BME280
 float pressure = 0.0;          // Presión BME280
+float altitude = 0.0;          // Calcula la altitud a partir de la presión
 int airQuality = 0;            // CAQI del MQ-135
 
 // Estados de sensores
@@ -92,20 +92,12 @@ void InitSensors() {
     //BME_SDA y BME_SCL son los pines GPIO que se han definido en config.h para conectar el sensor
 
     // Inicializar BME280
-    if (bme.begin(BME280_ADDRESS)) {
-        Serial.println("✓ BME280 inicializado correctamente");
-        bme.setSampling(Adafruit_BME280::MODE_NORMAL,  //El sensor toma mediciones continuamente
-                        Adafruit_BME280::SAMPLING_X2,  // Temperatura 2 veces por medición y la promedia
-                        Adafruit_BME280::SAMPLING_X16, // Presión 16 veces por medición y la promedia
-                        Adafruit_BME280::SAMPLING_X1,  // Humedad 1 vez por medición
-                        Adafruit_BME280::FILTER_X16,   //Filtro digital que suaviza las lecturas y elimina ruido
-                        Adafruit_BME280::STANDBY_MS_500);// Tiempo de espera entre mediciones 500ms
-        bme_available = true;
-    } else {
-        Serial.println("⚠ BME280 no encontrado. Verifica las conexiones.");
-        //Serial.println("⚠ Usando valores simulados.");
-        bme_available = false;
+    if(!sensor_bme280.begin(0x76)){ //Trata de inicializar el sensor en esa dirección de memoria que es la estándar para ese sensor en el I^2C
+    Serial.println("No se encontró el sensor BME280. Revisar las conexiones.");
+    while (1);
     }
+    bme_available = true;
+    Serial.println("Sensor BME280 inicializado correctamente");
     
     // Configurar pines analógicos para MQ-135
     pinMode(MQ135_PIN, INPUT);
@@ -150,48 +142,29 @@ void IndicateStatus(String status) {
  * Lee la temperatura del BME280
  */
 float ReadTemperature() {
-    if (bme_available) {
-        float temp = bme.readTemperature();
-        if (!isnan(temp) && temp > -40 && temp < 85) {
-            return temp;
-        }
-    }
-    
-    // Si no hay sensor o lectura inválida, retornar error
-    Serial.println("⚠ Error: BME280 no disponible o lectura de temperatura inválida");
-    return -999.0;  // Valor de error
+    temperature = sensor_bme280.readTemperature();
+    return temperature; //Si el sensor se desconectase, mandaría un valor NaN, o similar, hay que comprobarlo cuando recibe este valor
 }
 
 /**
  * Lee la humedad del BME280
  */
 float ReadHumidity() {
-    if (bme_available) {
-        float hum = bme.readHumidity();
-        if (!isnan(hum) && hum >= 0 && hum <= 100) {
-            return hum;
-        }
-    }
-    
-    // Si no hay sensor o lectura inválida, retornar error
-    Serial.println("⚠ Error: BME280 no disponible o lectura de humedad inválida");
-    return -1.0;  // Valor de error
+    humidity = sensor_bme280.readHumidity(); 
+    return humidity;//Si el sensor se desconectase, mandaría un valor NaN, o similar, hay que comprobarlo cuando recibe este valor
+
 }
 
 /**
  * Lee la presión atmosférica del BME280
  */
 float ReadPressure() {
-    if (bme_available) {
-        float press = bme.readPressure() / 100.0F;  // Convertir a hPa
-        if (!isnan(press) && press > 800 && press < 1200) {
-            return press;
-        }
-    }
-    
-    // Si no hay sensor o lectura inválida, retornar error
-    Serial.println("⚠ Error: BME280 no disponible o lectura de presión inválida");
-    return -1.0;  // Valor de error
+    pressure = sensor_bme280.readPressure() / 100.0F;
+    return pressure;//Si el sensor se desconectase, mandaría un valor NaN, o similar, hay que comprobarlo cuando recibe este valor
+}
+float ReadAltitude(){
+    altitude = sensor_bme280.readAltitude(1013.25); // 1013.25 es la presión barométrica a nivel del mar por defecto
+    return altitude;//Si el sensor se desconectase, mandaría un valor NaN, o similar, hay que comprobarlo cuando recibe este valor
 }
 
 /**
@@ -257,14 +230,16 @@ void ReadAllSensors() {
     temperature = ReadTemperature();
     humidity = ReadHumidity();
     pressure = ReadPressure();
+    altitude = ReadAltitude();
     
     // Leer sensor MQ-135
     airQuality = ReadAirQuality();
     
     Serial.println("Lecturas de sensores:");
-    Serial.printf("  🌡️  Temperatura: %.1f°C\n", temperature);
+    Serial.printf("  🌡️ Temperatura: %.1f°C\n", temperature);
     Serial.printf("  💧 Humedad: %.1f%%\n", humidity);
     Serial.printf("  📏 Presión: %.1f hPa\n", pressure);
+    Serial.printf("      Altitud: %.1f m\n", altitude);
     Serial.printf("  🏭 Calidad del Aire (CAQI): %d\n", airQuality);
     Serial.println("===========================================");
 }
