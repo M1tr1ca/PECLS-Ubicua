@@ -28,13 +28,13 @@
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 #include  <Wire.h> //Incluye protocolo de comunicación I^2C, el sensor transmitirá los datos en 1's y 0's (SDA), sincronizados con un reloj (SCL)
-//Wire.h establece por defecto el pin 21 para SDA y el pin 22 para SCL
-
+                    //Wire.h establece por defecto el pin 21 para SDA y el pin 22 para SCL
 #include <Adafruit_BME280.h> //Librería que facilita el manejo del sensor (inicializa el sensor, lee datos, fórmulas de calibración...)
-//FIXME: Descomentar en algún momento 
-/**
+
 #include "config.h"
 #include "ESP32_UTILS.hpp"
+//FIXME: Descomentar en algún momento 
+/**
 #include "ESP32_Utils_MQTT.hpp"
 */
 #include <MQUnifiedsensor.h>
@@ -92,8 +92,7 @@ void InitSensors() {
   
     // Precalentamiento recomendado
     Serial.println("Precalentando sensor MQ-135 (espera 2-3 minutos mínimo)...");
-    delay(30000); // 30 segundos
-  // FIXME: esto lo puedes quitar si quires
+    delay(30000); // 30 segundos de espera inicial
   
   Serial.print("Calibrando sensor MQ-135 en aire exterior");
   float calcR0 = 0;
@@ -189,47 +188,24 @@ void ReadAllSensors() {
 }
 
 // ============================================
-// CONTROL DE ACTUADORES
-// ============================================
-
-/**
- * Controla los actuadores basándose en las lecturas
- */
-//FIXME: Valores no definidos, como HUMIDITY_HIGH...
-/** 
- * 
- 
-void ControlActuators() {
-    // Control del LED rojo según condiciones
-    if (temperature > TEMP_HIGH || airQuality > CAQI_DANGEROUS || humidity > HUMIDITY_HIGH) {
-        digitalWrite(LED_RED_PIN, HIGH);  // Encendido: condiciones anormales
-    } else {
-        digitalWrite(LED_RED_PIN, LOW);   // Apagado: todo normal
-    }
-}
-    */
-
-// ============================================
 // CREACIÓN Y ENVÍO DE MENSAJES JSON
 // ============================================
-// FIXME: Valores no definidos como SENSOR_ID, SENSOR_TYPE...
 /** 
  * Crea el mensaje JSON según el formato especificado
  */
-
- 
 String CreateJSONMessage() {
     DynamicJsonDocument doc(1024);
     
-    // Información básica de la estación
-    doc["sensor_id"] = "ST_1617";
-    doc["sensor_type"] = "Estación meteorológica";
-    doc["street_id"] = "Calle Pepe Hillo";
-    //FIXME: Cuando sepamos cómo conectarse al WiFi, coger hora a través de la red
-    // Timestamp (formato ISO 8601)
+    // Información básica de la estación (usando valores de config.h)
+    doc["sensor_id"] = SENSOR_ID;
+    doc["sensor_type"] = SENSOR_TYPE;
+    doc["street_id"] = STREET_ID;
+    
+    //FIXME: Cuando sepamos cómo conectarse al WiFi, coger hora a través de la red (NTP)
+    // Timestamp (formato ISO 8601 con Z al final)
     char timestamp[30];
     unsigned long currentTime = millis();
-    sprintf(timestamp, "2025-10-%02d T%02d:%02d:%02d.%03lu",
+    sprintf(timestamp, "2025-10-%02dT%02d:%02d:%02d.%03luZ",
             (int)(currentTime / 86400000) % 30 + 1,  // Día
             (int)(currentTime / 3600000) % 24,        // Hora
             (int)(currentTime / 60000) % 60,          // Minuto
@@ -237,26 +213,29 @@ String CreateJSONMessage() {
             currentTime % 1000);                       // Milisegundo
     doc["timestamp"] = timestamp;
     
-    // Ubicación
+    // Ubicación (valores únicos, no rangos)
     JsonObject location = doc.createNestedObject("location");
-    location["latitude_start"] = "40,4513367";
-    location["latitude_end"] = "40,4515721";
-    location["longitude_start"] = "3,6391751";
-    location["longitude_end"] = "-3,6409307";
-    location["altitude_meters"] = ReadAltitude();
-    location["district"] = "Hortaleza";
-    location["neighborhood"] = "Hortaleza";
+    location["latitude"] = LATITUDE;
+    location["longitude"] = LONGITUDE;
+    location["altitude_meters"] = round(ReadAltitude() * 10) / 10.0;
+    location["district"] = DISTRICT;
+    location["neighborhood"] = NEIGHBORHOOD;
     
     // Datos meteorológicos
     JsonObject data = doc.createNestedObject("data");
     data["temperature_celsius"] = round(ReadTemperature() * 10) / 10.0;
     data["humidity_percent"] = round(ReadHumidity() * 10) / 10.0;
-    data["air_quality_index"] = round(ReadAirQuality() * 10) / 10.0;;
+    data["air_quality_index"] = round(ReadAirQuality() * 10) / 10.0;
     data["atmospheric_pressure_hpa"] = round(ReadPressure() * 10) / 10.0;
+    
+    // Campos opcionales (sin sensor físico, valores por defecto)
+    data["wind_speed_kmh"] = 0.0;           // Sin sensor de viento
+    data["wind_direction_degrees"] = 0;     // Sin sensor de viento
+    data["uv_index"] = 0;                   // Sin sensor UV
     
     // Serializar a String
     String jsonString;
-    serializeJson(doc, jsonString); //Lo convierte a String
+    serializeJson(doc, jsonString);
     
     return jsonString;
 }
@@ -306,18 +285,13 @@ void setup() {
     Serial.println("");
     
     // Conectar a WiFi
-    //WiFi.onEvent(WiFiEvent);
-    //ConnectWifi_STA(false);
+    ConnectWifi_STA(false);
 
     InitSensors();
     
     // Inicializar MQTT
     //InitMQTT();
     //ConnectMQTT();
-    
-    // Inicializar sensores
-    
-    //ControlActuators();
     
     
     Serial.println("");
@@ -327,22 +301,17 @@ void setup() {
 
 void loop() {
     // Mantener conexiones activas
-    //CheckWiFiConnection();
+    CheckWiFiConnection();
     //HandleMQTT();
-    ReadAllSensors();
-    // Leer sensores cada READING_INTERVAL 
-    //FIXME: Valores no definidos, además, ¿por qué no usar un delay y ya?
-    /**
-     *  
-     
-    if (millis() - lastReadingTime >= READING_INTERVAL) {
+    
+    // Leer sensores cada 5 segundos (sin bloquear)
+    // [x] : ponemos lo de millis ya que el delay congela todo el programa, inlcuido la parte de wifi y mqtt
+    if (millis() - lastReadingTime >= 5000) {  // 5000ms = 5 segundos
         ReadAllSensors();
-        ControlActuators();
         //PublishData();
         lastReadingTime = millis();
     }
-        */
     
-    // Pequeña pausa para no saturar el loop
-    delay(5000); // Muestra datos cada 5 segundos
+    // Pequeña pausa para no saturar el loop (no bloqueante)
+    delay(100);  // Solo 100ms
 }

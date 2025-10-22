@@ -20,11 +20,11 @@ void ConnectWifi_STA(bool useStaticIP = false) {
     WiFi.mode(WIFI_STA);// Set station mode para conectarse a un router
     WiFi.setHostname(hostname);
     
+    WiFi.begin(ssid, password);
+
     if (useStaticIP) {
         WiFi.config(ip, gateway, subnet);
     }
-    
-    WiFi.begin(ssid, password);
     
     int attempts = 0;
     while (WiFi.status() != WL_CONNECTED && attempts < 50) {
@@ -56,7 +56,7 @@ void ConnectWifi_STA(bool useStaticIP = false) {
  * @param useStaticIP: true para configurar IP del AP
  */
 
-// [ ] Mirar si tiene que ser un AP o se conecta por WIFI
+// [x] Mirar si tiene que ser un AP o se conecta por WIFI
 void ConnectWifi_AP(bool useStaticIP = false) {
     Serial.println("");
     Serial.println("===========================================");
@@ -93,26 +93,5 @@ void CheckWiFiConnection() {
     }
 }
 
-/**
- * Manejador de eventos WiFi
- */
-void WiFiEvent(WiFiEvent_t event) {
-    switch(event) {
-        case SYSTEM_EVENT_STA_GOT_IP:
-            Serial.println("✓ IP obtenida");
-            break;
-        case SYSTEM_EVENT_STA_DISCONNECTED:
-            Serial.println("⚠ WiFi desconectado");
-            break;
-        case SYSTEM_EVENT_STA_START:
-            Serial.println("→ WiFi iniciado");
-            break;
-        case SYSTEM_EVENT_STA_CONNECTED:
-            Serial.println("✓ WiFi conectado");
-            break;
-        default:
-            break;
-    }
-}
 
 #endif

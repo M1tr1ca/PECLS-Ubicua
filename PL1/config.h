@@ -13,7 +13,7 @@ IPAddress subnet(255, 255, 255, 0);
 // ============================================
 const char* MQTT_BROKER_ADRESS = "test.mosquitto.org";  // Broker MQTT público
 const uint16_t MQTT_PORT = 1883;
-const char* MQTT_CLIENT_NAME = "ESP32_WS_ALC_01";
+const char* MQTT_CLIENT_NAME = "ST_1617";
 
 // Tópicos MQTT
 const char* TOPIC_PUBLISH = "uah/alcala/weather/data";
@@ -22,16 +22,22 @@ const char* TOPIC_SUBSCRIBE = "uah/alcala/weather/control";
 // ============================================
 // IDENTIFICACIÓN DE LA ESTACIÓN
 // ============================================
-const char* SENSOR_ID = "WS_ALC_01";
-const char* SENSOR_TYPE = "weather";
-const char* STREET_ID = "ST_ALC_001";
+const char* SENSOR_ID = "ST_1617";
+const char* SENSOR_TYPE = "Estación metereológica IoT";
+const char* STREET_ID = "ST_1617";
+const char* STREET_NAME = "Calle Pepe Hillo";
 
-// Ubicación: Alcalá de Henares
-const float LATITUDE = 40.4823;
-const float LONGITUDE = -3.3618;
-const float ALTITUDE = 588.0;
-const char* DISTRICT = "Alcalá de Henares";
-const char* NEIGHBORHOOD = "Centro";
+// Ubicación: Hortaleza, Madrid
+const float LATITUDE = 40.4513367;
+const float LONGITUDE = -3.6409307;
+const float LATITUDE_END = 40.4515721;
+const float LENGTH_METERS = 150.84;
+const char* DISTRICT = "Hortaleza";
+const char* NEIGHBORHOOD = "Hortaleza";
+const char* POSTAL_CODE = "28033";
+const char* SURFACE_TYPE = "asphalt";
+const int MAX_SPEED_KMH = 30;
+const bool IS_BIDIRECTIONAL = true;
 
 // ============================================
 // CONFIGURACIÓN DE PINES - SENSORES
