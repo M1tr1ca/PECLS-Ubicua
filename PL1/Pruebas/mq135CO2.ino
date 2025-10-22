@@ -12,41 +12,7 @@ MQUnifiedsensor MQ135(placa, Voltage_Resolution, ADC_Bit_Resolution, pin, type);
 void setup() {
   Serial.begin(115200);
   
-  MQ135.setRegressionMethod(1); // _PPM = a*ratio^b
-  MQ135.setA(110.47);   // Coeficiente A para CO₂
-  MQ135.setB(-2.862);   // Coeficiente B para CO₂
-  
-  MQ135.init();
-  
-  // Precalentamiento recomendado
-  Serial.println("Precalentando sensor MQ-135 (espera 2-3 minutos mínimo)...");
-  delay(120000); // 2 minutos mínimo
-  // FIXME: esto lo puedes quitar si quires
-  // Calibración en aire limpio exterior (400 ppm CO₂)
-  Serial.print("Calibrando sensor MQ-135 en aire exterior");
-  float calcR0 = 0;
-  for(int i = 1; i <= 10; i++) {
-    MQ135.update();
-    calcR0 += MQ135.calibrate(RatioMQ135CleanAir);
-    Serial.print(".");
-    delay(500); // Pausa entre lecturas
-  }
-  MQ135.setR0(calcR0/10);
-  
-  // Verificar problemas de conexión
-  if (isinf(calcR0)) {
-    Serial.println("\nWarning: Connection issue found, R0 is infinite (Open circuit detected) please check your wiring and supply");
-    while (1);
-  }
-  if (calcR0 == 0) {
-    Serial.println("\nWarning: Connection issue found, R0 is zero (Analog pin with short circuit to ground) please check your wiring and supply");
-    while (1);
-  }
-  
-  Serial.println("\nCalibración completa!");
-  Serial.print("R0 calculado: ");
-  Serial.println(calcR0);
-  Serial.println("-----------------------------------");
+
   Serial.println("Leyendo niveles de CO₂...\n");
 }
 
