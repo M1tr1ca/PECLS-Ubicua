@@ -61,7 +61,7 @@ float temperature = 0.0;       // Temperatura BME280
 float humidity = 0.0;          // Humedad BME280
 float pressure = 0.0;          // Presión BME280
 float altitude = 0.0;          // Calcula la altitud a partir de la presión
-int airQuality = 0;            // Asumimos que el MQ-135 detecta CO_2. MQ-135 es capaz de detectar distintos tipos de gases, pero no diferencia cuál es cuál. Lo calculamos asumiendo que todo es CO_2.
+float airQuality = 0;            // Asumimos que el MQ-135 detecta CO_2. MQ-135 es capaz de detectar distintos tipos de gases, pero no diferencia cuál es cuál. Lo calculamos asumiendo que todo es CO_2.
 
 // Estados de sensores
 bool bme_available = false;
@@ -183,6 +183,9 @@ void ReadAllSensors() {
     Serial.printf("      Altitud: %.1f m\n", altitude);
     Serial.printf("  🏭 Calidad del Aire (CAQI): %.1f ppm\n", airQuality);
     Serial.println("===========================================");
+
+    Serial.println("EL JSON es el siguiente: ");
+    Serial.println(CreateJSONMessage());
 }
 
 // ============================================
@@ -213,17 +216,16 @@ void ControlActuators() {
 /** 
  * Crea el mensaje JSON según el formato especificado
  */
-/**
- * 
+
  
 String CreateJSONMessage() {
     DynamicJsonDocument doc(1024);
     
     // Información básica de la estación
-    doc["sensor_id"] = SENSOR_ID;
-    doc["sensor_type"] = SENSOR_TYPE;
-    doc["street_id"] = STREET_ID;
-    
+    doc["sensor_id"] = "ST_1617";
+    doc["sensor_type"] = "Estación meteorológica";
+    doc["street_id"] = "Calle Pepe Hillo";
+    //FIXME: Cuando sepamos cómo conectarse al WiFi, coger hora a través de la red
     // Timestamp (formato ISO 8601)
     char timestamp[30];
     unsigned long currentTime = millis();
@@ -237,26 +239,27 @@ String CreateJSONMessage() {
     
     // Ubicación
     JsonObject location = doc.createNestedObject("location");
-    location["latitude"] = LATITUDE;
-    location["longitude"] = LONGITUDE;
-    location["altitude_meters"] = ALTITUDE;
-    location["district"] = DISTRICT;
-    location["neighborhood"] = NEIGHBORHOOD;
+    location["latitude_start"] = "40,4513367";
+    location["latitude_end"] = "40,4515721";
+    location["longitude_start"] = "3,6391751";
+    location["longitude_end"] = "-3,6409307";
+    location["altitude_meters"] = ReadAltitude();
+    location["district"] = "Hortaleza";
+    location["neighborhood"] = "Hortaleza";
     
     // Datos meteorológicos
     JsonObject data = doc.createNestedObject("data");
-    data["temperature_celsius"] = round(temperature * 10) / 10.0;
-    data["humidity_percent"] = round(humidity * 10) / 10.0;
-    data["air_quality_index"] = airQuality;
-    data["atmospheric_pressure_hpa"] = round(pressure * 10) / 10.0;
+    data["temperature_celsius"] = round(ReadTemperature() * 10) / 10.0;
+    data["humidity_percent"] = round(ReadHumidity() * 10) / 10.0;
+    data["air_quality_index"] = round(ReadAirQuality() * 10) / 10.0;;
+    data["atmospheric_pressure_hpa"] = round(ReadPressure() * 10) / 10.0;
     
     // Serializar a String
     String jsonString;
-    serializeJson(doc, jsonString);
+    serializeJson(doc, jsonString); //Lo convierte a String
     
     return jsonString;
 }
-    */
 
 /**
  * Publica los datos en MQTT
