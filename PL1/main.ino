@@ -164,6 +164,7 @@ float ReadAltitude(){
  */
 
 float ReadAirQuality(){
+    MQ135.update(); // Actualiza los valores del sensor
     airQuality = MQ135.readSensor();
     return airQuality;
 }
