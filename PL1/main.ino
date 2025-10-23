@@ -33,6 +33,8 @@
 
 #include "config.h"
 #include "ESP32_UTILS.hpp"
+#include <sys/time.h>
+#include "time.h"
 //FIXME: Descomentar en algún momento 
 /**
 #include "ESP32_Utils_MQTT.hpp"
@@ -49,6 +51,10 @@
 Adafruit_BME280 sensor_bme280; //Creamos una instancia del objeto para el sensor
 MQUnifiedsensor MQ135(placa, Voltage_Resolution, ADC_Bit_Resolution, pin, type);
 
+
+
+struct tm timeinfo; //Utilizado para almacenar fecha y hora
+struct timeval tv; // Contiene el tiempo en segundos y precisión en microsegundos
 // ============================================
 // VARIABLES GLOBALES
 // ============================================
@@ -91,7 +97,7 @@ void InitSensors() {
     MQ135.init();
   
     // Precalentamiento recomendado
-    Serial.println("Precalentando sensor MQ-135 (espera 2-3 minutos mínimo)...");
+    Serial.println("Precalentando sensor MQ-135 (espera 30 segundos)...");
     delay(30000); // 30 segundos de espera inicial
   
   Serial.print("Calibrando sensor MQ-135 en aire exterior");
@@ -196,6 +202,7 @@ void ReadAllSensors() {
 String CreateJSONMessage() {
     DynamicJsonDocument doc(1024);
     
+
     // Información básica de la estación (usando valores de config.h)
     doc["sensor_id"] = SENSOR_ID;
     doc["sensor_type"] = SENSOR_TYPE;
@@ -203,15 +210,28 @@ String CreateJSONMessage() {
     
     //FIXME: Cuando sepamos cómo conectarse al WiFi, coger hora a través de la red (NTP)
     // Timestamp (formato ISO 8601 con Z al final)
-    char timestamp[30];
-    unsigned long currentTime = millis();
-    sprintf(timestamp, "2025-10-%02dT%02d:%02d:%02d.%03luZ",
-            (int)(currentTime / 86400000) % 30 + 1,  // Día
-            (int)(currentTime / 3600000) % 24,        // Hora
-            (int)(currentTime / 60000) % 60,          // Minuto
-            (int)(currentTime / 1000) % 60,           // Segundo
-            currentTime % 1000);                       // Milisegundo
-    doc["timestamp"] = timestamp;
+    //Es más eficiente trabajar con direcciones de memoria
+    getLocalTime(&timeinfo); //Rellena estructura timeinfo con la hora del sistema
+    gettimeofday(&tv, NULL); //Rellena estructura tv con timestamp de horas y milisegundos
+    int millisPart = tv.tv_usec / 1000;
+
+// 1. Define un buffer (array de caracteres) donde se guardará la cadena formateada.
+char timeBuffer[30]; 
+
+// 2. Usa snprintf para construir la cadena formateada y guardarla en el buffer.
+// snprintf(destino, tamaño, formato, argumentos...)
+snprintf(timeBuffer, sizeof(timeBuffer), 
+         "%04d-%02d-%02d %02d:%02d:%02d:%03d",
+         timeinfo.tm_year + 1900,  // Año
+         timeinfo.tm_mon + 1,      // Mes
+         timeinfo.tm_mday,         // Día
+         timeinfo.tm_hour,         // Hora
+         timeinfo.tm_min,          // Minuto
+         timeinfo.tm_sec,          // Segundo
+         millisPart);              // Milisegundos
+
+// 3. Asigna la cadena del buffer a tu documento.
+doc["timestamp"] = timeBuffer;           // Milisegundos
     
     // Ubicación (valores únicos, no rangos)
     JsonObject location = doc.createNestedObject("location");
@@ -285,7 +305,14 @@ void setup() {
     Serial.println("");
     
     // Conectar a WiFi
-    ConnectWifi_STA(false);
+    ConnectWifi_STA(false); //False indica que no queremos una dirección IP estática
+    //FIXME: El sábado (cambio de hora) cambiar al horario de invierno
+    configTime(7200, 0, "pool.ntp.org"); //Introducimos una vez la hora en el sistema desde un servidor, después, el esp32 lleva la cuenta
+    while(!getLocalTime(&timeinfo)){
+        Serial.println("Esperando sincronización NTP para la hora...");
+        delay(500);
+    }
+    Serial.println("Hora sincronizada");
 
     InitSensors();
     

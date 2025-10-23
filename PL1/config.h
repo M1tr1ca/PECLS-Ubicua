@@ -1,9 +1,9 @@
 
 // CONFIGURACIÓN WIFI
 // ============================================
-const char* ssid = "cubicuz";                    // Nombre de tu red WiFi
-const char* password = "estoesesparta";          // Contraseña de tu red WiFi
-const char* hostname = "cubicua";
+const char* ssid = "";                    // Nombre de tu red WiFi
+const char* password = "";          // Contraseña de tu red WiFi
+const char* hostname = "cubicua";           //Establece nombre del ESP32 en la red
 IPAddress ip(192, 168, 1, 200);
 IPAddress gateway(192, 168, 1, 1);
 IPAddress subnet(255, 255, 255, 0);
