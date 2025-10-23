@@ -159,6 +159,10 @@ float ReadAltitude(){
     return altitude;//Si el sensor se desconectase, mandaría un valor NaN, o similar, hay que comprobarlo cuando recibe este valor
 }
 
+/**
+ * Lee el CO2 del MQ-135
+ */
+
 float ReadAirQuality(){
     airQuality = MQ135.readSensor();
     return airQuality;
@@ -169,7 +173,7 @@ float ReadAirQuality(){
 void ReadAllSensors() {
     Serial.println("");
     Serial.println("===========================================");
-    Serial.println("📊 Leyendo sensores...");
+    Serial.println(" Leyendo sensores...");
     Serial.println("===========================================");
     
     // Leer sensores BME280
@@ -182,16 +186,39 @@ void ReadAllSensors() {
     airQuality = ReadAirQuality();
     
     Serial.println("Lecturas de sensores:");
-    Serial.printf("  🌡️ Temperatura: %.1f°C\n", temperature);
-    Serial.printf("  💧 Humedad: %.1f%%\n", humidity);
-    Serial.printf("  📏 Presión: %.1f hPa\n", pressure);
+    Serial.printf("   Temperatura: %.1f°C\n", temperature);
+    Serial.printf("   Humedad: %.1f%%\n", humidity);
+    Serial.printf("   Presión: %.1f hPa\n", pressure);
     Serial.printf("      Altitud: %.1f m\n", altitude);
-    Serial.printf("  🏭 Calidad del Aire (CAQI): %.1f ppm\n", airQuality);
+    Serial.printf("   Calidad del Aire (CAQI): %.1f ppm\n", airQuality);
     Serial.println("===========================================");
 
     Serial.println("EL JSON es el siguiente: ");
     Serial.println(CreateJSONMessage());
 }
+
+// ============================================
+// CONTROL DE ACTUADORES
+// ============================================
+
+/**
+ * Controla los actuadores basándose en las lecturas
+ */
+//FIXME: Valores no definidos, como HUMIDITY_HIGH...
+//FIXME: MIRAR ACTUADORES
+/** 
+ * 
+ 
+void ControlActuators() {
+    // Control del LED rojo según condiciones
+    if (temperature > TEMP_HIGH || airQuality > CAQI_DANGEROUS || humidity > HUMIDITY_HIGH) {
+        digitalWrite(LED_RED_PIN, HIGH);  // Encendido: condiciones anormales
+    } else {
+        digitalWrite(LED_RED_PIN, LOW);   // Apagado: todo normal
+    }
+}
+    */
+
 
 // ============================================
 // CREACIÓN Y ENVÍO DE MENSAJES JSON
@@ -260,9 +287,9 @@ doc["timestamp"] = timeBuffer;           // Milisegundos
     return jsonString;
 }
 
-/**
- * Publica los datos en MQTT
- 
+// ============================================
+// PUBLICACIÓN DE DATOS MQTT
+// ============================================
 void PublishData() {
     if (!IsMQTTConnected()) {
         Serial.println("⚠ MQTT no conectado. Saltando publicación.");
@@ -273,7 +300,7 @@ void PublishData() {
     
     Serial.println("");
     Serial.println("===========================================");
-    Serial.println("📤 Publicando datos...");
+    Serial.println(" Publicando datos...");
     Serial.println("===========================================");
     Serial.println("JSON generado:");
     Serial.println(jsonMessage);
@@ -287,7 +314,7 @@ void PublishData() {
     Serial.println(" enviado");
     Serial.println("===========================================");
 }
-*/
+
 // ============================================
 // SETUP Y LOOP
 // ============================================
@@ -317,9 +344,12 @@ void setup() {
     InitSensors();
     
     // Inicializar MQTT
-    //InitMQTT();
+    InitMQTT();
+    //FIXME: mirar cual es const char* TOPIC_SUBSCRIBE = "uah/alcala/weather/control"; de config.h
     //ConnectMQTT();
-    
+
+    //FIXME : MIRAR ACTUADORES
+    //ControlActuators();
     
     Serial.println("");
     Serial.println("✓ Estación lista para operar");
@@ -335,7 +365,9 @@ void loop() {
     // [x] : ponemos lo de millis ya que el delay congela todo el programa, inlcuido la parte de wifi y mqtt
     if (millis() - lastReadingTime >= 5000) {  // 5000ms = 5 segundos
         ReadAllSensors();
-        //PublishData();
+        //FIXME: MIRAR ACTUADORES
+        //ControlActuators();
+        PublishData();
         lastReadingTime = millis();
     }
     

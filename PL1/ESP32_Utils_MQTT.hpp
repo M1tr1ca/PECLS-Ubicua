@@ -4,6 +4,7 @@
 #include <PubSubClient.h>
 #include <WiFi.h>
 #include <ArduinoJson.h>
+#include "config.h"
 
 // Cliente MQTT
 WiFiClient espClient;
@@ -26,6 +27,7 @@ void InitMQTT() {
     mqttClient.setCallback(OnMqttReceived);
     mqttClient.setBufferSize(1024);  // Buffer grande para JSON
     
+
     Serial.print("  Broker: ");
     Serial.println(MQTT_BROKER_ADRESS);
     Serial.print("  Puerto: ");
@@ -34,7 +36,7 @@ void InitMQTT() {
 }
 
 /**
- * Conecta al broker MQTT
+ * Conecta al broker MQTT, sirve para suscribirse a algún tópico
  */
 void ConnectMQTT() {
     while (!mqttClient.connected()) {
@@ -92,12 +94,12 @@ void OnMqttReceived(char* topic, byte* payload, unsigned int length) {
             // Procesar comandos de control
             if (doc.containsKey("command")) {
                 String command = doc["command"].as<String>();
-                Serial.print("🎮 Comando recibido: ");
+                Serial.print(" Comando recibido: ");
                 Serial.println(command);
                 
                 // Comandos disponibles
                 if (command == "reset") {
-                    Serial.println("⚡ Reiniciando dispositivo...");
+                    Serial.println(" Reiniciando dispositivo...");
                     delay(1000);
                     ESP.restart();
                 } else {

@@ -13,7 +13,7 @@ IPAddress subnet(255, 255, 255, 0);
 // ============================================
 const char* MQTT_BROKER_ADRESS = "test.mosquitto.org";  // Broker MQTT público
 const uint16_t MQTT_PORT = 1883;
-const char* MQTT_CLIENT_NAME = "ST_1617";
+const char* MQTT_CLIENT_NAME = "LAB08JAV-G5";
 
 // Tópicos MQTT
 const char* TOPIC_PUBLISH = "uah/alcala/weather/data";
