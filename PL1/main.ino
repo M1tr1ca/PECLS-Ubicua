@@ -35,10 +35,8 @@
 #include "ESP32_UTILS.hpp"
 #include <sys/time.h>
 #include "time.h"
-//FIXME: Descomentar en algún momento 
-/**
 #include "ESP32_Utils_MQTT.hpp"
-*/
+
 #include <MQUnifiedsensor.h>
 
 
