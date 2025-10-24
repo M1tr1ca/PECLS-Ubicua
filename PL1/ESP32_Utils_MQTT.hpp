@@ -15,53 +15,6 @@ PubSubClient mqttClient(espClient);
 // ============================================
 
 /**
- * Inicializa la configuración del cliente MQTT
- */
-void InitMQTT() {
-    Serial.println("");
-    Serial.println("===========================================");
-    Serial.println("Inicializando MQTT...");
-    Serial.println("===========================================");
-    
-    mqttClient.setServer(MQTT_BROKER_ADRESS, MQTT_PORT);
-    mqttClient.setCallback(OnMqttReceived);
-    mqttClient.setBufferSize(1024);  // Buffer grande para JSON
-    
-
-    Serial.print("  Broker: ");
-    Serial.println(MQTT_BROKER_ADRESS);
-    Serial.print("  Puerto: ");
-    Serial.println(MQTT_PORT);
-    Serial.println("===========================================");
-}
-
-/**
- * Conecta al broker MQTT, sirve para suscribirse a algún tópico
- */
-void ConnectMQTT() {
-    while (!mqttClient.connected()) {
-        Serial.print("→ Conectando a MQTT... ");
-        
-        if (mqttClient.connect(MQTT_CLIENT_NAME)) {
-            Serial.println("✓ Conectado");
-            
-            // Suscribirse al tópico de control
-            if (mqttClient.subscribe(TOPIC_SUBSCRIBE)) {
-                Serial.print("✓ Suscrito a: ");
-                Serial.println(TOPIC_SUBSCRIBE);
-            } else {
-                Serial.println("✗ Error al suscribirse");
-            }
-        } else {
-            Serial.print("✗ Error, rc=");
-            Serial.print(mqttClient.state());
-            Serial.println(" | Reintentando en 5s...");
-            delay(5000);
-        }
-    }
-}
-
-/**
  * Callback que se ejecuta al recibir mensajes MQTT
  */
 void OnMqttReceived(char* topic, byte* payload, unsigned int length) {
@@ -112,6 +65,54 @@ void OnMqttReceived(char* topic, byte* payload, unsigned int length) {
         }
     }
 }
+/**
+ * Inicializa la configuración del cliente MQTT
+ */
+void InitMQTT() {
+    Serial.println("");
+    Serial.println("===========================================");
+    Serial.println("Inicializando MQTT...");
+    Serial.println("===========================================");
+    
+    mqttClient.setServer(MQTT_BROKER_ADRESS, MQTT_PORT);
+    mqttClient.setCallback(OnMqttReceived);
+    mqttClient.setBufferSize(1024);  // Buffer grande para JSON
+    
+
+    Serial.print("  Broker: ");
+    Serial.println(MQTT_BROKER_ADRESS);
+    Serial.print("  Puerto: ");
+    Serial.println(MQTT_PORT);
+    Serial.println("===========================================");
+}
+
+/**
+ * Conecta al broker MQTT, sirve para suscribirse a algún tópico
+ */
+void ConnectMQTT() {
+    while (!mqttClient.connected()) {
+        Serial.print("→ Conectando a MQTT... ");
+        
+        if (mqttClient.connect(MQTT_CLIENT_NAME)) {
+            Serial.println("✓ Conectado");
+            
+            // Suscribirse al tópico de control
+            if (mqttClient.subscribe(TOPIC_SUBSCRIBE)) {
+                Serial.print("✓ Suscrito a: ");
+                Serial.println(TOPIC_SUBSCRIBE);
+            } else {
+                Serial.println("✗ Error al suscribirse");
+            }
+        } else {
+            Serial.print("✗ Error, rc=");
+            Serial.print(mqttClient.state());
+            Serial.println(" | Reintentando en 5s...");
+            delay(5000);
+        }
+    }
+}
+
+
 
 /**
  * Publica un mensaje JSON en el tópico de datos

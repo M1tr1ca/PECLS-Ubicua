@@ -1,8 +1,9 @@
-
+#ifndef CONFIG_H
+#define CONFIG_H
 // CONFIGURACIÓN WIFI
 // ============================================
-const char* ssid = "";                    // Nombre de tu red WiFi
-const char* password = "";          // Contraseña de tu red WiFi
+const char* ssid = "iPhone";                    // Nombre de tu red WiFi
+const char* password = "12345678";          // Contraseña de tu red WiFi
 const char* hostname = "cubicua";           //Establece nombre del ESP32 en la red
 IPAddress ip(192, 168, 1, 200);
 IPAddress gateway(192, 168, 1, 1);
@@ -11,7 +12,7 @@ IPAddress subnet(255, 255, 255, 0);
 // ============================================
 // CONFIGURACIÓN MQTT BROKER
 // ============================================
-const char* MQTT_BROKER_ADRESS = "test.mosquitto.org";  // Broker MQTT público
+const char* MQTT_BROKER_ADRESS = "172.20.10.11";  // Broker MQTT público
 const uint16_t MQTT_PORT = 1883;
 const char* MQTT_CLIENT_NAME = "LAB08JAV-G5";
 
@@ -61,7 +62,7 @@ const bool IS_BIDIRECTIONAL = true;
 #define READING_INTERVAL 30000  // Intervalo de lectura en ms (30 segundos)
 
 // Umbrales de alertas
-#define TEMP_HIGH 35.0              // Temperatura alta (°C) para activar alerta LED
+#define TEMP_HIGH 15.0              // Temperatura alta (°C) para activar alerta LED
 #define HUMIDITY_HIGH 80.0          // Umbral de humedad alta (%) para activar alerta LED
 #define CAQI_DANGEROUS 75           // CAQI peligroso (nivel medio-alto, escala 0-150)
 
@@ -71,3 +72,4 @@ const bool IS_BIDIRECTIONAL = true;
 // Configuración MQ-135 para cálculo de CAQI
 #define MQ135_RL 10.0              // Resistencia de carga en kΩ
 #define MQ135_RO_CLEAN_AIR 3.6     // Ratio Rs/Ro en aire limpio (condiciones de calibración)
+#endif
