@@ -65,6 +65,21 @@ void OnMqttReceived(char* topic, byte* payload, unsigned int length) {
         }
     }
 }
+
+/**
+ * Callback simplificado que solo muestra el mensaje como texto
+ */
+void OnMqttReceived2(char* topic, byte* payload, unsigned int length) {
+    // Convertir payload a String
+    String message = "";
+    for (unsigned int i = 0; i < length; i++) {
+        message += (char)payload[i];
+    }
+    
+    // Mostrar solo el mensaje
+    Serial.println(message);
+}
+
 /**
  * Inicializa la configuración del cliente MQTT
  */

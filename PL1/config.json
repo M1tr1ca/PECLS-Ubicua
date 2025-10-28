@@ -1,65 +1,24 @@
+
+
 {
-  "mqtt": {
-    "broker": "localhost",
-    "port": 1883,
-    "username": "",
-    "password": "",
-    "keepalive": 60,
-    "qos": 1
+  "sensor_id": "WS_001",
+  "sensor_type": "weather",
+  "street_id": "ST_001",
+  "timestamp": "2025-10-15T12:34:56.789Z",
+  "location": {
+    "latitude": 40.416775,
+    "longitude": -3.703790,
+    "altitude_meters": 650.0,
+    "district": "Centro",
+    "neighborhood": "Sol"
   },
-  "station": {
-    "sensor_id": "WS_ALC_01",
-    "sensor_type": "weather",
-    "street_id": "ST_ALC_001",
-    "location": {
-      "latitude": 40.4823,
-      "longitude": -3.3618,
-      "altitude_meters": 588.0,
-      "district": "Alcalá de Henares",
-      "neighborhood": "Centro"
-    }
-  },
-  "sensors": {
-    "reading_interval_seconds": 30,
-    "temperature_range": [-10, 40],
-    "humidity_range": [20, 90],
-    "pressure_range": [980, 1050],
-    "air_quality_caqi_range": [0, 150]
-  },
-  "actuators": {
-    "led_alert": {
-      "enabled": true,
-      "auto_mode": true,
-      "triggers": {
-        "temperature_high": 35,
-        "humidity_high": 80,
-        "caqi_dangerous": 75
-      }
-    }
+  "data": {
+    "temperature_celsius": 22.5,
+    "humidity_percent": 65.0,
+    "air_quality_index": 45,
+    "wind_speed_kmh": 12.3,
+    "wind_direction_degrees": 180,
+    "atmospheric_pressure_hpa": 1015.2,
+    "uv_index": 5
   }
-}
-
-
-
-{
-"sensor_id": "WS_001",
-"sensor_type": "weather",
-"street_id": "ST_001",
-"timestamp": "2025-10-15T12:34:56.789Z",
-"location": {
-"latitude": 40.416775,
-"longitude": -3.703790,
-"altitude_meters": 650.0,
-"district": "Centro",
-"neighborhood": "Sol"
-},
-"data": {
-"temperature_celsius": 22.5,
-"humidity_percent": 65.0,
-"air_quality_index": 45,
-"wind_speed_kmh": 12.3,
-"wind_direction_degrees": 180,
-"atmospheric_pressure_hpa": 1015.2,
-"uv_index": 5
-}
 }
