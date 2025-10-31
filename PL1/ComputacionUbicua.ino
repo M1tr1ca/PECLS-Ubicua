@@ -30,7 +30,6 @@
 #include  <Wire.h> //Incluye protocolo de comunicación I^2C, el sensor transmitirá los datos en 1's y 0's (SDA), sincronizados con un reloj (SCL)
                     //Wire.h establece por defecto el pin 21 para SDA y el pin 22 para SCL
 #include <Adafruit_BME280.h> //Librería que facilita el manejo del sensor (inicializa el sensor, lee datos, fórmulas de calibración...)
-#include <SevSeg.h> // Librería para el display de 7 segmentos
 
 #include "config.h"
 #include "ESP32_UTILS.hpp"
@@ -50,8 +49,30 @@
 Adafruit_BME280 sensor_bme280; //Creamos una instancia del objeto para el sensor
 MQUnifiedsensor MQ135(placa, Voltage_Resolution, ADC_Bit_Resolution, pin, type);
 
-// Display de 7 segmentos
-SevSeg sevseg;
+// ============================================
+// CONFIGURACIÓN DISPLAY 7 SEGMENTOS MANUAL
+// ============================================
+// Tabla de segmentos para cada dígito (0-9)
+// Orden: A, B, C, D, E, F, G
+// 1 = encendido, 0 = apagado
+const byte DIGIT_PATTERNS[10][7] = {
+  {1, 1, 1, 1, 1, 1, 0}, // 0
+  {0, 1, 1, 0, 0, 0, 0}, // 1
+  {1, 1, 0, 1, 1, 0, 1}, // 2
+  {1, 1, 1, 1, 0, 0, 1}, // 3
+  {0, 1, 1, 0, 0, 1, 1}, // 4
+  {1, 0, 1, 1, 0, 1, 1}, // 5
+  {1, 0, 1, 1, 1, 1, 1}, // 6
+  {1, 1, 1, 0, 0, 0, 0}, // 7
+  {1, 1, 1, 1, 1, 1, 1}, // 8
+  {1, 1, 1, 1, 0, 1, 1}  // 9
+};
+
+// Array con los pines de los segmentos
+const int SEGMENT_PINS[7] = {
+  DISPLAY_A, DISPLAY_B, DISPLAY_C, DISPLAY_D, 
+  DISPLAY_E, DISPLAY_F, DISPLAY_G
+};
 
 
 
@@ -76,36 +97,53 @@ bool bme_available = false;
 bool mq135_available = false;
 
 // ============================================
-// FUNCIONES DISPLAY 7 SEGMENTOS
+// FUNCIONES DISPLAY 7 SEGMENTOS MANUAL
 // ============================================
 
 /**
- * Inicializa el display de 7 segmentos usando la librería SevSeg
+ * Inicializa los pines del display de 7 segmentos
  */
 void InitDisplay() {
-    byte numDigits = 1;   // Un solo dígito
-    byte digitPins[] = {}; // No se usan pines de dígitos (display de un solo dígito)
-    byte segmentPins[] = {DISPLAY_A, DISPLAY_B, DISPLAY_C, DISPLAY_D, DISPLAY_E, DISPLAY_F, DISPLAY_G};
-    bool resistorsOnSegments = true; // Las resistencias están en los segmentos
-    byte hardwareConfig = COMMON_CATHODE; // Display de cátodo común (SA52-11EWA)
-    bool updateWithDelays = false; // No usar delays en la actualización
-    bool leadingZeros = false; // No mostrar ceros a la izquierda
-    bool disableDecPoint = true; // Deshabilitar punto decimal
+    // Configurar todos los pines de segmentos como salida
+    for (int i = 0; i < 7; i++) {
+        pinMode(SEGMENT_PINS[i], OUTPUT);
+        digitalWrite(SEGMENT_PINS[i], LOW); // Apagar todos los segmentos (cátodo común)
+    }
     
-    sevseg.begin(hardwareConfig, numDigits, digitPins, segmentPins, resistorsOnSegments, 
-                 updateWithDelays, leadingZeros, disableDecPoint);
-    sevseg.setBrightness(90); // Brillo al 90%
-    sevseg.setNumber(0); // Mostrar 0 inicialmente
+    // Mostrar 0 inicialmente
+    DisplayNumber(0);
     
-    Serial.println("✓ Display de 7 segmentos inicializado");
+    Serial.println("✓ Display de 7 segmentos inicializado (manual)");
 }
 
 /**
  * Muestra un número (0-9) en el display de 7 segmentos
+ * @param number: Número a mostrar (0-9). Si está fuera de rango, apaga el display
  */
 void DisplayNumber(int number) {
-    sevseg.setNumber(number);
-    sevseg.refreshDisplay(); // Actualizar el display
+    // Validar que el número esté en el rango 0-9
+    if (number < 0 || number > 9) {
+        // Apagar todos los segmentos si el número es inválido
+        for (int i = 0; i < 7; i++) {
+            digitalWrite(SEGMENT_PINS[i], LOW);
+        }
+        return;
+    }
+    
+    // Activar/desactivar cada segmento según el patrón del dígito
+    // Para display de CÁTODO COMÚN: HIGH = encendido, LOW = apagado
+    for (int i = 0; i < 7; i++) {
+        digitalWrite(SEGMENT_PINS[i], DIGIT_PATTERNS[number][i]);
+    }
+}
+
+/**
+ * Apaga completamente el display
+ */
+void DisplayOff() {
+    for (int i = 0; i < 7; i++) {
+        digitalWrite(SEGMENT_PINS[i], LOW);
+    }
 }
 
 // ============================================
@@ -405,9 +443,6 @@ void loop() {
     // Mantener conexiones activas
     CheckWiFiConnection();
     HandleMQTT();
-    
-    // Refrescar el display de 7 segmentos
-    sevseg.refreshDisplay();
     
     // Leer sensores cada 5 segundos (sin bloquear)
     // [x] : ponemos lo de millis ya que el delay congela todo el programa, inlcuido la parte de wifi y mqtt

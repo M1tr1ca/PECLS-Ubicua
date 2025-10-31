@@ -71,7 +71,7 @@ const bool IS_BIDIRECTIONAL = true;
 #define DISPLAY_B 12      // Segmento B
 #define DISPLAY_C 14      // Segmento C
 #define DISPLAY_D 32      // Segmento D
-#define DISPLAY_E 35      // Segmento E
+#define DISPLAY_E 15      // Segmento E (CAMBIADO: GPIO 35 es solo entrada)
 #define DISPLAY_F 23      // Segmento F
 #define DISPLAY_G 19      // Segmento G
 
