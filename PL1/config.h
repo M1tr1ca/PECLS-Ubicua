@@ -67,13 +67,13 @@ const bool IS_BIDIRECTIONAL = true;
 // ============================================
 // CONFIGURACIÓN DISPLAY 7 SEGMENTOS SA52-11EWA
 // ============================================
-#define DISPLAY_A 13      // Segmento A
-#define DISPLAY_B 12      // Segmento B
-#define DISPLAY_C 14      // Segmento C
-#define DISPLAY_D 32      // Segmento D
-#define DISPLAY_E 15      // Segmento E (CAMBIADO: GPIO 35 es solo entrada)
-#define DISPLAY_F 23      // Segmento F
-#define DISPLAY_G 19      // Segmento G
+#define DISPLAY_A 23      // Segmento A *
+#define DISPLAY_B 19      // Segmento B *
+#define DISPLAY_C 32      // Segmento C *
+#define DISPLAY_D 14      // Segmento D *
+#define DISPLAY_E 15      // Segmento E (CAMBIADO: GPIO 35 es solo entrada) *
+#define DISPLAY_F 13      // Segmento F *
+#define DISPLAY_G 12      // Segmento G *
 
 // ============================================
 // CONFIGURACIÓN DEL SISTEMA
