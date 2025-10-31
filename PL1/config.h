@@ -57,6 +57,25 @@ const bool IS_BIDIRECTIONAL = true;
 #define LED_RED_PIN 25      // LED indicador de estado (alertas y condiciones anormales)
 
 // ============================================
+// CONFIGURACIÓN DE PINES - ACTUADORES ALARMA
+// ============================================
+
+#define LED_ALARM_PIN_1 26    // LED de alarma (alertas y condiciones anormales)
+#define LED_ALARM_PIN_2 27    // LED de alarma (alertas y condiciones anormales)
+#define LED_ALARM_PIN_3 33    // LED de alarma (alertas y condiciones anormales)
+
+// ============================================
+// CONFIGURACIÓN DISPLAY 7 SEGMENTOS SA52-11EWA
+// ============================================
+#define DISPLAY_A 13      // Segmento A
+#define DISPLAY_B 12      // Segmento B
+#define DISPLAY_C 14      // Segmento C
+#define DISPLAY_D 32      // Segmento D
+#define DISPLAY_E 35      // Segmento E
+#define DISPLAY_F 23      // Segmento F
+#define DISPLAY_G 19      // Segmento G
+
+// ============================================
 // CONFIGURACIÓN DEL SISTEMA
 // ============================================
 #define READING_INTERVAL 30000  // Intervalo de lectura en ms (30 segundos)

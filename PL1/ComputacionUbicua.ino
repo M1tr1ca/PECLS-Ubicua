@@ -30,6 +30,7 @@
 #include  <Wire.h> //Incluye protocolo de comunicación I^2C, el sensor transmitirá los datos en 1's y 0's (SDA), sincronizados con un reloj (SCL)
                     //Wire.h establece por defecto el pin 21 para SDA y el pin 22 para SCL
 #include <Adafruit_BME280.h> //Librería que facilita el manejo del sensor (inicializa el sensor, lee datos, fórmulas de calibración...)
+#include <SevSeg.h> // Librería para el display de 7 segmentos
 
 #include "config.h"
 #include "ESP32_UTILS.hpp"
@@ -48,6 +49,9 @@
 #define RatioMQ135CleanAir 3.6
 Adafruit_BME280 sensor_bme280; //Creamos una instancia del objeto para el sensor
 MQUnifiedsensor MQ135(placa, Voltage_Resolution, ADC_Bit_Resolution, pin, type);
+
+// Display de 7 segmentos
+SevSeg sevseg;
 
 
 
@@ -70,6 +74,39 @@ float airQuality = 0;            // Asumimos que el MQ-135 detecta CO_2. MQ-135 
 // Estados de sensores
 bool bme_available = false;
 bool mq135_available = false;
+
+// ============================================
+// FUNCIONES DISPLAY 7 SEGMENTOS
+// ============================================
+
+/**
+ * Inicializa el display de 7 segmentos usando la librería SevSeg
+ */
+void InitDisplay() {
+    byte numDigits = 1;   // Un solo dígito
+    byte digitPins[] = {}; // No se usan pines de dígitos (display de un solo dígito)
+    byte segmentPins[] = {DISPLAY_A, DISPLAY_B, DISPLAY_C, DISPLAY_D, DISPLAY_E, DISPLAY_F, DISPLAY_G};
+    bool resistorsOnSegments = true; // Las resistencias están en los segmentos
+    byte hardwareConfig = COMMON_CATHODE; // Display de cátodo común (SA52-11EWA)
+    bool updateWithDelays = false; // No usar delays en la actualización
+    bool leadingZeros = false; // No mostrar ceros a la izquierda
+    bool disableDecPoint = true; // Deshabilitar punto decimal
+    
+    sevseg.begin(hardwareConfig, numDigits, digitPins, segmentPins, resistorsOnSegments, 
+                 updateWithDelays, leadingZeros, disableDecPoint);
+    sevseg.setBrightness(90); // Brillo al 90%
+    sevseg.setNumber(0); // Mostrar 0 inicialmente
+    
+    Serial.println("✓ Display de 7 segmentos inicializado");
+}
+
+/**
+ * Muestra un número (0-9) en el display de 7 segmentos
+ */
+void DisplayNumber(int number) {
+    sevseg.setNumber(number);
+    sevseg.refreshDisplay(); // Actualizar el display
+}
 
 // ============================================
 // FUNCIONES DE CONFIGURACIÓN
@@ -328,8 +365,17 @@ void setup() {
     Serial.println("═══════════════════════════════════════════");
     Serial.println("");
     
-    
+    // Configurar pines de actuadores
     pinMode(LED_RED_PIN, OUTPUT);
+
+    //Configurar pines de actuadores de alarma
+    pinMode(LED_ALARM_PIN_1, OUTPUT);
+    pinMode(LED_ALARM_PIN_2, OUTPUT);
+    pinMode(LED_ALARM_PIN_3, OUTPUT);
+
+    // Inicializar display de 7 segmentos
+    InitDisplay();
+
     // Conectar a WiFi
     ConnectWifi_STA(false); //False indica que no queremos una dirección IP estática
     //FIXME: El sábado (cambio de hora) cambiar al horario de invierno
@@ -359,6 +405,9 @@ void loop() {
     // Mantener conexiones activas
     CheckWiFiConnection();
     HandleMQTT();
+    
+    // Refrescar el display de 7 segmentos
+    sevseg.refreshDisplay();
     
     // Leer sensores cada 5 segundos (sin bloquear)
     // [x] : ponemos lo de millis ya que el delay congela todo el programa, inlcuido la parte de wifi y mqtt

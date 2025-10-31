@@ -1,0 +1,46 @@
+{
+  "_comentario": "Ejemplos de mensajes MQTT para control del ESP32",
+  "_descripcion": "El display de 7 segmentos SA52-11EWA mostrará el nivel de alerta (0-4)",
+  "_libreria_requerida": "SevSeg - Instalar desde el Gestor de Librerías de Arduino IDE",
+  "_instalacion": "Arduino IDE > Herramientas > Gestionar Bibliotecas > Buscar 'SevSeg' > Instalar",
+  
+  "_niveles_de_alerta": {
+    "0": "Sin alerta - LED apagado - Display muestra '0'",
+    "1": "Alerta BAJA - Parpadeo lento (1 vez/seg) - Display muestra '1'",
+    "2": "Alerta MEDIA - Parpadeo medio (2 veces/seg) - Display muestra '2'",
+    "3": "Alerta ALTA - Parpadeo rápido (4 veces/seg) - Display muestra '3'",
+    "4": "Alerta CRÍTICA - LED continuo - Display muestra '4'"
+  },
+  
+  "_ejemplos": [
+    {
+      "descripcion": "Sin alerta",
+      "mensaje": {"alert_level": 0}
+    },
+    {
+      "descripcion": "Alerta baja",
+      "mensaje": {"alert_level": 1}
+    },
+    {
+      "descripcion": "Alerta media",
+      "mensaje": {"alert_level": 2}
+    },
+    {
+      "descripcion": "Alerta alta",
+      "mensaje": {"alert_level": 3}
+    },
+    {
+      "descripcion": "Alerta crítica",
+      "mensaje": {"alert_level": 4}
+    },
+    {
+      "descripcion": "Reiniciar dispositivo",
+      "mensaje": {"command": "reset"}
+    }
+  ],
+  
+  "_uso": "Enviar solo el objeto 'mensaje' al tópico MQTT de control",
+  "_topico": "uah/alcala/weather/control",
+  
+  "_nota_importante": "Asegúrate de instalar la librería SevSeg antes de compilar el código"
+}
