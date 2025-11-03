@@ -48,32 +48,31 @@ const bool IS_BIDIRECTIONAL = true;
 #define BME_SCL 22          // BME280 I2C SCL
 #define BME280_ADDRESS 0x76 // Dirección I2C del BME280 (por defecto)
 
-// MQ-135 - Sensor analógico de calidad del aire (CO2, NH3, NOx, alcohol, benceno, humo)
-#define MQ135_PIN 34        // Pin analógico para sensor MQ-135
+
 
 // ============================================
 // CONFIGURACIÓN DE PINES - ACTUADORES
 // ============================================
-#define LED_RED_PIN 25      // LED indicador de estado (alertas y condiciones anormales)
+#define LED_RED_PIN 12      // LED indicador de estado (alertas y condiciones anormales)
 
 // ============================================
 // CONFIGURACIÓN DE PINES - ACTUADORES ALARMA
 // ============================================
 
-#define LED_ALARM_PIN_1 26    // LED de alarma (alertas y condiciones anormales)
-#define LED_ALARM_PIN_2 27    // LED de alarma (alertas y condiciones anormales)
-#define LED_ALARM_PIN_3 33    // LED de alarma (alertas y condiciones anormales)
+#define LED_ALARM_PIN_1 4    // LED de alarma (alertas y condiciones anormales)
+#define LED_ALARM_PIN_2 5    // LED de alarma (alertas y condiciones anormales)
+#define LED_ALARM_PIN_3 13    // LED de alarma (alertas y condiciones anormales)
 
 // ============================================
 // CONFIGURACIÓN DISPLAY 7 SEGMENTOS SA52-11EWA
 // ============================================
-#define DISPLAY_A 23      // Segmento A *
-#define DISPLAY_B 19      // Segmento B *
-#define DISPLAY_C 32      // Segmento C *
-#define DISPLAY_D 14      // Segmento D *
-#define DISPLAY_E 15      // Segmento E (CAMBIADO: GPIO 35 es solo entrada) *
-#define DISPLAY_F 13      // Segmento F *
-#define DISPLAY_G 12      // Segmento G *
+#define DISPLAY_A 26      // Segmento A *
+#define DISPLAY_B 25      // Segmento B *
+#define DISPLAY_C 19      // Segmento C *
+#define DISPLAY_D 18      // Segmento D *
+#define DISPLAY_E 23      // Segmento E (CAMBIADO: GPIO 35 es solo entrada) *
+#define DISPLAY_F 27      // Segmento F *
+#define DISPLAY_G 14      // Segmento G *
 
 // ============================================
 // CONFIGURACIÓN DEL SISTEMA
@@ -81,14 +80,11 @@ const bool IS_BIDIRECTIONAL = true;
 #define READING_INTERVAL 30000  // Intervalo de lectura en ms (30 segundos)
 
 // Umbrales de alertas
-#define TEMP_HIGH 15.0              // Temperatura alta (°C) para activar alerta LED
+#define TEMP_HIGH 35.0              // Temperatura alta (°C) para activar alerta LED
 #define HUMIDITY_HIGH 80.0          // Umbral de humedad alta (%) para activar alerta LED
 #define CAQI_DANGEROUS 75           // CAQI peligroso (nivel medio-alto, escala 0-150)
 
 // Configuración BME280
 #define SEALEVELPRESSURE_HPA (1013.25)  // Presión a nivel del mar para cálculo de altitud
 
-// Configuración MQ-135 para cálculo de CAQI
-#define MQ135_RL 10.0              // Resistencia de carga en kΩ
-#define MQ135_RO_CLEAN_AIR 3.6     // Ratio Rs/Ro en aire limpio (condiciones de calibración)
 #endif

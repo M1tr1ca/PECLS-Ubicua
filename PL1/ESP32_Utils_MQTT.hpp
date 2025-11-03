@@ -5,7 +5,8 @@
 #include <WiFi.h>
 #include <ArduinoJson.h>
 #include "config.h"
-
+#include <freertos/FreeRTOS.h>
+#include <freertos/task.h>
 // Cliente MQTT
 WiFiClient espClient;
 PubSubClient mqttClient(espClient);
@@ -13,6 +14,12 @@ PubSubClient mqttClient(espClient);
 // Declaración externa de funciones del display (definidas en .ino)
 extern void DisplayNumber(int number);
 
+void TareaControlLed_Uno(void * parameter);
+void TareaControlLed_Dos(void * parameter);
+void TareaControlLed_Tres(void * parameter);
+void TareaControlLed_Cuatro(void * parameter);
+
+TaskHandle_t ledTaskHandle = NULL;
 // ============================================
 // FUNCIONES DE INICIALIZACIÓN MQTT
 // ============================================
@@ -23,7 +30,7 @@ extern void DisplayNumber(int number);
 void OnMqttReceived(char* topic, byte* payload, unsigned int length) {
     Serial.println("");
     Serial.println("===========================================");
-    Serial.println("📩 Mensaje MQTT Recibido");
+    Serial.println("Mensaje MQTT Recibido");
     Serial.println("===========================================");
     Serial.print("  Tópico: ");
     Serial.println(topic);
@@ -50,59 +57,74 @@ void OnMqttReceived(char* topic, byte* payload, unsigned int length) {
             // Procesar nivel de alerta
             if (doc.containsKey("alert_level")) {
                 int alertLevel = doc["alert_level"].as<int>();
-                Serial.print("🚨 Nivel de alerta recibido: ");
+                Serial.print("Nivel de alerta recibido: ");
                 Serial.println(alertLevel);
                 
                 // Mostrar nivel en el display de 7 segmentos
                 DisplayNumber(alertLevel);
-                Serial.print("📟 Display mostrando: ");
+                Serial.print("Display mostrando: ");
                 Serial.println(alertLevel);
                 
                 // Configurar parpadeo según nivel de alerta
                 switch(alertLevel) {
                     case 0: // Sin alerta - LED apagado
                         digitalWrite(LED_RED_PIN, LOW);
-                        Serial.println("✓ Sin alerta - LED apagado");
+                        Serial.println("Sin alerta - LED apagado");
                         break;
                         
                     case 1: // Alerta baja - Parpadeo lento (1 vez por segundo)
-                        Serial.println("⚠️ Alerta BAJA - Parpadeo lento");
-                        for(int i = 0; i < 3; i++) {
-                            digitalWrite(LED_RED_PIN, HIGH);
-                            delay(500);
-                            digitalWrite(LED_RED_PIN, LOW);
-                            delay(500);
+                    if(ledTaskHandle != NULL){
+                            vTaskDelete(ledTaskHandle);
+                            digitalWrite(LED_ALARM_PIN_1, LOW);
+                            digitalWrite(LED_ALARM_PIN_2, LOW);
+                            digitalWrite(LED_ALARM_PIN_3, LOW);
                         }
+                        Serial.println("Alerta BAJA - Parpadeo lento");
+                        xTaskCreatePinnedToCore(TareaControlLed_Uno, "LED_Task_Uno", 10000, NULL, 1, &ledTaskHandle, 0);
                         break;
                         
                     case 2: // Alerta media - Parpadeo medio (2 veces por segundo)
-                        Serial.println("⚠️ Alerta MEDIA - Parpadeo medio");
-                        for(int i = 0; i < 6; i++) {
-                            digitalWrite(LED_RED_PIN, HIGH);
-                            delay(250);
-                            digitalWrite(LED_RED_PIN, LOW);
-                            delay(250);
+                        if(ledTaskHandle != NULL){
+                            vTaskDelete(ledTaskHandle);
+                            digitalWrite(LED_ALARM_PIN_1, LOW);
+                            digitalWrite(LED_ALARM_PIN_2, LOW);
+                            digitalWrite(LED_ALARM_PIN_3, LOW);
                         }
+                        Serial.println("Alerta MEDIA - Parpadeo medio");
+                        xTaskCreatePinnedToCore(TareaControlLed_Dos, "LED_Task_Dos", 10000, NULL, 1, &ledTaskHandle, 0);
+
                         break;
                         
                     case 3: // Alerta alta - Parpadeo rápido (4 veces por segundo)
-                        Serial.println("🚨 Alerta ALTA - Parpadeo rápido");
-                        for(int i = 0; i < 12; i++) {
-                            digitalWrite(LED_RED_PIN, HIGH);
-                            delay(125);
-                            digitalWrite(LED_RED_PIN, LOW);
-                            delay(125);
+                    if(ledTaskHandle != NULL){
+                            vTaskDelete(ledTaskHandle);
+                            digitalWrite(LED_ALARM_PIN_1, LOW);
+                            digitalWrite(LED_ALARM_PIN_2, LOW);
+                            digitalWrite(LED_ALARM_PIN_3, LOW);
                         }
+                        xTaskCreatePinnedToCore(TareaControlLed_Tres, "LED_Task_Tres", 10000, NULL, 1, &ledTaskHandle, 0);
+
+                        Serial.println("Alerta ALTA - Parpadeo rápido");
+                       
+                            
+                        
                         break;
                         
                     case 4: // Alerta crítica - LED encendido permanentemente
-                        digitalWrite(LED_RED_PIN, HIGH);
-                        Serial.println("💀 Alerta CRÍTICA - LED encendido continuo");
+                    if(ledTaskHandle != NULL){
+                            vTaskDelete(ledTaskHandle);
+                            digitalWrite(LED_ALARM_PIN_1, LOW);
+                            digitalWrite(LED_ALARM_PIN_2, LOW);
+                            digitalWrite(LED_ALARM_PIN_3, LOW);
+                        }
+                        xTaskCreatePinnedToCore(TareaControlLed_Cuatro, "LED_Task_Cuatro", 10000, NULL, 1, &ledTaskHandle, 0);
+
+                        Serial.println("Alerta CRÍTICA - LED encendido continuo");
                         break;
                         
                     default:
-                        Serial.println("⚠️ Nivel de alerta no válido (usar 0-4)");
-                        DisplayNumber(-1); // Mostrar guión en el display
+                        Serial.println("Nivel de alerta no válido (usar 0-4)");
+                        DisplayNumber(0); // Mostrar guión en el display
                         break;
                 }
             }
@@ -114,15 +136,15 @@ void OnMqttReceived(char* topic, byte* payload, unsigned int length) {
                 
                 // Comandos disponibles
                 if (command == "reset") {
-                    Serial.println("🔄 Reiniciando dispositivo...");
+                    Serial.println("Reiniciando dispositivo...");
                     delay(1000);
                     ESP.restart();
                 } else {
-                    Serial.println("⚠ Comando no reconocido");
+                    Serial.println("Comando no reconocido");
                 }
             }
         } else {
-            Serial.print("✗ Error parseando JSON: ");
+            Serial.print("Error parseando JSON: ");
             Serial.println(error.c_str());
         }
     }
@@ -168,20 +190,20 @@ void InitMQTT() {
  */
 void ConnectMQTT() {
     while (!mqttClient.connected()) {
-        Serial.print("→ Conectando a MQTT... ");
+        Serial.print("Conectando a MQTT... ");
         
         if (mqttClient.connect(MQTT_CLIENT_NAME)) {
-            Serial.println("✓ Conectado");
+            Serial.println("Conectado");
             
             // Suscribirse al tópico de control
             if (mqttClient.subscribe(TOPIC_SUBSCRIBE)) {
-                Serial.print("✓ Suscrito a: ");
+                Serial.print("Suscrito a: ");
                 Serial.println(TOPIC_SUBSCRIBE);
             } else {
-                Serial.println("✗ Error al suscribirse");
+                Serial.println("Error al suscribirse");
             }
         } else {
-            Serial.print("✗ Error, rc=");
+            Serial.print("Error, rc=");
             Serial.print(mqttClient.state());
             Serial.println(" | Reintentando en 5s...");
             delay(5000);
@@ -197,12 +219,12 @@ void ConnectMQTT() {
 void PublishMQTT(String jsonMessage) {
     if (mqttClient.connected()) {
         if (mqttClient.publish(TOPIC_PUBLISH, jsonMessage.c_str(), false)) {
-            Serial.println("✓ Datos publicados en MQTT");
+            Serial.println("Datos publicados en MQTT");
         } else {
-            Serial.println("✗ Error publicando datos");
+            Serial.println("Error publicando datos");
         }
     } else {
-        Serial.println("⚠ MQTT desconectado. Intentando reconectar...");
+        Serial.println("MQTT desconectado. Intentando reconectar...");
         ConnectMQTT();
     }
 }
@@ -222,6 +244,54 @@ void HandleMQTT() {
  */
 bool IsMQTTConnected() {
     return mqttClient.connected();
+}
+
+void TareaControlLed_Uno(void * parameter){
+    for(;;){
+        digitalWrite(LED_ALARM_PIN_1, HIGH);
+
+        delay(700);
+        digitalWrite(LED_ALARM_PIN_1, LOW);
+
+        delay(700);
+    }
+}
+void TareaControlLed_Dos(void * parameter){
+    for(;;){
+    digitalWrite(LED_ALARM_PIN_1, HIGH);
+    digitalWrite(LED_ALARM_PIN_2, HIGH);
+
+    delay(300);
+    digitalWrite(LED_ALARM_PIN_1, LOW);
+    digitalWrite(LED_ALARM_PIN_2, LOW);
+
+    delay(300);
+    }
+    
+}
+void TareaControlLed_Tres(void * parameter){
+    for(;;){
+        digitalWrite(LED_ALARM_PIN_1, HIGH);
+        digitalWrite(LED_ALARM_PIN_2, HIGH);
+        digitalWrite(LED_ALARM_PIN_3, HIGH);
+        delay(150);
+        digitalWrite(LED_ALARM_PIN_1, LOW);
+        digitalWrite(LED_ALARM_PIN_2, LOW);
+        digitalWrite(LED_ALARM_PIN_3, LOW);
+        delay(150);
+    }
+}
+void TareaControlLed_Cuatro(void * parameter){
+    for(;;){
+        digitalWrite(LED_ALARM_PIN_1, HIGH);
+        digitalWrite(LED_ALARM_PIN_2, HIGH);
+        digitalWrite(LED_ALARM_PIN_3, HIGH);
+        delay(50);
+        digitalWrite(LED_ALARM_PIN_1, LOW);
+        digitalWrite(LED_ALARM_PIN_2, LOW);
+        digitalWrite(LED_ALARM_PIN_3, LOW);
+        delay(50);
+    }
 }
 
 #endif

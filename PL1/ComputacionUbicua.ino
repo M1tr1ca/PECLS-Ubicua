@@ -113,7 +113,7 @@ void InitDisplay() {
     // Mostrar 0 inicialmente
     DisplayNumber(0);
     
-    Serial.println("✓ Display de 7 segmentos inicializado (manual)");
+    Serial.println("Display de 7 segmentos inicializado (manual)");
 }
 
 /**
@@ -163,39 +163,7 @@ void InitSensors() {
     bme_available = true;
     Serial.println("Sensor BME280 inicializado correctamente");
 
-    MQ135.setRegressionMethod(1); // _PPM = a*ratio^b
-    MQ135.setA(110.47);   // Coeficiente A para CO₂
-    MQ135.setB(-2.862);   // Coeficiente B para CO₂
-  
-    MQ135.init();
-  
-    // Precalentamiento recomendado
-    Serial.println("Precalentando sensor MQ-135 (espera 30 segundos)...");
-    delay(30000); // 30 segundos de espera inicial
-  
-  Serial.print("Calibrando sensor MQ-135 en aire exterior");
-  float calcR0 = 0;
-  for(int i = 1; i <= 10; i++) {
-    MQ135.update();
-    calcR0 += MQ135.calibrate(RatioMQ135CleanAir);
-    Serial.print(".");
-    delay(500); // Pausa entre lecturas
-  }
-  MQ135.setR0(calcR0/10);
-  
-  // Verificar problemas de conexión
-  if (isinf(calcR0)) {
-    Serial.println("\nWarning: Connection issue found, R0 is infinite (Open circuit detected) please check your wiring and supply");
-    while (1);
-  }
-  if (calcR0 == 0) {
-    Serial.println("\nWarning: Connection issue found, R0 is zero (Analog pin with short circuit to ground) please check your wiring and supply");
-    while (1);
-  }
-  
-  Serial.println("\nCalibración completa!");
-  Serial.print("R0 calculado: ");
-  Serial.println(calcR0);
+    
   Serial.println("-----------------------------------");
 }
 
@@ -232,15 +200,7 @@ float ReadAltitude(){
     return altitude;//Si el sensor se desconectase, mandaría un valor NaN, o similar, hay que comprobarlo cuando recibe este valor
 }
 
-/**
- * Lee el CO2 del MQ-135
- */
 
-float ReadAirQuality(){
-    MQ135.update(); // Actualiza los valores del sensor
-    airQuality = MQ135.readSensor();
-    return airQuality;
-}
 /**
  * Lee todos los sensores
  */
@@ -256,15 +216,12 @@ void ReadAllSensors() {
     pressure = ReadPressure();
     altitude = ReadAltitude();
     
-    // Leer sensor MQ-135
-    airQuality = ReadAirQuality();
     
     Serial.println("Lecturas de sensores:");
     Serial.printf("   Temperatura: %.1f°C\n", temperature);
     Serial.printf("   Humedad: %.1f%%\n", humidity);
     Serial.printf("   Presión: %.1f hPa\n", pressure);
     Serial.printf("      Altitud: %.1f m\n", altitude);
-    Serial.printf("   Calidad del Aire (CAQI): %.1f ppm\n", airQuality);
     Serial.println("===========================================");
 
     Serial.println("EL JSON es el siguiente: ");
@@ -284,7 +241,7 @@ void ReadAllSensors() {
  
 void ControlActuators() {
     // Control del LED rojo según condiciones
-    if (temperature > TEMP_HIGH || airQuality > CAQI_DANGEROUS || humidity > HUMIDITY_HIGH) {
+    if (temperature > TEMP_HIGH || humidity > HUMIDITY_HIGH) {
         digitalWrite(LED_RED_PIN, HIGH);  // Encendido: condiciones anormales
     } else {
         digitalWrite(LED_RED_PIN, LOW);   // Apagado: todo normal
@@ -344,7 +301,6 @@ doc["timestamp"] = timeBuffer;           // Milisegundos
     JsonObject data = doc.createNestedObject("data");
     data["temperature_celsius"] = round(ReadTemperature() * 10) / 10.0;
     data["humidity_percent"] = round(ReadHumidity() * 10) / 10.0;
-    data["air_quality_index"] = round(ReadAirQuality() * 10) / 10.0;
     data["atmospheric_pressure_hpa"] = round(ReadPressure() * 10) / 10.0;
     
     // Campos opcionales (sin sensor físico, valores por defecto)
@@ -364,7 +320,7 @@ doc["timestamp"] = timeBuffer;           // Milisegundos
 // ============================================
 void PublishData() {
     if (!IsMQTTConnected()) {
-        Serial.println("⚠ MQTT no conectado. Saltando publicación.");
+        Serial.println("MQTT no conectado. Saltando publicación.");
         return;
     }
     
@@ -381,7 +337,7 @@ void PublishData() {
     PublishMQTT(jsonMessage);
     
     messageCount++;
-    Serial.print("✓ Mensaje #");
+    Serial.print("Mensaje #");
     Serial.print(messageCount);
     Serial.println(" enviado");
     Serial.println("===========================================");
@@ -411,13 +367,17 @@ void setup() {
     pinMode(LED_ALARM_PIN_2, OUTPUT);
     pinMode(LED_ALARM_PIN_3, OUTPUT);
 
+    digitalWrite(LED_ALARM_PIN_1, LOW);
+    digitalWrite(LED_ALARM_PIN_2, LOW);
+    digitalWrite(LED_ALARM_PIN_3, LOW);
+
     // Inicializar display de 7 segmentos
     InitDisplay();
 
     // Conectar a WiFi
     ConnectWifi_STA(false); //False indica que no queremos una dirección IP estática
     //FIXME: El sábado (cambio de hora) cambiar al horario de invierno
-    configTime(7200, 0, "pool.ntp.org"); //Introducimos una vez la hora en el sistema desde un servidor, después, el esp32 lleva la cuenta
+    configTime(3600, 0, "pool.ntp.org"); //Introducimos una vez la hora en el sistema desde un servidor, después, el esp32 lleva la cuenta
     while(!getLocalTime(&timeinfo)){
         Serial.println("Esperando sincronización NTP para la hora...");
         delay(500);
