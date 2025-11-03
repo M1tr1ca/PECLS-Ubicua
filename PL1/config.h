@@ -49,7 +49,6 @@ const bool IS_BIDIRECTIONAL = true;
 #define BME280_ADDRESS 0x76 // Dirección I2C del BME280 (por defecto)
 
 
-
 // ============================================
 // CONFIGURACIÓN DE PINES - ACTUADORES
 // ============================================
@@ -82,7 +81,6 @@ const bool IS_BIDIRECTIONAL = true;
 // Umbrales de alertas
 #define TEMP_HIGH 35.0              // Temperatura alta (°C) para activar alerta LED
 #define HUMIDITY_HIGH 80.0          // Umbral de humedad alta (%) para activar alerta LED
-#define CAQI_DANGEROUS 75           // CAQI peligroso (nivel medio-alto, escala 0-150)
 
 // Configuración BME280
 #define SEALEVELPRESSURE_HPA (1013.25)  // Presión a nivel del mar para cálculo de altitud

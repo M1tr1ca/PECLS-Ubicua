@@ -1,26 +1,28 @@
 /*
  * =====================================================
  * ESTACIÓN METEOROLÓGICA IoT - CIUDAD 4.0
- * Universidad de Alcalá de Henares
+ * UAH - PECL1 - Computación Ubicua
  * =====================================================
  * 
  * Proyecto: PECL1 - Computación Ubicua
  * Dispositivo: Estación Meteorológica
  * Ubicación: Alcalá de Henares, Centro
  * Tipo: Weather Station (weather)
+ * Autores: Grupo 5 - Juan Pérez Resa y David Nicolás Mitrica
  * 
  * Descripción:
  * Este dispositivo IoT captura datos meteorológicos en tiempo real
- * y los envía a un broker MQTT siguiendo el formato JSON especificado.
+ * y los envía a un broker MQTT siguiendo el formato JSON especificado
+ * y recibe comandos para controlar los actuadores y la esp32.
  * 
- * Sensores implementados (2):
+ * Sensores implementados (1):
  * - BME280: Temperatura, Humedad y Presión Atmosférica (3 en 1)
- * - MQ-135: Calidad del aire (CO2, NH3, NOx, alcohol, benceno, humo)
  * 
- * Actuadores implementados (1):
- * - LED Rojo: Indicador visual de alertas (temperatura alta, CAQI peligroso, humedad alta)
+ * Actuadores implementados (2):
+ * - LEDs Alerta: Indicador visual de alertas (temperatura alta) o información que nos manden desde el broker MQTT
+ * - Display 7 segmentos: Visualización de datos en tiempo real
  * 
- * Total: 3 componentes (2 sensores + 1 actuador)
+ * Total: 3 componentes (1 sensor + 2 actuadores)
  * =====================================================
  */
 
@@ -28,7 +30,6 @@
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 #include  <Wire.h> //Incluye protocolo de comunicación I^2C, el sensor transmitirá los datos en 1's y 0's (SDA), sincronizados con un reloj (SCL)
-                    //Wire.h establece por defecto el pin 21 para SDA y el pin 22 para SCL
 #include <Adafruit_BME280.h> //Librería que facilita el manejo del sensor (inicializa el sensor, lee datos, fórmulas de calibración...)
 
 #include "config.h"
@@ -37,17 +38,8 @@
 #include "time.h"
 #include "ESP32_Utils_MQTT.hpp"
 
-#include <MQUnifiedsensor.h>
-
-
-#define placa "ESP_32" //Usado para MQUnifiedsensor
-#define Voltage_Resolution 3.3
-#define pin 34  // Pin analógico del ESP32
-#define type "MQ-135"
-#define ADC_Bit_Resolution 12
-#define RatioMQ135CleanAir 3.6
 Adafruit_BME280 sensor_bme280; //Creamos una instancia del objeto para el sensor
-MQUnifiedsensor MQ135(placa, Voltage_Resolution, ADC_Bit_Resolution, pin, type);
+
 
 // ============================================
 // CONFIGURACIÓN DISPLAY 7 SEGMENTOS MANUAL
@@ -75,7 +67,6 @@ const int SEGMENT_PINS[7] = {
 };
 
 
-
 struct tm timeinfo; //Utilizado para almacenar fecha y hora
 struct timeval tv; // Contiene el tiempo en segundos y precisión en microsegundos
 // ============================================
@@ -90,11 +81,10 @@ float temperature = 0.0;       // Temperatura BME280
 float humidity = 0.0;          // Humedad BME280
 float pressure = 0.0;          // Presión BME280
 float altitude = 0.0;          // Calcula la altitud a partir de la presión
-float airQuality = 0;            // Asumimos que el MQ-135 detecta CO_2. MQ-135 es capaz de detectar distintos tipos de gases, pero no diferencia cuál es cuál. Lo calculamos asumiendo que todo es CO_2.
+
 
 // Estados de sensores
 bool bme_available = false;
-bool mq135_available = false;
 
 // ============================================
 // FUNCIONES DISPLAY 7 SEGMENTOS MANUAL
@@ -163,7 +153,6 @@ void InitSensors() {
     bme_available = true;
     Serial.println("Sensor BME280 inicializado correctamente");
 
-    
   Serial.println("-----------------------------------");
 }
 
@@ -187,7 +176,6 @@ float ReadHumidity() {
     return humidity;//Si el sensor se desconectase, mandaría un valor NaN, o similar, hay que comprobarlo cuando recibe este valor
 
 }
-
 /**
  * Lee la presión atmosférica del BME280
  */
@@ -195,6 +183,9 @@ float ReadPressure() {
     pressure = sensor_bme280.readPressure() / 100.0; //Por defecto se recibe en Pa, se divide entre 100 para convertirlo en hPa (medida típica)
     return pressure;//Si el sensor se desconectase, mandaría un valor NaN, o similar, hay que comprobarlo cuando recibe este valor
 }
+/**
+ * Calcula la altitud basándose en la presión atmosférica
+ */
 float ReadAltitude(){
     altitude = sensor_bme280.readAltitude(1013.25); // 1013.25 es la presión barométrica a nivel del mar por defecto
     return altitude;//Si el sensor se desconectase, mandaría un valor NaN, o similar, hay que comprobarlo cuando recibe este valor
@@ -235,9 +226,6 @@ void ReadAllSensors() {
 /**
  * Controla los actuadores basándose en las lecturas
  */
-//FIXME: Valores no definidos, como HUMIDITY_HIGH...
-//FIXME: MIRAR ACTUADORES
-
  
 void ControlActuators() {
     // Control del LED rojo según condiciones
@@ -264,7 +252,6 @@ String CreateJSONMessage() {
     doc["sensor_type"] = SENSOR_TYPE;
     doc["street_id"] = STREET_ID;
     
-    //FIXME: Cuando sepamos cómo conectarse al WiFi, coger hora a través de la red (NTP)
     // Timestamp (formato ISO 8601 con Z al final)
     //Es más eficiente trabajar con direcciones de memoria
     getLocalTime(&timeinfo); //Rellena estructura timeinfo con la hora del sistema
@@ -376,7 +363,7 @@ void setup() {
 
     // Conectar a WiFi
     ConnectWifi_STA(false); //False indica que no queremos una dirección IP estática
-    //FIXME: El sábado (cambio de hora) cambiar al horario de invierno
+
     configTime(3600, 0, "pool.ntp.org"); //Introducimos una vez la hora en el sistema desde un servidor, después, el esp32 lleva la cuenta
     while(!getLocalTime(&timeinfo)){
         Serial.println("Esperando sincronización NTP para la hora...");
@@ -384,14 +371,16 @@ void setup() {
     }
     Serial.println("Hora sincronizada");
 
+    // Inicializar sensores
     InitSensors();
     
     // Inicializar MQTT
     InitMQTT();
-    //FIXME: mirar cual es const char* TOPIC_SUBSCRIBE = "uah/alcala/weather/control"; de config.h
+
+    // Conectar a MQTT
     ConnectMQTT();
 
-    //FIXME : MIRAR ACTUADORES
+    // Control inicial de actuadores
     ControlActuators();
     
     Serial.println("");
@@ -408,12 +397,11 @@ void loop() {
     // [x] : ponemos lo de millis ya que el delay congela todo el programa, inlcuido la parte de wifi y mqtt
     if (millis() - lastReadingTime >= 5000) {  // 5000ms = 5 segundos
         ReadAllSensors();
-        //FIXME: MIRAR ACTUADORES
         ControlActuators();
         PublishData();
         lastReadingTime = millis();
     }
     
-    // Pequeña pausa para no saturar el loop (no bloqueante)
+    // Pequeña pausa para no saturar el loop
     delay(100);  // Solo 100ms
 }
