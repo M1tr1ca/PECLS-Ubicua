@@ -17,8 +17,8 @@ const uint16_t MQTT_PORT = 1883;
 const char* MQTT_CLIENT_NAME = "LAB08JAV-G5";
 
 // Tópicos MQTT
-const char* TOPIC_PUBLISH = "uah/alcala/weather/data";
-const char* TOPIC_SUBSCRIBE = "uah/alcala/weather/control";
+const char* TOPIC_PUBLISH = "sensors/ST_1617/weather_station";
+const char* TOPIC_SUBSCRIBE = "sensors/ST_1617/alerts";
 
 // ============================================
 // IDENTIFICACIÓN DE LA ESTACIÓN
@@ -29,9 +29,11 @@ const char* STREET_ID = "ST_1617";
 const char* STREET_NAME = "Calle Pepe Hillo";
 
 // Ubicación: Hortaleza, Madrid
-const float LATITUDE = 40.4513367;
-const float LONGITUDE = -3.6409307;
+const float LATITUDE_START = 40.4513367;
 const float LATITUDE_END = 40.4515721;
+const float LONGITUDE_START = 40.4513367;
+const float LONGITUDE_END = -3.6409307;
+
 const float LENGTH_METERS = 150.84;
 const char* DISTRICT = "Hortaleza";
 const char* NEIGHBORHOOD = "Hortaleza";

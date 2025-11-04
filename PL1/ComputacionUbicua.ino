@@ -278,8 +278,10 @@ doc["timestamp"] = timeBuffer;           // Milisegundos
     
     // Ubicación (valores únicos, no rangos)
     JsonObject location = doc.createNestedObject("location");
-    location["latitude"] = LATITUDE;
-    location["longitude"] = LONGITUDE;
+    location["latitude_start"] = LATITUDE_START;
+    location["latitude_end"] = LATITUDE_END;
+    location["longitude_start"] = LONGITUDE_START;
+    location["longitude_end"] = LONGITUDE_END;
     location["altitude_meters"] = round(ReadAltitude() * 10) / 10.0;
     location["district"] = DISTRICT;
     location["neighborhood"] = NEIGHBORHOOD;
@@ -289,12 +291,7 @@ doc["timestamp"] = timeBuffer;           // Milisegundos
     data["temperature_celsius"] = round(ReadTemperature() * 10) / 10.0;
     data["humidity_percent"] = round(ReadHumidity() * 10) / 10.0;
     data["atmospheric_pressure_hpa"] = round(ReadPressure() * 10) / 10.0;
-    
-    // Campos opcionales (sin sensor físico, valores por defecto)
-    data["wind_speed_kmh"] = 0.0;           // Sin sensor de viento
-    data["wind_direction_degrees"] = 0;     // Sin sensor de viento
-    data["uv_index"] = 0;                   // Sin sensor UV
-    
+        
     // Serializar a String
     String jsonString;
     serializeJson(doc, jsonString);
@@ -384,7 +381,7 @@ void setup() {
     ControlActuators();
     
     Serial.println("");
-    Serial.println("✓ Estación lista para operar");
+    Serial.println("Estación lista para operar");
     Serial.println("");
 }
 

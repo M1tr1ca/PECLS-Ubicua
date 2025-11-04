@@ -68,13 +68,21 @@ void OnMqttReceived(char* topic, byte* payload, unsigned int length) {
                 // Configurar parpadeo según nivel de alerta
                 switch(alertLevel) {
                     case 0: // Sin alerta - LED apagado
-                        digitalWrite(LED_RED_PIN, LOW);
+                        if(ledTaskHandle != NULL){
+                            vTaskDelete(ledTaskHandle);
+                            
+                            digitalWrite(LED_ALARM_PIN_1, LOW);
+                            digitalWrite(LED_ALARM_PIN_2, LOW);
+                            digitalWrite(LED_ALARM_PIN_3, LOW);
+                        }
+                        ledTaskHandle = NULL;
                         Serial.println("Sin alerta - LED apagado");
                         break;
                         
                     case 1: // Alerta baja - Parpadeo lento (1 vez por segundo)
                     if(ledTaskHandle != NULL){
                             vTaskDelete(ledTaskHandle);
+                            ledTaskHandle = NULL;
                             digitalWrite(LED_ALARM_PIN_1, LOW);
                             digitalWrite(LED_ALARM_PIN_2, LOW);
                             digitalWrite(LED_ALARM_PIN_3, LOW);
@@ -86,6 +94,7 @@ void OnMqttReceived(char* topic, byte* payload, unsigned int length) {
                     case 2: // Alerta media - Parpadeo medio (2 veces por segundo)
                         if(ledTaskHandle != NULL){
                             vTaskDelete(ledTaskHandle);
+                            ledTaskHandle = NULL;
                             digitalWrite(LED_ALARM_PIN_1, LOW);
                             digitalWrite(LED_ALARM_PIN_2, LOW);
                             digitalWrite(LED_ALARM_PIN_3, LOW);
@@ -98,6 +107,7 @@ void OnMqttReceived(char* topic, byte* payload, unsigned int length) {
                     case 3: // Alerta alta - Parpadeo rápido (4 veces por segundo)
                     if(ledTaskHandle != NULL){
                             vTaskDelete(ledTaskHandle);
+                            ledTaskHandle = NULL;
                             digitalWrite(LED_ALARM_PIN_1, LOW);
                             digitalWrite(LED_ALARM_PIN_2, LOW);
                             digitalWrite(LED_ALARM_PIN_3, LOW);
@@ -113,6 +123,7 @@ void OnMqttReceived(char* topic, byte* payload, unsigned int length) {
                     case 4: // Alerta crítica - LED encendido permanentemente
                     if(ledTaskHandle != NULL){
                             vTaskDelete(ledTaskHandle);
+                            ledTaskHandle = NULL;
                             digitalWrite(LED_ALARM_PIN_1, LOW);
                             digitalWrite(LED_ALARM_PIN_2, LOW);
                             digitalWrite(LED_ALARM_PIN_3, LOW);
@@ -149,21 +160,6 @@ void OnMqttReceived(char* topic, byte* payload, unsigned int length) {
         }
     }
 }
-
-/**
- * Callback simplificado que solo muestra el mensaje como texto
- */
-void OnMqttReceived2(char* topic, byte* payload, unsigned int length) {
-    // Convertir payload a String
-    String message = "";
-    for (unsigned int i = 0; i < length; i++) {
-        message += (char)payload[i];
-    }
-    
-    // Mostrar solo el mensaje
-    Serial.println(message);
-}
-
 /**
  * Inicializa la configuración del cliente MQTT
  */
