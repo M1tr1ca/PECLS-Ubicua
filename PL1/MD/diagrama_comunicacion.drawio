@@ -1,0 +1,79 @@
+<mxfile host="65bd71144e">
+    <diagram name="Arquitectura IoT - Estación Meteorológica" id="arquitectura-iot">
+        <mxGraphModel dx="672" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="titulo" value="SISTEMA IoT - ESTACIÓN METEOROLÓGICA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="320" y="20" width="530" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="esp32" value="&lt;b&gt;ESP32&lt;/b&gt;&lt;br&gt;Estación ST_1617&lt;br&gt;Cliente: LAB08JAV-G5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="200" width="280" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="sensor-bme280" value="&lt;b&gt;&amp;nbsp;BME280&lt;/b&gt;&lt;br&gt;Temperatura: °C&lt;br&gt;Humedad: %&lt;br&gt;Presión: hPa&lt;br&gt;Altitud: m" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="270" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="led-red" value="&amp;nbsp;LED Rojo&lt;br&gt;(Temp/Hum alta)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="400" width="110" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="leds-alarm" value="&amp;nbsp;3x LEDs Alarma&lt;br&gt;(Control remoto)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="400" width="110" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="display" value="&amp;nbsp;Display 7-seg&lt;br&gt;(Nivel alerta)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="480" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="broker" value="&lt;b&gt;BROKER MQTT&lt;/b&gt;&lt;br&gt;Mosquitto&lt;br&gt;172.20.10.11:1883&lt;br&gt;QoS: 1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="160" width="280" height="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="topic-publish" value="&lt;b&gt;PUBLISH&lt;/b&gt;&lt;br&gt;sensors/ST_1617/weather_station&lt;br&gt;&lt;br&gt;Frecuencia: cada 5 segundos&lt;br&gt;&lt;br&gt;Datos enviados:&lt;br&gt;• sensor_id, sensor_type&lt;br&gt;• timestamp (NTP)&lt;br&gt;• location (lat, long, alt)&lt;br&gt;• data:&lt;br&gt;  - temperature_celsius&lt;br&gt;  - humidity_percent&lt;br&gt;  - atmospheric_pressure_hpa" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="220" width="240" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="topic-subscribe" value="&lt;b&gt;SUBSCRIBE&lt;/b&gt;&lt;br&gt;sensors/ST_1617/alerts&lt;br&gt;&lt;br&gt;Recibe comandos:&lt;br&gt;&lt;br&gt;1. alert_level (0-4):&lt;br&gt;  • 0: LEDs apagados&lt;br&gt;  • 1: 1 LED (1Hz)&lt;br&gt;  • 2: 2 LEDs (2Hz)&lt;br&gt;  • 3: 3 LEDs (4Hz)&lt;br&gt;  • 4: 3 LEDs (10Hz)&lt;br&gt;&lt;br&gt;2. command: &quot;reset&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff4e6;strokeColor=#d79b00;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="430" width="240" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="servidor" value="&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;b&gt;&amp;nbsp;SERVIDOR&lt;/b&gt;&lt;br&gt;&lt;br&gt;Servicios:&lt;br&gt;• MariaDB&lt;br&gt;• Tomcat&lt;br&gt;• Sistema Ciudad 4.0&lt;br&gt;&lt;br&gt;Clientes MQTT:&lt;br&gt;• Python&lt;br&gt;• Node.js&lt;br&gt;• Bash" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="880" y="200" width="200" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow-publish" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#82b366;endArrow=classic;endFill=1;" parent="1" source="esp32" target="topic-publish" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-publish" value="JSON cada 5s" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#2D7600;fontStyle=1" parent="arrow-publish" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint x="5" y="-11" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arrow-subscribe" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#d79b00;endArrow=classic;endFill=1;" parent="1" source="topic-subscribe" target="esp32" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-subscribe" value="Comandos control" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#B85C00;fontStyle=1" parent="arrow-subscribe" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint x="-5" y="11" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arrow-broker-server" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#666666;endArrow=classic;startArrow=classic;endFill=1;startFill=1;" parent="1" source="broker" target="servidor" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-bidireccional" value="Bidireccional" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1" parent="arrow-broker-server" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint y="-11" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="info-box" value="&lt;b&gt;ℹ️ INFORMACIÓN DEL SISTEMA&lt;/b&gt;&lt;br&gt;&lt;br&gt;📍 Ubicación: Hortaleza, Madrid (Calle Pepe Hillo)&lt;br&gt;🌐 Coordenadas: 40.4513367, -3.6409307&lt;br&gt;⏱️ Sincronización NTP: pool.ntp.org&lt;br&gt;🔧 FreeRTOS: Gestión de tareas LED asíncronas&lt;br&gt;📦 Buffer MQTT: 1024 bytes&lt;br&gt;🔒 Protocolo: MQTT v3.1.1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9e6;strokeColor=#cca300;align=left;verticalAlign=top;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="85" y="690" width="1000" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="leyenda-title" value="&lt;b&gt;LEYENDA&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="80" y="120" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leyenda-1" value="🟦 Hardware ESP32" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="145" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leyenda-2" value="🟩 Broker MQTT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="145" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leyenda-3" value="⬜ Servicios backend" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="145" width="150" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
