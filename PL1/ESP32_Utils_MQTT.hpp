@@ -188,7 +188,7 @@ void ConnectMQTT() {
     while (!mqttClient.connected()) {
         Serial.print("Conectando a MQTT... ");
         
-        if (mqttClient.connect(MQTT_CLIENT_NAME)) {
+        if (mqttClient.connect(MQTT_CLIENT_NAME, MQTT_USER, MQTT_PASS)) {
             Serial.println("Conectado");
             
             // Suscribirse al tópico de control

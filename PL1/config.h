@@ -2,8 +2,8 @@
 #define CONFIG_H
 // CONFIGURACIÓN WIFI
 // ============================================
-const char* ssid = "iPhone";                    // Nombre de tu red WiFi
-const char* password = "12345678";          // Contraseña de tu red WiFi
+const char* ssid = "cubicua";                    // Nombre de tu red WiFi
+const char* password = "";          // Contraseña de tu red WiFi
 const char* hostname = "cubicua";           //Establece nombre del ESP32 en la red
 IPAddress ip(192, 168, 1, 200);
 IPAddress gateway(192, 168, 1, 1);
@@ -12,9 +12,11 @@ IPAddress subnet(255, 255, 255, 0);
 // ============================================
 // CONFIGURACIÓN MQTT BROKER
 // ============================================
-const char* MQTT_BROKER_ADRESS = "172.20.10.11";  // Broker MQTT público
+const char* MQTT_BROKER_ADRESS = "172.29.41.88";  // Broker MQTT público
 const uint16_t MQTT_PORT = 1883;
 const char* MQTT_CLIENT_NAME = "LAB08JAV-G5";
+const char* MQTT_USER = "ubicua";
+const char* MQTT_PASS = "ubicua1234";
 
 // Tópicos MQTT
 const char* TOPIC_PUBLISH = "sensors/ST_1617/weather_station";

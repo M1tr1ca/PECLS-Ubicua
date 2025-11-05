@@ -383,6 +383,9 @@ void setup() {
     Serial.println("");
     Serial.println("Estación lista para operar");
     Serial.println("");
+    ReadAllSensors();
+    ControlActuators();
+    PublishData();
 }
 
 void loop() {
@@ -392,7 +395,7 @@ void loop() {
     
     // Leer sensores cada 5 segundos (sin bloquear)
     // [x] : ponemos lo de millis ya que el delay congela todo el programa, inlcuido la parte de wifi y mqtt
-    if (millis() - lastReadingTime >= 5000) {  // 5000ms = 5 segundos
+    if (millis() - lastReadingTime >= READING_INTERVAL) {  // Cada 30 segundos
         ReadAllSensors();
         ControlActuators();
         PublishData();
