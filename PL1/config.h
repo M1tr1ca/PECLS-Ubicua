@@ -19,7 +19,7 @@ const char* MQTT_USER = "ubicua";
 const char* MQTT_PASS = "ubicua1234";
 
 // Tópicos MQTT
-const char* TOPIC_PUBLISH = "sensors/ST_1617/weather_station";
+const char* TOPIC_PUBLISH = "sensors/ST_1617/weather_station/LAB08JAV-G5";
 const char* TOPIC_SUBSCRIBE = "sensors/ST_1617/alerts";
 
 // ============================================
