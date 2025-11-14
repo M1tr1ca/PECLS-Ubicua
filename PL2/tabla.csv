@@ -1,0 +1,31 @@
+Group ID;Surname;Name;Street ID;Street Name;Street_ length_meters;Latitude Start;Longitude Start;Latitude End;Longitude End;Is Bidirectional;Distric;Neighborhood;Postal Code
+LAB12JAV-G1;Gómez García;Eduardo;ST_2120;Calle de Campeche;152,62;40,4412835;-3,6306953;40,4399919;-3,6300852;1;Hortaleza;Hortaleza;28033
+;Paniagua Cortijo;Álvaro;;;;;;;;;;;
+LAB12JAV-G2;Castro Hernández;Gisela;ST_1046;Calle de Javier de Miguel;485,33;40,3875725;-3,6602807;40,3848174;-3,6558364;1;Puente de Vallecas;Puente de Vallecas;28053
+;Saz González;Andrea;;;;;;;;;;;
+LAB12JAV-G3;Matanza Barahona;Pablo;ST_0889;Calle Río Uruguay;58,37;40,3845025;-3,6519771;40,3850273;-3,6519949;0;Moratalaz;Moratalaz;28030
+;Oppong Ansah;Elizabeth Adwoa;;;;;;;;;;;
+LAB12JAV-G4;Galindo Lorenzo;Hugo;ST_0427;Doña Juana I de Castilla;183,15;40,4477079;-3,6324966;40,446472;-3,6310659;0;Ciudad Lineal;Ciudad Lineal;28043
+;Navarro Báguenas;Iván;;;;;;;;;;;
+LAB12JAV-G5;Bardavío Soria;Sergio;ST_0155;Calle de los Montes Alberes;85,79;40,3736541;-3,6193836;40,3739657;-3,6184572;1;Vicálvaro;Vicálvaro;28032
+;Jiménez Moneva;Ángel;;;;;;;;;;;
+LAB12JAV-G6;Ahmed Carreño;Karim;ST_1782;Calle de Covarrubias;448,42;40,4318971;-3,6984895;40,4280019;-3,6971176;1;Centro;Sol;28001
+;Ansatuña Gomes;Othon;;;;;;;;;;;
+LAB12JAV-G7;Aguilera Arenas;Víctor;ST_1760;Calle de Pío Felipe;362,23;40,3954945;-3,6514822;40,39765;-3,648275;1;Puente de Vallecas;Puente de Vallecas;28053
+;Dumitriu;Darius Andrei;;;;;;;;;;;
+LAB12JAV-G8;Admou Admou;Yacine;ST_0106;Paseo de las Acacias;55,18;40,4028748;-3,7104282;40,4025965;-3,7109677;1;Centro;Cortes;28012
+;Chamorro Sánchez;Carolina;;;;;;;;;;;
+LAB12JAV-G9;Frutos Saucedo;Jesús;ST_0246;Calle Nimes;79,98;40,4174738;-3,6162871;40,4168208;-3,6158909;1;San Blas-Canillejas;San Blas-Canillejas;28022
+;Martínez Blanco;Diego;;;;;;;;;;;
+LAB12JAV-G10;Cubas Martí;David;ST_0947;Calle de María Odiaga;605,6;40,379452;-3,7398847;40,3751788;-3,7443173;1;Latina;Puerta del Ángel;28011
+;Torrico López;Diana;;;;;;;;;;;
+LAB12JAV-G11;Cantero Anchuelo;Lucía;ST_2245;Carretera de Castilla;849,93;40,4438378;-3,7502559;40,4477116;-3,7589143;0;Moncloa-Aravaca;Moncloa-Aravaca;28050
+;Fuentes Lozano;Álvaro;;;;;;;;;;;
+LAB12JAV-G12;Meda López;Ángel;ST_0338;Calle Puerto de Baños;64,82;40,3925639;-3,6624486;40,3930414;-3,6620095;1;Moratalaz;Moratalaz;28030
+;Prado Sánchez;Nicolás;;;;;;;;;;;
+LAB12JAV-G13;Marín Morales;Marcos;ST_1420;Calle de San Erasmo;168,2;40,3379227;-3,7065521;40,3394348;-3,7066042;1;Usera;Usera;28026
+;Moraga Monterroso;Jairo;;;;;;;;;;;
+LAB12JAV-G14;Cruz Moreno;Marta de la;ST_1678;Calle del Sol;63,21;40,4256518;-3,6619545;40,4251299;-3,6622506;1;Salamanca;Parque de las Avenidas;28009
+;Morán Alarcón;Óscar;;;;;;;;;;;
+LAB12JAV-G15;Fernández Narciso;Álvaro Eugenio;ST_1149;Calle Aliseda;63,32;40,3735193;-3,7421497;40,3740699;-3,7423406;1;Carabanchel;Comillas;28025
+LAB12JAV-G16;Rey Henche;Rodrigo;ST_1843;Calle del Cañaveral;419,65;40,4724004;-3,6907558;40,4691071;-3,6931787;1;Tetuán;Bellas Vistas;28046
