@@ -27,10 +27,11 @@ CREATE TABLE sensor_readings (
   FOREIGN KEY (sensor_id) REFERENCES sensors(sensor_id)
 );
 
-
 -- Índice para mejorar consultas por timestamp
 CREATE INDEX idx_sensor_readings_timestamp ON sensor_readings(timestamp DESC);
 CREATE INDEX idx_sensor_readings_sensor_timestamp ON sensor_readings(sensor_id, timestamp DESC);
+\copy streets FROM 'docker-entrypoint-initdb.d/tabla_calles.csv' WITH (FORMAT CSV, HEADER, DELIMITER ',');
+\copy sensors FROM 'docker-entrypoint-initdb.d/tabla_sensores.csv' WITH (FORMAT CSV, HEADER, DELIMITER ',');
 
 
 
