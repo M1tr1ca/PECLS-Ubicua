@@ -3,10 +3,15 @@ package mqtt;
 public class MQTTBroker {
 
     private static int qos = 2;
-    private static final String broker = "tcp://localhost:1883";
-    private static final String clientId = "WheatherStationUAH";
-    private static final String username = "ubicua";
-    private static final String password = "ubicua";
+    // Puerto 3000 mapeado al 1883 interno del contenedor MQTT
+    // En producción (Docker) usar mqtt-broker:1883, en desarrollo localhost:3000
+    private static final String broker = System.getenv("MQTT_BROKER") != null ? 
+                                         System.getenv("MQTT_BROKER") : "tcp://localhost:3000";
+    private static final String clientId = "ServerUbicuaUAH";
+    private static final String username = System.getenv("MQTT_USERNAME") != null ? 
+                                           System.getenv("MQTT_USERNAME") : "ubicua";
+    private static final String password = System.getenv("MQTT_PASSWORD") != null ? 
+                                           System.getenv("MQTT_PASSWORD") : "ubicua";
     
     public MQTTBroker() {
     }
@@ -24,7 +29,7 @@ public class MQTTBroker {
     }
 
     public static String getUsername() {
-        return password;
+        return username;
     }
 
     public static String getPassword() {

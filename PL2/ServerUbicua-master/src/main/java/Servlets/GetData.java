@@ -34,27 +34,54 @@ public class GetData extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Log.log.info("--Set new value into the DB--");
-		response.setContentType("text/html;charset=UTF-8");
+		Log.log.info("--Obteniendo datos de sensores--");
+		response.setContentType("application/json;charset=UTF-8");
+		response.setHeader("Access-Control-Allow-Origin", "*");
 		PrintWriter out = response.getWriter();
 		try 
 		{
-			//ArrayList<Measurement> values =Logic.getDataFromDB();
-			//String jsonMeasurements = new Gson().toJson(values);
-			//Logs.log.info("Values=>" + jsonMeasurements);
-			//out.println(jsonMeasurements);
+			// Obtener parámetros opcionales
+			String sensorId = request.getParameter("sensor_id");
+			String limitStr = request.getParameter("limit");
+			
+			int limit = 100; // Por defecto 100 lecturas
+			if (limitStr != null) {
+				try {
+					limit = Integer.parseInt(limitStr);
+				} catch (NumberFormatException e) {
+					Log.log.warn("Límite inválido, usando valor por defecto: 100");
+				}
+			}
+			
+			java.util.List<logic.SensorReading> readings;
+			
+			if (sensorId != null && !sensorId.isEmpty()) {
+				// Obtener lecturas de un sensor específico
+				Log.log.info("Obteniendo lecturas del sensor: {} (límite: {})", sensorId, limit);
+				readings = logic.SensorLogic.getLatestReadingsBySensor(sensorId, limit);
+			} else {
+				// Obtener las últimas lecturas de todos los sensores
+				Log.log.info("Obteniendo últimas {} lecturas de todos los sensores", limit);
+				readings = logic.SensorLogic.getLatestReadings(limit);
+			}
+			
+			String jsonReadings = new Gson().toJson(readings);
+			Log.log.info("Devolviendo {} lecturas", readings.size());
+			out.println(jsonReadings);
+			
 		} catch (NumberFormatException nfe) 
 		{
-			out.println("-1");
+			out.println("{\"error\":\"Formato de número inválido\"}");
 			Log.log.error("Number Format Exception: " + nfe);
 		} catch (IndexOutOfBoundsException iobe) 
 		{
-			out.println("-1");
+			out.println("{\"error\":\"Índice fuera de límites\"}");
 			Log.log.error("Index out of bounds Exception: " + iobe);
 		} catch (Exception e) 
 		{
-			out.println("-1");
+			out.println("{\"error\":\"Error interno del servidor\"}");
 			Log.log.error("Exception: " + e);
+			e.printStackTrace();
 		} finally 
 		{
 			out.close();

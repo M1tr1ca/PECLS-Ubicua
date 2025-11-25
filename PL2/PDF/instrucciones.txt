@@ -1,0 +1,57 @@
+
+1
+
+Tamaño automático
+PECL2
+Creación de infraestructura para el soporte de los
+dispositivos y aplicaciones de control del sistema de
+gestión urbano.
+Una vez desarrollados los dispositivos que distribuiremos por las calles de la ciudad para
+la obtención de los datos, necesitamos crear la infraestructura necesaria para soportar
+nuestro sistema en producción.
+El sistema contará con 3 servicios interconectados entre sí:
+• Base de datos donde el sistema almacena la información recibida.
+• Bróker MQTT Mosquitto el cual permite la conexión entre la red de sensores y el
+servidor de forma bidireccional.
+• Servidor Tomcat.
+Las estaciones se comunicarán con el sistema por medio del Broker MQTT, con el cual
+intercambiarán información en formato JSON (el mismo que era requerido para la PECL1).
+A continuación, se muestra la estructura básica de mensajes aceptada por el servidor:
+{
+"sensor_id":"WS_BAR_01",
+"sensor_type":"XXXX",
+"street_id":"ST_0478",
+"timestamp":"2025-09-18T09:37:28.225646",
+"location":{
+"latitude":40.45409486,
+"longitude":-3.60391176,
+"altitude_meters":646.19,
+"district":"Barajas",
+"neighborhood":"Barajas"
+},
+"data":{ ... }
+}
+Dado que existen distintas tipologías de sensores, la etiqueta “sensor_type” especificará el
+tipo de red de sensores que está transmitiendo la información. Además, se ha incluido en
+el mensaje anterior la etiqueta data que contendrá información específica de cada
+tipología.
+A continuación, se muestra cada una de las tipologías de datos en mayor detalle.
+Estaciones meteorológicas
+El objetivo principal de este tipo de estaciones de sensores es monitorizar las variables
+meteorológicas de la zona. Entre los valores recopilados se encuentran la temperatura, la
+humedad o la presión atmosférica entre otros.
+Para poder enviar información al sistema será necesario especificar en el JSON base el
+valor de la variable sensor_type como "weather". Además, la estructura de la etiqueta data
+seguirá la siguiente estructura:
+{
+.....
+"sensor_type":"weather",
+"data":{
+"temperature_celsius":17.9,
+"humidity_percent":64.9,
+"air_quality_index":79,
+"wind_speed_kmh":8.0,
+"wind_direction_degrees":17,
+"atmospheric_pressure_hpa":992.7,
+"uv_index":2
+}

@@ -9,31 +9,45 @@ import mqtt.MQTTPublisher;
 import mqtt.MQTTSuscriber;
 
 /**
- * ES: Clase encargada de inicializar el sistema y de lanzar el hilo de
- * previsión meteorológica EN: Class in charge of initializing the thread of
- * weather forecast
+ * Clase encargada de inicializar el sistema MQTT al arrancar el servidor
+ * Se suscribe a los tópicos de los sensores meteorológicos
  */
 @WebListener
 public class Projectinitializer implements ServletContextListener {
 
+    private MQTTSuscriber suscriber;
+
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
+        Log.log.info("-->Servidor detenido, desconectando MQTT<--");
+        if (suscriber != null) {
+            suscriber.disconnect();
+        }
     }
 
     @Override
-    /**
-     * ES: Metodo empleado para detectar la inicializacion del servidor	<br>
-     * EN: Method used to detect server initialization
-     *
-     * @param sce <br>
-     * ES: Evento de contexto creado durante el arranque del servidor	<br>
-     * EN: Context event created during server launch
-     */
     public void contextInitialized(ServletContextEvent sce) {
-        Log.log.info("-->Suscribe Topics<--");
+        Log.log.info("===========================================");
+        Log.log.info("  SERVIDOR UBICUA - PECL2 INICIADO");
+        Log.log.info("===========================================");
+        Log.log.info("-->Suscribiéndose a tópicos MQTT<--");
+        
         MQTTBroker broker = new MQTTBroker();
-        MQTTSuscriber suscriber = new MQTTSuscriber();
-        suscriber.suscribeTopic(broker, "test");
-        MQTTPublisher.publish(broker, "test", "Hello from Tomcat :)");
+        suscriber = new MQTTSuscriber();
+        
+        // Suscribirse con wildcard para recibir de todos los sensores
+        // Formato del tópico: sensors/{street_id}/weather_station/{sensor_id}
+        // Usamos # para suscribirnos a todos los sensores
+        String topicPattern = "sensors/#";
+        suscriber.suscribeTopic(broker, topicPattern);
+        
+        Log.log.info("Suscrito al patrón de tópicos: {}", topicPattern);
+        
+        // Publicar mensaje de test para confirmar conexión
+        MQTTPublisher.publish(broker, "server/status", "{\"status\":\"online\",\"message\":\"Servidor Ubicua PECL2 iniciado\"}");
+        
+        Log.log.info("===========================================");
+        Log.log.info("  SISTEMA LISTO PARA RECIBIR DATOS");
+        Log.log.info("===========================================");
     }
 }
