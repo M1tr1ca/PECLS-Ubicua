@@ -35,7 +35,7 @@ services:
       POSTGRES_DB: ubicua
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - ./postgres_data:/var/lib/postgresql/data
       - ./init_scripts:/docker-entrypoint-initdb.d
     networks:
       - ubicua-network

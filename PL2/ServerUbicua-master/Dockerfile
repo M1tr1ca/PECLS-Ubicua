@@ -37,9 +37,6 @@ ENV MQTT_PASSWORD="ubicua"
 # Eliminar aplicaciones por defecto de Tomcat
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-# Crear directorio de logs para la aplicación
-RUN mkdir -p /usr/local/tomcat/webapps/ServerExampleUbicomp/logs
-
 # Copiar el driver de PostgreSQL al directorio lib de Tomcat
 # (para que esté disponible para el pool de conexiones)
 COPY --from=builder /root/.m2/repository/org/postgresql/postgresql/42.7.2/postgresql-42.7.2.jar /usr/local/tomcat/lib/

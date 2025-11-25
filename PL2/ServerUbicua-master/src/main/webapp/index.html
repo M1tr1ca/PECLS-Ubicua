@@ -1,482 +1,92 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Gestión Urbana - PECL2</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-primary: #0a0f1c;
-            --bg-secondary: #111827;
-            --bg-card: #1a2234;
-            --accent-cyan: #00d4ff;
-            --accent-green: #10b981;
-            --accent-orange: #f59e0b;
-            --accent-red: #ef4444;
-            --text-primary: #f3f4f6;
-            --text-secondary: #9ca3af;
-            --border-color: #374151;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            min-height: 100vh;
-            background-image: 
-                radial-gradient(ellipse at 20% 0%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 100%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
-        }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .logo-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-green));
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-        }
-        
-        h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-green));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .subtitle {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-top: 0.25rem;
-        }
-        
-        .status-badge {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: var(--bg-card);
-            border-radius: 50px;
-            border: 1px solid var(--border-color);
-        }
-        
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--accent-green);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        
-        .stat-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 1.5rem;
-            transition: all 0.3s ease;
-        }
-        
-        .stat-card:hover {
-            border-color: var(--accent-cyan);
-            transform: translateY(-2px);
-        }
-        
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-value {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 2rem;
-            font-weight: 600;
-            color: var(--accent-cyan);
-        }
-        
-        .main-content {
-            display: grid;
-            grid-template-columns: 1fr 350px;
-            gap: 2rem;
-        }
-        
-        @media (max-width: 1024px) {
-            .main-content {
-                grid-template-columns: 1fr;
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+        <title>Server example</title>
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
             }
-        }
-        
-        .card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            overflow: hidden;
-        }
-        
-        .card-header {
-            padding: 1.25rem 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .card-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        
-        .refresh-btn {
-            background: transparent;
-            border: 1px solid var(--border-color);
-            color: var(--text-secondary);
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        
-        .refresh-btn:hover {
-            border-color: var(--accent-cyan);
-            color: var(--accent-cyan);
-        }
-        
-        .table-container {
-            max-height: 500px;
-            overflow-y: auto;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        th, td {
-            padding: 1rem 1.5rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        th {
-            background: var(--bg-secondary);
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight: 600;
-            position: sticky;
-            top: 0;
-        }
-        
-        td {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9rem;
-        }
-        
-        tr:hover {
-            background: rgba(0, 212, 255, 0.05);
-        }
-        
-        .sensor-id {
-            color: var(--accent-cyan);
-            font-weight: 600;
-        }
-        
-        .temp-value {
-            color: var(--accent-orange);
-        }
-        
-        .humidity-value {
-            color: var(--accent-cyan);
-        }
-        
-        .pressure-value {
-            color: var(--accent-green);
-        }
-        
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-        
-        .endpoint-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 1.5rem;
-        }
-        
-        .endpoint-title {
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-        }
-        
-        .endpoint-url {
-            background: var(--bg-primary);
-            padding: 0.75rem 1rem;
-            border-radius: 8px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            color: var(--accent-green);
-            margin-bottom: 0.5rem;
-            word-break: break-all;
-        }
-        
-        .endpoint-desc {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-        }
-        
-        .loading {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-secondary);
-        }
-        
-        .loading::after {
-            content: '';
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--border-color);
-            border-top-color: var(--accent-cyan);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-left: 0.5rem;
-            vertical-align: middle;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        .no-data {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-secondary);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <div class="logo-icon">🌡️</div>
-                <div>
-                    <h1>Sistema de Gestión Urbana</h1>
-                    <p class="subtitle">PECL2 - Computación Ubicua UAH</p>
-                </div>
-            </div>
-            <div class="status-badge">
-                <span class="status-dot"></span>
-                <span>Sistema Activo</span>
-            </div>
-        </header>
-        
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-label">Total Lecturas</div>
-                <div class="stat-value" id="totalReadings">--</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">Sensores Activos</div>
-                <div class="stat-value" id="activeSensors">--</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">Temp. Promedio</div>
-                <div class="stat-value" id="avgTemp">--°C</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">Última Actualización</div>
-                <div class="stat-value" id="lastUpdate" style="font-size: 1rem;">--</div>
-            </div>
-        </div>
-        
-        <div class="main-content">
-            <div class="card">
-                <div class="card-header">
-                    <span class="card-title">📊 Últimas Lecturas de Sensores</span>
-                    <button class="refresh-btn" onclick="loadData()">⟳ Actualizar</button>
-                </div>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Sensor ID</th>
-                                <th>Temperatura</th>
-                                <th>Humedad</th>
-                                <th>Presión</th>
-                                <th>Timestamp</th>
-                            </tr>
-                        </thead>
-                        <tbody id="dataTable">
-                            <tr>
-                                <td colspan="5" class="loading">Cargando datos</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            
-            <div class="sidebar">
-                <div class="endpoint-card">
-                    <div class="endpoint-title">🔌 API Endpoints</div>
-                    <div class="endpoint-url">GET /GetData</div>
-                    <p class="endpoint-desc">Obtiene las últimas lecturas de todos los sensores</p>
-                </div>
-                
-                <div class="endpoint-card">
-                    <div class="endpoint-url">GET /GetData?sensor_id=XXX</div>
-                    <p class="endpoint-desc">Lecturas de un sensor específico</p>
-                </div>
-                
-                <div class="endpoint-card">
-                    <div class="endpoint-url">GET /GetData?limit=N</div>
-                    <p class="endpoint-desc">Limitar número de resultados</p>
-                </div>
-                
-                <div class="endpoint-card">
-                    <div class="endpoint-title">📡 MQTT Topics</div>
-                    <div class="endpoint-url">sensors/{street_id}/weather_station/{sensor_id}</div>
-                    <p class="endpoint-desc">Tópico para publicar datos de sensores</p>
-                </div>
-                
-                <div class="endpoint-card">
-                    <div class="endpoint-url">sensors/{street_id}/alerts</div>
-                    <p class="endpoint-desc">Tópico para recibir alertas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <script>
-        $(document).ready(function() {
-            loadData();
-            // Actualizar cada 30 segundos
-            setInterval(loadData, 30000);
-        });
-        
-        function loadData() {
-            $.ajax({
-                url: "/ServerExampleUbicomp/GetData?limit=50",
-                type: 'GET',
-                dataType: 'json',
-                success: function(resp) {
-                    console.log('Datos recibidos:', resp);
-                    updateTable(resp);
-                    updateStats(resp);
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error cargando datos:', error);
-                    $("#dataTable").html('<tr><td colspan="5" class="no-data">Error al cargar datos. Verifica la conexión.</td></tr>');
-                }
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function ()
+            {
+                loadData();
             });
-        }
-        
-        function updateTable(data) {
-            if (!data || data.length === 0) {
-                $("#dataTable").html('<tr><td colspan="5" class="no-data">No hay datos disponibles</td></tr>');
-                return;
+
+            function loadData()
+            {
+                $.ajax(
+                {
+                    data: {},
+                    url: "/ServerExampleUbicomp/GetData",
+                    type: 'post',
+                    async: false,
+                    success: function (response)
+                    {
+                        var resp = JSON.parse(response);
+                        console.log(resp);
+                        $("#dataTable").empty();
+                        var newRow = "";
+                        $.each(resp, function (i, value)
+                        {
+                            newRow += "<tr>";
+                            newRow += "<td>" + value.date + "</td>";
+                            newRow += "<td>" + value.value + " Â°C</td>";
+                            newRow += "</tr>";
+                        });
+                        $("#dataTable").append(newRow);
+                    }
+                });
             }
-            
-            var rows = "";
-            $.each(data, function(i, reading) {
-                var temp = reading.data && reading.data.temperatureCelsius ? 
-                    reading.data.temperatureCelsius.toFixed(1) + '°C' : '--';
-                var humidity = reading.data && reading.data.humidityPercent ? 
-                    reading.data.humidityPercent.toFixed(1) + '%' : '--';
-                var pressure = reading.data && reading.data.atmosphericPressureHpa ? 
-                    reading.data.atmosphericPressureHpa.toFixed(1) + ' hPa' : '--';
-                var timestamp = reading.timestamp ? 
-                    new Date(reading.timestamp).toLocaleString('es-ES') : '--';
-                
-                rows += '<tr>';
-                rows += '<td class="sensor-id">' + (reading.sensorId || '--') + '</td>';
-                rows += '<td class="temp-value">' + temp + '</td>';
-                rows += '<td class="humidity-value">' + humidity + '</td>';
-                rows += '<td class="pressure-value">' + pressure + '</td>';
-                rows += '<td>' + timestamp + '</td>';
-                rows += '</tr>';
-            });
-            
-            $("#dataTable").html(rows);
-        }
-        
-        function updateStats(data) {
-            if (!data || data.length === 0) {
-                $('#totalReadings').text('0');
-                $('#activeSensors').text('0');
-                $('#avgTemp').text('--°C');
-                return;
+
+            function insertData()
+            {
+                var value = $('#newValue').val();
+                $.ajax(
+                {
+                    data: {value: value},
+                    url: "/UbicompServerExample/SetData",
+                    type: 'post',
+                    async: false,
+                    success: function (response)
+                    {
+                        loadData();
+                    }
+                });
             }
-            
-            // Total lecturas
-            $('#totalReadings').text(data.length);
-            
-            // Sensores únicos
-            var uniqueSensors = [...new Set(data.map(r => r.sensorId))];
-            $('#activeSensors').text(uniqueSensors.length);
-            
-            // Temperatura promedio
-            var temps = data.filter(r => r.data && r.data.temperatureCelsius)
-                           .map(r => r.data.temperatureCelsius);
-            if (temps.length > 0) {
-                var avgTemp = temps.reduce((a, b) => a + b, 0) / temps.length;
-                $('#avgTemp').text(avgTemp.toFixed(1) + '°C');
-            }
-            
-            // Última actualización
-            $('#lastUpdate').text(new Date().toLocaleTimeString('es-ES'));
-        }
-    </script>
-</body>
+
+        </script>
+        <h1>SERVER EXAMPLE</h1>
+        <br>
+        <label>New value</label>
+        <input type="number" id="newValue"><br>
+        <button onclick="insertData()">Send</button> 
+        <br><br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Temperature</th>
+                </tr>
+            </thead>
+            <tbody id="dataTable">
+            </tbody>
+        </table>		
+    </body>
 </html>
