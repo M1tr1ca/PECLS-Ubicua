@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource name="jdbc/ubicomp"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://base-datos-ubicua:5432/ubicua"
+              username="admin"
+              password="admin"
+              maxTotal="20"
+              maxIdle="10"
+              maxWaitMillis="10000"/>
+</Context>

@@ -1,0 +1,177 @@
+1764087052: mosquitto version 2.0.22 starting
+1764087052: Config loaded from /mosquitto/config/mosquitto.conf.
+1764087052: Opening ipv4 listen socket on port 1883.
+1764087052: Opening ipv6 listen socket on port 1883.
+1764087052: mosquitto version 2.0.22 running
+1764087090: New connection from 172.18.0.1:45054 on port 1883.
+1764087090: New client connected from 172.18.0.1:45054 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764087147: New connection from 172.18.0.1:57980 on port 1883.
+1764087147: Client <unknown> disconnected due to protocol error.
+1764087339: mosquitto version 2.0.22 terminating
+1764087339: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764087366: mosquitto version 2.0.22 starting
+1764087366: Config loaded from /mosquitto/config/mosquitto.conf.
+1764087366: Opening ipv4 listen socket on port 1883.
+1764087366: Opening ipv6 listen socket on port 1883.
+1764087366: mosquitto version 2.0.22 running
+1764087366: New connection from 172.18.0.1:60854 on port 1883.
+1764087366: New client connected from 172.18.0.1:60854 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764087452: mosquitto version 2.0.22 terminating
+1764087452: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764087466: mosquitto version 2.0.22 starting
+1764087466: Config loaded from /mosquitto/config/mosquitto.conf.
+1764087466: Opening ipv4 listen socket on port 1883.
+1764087466: Opening ipv6 listen socket on port 1883.
+1764087466: mosquitto version 2.0.22 running
+1764087466: New connection from 172.18.0.1:42416 on port 1883.
+1764087466: New client connected from 172.18.0.1:42416 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764087770: mosquitto version 2.0.22 starting
+1764087770: Config loaded from /mosquitto/config/mosquitto.conf.
+1764087770: Opening ipv4 listen socket on port 1883.
+1764087770: Opening ipv6 listen socket on port 1883.
+1764087770: mosquitto version 2.0.22 running
+1764087771: New connection from 172.18.0.1:51612 on port 1883.
+1764087771: New client connected from 172.18.0.1:51612 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764088322: mosquitto version 2.0.22 terminating
+1764088322: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764088416: mosquitto version 2.0.22 starting
+1764088416: Config loaded from /mosquitto/config/mosquitto.conf.
+1764088416: Opening ipv4 listen socket on port 1883.
+1764088416: Opening ipv6 listen socket on port 1883.
+1764088416: mosquitto version 2.0.22 running
+1764088417: New connection from 172.18.0.1:45024 on port 1883.
+1764088417: New client connected from 172.18.0.1:45024 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764088418: New connection from 172.18.0.4:35066 on port 1883.
+1764088418: New client connected from 172.18.0.4:35066 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764088418: New connection from 172.18.0.4:35080 on port 1883.
+1764088419: New client connected from 172.18.0.4:35080 as WheatherStationUAH-publisher (p2, c1, k60).
+1764088419: Client WheatherStationUAH-publisher disconnected.
+1764089212: Client mqtt-explorer-33d8c505 disconnected.
+1764089295: mosquitto version 2.0.22 terminating
+1764089295: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764089368: mosquitto version 2.0.22 starting
+1764089368: Config loaded from /mosquitto/config/mosquitto.conf.
+1764089368: Opening ipv4 listen socket on port 1883.
+1764089368: Opening ipv6 listen socket on port 1883.
+1764089368: mosquitto version 2.0.22 running
+1764089370: New connection from 172.18.0.2:47898 on port 1883.
+1764089370: New client connected from 172.18.0.2:47898 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764089370: New connection from 172.18.0.2:47914 on port 1883.
+1764089370: Client <unknown> closed its connection.
+1764089370: Client WheatherStationUAH-subscriber closed its connection.
+1764089372: New connection from 172.18.0.2:47916 on port 1883.
+1764089372: New client connected from 172.18.0.2:47916 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764089372: New connection from 172.18.0.2:47926 on port 1883.
+1764089373: New client connected from 172.18.0.2:47926 as WheatherStationUAH-publisher (p2, c1, k60).
+1764089373: Client WheatherStationUAH-publisher disconnected.
+1764089389: Client WheatherStationUAH-subscriber closed its connection.
+1764089390: mosquitto version 2.0.22 terminating
+1764089390: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764096444: mosquitto version 2.0.22 starting
+1764096444: Config loaded from /mosquitto/config/mosquitto.conf.
+1764096444: Opening ipv4 listen socket on port 1883.
+1764096444: Opening ipv6 listen socket on port 1883.
+1764096444: mosquitto version 2.0.22 running
+1764096448: New connection from 172.18.0.4:36168 on port 1883.
+1764096449: New client connected from 172.18.0.4:36168 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764096449: New connection from 172.18.0.4:36176 on port 1883.
+1764096449: New client connected from 172.18.0.4:36176 as WheatherStationUAH-publisher (p2, c1, k60).
+1764096449: Client WheatherStationUAH-publisher disconnected.
+1764096495: New connection from ::1:54904 on port 1883.
+1764096495: New client connected from ::1:54904 as auto-AF4344BD-F124-D25B-EF13-9D92455D1EA8 (p2, c1, k60).
+1764096495: Client auto-AF4344BD-F124-D25B-EF13-9D92455D1EA8 disconnected.
+1764096557: Client WheatherStationUAH-subscriber closed its connection.
+1764096557: mosquitto version 2.0.22 terminating
+1764096557: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764096560: mosquitto version 2.0.22 starting
+1764096560: Config loaded from /mosquitto/config/mosquitto.conf.
+1764096560: Opening ipv4 listen socket on port 1883.
+1764096560: Opening ipv6 listen socket on port 1883.
+1764096560: mosquitto version 2.0.22 running
+1764096563: New connection from 172.18.0.4:60388 on port 1883.
+1764096564: New client connected from 172.18.0.4:60388 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764096564: New connection from 172.18.0.4:60404 on port 1883.
+1764096564: New client connected from 172.18.0.4:60404 as WheatherStationUAH-publisher (p2, c1, k60).
+1764096564: Client WheatherStationUAH-publisher disconnected.
+1764096600: New connection from ::1:55914 on port 1883.
+1764096600: New client connected from ::1:55914 as auto-237D74D4-D776-E4BE-C284-D9E41ED9DEB4 (p2, c1, k60).
+1764096600: Client auto-237D74D4-D776-E4BE-C284-D9E41ED9DEB4 disconnected.
+1764096615: Client WheatherStationUAH-subscriber closed its connection.
+1764096615: mosquitto version 2.0.22 terminating
+1764096615: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764096621: mosquitto version 2.0.22 starting
+1764096621: Config loaded from /mosquitto/config/mosquitto.conf.
+1764096621: Opening ipv4 listen socket on port 1883.
+1764096621: Opening ipv6 listen socket on port 1883.
+1764096621: mosquitto version 2.0.22 running
+1764096623: New connection from 172.18.0.4:34530 on port 1883.
+1764096624: New client connected from 172.18.0.4:34530 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764096624: New connection from 172.18.0.4:34540 on port 1883.
+1764096624: New client connected from 172.18.0.4:34540 as WheatherStationUAH-publisher (p2, c1, k60).
+1764096624: Client WheatherStationUAH-publisher disconnected.
+1764096657: New connection from ::1:54088 on port 1883.
+1764096657: New client connected from ::1:54088 as auto-8DE8AB0C-01B1-8368-F2E4-C3AE8287E679 (p2, c1, k60).
+1764096657: Client auto-8DE8AB0C-01B1-8368-F2E4-C3AE8287E679 disconnected.
+1764096743: Client WheatherStationUAH-subscriber closed its connection.
+1764096744: mosquitto version 2.0.22 terminating
+1764096744: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764096752: mosquitto version 2.0.22 starting
+1764096752: Config loaded from /mosquitto/config/mosquitto.conf.
+1764096752: Opening ipv4 listen socket on port 1883.
+1764096752: Opening ipv6 listen socket on port 1883.
+1764096752: mosquitto version 2.0.22 running
+1764096756: New connection from 172.18.0.4:35246 on port 1883.
+1764096756: New client connected from 172.18.0.4:35246 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764096756: New connection from 172.18.0.4:35250 on port 1883.
+1764096756: New client connected from 172.18.0.4:35250 as WheatherStationUAH-publisher (p2, c1, k60).
+1764096756: Client WheatherStationUAH-publisher disconnected.
+1764096781: New connection from ::1:40618 on port 1883.
+1764096781: New client connected from ::1:40618 as auto-B61F91CC-D5D7-4580-CD03-A14F38D0A8AA (p2, c1, k60).
+1764096781: Client auto-B61F91CC-D5D7-4580-CD03-A14F38D0A8AA disconnected.
+1764096854: Client WheatherStationUAH-subscriber closed its connection.
+1764096855: mosquitto version 2.0.22 terminating
+1764096855: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764096860: mosquitto version 2.0.22 starting
+1764096860: Config loaded from /mosquitto/config/mosquitto.conf.
+1764096860: Opening ipv4 listen socket on port 1883.
+1764096860: Opening ipv6 listen socket on port 1883.
+1764096860: mosquitto version 2.0.22 running
+1764096863: New connection from 172.18.0.4:50318 on port 1883.
+1764096864: New client connected from 172.18.0.4:50318 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764096864: New connection from 172.18.0.4:50330 on port 1883.
+1764096864: New client connected from 172.18.0.4:50330 as WheatherStationUAH-publisher (p2, c1, k60).
+1764096864: Client WheatherStationUAH-publisher disconnected.
+1764096886: New connection from ::1:37390 on port 1883.
+1764096886: New client connected from ::1:37390 as auto-1F052FA4-AE30-8395-898C-97E88AFCE124 (p2, c1, k60).
+1764096886: Client auto-1F052FA4-AE30-8395-898C-97E88AFCE124 disconnected.
+1764096936: New connection from ::1:38482 on port 1883.
+1764096936: New client connected from ::1:38482 as auto-91A19223-2783-103F-8F04-D8BF6EA140F9 (p2, c1, k60).
+1764096936: Client auto-91A19223-2783-103F-8F04-D8BF6EA140F9 disconnected.
+1764097274: Client WheatherStationUAH-subscriber closed its connection.
+1764097275: mosquitto version 2.0.22 terminating
+1764097275: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764097283: mosquitto version 2.0.22 starting
+1764097283: Config loaded from /mosquitto/config/mosquitto.conf.
+1764097283: Opening ipv4 listen socket on port 1883.
+1764097283: Opening ipv6 listen socket on port 1883.
+1764097283: mosquitto version 2.0.22 running
+1764097287: New connection from 172.18.0.4:55360 on port 1883.
+1764097288: New client connected from 172.18.0.4:55360 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764097288: New connection from 172.18.0.4:55372 on port 1883.
+1764097288: New client connected from 172.18.0.4:55372 as WheatherStationUAH-publisher (p2, c1, k60).
+1764097288: Client WheatherStationUAH-publisher disconnected.
+1764097461: Client WheatherStationUAH-subscriber closed its connection.
+1764097470: New connection from 172.18.0.4:55950 on port 1883.
+1764097470: New client connected from 172.18.0.4:55950 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764097470: New connection from 172.18.0.4:50486 on port 1883.
+1764097470: New client connected from 172.18.0.4:50486 as WheatherStationUAH-publisher (p2, c1, k60).
+1764097470: Client WheatherStationUAH-publisher disconnected.
+1764097543: New connection from ::1:54558 on port 1883.
+1764097543: New client connected from ::1:54558 as auto-E4FF312E-7701-2C76-51FF-5B4B1F933457 (p2, c1, k60).
+1764097543: Client auto-E4FF312E-7701-2C76-51FF-5B4B1F933457 disconnected.
+1764097557: New connection from ::1:56650 on port 1883.
+1764097557: New client connected from ::1:56650 as auto-7C3C6D8E-C9FB-D272-23F5-9C8C028DF88F (p2, c1, k60).
+1764097557: Client auto-7C3C6D8E-C9FB-D272-23F5-9C8C028DF88F disconnected.
+1764097642: Client WheatherStationUAH-subscriber closed its connection.
+1764097642: mosquitto version 2.0.22 terminating
+1764097642: Saving in-memory database to /mosquitto/data//mosquitto.db.

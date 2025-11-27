@@ -1,0 +1,36 @@
+services:
+  mqtt-broker:
+    image: eclipse-mosquitto:latest # Descargamos la última versión de MQTT en nuestro Docker
+    container_name: mqtt-broker #Indicamos un nombre, que será utilizado para poder identificar al servicio a través del servidor Java
+    ports:
+      - "3000:1883" # Significa que cuando en nuestro PC entre algo por el puerto 3000, pasará al 1883 del Docker (puerto MQTT)ç
+    volumes: #Necesitamos poder guardar cierta información en nuestro ordenador para que no se pierda al eliminar los contenedores en el Docker
+      - ./mosquitto/conf/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    restart: unless-stopped #Trata de mantener siempre encendido el contenedor, pero sí se apaga manualmente, no lo vuelve a encender
+  base-datos:
+    image: postgres:16
+    container_name: base-datos-ubicua #nombre con el que se comunicará el servidor Java
+    ports:
+      - "3001:5432"
+    environment: #Se debe configurar la base de datos
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=ubicua
+    volumes:
+      - ./postgres/data:/var/lib/postgresql/data
+      - ./init_scripts:/docker-entrypoint-initdb.d
+    restart: unless-stopped
+  
+  tomcat-server:
+    build: .
+    container_name: tomcat-server
+    ports:
+      - "3002:8080"
+    volumes:
+      - ./tomcat/logs:/usr/local/tomcat/logs
+    depends_on: #No arranca este contenedor hasta que los contenedores listados no hayan arrancado
+      - mqtt-broker
+      - base-datos
+    restart: unless-stopped
