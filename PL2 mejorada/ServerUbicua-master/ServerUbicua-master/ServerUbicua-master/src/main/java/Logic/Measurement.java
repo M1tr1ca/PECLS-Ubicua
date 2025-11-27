@@ -1,5 +1,6 @@
 package logic;
 
+// sirve para LEER datos de la BD, NO para guardarlos.
 import java.sql.Timestamp;
 
 public class Measurement 

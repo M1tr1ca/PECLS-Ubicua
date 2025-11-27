@@ -28,13 +28,14 @@ public class ConectionDDBB
 	            // Get the connection factory configured in Tomcat
 	            DataSource ds = (DataSource) ctx.lookup("java:/comp/env/jdbc/ubicomp");
 	           
-	            // Obtiene una conexion
+	            // Obtiene una conexion, se conecta con PostgreSQL
 	            con = ds.getConnection();
-				Calendar calendar = Calendar.getInstance();
-				java.sql.Date date = new java.sql.Date(calendar.getTime().getTime());
+
+				      Calendar calendar = Calendar.getInstance();
+				      java.sql.Date date = new java.sql.Date(calendar.getTime().getTime());
 	            Log.log.debug("Connection creation. Bd connection identifier: " + con.toString() + " obtained in " + date.toString());
 	            con.setAutoCommit(autoCommit);
-	        	Log.log.info("Conection obtained in the attempt: " + i);
+	        	  Log.log.info("Conection obtained in the attempt: " + i);
 	            i = intentos;
 	          } catch (NamingException ex)
 	          {
@@ -52,6 +53,7 @@ public class ConectionDDBB
     {
         try
           {
+            // Guarda los cambios en la BD
             con.commit();
             Log.log.debug("Transaction closed");
           } catch (SQLException ex)
@@ -64,6 +66,7 @@ public class ConectionDDBB
     {
         try
           {
+            // Deshace los cambios en la BD
             con.rollback();
             Log.log.debug("Transaction canceled");
           } catch (SQLException ex)
@@ -79,9 +82,9 @@ public class ConectionDDBB
         	Log.log.info("Closing the connection");
             if (null != con)
               {
-				Calendar calendar = Calendar.getInstance();
-				java.sql.Date date = new java.sql.Date(calendar.getTime().getTime());
-	            Log.log.debug("Connection closed. Bd connection identifier: " + con.toString() + " obtained in " + date.toString());
+				        Calendar calendar = Calendar.getInstance();
+				        java.sql.Date date = new java.sql.Date(calendar.getTime().getTime());
+	              Log.log.debug("Connection closed. Bd connection identifier: " + con.toString() + " obtained in " + date.toString());
                 con.close();
               }
 
