@@ -1,33 +1,914 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
-        <title>Server example</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <title>Panel de Control IoT - Sensores Ambientales</title>
         <style>
+            :root {
+                --primary-color: #4f46e5;
+                --primary-hover: #4338ca;
+                --success-color: #10b981;
+                --warning-color: #f59e0b;
+                --danger-color: #ef4444;
+                --info-color: #3b82f6;
+                --dark-color: #1f2937;
+                --light-bg: #f8fafc;
+                --card-bg: #ffffff;
+                --border-color: #e2e8f0;
+                --text-primary: #1e293b;
+                --text-secondary: #64748b;
+                --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+                --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+                --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                color: var(--text-primary);
+            }
+
+            .container {
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            /* Header */
+            .header {
+                background: var(--card-bg);
+                border-radius: 16px;
+                padding: 24px 32px;
+                margin-bottom: 24px;
+                box-shadow: var(--shadow-lg);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+
+            .header-left {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
+                background: linear-gradient(135deg, var(--primary-color), #7c3aed);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 24px;
+            }
+
+            .header h1 {
+                font-size: 1.75rem;
+                font-weight: 700;
+                color: var(--text-primary);
+            }
+
+            .header p {
+                color: var(--text-secondary);
+                font-size: 0.875rem;
+            }
+
+            .header-right {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .status-container {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .status-badge {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 8px 16px;
+                background: #ecfdf5;
+                border-radius: 9999px;
+                font-size: 0.875rem;
+                font-weight: 500;
+                color: var(--success-color);
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+
+            .status-badge:hover {
+                transform: scale(1.02);
+            }
+
+            .status-badge.warning {
+                background: #fef3c7;
+                color: #d97706;
+            }
+
+            .status-badge.error {
+                background: #fecaca;
+                color: #dc2626;
+            }
+
+            .status-badge.checking {
+                background: #e0e7ff;
+                color: #4f46e5;
+            }
+
+            .status-dot {
+                width: 8px;
+                height: 8px;
+                background: var(--success-color);
+                border-radius: 50%;
+                animation: pulse 2s infinite;
+            }
+
+            .status-dot.warning {
+                background: #d97706;
+            }
+
+            .status-dot.error {
+                background: #dc2626;
+                animation: none;
+            }
+
+            .status-dot.checking {
+                background: #4f46e5;
+            }
+
+            .status-details {
+                display: flex;
+                gap: 6px;
+            }
+
+            .status-item {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                padding: 6px 12px;
+                border-radius: 8px;
+                font-size: 0.75rem;
+                font-weight: 500;
+            }
+
+            .status-item.ok {
+                background: #d1fae5;
+                color: #065f46;
+            }
+
+            .status-item.fail {
+                background: #fecaca;
+                color: #991b1b;
+            }
+
+            .status-item i {
+                font-size: 0.7rem;
+            }
+
+            @keyframes pulse {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0.5; }
+            }
+
+            .btn-refresh {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 10px 20px;
+                background: var(--primary-color);
+                color: white;
+                border: none;
+                border-radius: 10px;
+                font-size: 0.875rem;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+
+            .btn-refresh:hover {
+                background: var(--primary-hover);
+                transform: translateY(-1px);
+            }
+
+            /* Stats Cards */
+            .stats-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 16px;
+                margin-bottom: 24px;
+            }
+
+            .stat-card {
+                background: var(--card-bg);
+                border-radius: 12px;
+                padding: 20px;
+                box-shadow: var(--shadow-md);
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+
+            .stat-card:hover {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .stat-card .icon {
+                width: 44px;
+                height: 44px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+
+            .stat-card.temp .icon { background: #fef3c7; color: #d97706; }
+            .stat-card.humidity .icon { background: #dbeafe; color: #2563eb; }
+            .stat-card.pressure .icon { background: #ede9fe; color: #7c3aed; }
+            .stat-card.altitude .icon { background: #d1fae5; color: #059669; }
+
+            .stat-card .label {
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                color: var(--text-secondary);
+                font-weight: 600;
+                margin-bottom: 4px;
+            }
+
+            .stat-card .value {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: var(--text-primary);
+            }
+
+            .stat-card .sub {
+                font-size: 0.75rem;
+                color: var(--text-secondary);
+                margin-top: 4px;
+            }
+
+            /* Main Grid */
+            .main-grid {
+                display: grid;
+                grid-template-columns: 1fr 350px;
+                gap: 24px;
+            }
+
+            @media (max-width: 1024px) {
+                .main-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            /* Card */
+            .card {
+                background: var(--card-bg);
+                border-radius: 16px;
+                box-shadow: var(--shadow-md);
+                overflow: hidden;
+            }
+
+            .card-header {
+                padding: 20px 24px;
+                border-bottom: 1px solid var(--border-color);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .card-title {
+                font-size: 1.125rem;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .card-title i {
+                color: var(--primary-color);
+            }
+
+            .card-body {
+                padding: 24px;
+            }
+
+            /* Filters */
+            .filters-section {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                align-items: center;
+            }
+
+            .filter-group {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .filter-group label {
+                font-size: 0.875rem;
+                font-weight: 500;
+                color: var(--text-secondary);
+            }
+
+            .filter-select, .filter-input {
+                padding: 8px 12px;
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                font-size: 0.875rem;
+                background: var(--light-bg);
+                color: var(--text-primary);
+                transition: border-color 0.2s, box-shadow 0.2s;
+            }
+
+            .filter-select:focus, .filter-input:focus {
+                outline: none;
+                border-color: var(--primary-color);
+                box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+            }
+
+            .btn-filter {
+                padding: 8px 16px;
+                background: var(--light-bg);
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                font-size: 0.875rem;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.2s;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+
+            .btn-filter:hover {
+                background: var(--primary-color);
+                color: white;
+                border-color: var(--primary-color);
+            }
+
+            .btn-filter.active {
+                background: var(--primary-color);
+                color: white;
+                border-color: var(--primary-color);
+            }
+
+            /* Table */
+            .table-container {
+                overflow-x: auto;
+            }
+
             table {
-                font-family: arial, sans-serif;
-                border-collapse: collapse;
                 width: 100%;
+                border-collapse: collapse;
+                font-size: 0.875rem;
             }
 
-            td, th {
-                border: 1px solid #dddddd;
+            thead {
+                background: var(--light-bg);
+            }
+
+            th {
+                padding: 14px 16px;
                 text-align: left;
-                padding: 8px;
+                font-weight: 600;
+                color: var(--text-secondary);
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                letter-spacing: 0.05em;
+                border-bottom: 2px solid var(--border-color);
+                cursor: pointer;
+                transition: background 0.2s;
+                white-space: nowrap;
             }
 
-            tr:nth-child(even) {
-                background-color: #dddddd;
+            th:hover {
+                background: #e2e8f0;
+            }
+
+            th i {
+                margin-left: 6px;
+                opacity: 0.5;
+            }
+
+            td {
+                padding: 14px 16px;
+                border-bottom: 1px solid var(--border-color);
+                color: var(--text-primary);
+            }
+
+            tr:hover {
+                background: #f8fafc;
+            }
+
+            .sensor-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                padding: 4px 10px;
+                background: #ede9fe;
+                color: #7c3aed;
+                border-radius: 6px;
+                font-weight: 500;
+                font-size: 0.8rem;
+            }
+
+            .temp-value {
+                font-weight: 600;
+                color: #d97706;
+            }
+
+            .temp-high { color: #dc2626; }
+            .temp-low { color: #2563eb; }
+
+            .humidity-value { color: #2563eb; font-weight: 500; }
+            .pressure-value { color: #7c3aed; font-weight: 500; }
+            .altitude-value { color: #059669; font-weight: 500; }
+
+            /* Alert Controls */
+            .alert-section {
+                margin-bottom: 20px;
+            }
+
+            .alert-title {
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: var(--text-secondary);
+                margin-bottom: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            .alert-buttons {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 8px;
+            }
+
+            .btn-alert {
+                padding: 12px 8px;
+                border: none;
+                border-radius: 10px;
+                font-size: 0.75rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.2s;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4px;
+            }
+
+            .btn-alert:hover {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-md);
+            }
+
+            .btn-alert.level-0 { background: #d1fae5; color: #065f46; }
+            .btn-alert.level-0:hover { background: #a7f3d0; }
+            .btn-alert.level-1 { background: #dbeafe; color: #1e40af; }
+            .btn-alert.level-1:hover { background: #bfdbfe; }
+            .btn-alert.level-2 { background: #fef3c7; color: #92400e; }
+            .btn-alert.level-2:hover { background: #fde68a; }
+            .btn-alert.level-3 { background: #fed7aa; color: #9a3412; }
+            .btn-alert.level-3:hover { background: #fdba74; }
+            .btn-alert.level-4 { background: #fecaca; color: #991b1b; }
+            .btn-alert.level-4:hover { background: #fca5a5; }
+
+            .btn-alert i {
+                font-size: 1.25rem;
+            }
+
+            .btn-reset {
+                width: 100%;
+                padding: 14px;
+                background: linear-gradient(135deg, #64748b, #475569);
+                color: white;
+                border: none;
+                border-radius: 10px;
+                font-size: 0.875rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.2s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                margin-top: 16px;
+            }
+
+            .btn-reset:hover {
+                background: linear-gradient(135deg, #475569, #334155);
+                transform: translateY(-1px);
+            }
+
+            #commandStatus {
+                margin-top: 12px;
+                padding: 10px;
+                border-radius: 8px;
+                text-align: center;
+                font-size: 0.875rem;
+                min-height: 40px;
+            }
+
+            #commandStatus:not(:empty) {
+                background: #f0fdf4;
+            }
+
+            /* Input Section */
+            .input-section {
+                background: var(--light-bg);
+                border-radius: 12px;
+                padding: 16px;
+                margin-top: 16px;
+            }
+
+            .input-section label {
+                display: block;
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: var(--text-secondary);
+                margin-bottom: 8px;
+            }
+
+            .input-group {
+                display: flex;
+                gap: 8px;
+            }
+
+            .input-group input, .input-group textarea {
+                flex: 1;
+                padding: 12px 16px;
+                border: 1px solid var(--border-color);
+                border-radius: 10px;
+                font-size: 0.875rem;
+                background: var(--card-bg);
+                font-family: inherit;
+            }
+
+            .input-group input:focus, .input-group textarea:focus {
+                outline: none;
+                border-color: var(--primary-color);
+                box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+            }
+
+            .mqtt-section {
+                background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+                border: 1px solid #bae6fd;
+            }
+
+            .mqtt-section .input-row {
+                margin-bottom: 12px;
+            }
+
+            .mqtt-section .input-row:last-child {
+                margin-bottom: 0;
+            }
+
+            .mqtt-section .input-label {
+                display: block;
+                font-size: 0.75rem;
+                font-weight: 600;
+                color: #0369a1;
+                margin-bottom: 6px;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            .mqtt-section input, .mqtt-section textarea {
+                width: 100%;
+                padding: 10px 14px;
+                border: 1px solid #7dd3fc;
+                border-radius: 8px;
+                font-size: 0.875rem;
+                background: white;
+            }
+
+            .mqtt-section textarea {
+                min-height: 80px;
+                resize: vertical;
+                font-family: 'Monaco', 'Consolas', monospace;
+                font-size: 0.8rem;
+            }
+
+            .btn-mqtt {
+                width: 100%;
+                padding: 12px;
+                background: linear-gradient(135deg, #0284c7, #0369a1);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-size: 0.875rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.2s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                margin-top: 12px;
+            }
+
+            .btn-mqtt:hover {
+                background: linear-gradient(135deg, #0369a1, #075985);
+                transform: translateY(-1px);
+            }
+
+            .btn-mqtt:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+                transform: none;
+            }
+
+            #mqttStatus {
+                margin-top: 10px;
+                padding: 8px 12px;
+                border-radius: 6px;
+                font-size: 0.8rem;
+                text-align: center;
+            }
+
+            #mqttStatus.success {
+                background: #d1fae5;
+                color: #065f46;
+            }
+
+            #mqttStatus.error {
+                background: #fecaca;
+                color: #991b1b;
+            }
+
+            .btn-send {
+                padding: 12px 24px;
+                background: var(--primary-color);
+                color: white;
+                border: none;
+                border-radius: 10px;
+                font-size: 0.875rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+
+            .btn-send:hover {
+                background: var(--primary-hover);
+            }
+
+            .json-helper {
+                display: flex;
+                gap: 6px;
+                margin-top: 8px;
+                flex-wrap: wrap;
+            }
+
+            .json-helper button {
+                padding: 4px 10px;
+                font-size: 0.7rem;
+                background: #e0f2fe;
+                border: 1px solid #7dd3fc;
+                border-radius: 4px;
+                cursor: pointer;
+                color: #0369a1;
+                transition: all 0.2s;
+            }
+
+            .json-helper button:hover {
+                background: #bae6fd;
+            }
+
+            /* Empty State */
+            .empty-state {
+                text-align: center;
+                padding: 48px 24px;
+                color: var(--text-secondary);
+            }
+
+            .empty-state i {
+                font-size: 48px;
+                margin-bottom: 16px;
+                opacity: 0.5;
+            }
+
+            /* Pagination Info */
+            .table-footer {
+                padding: 16px 24px;
+                border-top: 1px solid var(--border-color);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 0.875rem;
+                color: var(--text-secondary);
+            }
+
+            .records-info {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            /* Quick Stats in Sidebar */
+            .quick-stats {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                margin-bottom: 20px;
+            }
+
+            .quick-stat {
+                background: var(--light-bg);
+                border-radius: 10px;
+                padding: 12px;
+                text-align: center;
+            }
+
+            .quick-stat .label {
+                font-size: 0.7rem;
+                color: var(--text-secondary);
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            .quick-stat .value {
+                font-size: 1.25rem;
+                font-weight: 700;
+                color: var(--text-primary);
+                margin-top: 4px;
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                .container {
+                    padding: 12px;
+                }
+
+                .header {
+                    padding: 16px;
+                }
+
+                .header h1 {
+                    font-size: 1.25rem;
+                }
+
+                .stats-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .card-header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .filters-section {
+                    width: 100%;
+                }
+
+                .filter-group {
+                    width: 100%;
+                }
+
+                .filter-select {
+                    flex: 1;
+                }
+            }
+
+            /* Loading Animation */
+            .loading {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border: 2px solid rgba(255,255,255,0.3);
+                border-radius: 50%;
+                border-top-color: #fff;
+                animation: spin 1s ease-in-out infinite;
+            }
+
+            @keyframes spin {
+                to { transform: rotate(360deg); }
+            }
+
+            /* Scrollbar Styling */
+            ::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: var(--light-bg);
+                border-radius: 4px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #cbd5e1;
+                border-radius: 4px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #94a3b8;
             }
         </style>
     </head>
     <body>
         <script>
+            var allData = []; // Almacenar todos los datos para filtrar
+            var currentSort = { column: 'date', direction: 'desc' };
+
             $(document).ready(function ()
             {
+                checkSystemStatus();
                 loadData();
+                // Auto-refresh cada 30 segundos
+                setInterval(function() {
+                    loadData();
+                    checkSystemStatus();
+                }, 30000);
             });
+
+            function checkSystemStatus() {
+                $('#systemStatus').removeClass('warning error').addClass('checking');
+                $('#statusDot').removeClass('warning error').addClass('checking');
+                $('#statusText').text('Verificando...');
+                
+                $.ajax({
+                    url: "/Server/SystemStatus",
+                    type: 'get',
+                    timeout: 10000,
+                    success: function(response) {
+                        var status;
+                        try {
+                            status = typeof response === 'string' ? JSON.parse(response) : response;
+                        } catch(e) {
+                            showStatusError();
+                            return;
+                        }
+                        
+                        updateStatusBadge(status);
+                    },
+                    error: function() {
+                        showStatusError();
+                    }
+                });
+            }
+
+            function updateStatusBadge(status) {
+                var badge = $('#systemStatus');
+                var dot = $('#statusDot');
+                var text = $('#statusText');
+                var details = $('#statusDetails');
+                
+                badge.removeClass('checking warning error');
+                dot.removeClass('checking warning error');
+                
+                // Actualizar indicadores individuales
+                var mqttHtml = status.mqtt 
+                    ? '<span class="status-item ok"><i class="fas fa-check"></i> MQTT</span>'
+                    : '<span class="status-item fail"><i class="fas fa-times"></i> MQTT</span>';
+                var dbHtml = status.database 
+                    ? '<span class="status-item ok"><i class="fas fa-check"></i> BD</span>'
+                    : '<span class="status-item fail"><i class="fas fa-times"></i> BD</span>';
+                
+                details.html(mqttHtml + dbHtml);
+                
+                if (status.overall) {
+                    text.text('Sistema Activo');
+                } else if (status.mqtt || status.database) {
+                    badge.addClass('warning');
+                    dot.addClass('warning');
+                    text.text('Parcialmente Activo');
+                } else {
+                    badge.addClass('error');
+                    dot.addClass('error');
+                    text.text('Sistema Caído');
+                }
+            }
+
+            function showStatusError() {
+                $('#systemStatus').removeClass('checking').addClass('error');
+                $('#statusDot').removeClass('checking').addClass('error');
+                $('#statusText').text('Sin Conexión');
+                $('#statusDetails').html('<span class="status-item fail"><i class="fas fa-times"></i> Error</span>');
+            }
 
             function loadData()
             {
@@ -41,22 +922,156 @@
                     {
                         var resp = JSON.parse(response);
                         console.log(resp);
-                        $("#dataTable").empty();
-                        var newRow = "";
-                        $.each(resp, function (i, value)
-                        {
-                            newRow += "<tr>";
-                            newRow += "<td>" + value.sensorId + "</td>";
-                            newRow += "<td>" + value.date + "</td>";
-                            newRow += "<td>" + value.temperature.toFixed(2) + " °C</td>";
-                            newRow += "<td>" + value.humidity.toFixed(2) + " %</td>";
-                            newRow += "<td>" + value.pressure.toFixed(2) + " hPa</td>";
-                            newRow += "<td>" + value.altitude.toFixed(2) + " m</td>";
-                            newRow += "</tr>";
-                        });
-                        $("#dataTable").append(newRow);
+                        allData = resp;
+                        updateSensorFilter(resp);
+                        updateStats(resp);
+                        applyFiltersAndRender();
                     }
                 });
+            }
+
+            function updateSensorFilter(data) {
+                var sensors = [...new Set(data.map(item => item.sensorId))];
+                var select = $('#sensorFilter');
+                var currentValue = select.val();
+                select.find('option:not(:first)').remove();
+                sensors.forEach(function(sensor) {
+                    select.append('<option value="' + sensor + '">' + sensor + '</option>');
+                });
+                if (currentValue) select.val(currentValue);
+            }
+
+            function updateStats(data) {
+                if (data.length === 0) {
+                    $('#totalRecords').text('0');
+                    $('#avgTemp').text('--');
+                    $('#avgHumidity').text('--');
+                    $('#avgPressure').text('--');
+                    $('#maxTemp').text('--');
+                    $('#minTemp').text('--');
+                    $('#maxHumidity').text('--');
+                    $('#maxAltitude').text('--');
+                    return;
+                }
+
+                var temps = data.map(d => d.temperature);
+                var humidities = data.map(d => d.humidity);
+                var pressures = data.map(d => d.pressure);
+                var altitudes = data.map(d => d.altitude);
+
+                $('#totalRecords').text(data.length);
+                $('#avgTemp').text((temps.reduce((a,b) => a+b, 0) / temps.length).toFixed(1) + '°C');
+                $('#avgHumidity').text((humidities.reduce((a,b) => a+b, 0) / humidities.length).toFixed(1) + '%');
+                $('#avgPressure').text((pressures.reduce((a,b) => a+b, 0) / pressures.length).toFixed(0) + ' hPa');
+                $('#maxTemp').text(Math.max(...temps).toFixed(1) + '°C');
+                $('#minTemp').text(Math.min(...temps).toFixed(1) + '°C');
+                $('#maxHumidity').text(Math.max(...humidities).toFixed(1) + '%');
+                $('#maxAltitude').text(Math.max(...altitudes).toFixed(0) + 'm');
+            }
+
+            function applyFiltersAndRender() {
+                var filtered = [...allData];
+                
+                // Filtrar por sensor
+                var sensorFilter = $('#sensorFilter').val();
+                if (sensorFilter) {
+                    filtered = filtered.filter(d => d.sensorId == sensorFilter);
+                }
+
+                // Filtrar por temperatura mínima
+                var minTemp = parseFloat($('#minTempFilter').val());
+                if (!isNaN(minTemp)) {
+                    filtered = filtered.filter(d => d.temperature >= minTemp);
+                }
+
+                // Filtrar por temperatura máxima
+                var maxTemp = parseFloat($('#maxTempFilter').val());
+                if (!isNaN(maxTemp)) {
+                    filtered = filtered.filter(d => d.temperature <= maxTemp);
+                }
+
+                // Ordenar
+                filtered.sort(function(a, b) {
+                    var valA = a[currentSort.column];
+                    var valB = b[currentSort.column];
+                    if (typeof valA === 'string') {
+                        valA = valA.toLowerCase();
+                        valB = valB.toLowerCase();
+                    }
+                    if (currentSort.direction === 'asc') {
+                        return valA > valB ? 1 : -1;
+                    } else {
+                        return valA < valB ? 1 : -1;
+                    }
+                });
+
+                renderTable(filtered);
+                updateFilteredStats(filtered);
+            }
+
+            function updateFilteredStats(data) {
+                $('#filteredCount').text(data.length + ' de ' + allData.length + ' registros');
+            }
+
+            function renderTable(data) {
+                $("#dataTable").empty();
+                if (data.length === 0) {
+                    $("#dataTable").append('<tr><td colspan="6" class="empty-state"><i class="fas fa-database"></i><p>No hay datos disponibles</p></td></tr>');
+                    return;
+                }
+                var newRow = "";
+                $.each(data, function (i, value)
+                {
+                    var tempClass = 'temp-value';
+                    if (value.temperature > 30) tempClass += ' temp-high';
+                    else if (value.temperature < 15) tempClass += ' temp-low';
+
+                    newRow += "<tr>";
+                    newRow += "<td><span class='sensor-badge'><i class='fas fa-microchip'></i>" + value.sensorId + "</span></td>";
+                    newRow += "<td>" + value.date + "</td>";
+                    newRow += "<td class='" + tempClass + "'>" + value.temperature.toFixed(2) + " °C</td>";
+                    newRow += "<td class='humidity-value'>" + value.humidity.toFixed(2) + " %</td>";
+                    newRow += "<td class='pressure-value'>" + value.pressure.toFixed(2) + " hPa</td>";
+                    newRow += "<td class='altitude-value'>" + value.altitude.toFixed(2) + " m</td>";
+                    newRow += "</tr>";
+                });
+                $("#dataTable").append(newRow);
+            }
+
+            function sortTable(column) {
+                if (currentSort.column === column) {
+                    currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+                } else {
+                    currentSort.column = column;
+                    currentSort.direction = 'asc';
+                }
+                updateSortIcons();
+                applyFiltersAndRender();
+            }
+
+            function updateSortIcons() {
+                $('th i').removeClass('fa-sort-up fa-sort-down').addClass('fa-sort');
+                var icon = currentSort.direction === 'asc' ? 'fa-sort-up' : 'fa-sort-down';
+                $('th[data-column="' + currentSort.column + '"] i').removeClass('fa-sort').addClass(icon);
+            }
+
+            function clearFilters() {
+                $('#sensorFilter').val('');
+                $('#minTempFilter').val('');
+                $('#maxTempFilter').val('');
+                applyFiltersAndRender();
+            }
+
+            function showHighTemps() {
+                $('#minTempFilter').val('25');
+                $('#maxTempFilter').val('');
+                applyFiltersAndRender();
+            }
+
+            function showLowTemps() {
+                $('#minTempFilter').val('');
+                $('#maxTempFilter').val('18');
+                applyFiltersAndRender();
             }
 
             function insertData()
@@ -73,6 +1088,90 @@
                         loadData();
                     }
                 });
+            }
+
+            function publishMQTT() {
+                var topic = $('#mqttTopic').val().trim();
+                var message = $('#mqttMessage').val().trim();
+                
+                if (!topic) {
+                    showMqttStatus('Error: El topic es requerido', false);
+                    return;
+                }
+                
+                if (!message) {
+                    showMqttStatus('Error: El mensaje es requerido', false);
+                    return;
+                }
+                
+                // Validar que sea JSON válido
+                try {
+                    JSON.parse(message);
+                } catch(e) {
+                    showMqttStatus('Error: El mensaje debe ser JSON válido', false);
+                    return;
+                }
+                
+                $('#btnPublishMqtt').prop('disabled', true).html('<i class="fas fa-spinner fa-spin"></i> Enviando...');
+                
+                $.ajax({
+                    url: "/Server/PublishMQTT",
+                    type: 'post',
+                    data: { topic: topic, message: message },
+                    success: function(response) {
+                        var resp;
+                        try {
+                            resp = typeof response === 'string' ? JSON.parse(response) : response;
+                        } catch(e) {
+                            showMqttStatus('Error al parsear respuesta', false);
+                            resetMqttButton();
+                            return;
+                        }
+                        
+                        if (resp.success) {
+                            showMqttStatus('✓ Mensaje enviado a: ' + topic, true);
+                        } else {
+                            showMqttStatus('✗ Error: ' + resp.error, false);
+                        }
+                        resetMqttButton();
+                    },
+                    error: function() {
+                        showMqttStatus('✗ Error de conexión con el servidor', false);
+                        resetMqttButton();
+                    }
+                });
+            }
+
+            function showMqttStatus(message, success) {
+                var status = $('#mqttStatus');
+                status.removeClass('success error').addClass(success ? 'success' : 'error');
+                status.html(message);
+                setTimeout(function() { status.html('').removeClass('success error'); }, 5000);
+            }
+
+            function resetMqttButton() {
+                $('#btnPublishMqtt').prop('disabled', false).html('<i class="fas fa-paper-plane"></i> Publicar Mensaje');
+            }
+
+            function insertJsonTemplate(template) {
+                var templates = {
+                    'alert': '{\n  "alert_level": 1,\n  "message": "Alerta de prueba"\n}',
+                    'sensor': '{\n  "sensor_id": "ESP32_001",\n  "temperature": 25.5,\n  "humidity": 60.0\n}',
+                    'command': '{\n  "command": "restart",\n  "delay": 5000\n}',
+                    'config': '{\n  "interval": 30,\n  "enabled": true\n}'
+                };
+                $('#mqttMessage').val(templates[template] || '{}');
+            }
+
+            function formatJson() {
+                var textarea = $('#mqttMessage');
+                var value = textarea.val().trim();
+                try {
+                    var parsed = JSON.parse(value);
+                    textarea.val(JSON.stringify(parsed, null, 2));
+                } catch(e) {
+                    showMqttStatus('Error: JSON inválido', false);
+                }
             }
 
             function sendAlertLevel(level)
@@ -126,52 +1225,249 @@
             }
 
         </script>
-        <h1>SERVER EXAMPLE</h1>
-        <br>
-        
-        <!-- Control de Alertas -->
-        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
-            <h3>Control de Alertas ESP32</h3>
-            <p>Selecciona el nivel de alerta a enviar:</p>
-            <button onclick="sendAlertLevel(0)" style="background-color: #28a745; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">
-                Nivel 0 - Sin Alerta
-            </button>
-            <button onclick="sendAlertLevel(1)" style="background-color: #17a2b8; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">
-                Nivel 1 - Baja
-            </button>
-            <button onclick="sendAlertLevel(2)" style="background-color: #ffc107; color: black; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">
-                Nivel 2 - Media
-            </button>
-            <button onclick="sendAlertLevel(3)" style="background-color: #fd7e14; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">
-                Nivel 3 - Alta
-            </button>
-            <button onclick="sendAlertLevel(4)" style="background-color: #dc3545; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">
-                Nivel 4 - Crítica
-            </button>
-            <br><br>
-            <button onclick="sendReset()" style="background-color: #6c757d; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">
-                🔄 Reiniciar Dispositivo
-            </button>
-            <div id="commandStatus" style="margin-top: 10px; font-weight: bold;"></div>
+
+        <div class="container">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <div class="logo">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <div>
+                        <h1>Panel de Control IoT</h1>
+                        <p>Monitorización de Sensores Ambientales</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="status-container">
+                        <div class="status-badge checking" id="systemStatus" onclick="checkSystemStatus()" title="Click para actualizar estado">
+                            <span class="status-dot checking" id="statusDot"></span>
+                            <span id="statusText">Verificando...</span>
+                        </div>
+                        <div class="status-details" id="statusDetails"></div>
+                    </div>
+                    <button class="btn-refresh" onclick="loadData(); checkSystemStatus();">
+                        <i class="fas fa-sync-alt"></i>
+                        Actualizar
+                    </button>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card temp">
+                    <div class="icon"><i class="fas fa-thermometer-half"></i></div>
+                    <div class="label">Temperatura Promedio</div>
+                    <div class="value" id="avgTemp">--</div>
+                    <div class="sub">Última actualización</div>
+                </div>
+                <div class="stat-card humidity">
+                    <div class="icon"><i class="fas fa-tint"></i></div>
+                    <div class="label">Humedad Promedio</div>
+                    <div class="value" id="avgHumidity">--</div>
+                    <div class="sub">Última actualización</div>
+                </div>
+                <div class="stat-card pressure">
+                    <div class="icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <div class="label">Presión Promedio</div>
+                    <div class="value" id="avgPressure">--</div>
+                    <div class="sub">Última actualización</div>
+                </div>
+                <div class="stat-card altitude">
+                    <div class="icon"><i class="fas fa-mountain"></i></div>
+                    <div class="label">Total Registros</div>
+                    <div class="value" id="totalRecords">0</div>
+                    <div class="sub">En base de datos</div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-grid">
+                <!-- Data Table Section -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <i class="fas fa-table"></i>
+                            Datos de Sensores
+                        </h2>
+                        <div class="filters-section">
+                            <div class="filter-group">
+                                <label><i class="fas fa-microchip"></i></label>
+                                <select id="sensorFilter" class="filter-select" onchange="applyFiltersAndRender()">
+                                    <option value="">Todos los sensores</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Temp:</label>
+                                <input type="number" id="minTempFilter" class="filter-input" placeholder="Mín" style="width:70px" onchange="applyFiltersAndRender()">
+                                <span>-</span>
+                                <input type="number" id="maxTempFilter" class="filter-input" placeholder="Máx" style="width:70px" onchange="applyFiltersAndRender()">
+                            </div>
+                            <button class="btn-filter" onclick="showHighTemps()">
+                                <i class="fas fa-temperature-high"></i> Altas
+                            </button>
+                            <button class="btn-filter" onclick="showLowTemps()">
+                                <i class="fas fa-temperature-low"></i> Bajas
+                            </button>
+                            <button class="btn-filter" onclick="clearFilters()">
+                                <i class="fas fa-times"></i> Limpiar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th data-column="sensorId" onclick="sortTable('sensorId')">
+                                        Sensor ID <i class="fas fa-sort"></i>
+                                    </th>
+                                    <th data-column="date" onclick="sortTable('date')">
+                                        Fecha <i class="fas fa-sort"></i>
+                                    </th>
+                                    <th data-column="temperature" onclick="sortTable('temperature')">
+                                        Temperatura <i class="fas fa-sort"></i>
+                                    </th>
+                                    <th data-column="humidity" onclick="sortTable('humidity')">
+                                        Humedad <i class="fas fa-sort"></i>
+                                    </th>
+                                    <th data-column="pressure" onclick="sortTable('pressure')">
+                                        Presión <i class="fas fa-sort"></i>
+                                    </th>
+                                    <th data-column="altitude" onclick="sortTable('altitude')">
+                                        Altitud <i class="fas fa-sort"></i>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="dataTable">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-footer">
+                        <div class="records-info">
+                            <i class="fas fa-info-circle"></i>
+                            <span id="filteredCount">0 registros</span>
+                        </div>
+                        <div>
+                            <small>Auto-refresh: 30s</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar - Controls -->
+                <div>
+                    <!-- Quick Stats -->
+                    <div class="card" style="margin-bottom: 20px;">
+                        <div class="card-header">
+                            <h2 class="card-title">
+                                <i class="fas fa-chart-bar"></i>
+                                Estadísticas Rápidas
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="quick-stats">
+                                <div class="quick-stat">
+                                    <div class="label">Temp. Máx</div>
+                                    <div class="value" id="maxTemp" style="color: #dc2626;">--</div>
+                                </div>
+                                <div class="quick-stat">
+                                    <div class="label">Temp. Mín</div>
+                                    <div class="value" id="minTemp" style="color: #2563eb;">--</div>
+                                </div>
+                                <div class="quick-stat">
+                                    <div class="label">Humedad Máx</div>
+                                    <div class="value" id="maxHumidity" style="color: #0891b2;">--</div>
+                                </div>
+                                <div class="quick-stat">
+                                    <div class="label">Altitud Máx</div>
+                                    <div class="value" id="maxAltitude" style="color: #059669;">--</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alert Controls -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">
+                                <i class="fas fa-bell"></i>
+                                Control de Alertas ESP32
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert-section">
+                                <div class="alert-title">Nivel de Alerta</div>
+                                <div class="alert-buttons">
+                                    <button class="btn-alert level-0" onclick="sendAlertLevel(0)">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Nivel 0</span>
+                                        <small>Sin Alerta</small>
+                                    </button>
+                                    <button class="btn-alert level-1" onclick="sendAlertLevel(1)">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span>Nivel 1</span>
+                                        <small>Baja</small>
+                                    </button>
+                                    <button class="btn-alert level-2" onclick="sendAlertLevel(2)">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <span>Nivel 2</span>
+                                        <small>Media</small>
+                                    </button>
+                                    <button class="btn-alert level-3" onclick="sendAlertLevel(3)">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                        <span>Nivel 3</span>
+                                        <small>Alta</small>
+                                    </button>
+                                    <button class="btn-alert level-4" onclick="sendAlertLevel(4)">
+                                        <i class="fas fa-radiation"></i>
+                                        <span>Nivel 4</span>
+                                        <small>Crítica</small>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <button class="btn-reset" onclick="sendReset()">
+                                <i class="fas fa-redo-alt"></i>
+                                Reiniciar Dispositivo
+                            </button>
+
+                            <div id="commandStatus"></div>
+
+                            <div class="input-section">
+                                <label><i class="fas fa-database"></i> Enviar Valor a BD</label>
+                                <div class="input-group">
+                                    <input type="number" id="newValue" placeholder="Ingresa un valor...">
+                                    <button class="btn-send" onclick="insertData()">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="input-section mqtt-section">
+                                <label><i class="fas fa-broadcast-tower"></i> Publicar Mensaje MQTT</label>
+                                <div class="input-row">
+                                    <span class="input-label">Topic</span>
+                                    <input type="text" id="mqttTopic" placeholder="ej: uah/alcala/weather/control">
+                                </div>
+                                <div class="input-row">
+                                    <span class="input-label">Mensaje JSON</span>
+                                    <textarea id="mqttMessage" placeholder='{"key": "value"}'></textarea>
+                                </div>
+                                <div class="json-helper">
+                                    <button onclick="insertJsonTemplate('alert')" title="Plantilla de alerta">📢 Alerta</button>
+                                    <button onclick="insertJsonTemplate('sensor')" title="Plantilla de sensor">🌡️ Sensor</button>
+                                    <button onclick="insertJsonTemplate('command')" title="Plantilla de comando">⚙️ Comando</button>
+                                    <button onclick="insertJsonTemplate('config')" title="Plantilla de config">🔧 Config</button>
+                                    <button onclick="formatJson()" title="Formatear JSON">✨ Formatear</button>
+                                </div>
+                                <button class="btn-mqtt" id="btnPublishMqtt" onclick="publishMQTT()">
+                                    <i class="fas fa-paper-plane"></i> Publicar Mensaje
+                                </button>
+                                <div id="mqttStatus"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <label>New value</label>
-        <input type="number" id="newValue"><br>
-        <button onclick="insertData()">Send</button> 
-        <br><br>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Sensor ID</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Temperature</th>
-                    <th scope="col">Humidity</th>
-                    <th scope="col">Pressure</th>
-                    <th scope="col">Altitude</th>
-                </tr>
-            </thead>
-            <tbody id="dataTable">
-            </tbody>
-        </table>		
     </body>
 </html>

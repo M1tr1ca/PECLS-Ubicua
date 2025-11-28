@@ -203,3 +203,47 @@ See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
 2025-11-28 07:51:05.176 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
 2025-11-28 07:51:05.181 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:66) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
 2025-11-28 07:51:05.187 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 08:05:18.297 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to /sensors
+2025-11-28 08:05:18.301 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 08:05:18.608 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 08:05:18.612 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 08:05:18.612 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 08:05:18.623 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 08:05:18.654 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:123) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 08:05:25.348 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G3","timestamp":"2025-11-27 18:30:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":22.4,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-11-28 08:05:25.405 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:123) logmqtt ### Error guardando en BD: SQL connection is null
+2025-11-28 08:11:36.751 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to /sensors
+2025-11-28 08:11:36.764 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 08:11:37.092 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 08:11:37.095 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 08:11:37.095 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 08:11:37.103 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 08:11:37.129 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:123) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 08:11:50.296 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G3","timestamp":"2025-11-27 18:30:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":22.4,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-11-28 08:11:50.350 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:120) logmqtt ### Datos guardados: sensor=LAB08JAV-G3, temp=22.4, humidity=58.7
+2025-11-28 08:13:46.279 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 08:13:46.595 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 08:13:46.602 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":4}
+2025-11-28 08:13:46.602 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:66) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-11-28 08:13:46.608 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 08:13:46.613 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 08:13:58.188 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 08:13:58.502 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 08:13:58.508 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 08:13:58.513 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"command":"reset"}
+2025-11-28 08:13:58.520 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:66) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-11-28 08:13:58.520 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 08:14:26.463 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:57) logmqtt ### MQTT Connection lost, cause: Connection lost
+2025-11-28 08:23:48.436 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to /sensors
+2025-11-28 08:23:48.446 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 08:23:48.785 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 08:23:48.788 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 08:23:48.788 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 08:23:48.795 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 08:23:48.824 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:123) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 08:24:32.781 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:57) logmqtt ### MQTT Connection lost, cause: Connection lost
+2025-11-28 08:27:34.147 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-27 18:30:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":-20,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-11-28 08:27:35.883 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:120) logmqtt ### Datos guardados: sensor=LAB08JAV-G1, temp=-20.0, humidity=58.7
