@@ -1,0 +1,19 @@
+{
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}

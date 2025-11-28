@@ -1,0 +1,19 @@
+{
+  "sensor_id": "LAB08JAV-G2",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}

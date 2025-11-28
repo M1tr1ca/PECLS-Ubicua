@@ -119,6 +119,21 @@ public class ConectionDDBB
     	return getStatement(con,"SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50");  	
     }
     
+    public static PreparedStatement GetTrafficCounterDataBD(Connection con)
+    {
+    	return getStatement(con,"SELECT sensor_id, timestamp, vehicle_count, pedestrian_count, bicycle_count, direction, counter_type, technology, average_speed_kmh, occupancy_percentage, traffic_density FROM traffic_counter_readings ORDER BY timestamp DESC LIMIT 50");  	
+    }
+    
+    public static PreparedStatement GetTrafficLightDataBD(Connection con)
+    {
+    	return getStatement(con,"SELECT sensor_id, timestamp, current_state, cycle_position_seconds, time_remaining_seconds, cycle_duration_seconds, traffic_light_type, circulation_direction, pedestrian_waiting, pedestrian_button_pressed, malfunction_detected, cycle_count, state_changed, last_state_change FROM traffic_light_readings ORDER BY timestamp DESC LIMIT 50");  	
+    }
+    
+    public static PreparedStatement GetInformationDisplayDataBD(Connection con)
+    {
+    	return getStatement(con,"SELECT sensor_id, timestamp, display_status, current_message, content_type, brightness_level, display_type, display_size_inches, supports_color, temperature_celsius, energy_consumption_watts, last_content_update FROM information_display_readings ORDER BY timestamp DESC LIMIT 50");  	
+    }
+    
     public static PreparedStatement SetDataBD(Connection con)
     {
     	return getStatement(con,"INSERT INTO sensor_readings (sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters) VALUES (?,?,?,?,?,?)");  	

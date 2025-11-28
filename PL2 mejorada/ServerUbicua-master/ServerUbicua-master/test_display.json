@@ -1,0 +1,17 @@
+{
+  "sensor_id": "LAB08JAV-G3",
+  "timestamp": "2025-11-28 10:17:00:000",
+  "sensor_type": "information_display",
+  "data": {
+    "display_status": "active",
+    "current_message": "Trafico fluido en zona centro",
+    "content_type": "traffic",
+    "brightness_level": 90,
+    "display_type": "led_matrix",
+    "display_size_inches": 42.0,
+    "supports_color": true,
+    "temperature_celsius": 35.5,
+    "energy_consumption_watts": 120.0,
+    "last_content_update": "2025-11-28T10:01:30.000000"
+  }
+}

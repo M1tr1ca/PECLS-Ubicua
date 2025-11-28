@@ -247,3 +247,97 @@ See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
 2025-11-28 08:24:32.781 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:57) logmqtt ### MQTT Connection lost, cause: Connection lost
 2025-11-28 08:27:34.147 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-27 18:30:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":-20,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
 2025-11-28 08:27:35.883 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:120) logmqtt ### Datos guardados: sensor=LAB08JAV-G1, temp=-20.0, humidity=58.7
+2025-11-28 08:58:09.222 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to /sensors
+2025-11-28 08:58:09.225 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 08:58:09.536 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 08:58:09.541 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 08:58:09.541 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 08:58:09.550 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 08:58:09.591 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:123) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 08:59:20.981 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:50) logmqtt ### Subscribed to /sensors
+2025-11-28 08:59:20.984 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 08:59:21.320 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 08:59:21.325 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 08:59:21.326 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:64) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 08:59:21.331 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 08:59:21.356 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:122) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 09:06:54.396 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:64) logmqtt ### uah/ubicua/sensors: {sensor_id:LAB08JAV-G1,timestamp:2025-11-28 10:00:00:000,sensor_type:traffic_counter,data:{vehicle_count:55,pedestrian_count:200,bicycle_count:15,direction:west,counter_type:mixed,technology:infrared,average_speed_kmh:35.5,occupancy_percentage:85,traffic_density:medium},location:{altitude_meters:650}}
+2025-11-28 09:06:54.408 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:122) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Unterminated object at line 1 column 46 path $.timestamp
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 09:07:20.611 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:64) logmqtt ### uah/ubicua/sensors: {sensor_id:LAB08JAV-G2,timestamp:2025-11-28 10:01:00:000,sensor_type:traffic_light,data:{current_state:red,cycle_position_seconds:30,time_remaining_seconds:60,cycle_duration_seconds:120,traffic_light_type:pedestrian_vehicle,circulation_direction:unidirectional,pedestrian_waiting:true,pedestrian_button_pressed:true,malfunction_detected:false,cycle_count:15,state_changed:false,last_state_change:2025-11-28T10:00:00.000000}}
+2025-11-28 09:07:20.615 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:122) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Unterminated object at line 1 column 46 path $.timestamp
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 09:07:30.859 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:64) logmqtt ### uah/ubicua/sensors: {sensor_id:LAB08JAV-G3,timestamp:2025-11-28 10:02:00:000,sensor_type:information_display,data:{display_status:active,current_message:Trafico fluido en zona centro,content_type:traffic,brightness_level:90,display_type:led_matrix,display_size_inches:42.0,supports_color:true,temperature_celsius:35.5,energy_consumption_watts:120.0,last_content_update:2025-11-28T10:01:30.000000}}
+2025-11-28 09:07:30.865 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:122) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Unterminated object at line 1 column 46 path $.timestamp
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 09:09:48.719 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:64) logmqtt ### uah/ubicua/sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 09:09:48.760 INFO  mqtt.MQTTSuscriber.saveTrafficCounter(MQTTSuscriber.java:174) logmqtt ### Datos traffic_counter guardados: sensor=LAB08JAV-G1, vehicles=55, pedestrians=200
+2025-11-28 09:10:03.851 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:64) logmqtt ### uah/ubicua/sensors: {
+  "sensor_id": "LAB08JAV-G2",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-11-28 09:10:03.877 INFO  mqtt.MQTTSuscriber.saveTrafficLight(MQTTSuscriber.java:218) logmqtt ### Datos traffic_light guardados: sensor=LAB08JAV-G2, state=red, remaining=60s
+2025-11-28 09:10:10.884 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:64) logmqtt ### uah/ubicua/sensors: {
+  "sensor_id": "LAB08JAV-G3",
+  "timestamp": "2025-11-28 10:17:00:000",
+  "sensor_type": "information_display",
+  "data": {
+    "display_status": "active",
+    "current_message": "Trafico fluido en zona centro",
+    "content_type": "traffic",
+    "brightness_level": 90,
+    "display_type": "led_matrix",
+    "display_size_inches": 42.0,
+    "supports_color": true,
+    "temperature_celsius": 35.5,
+    "energy_consumption_watts": 120.0,
+    "last_content_update": "2025-11-28T10:01:30.000000"
+  }
+}
+
+2025-11-28 09:10:10.901 INFO  mqtt.MQTTSuscriber.saveInformationDisplay(MQTTSuscriber.java:260) logmqtt ### Datos information_display guardados: sensor=LAB08JAV-G3, status=active, message=Trafico fluido en zona centro
+2025-11-28 09:28:54.007 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:50) logmqtt ### Subscribed to /sensors
+2025-11-28 09:28:54.010 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 09:28:54.322 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 09:28:54.328 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 09:28:54.328 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:64) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 09:28:54.350 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 09:28:54.392 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:122) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
