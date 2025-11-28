@@ -46,8 +46,12 @@
                         $.each(resp, function (i, value)
                         {
                             newRow += "<tr>";
+                            newRow += "<td>" + value.sensorId + "</td>";
                             newRow += "<td>" + value.date + "</td>";
-                            newRow += "<td>" + value.value + " °C</td>";
+                            newRow += "<td>" + value.temperature.toFixed(2) + " °C</td>";
+                            newRow += "<td>" + value.humidity.toFixed(2) + " %</td>";
+                            newRow += "<td>" + value.pressure.toFixed(2) + " hPa</td>";
+                            newRow += "<td>" + value.altitude.toFixed(2) + " m</td>";
                             newRow += "</tr>";
                         });
                         $("#dataTable").append(newRow);
@@ -71,9 +75,86 @@
                 });
             }
 
+            function sendAlertLevel(level)
+            {
+                $.ajax(
+                {
+                    data: {alert_level: level},
+                    url: "/Server/SendCommand",
+                    type: 'post',
+                    async: false,
+                    success: function (response)
+                    {
+                        var resp = JSON.parse(response);
+                        if (resp.success) {
+                            $('#commandStatus').html('<span style="color:green;">✓ Alerta nivel ' + level + ' enviada</span>');
+                        } else {
+                            $('#commandStatus').html('<span style="color:red;">✗ Error: ' + resp.error + '</span>');
+                        }
+                        setTimeout(function() { $('#commandStatus').html(''); }, 3000);
+                    },
+                    error: function() {
+                        $('#commandStatus').html('<span style="color:red;">✗ Error de conexión</span>');
+                    }
+                });
+            }
+
+            function sendReset()
+            {
+                if (confirm('¿Estás seguro de que quieres reiniciar el dispositivo?')) {
+                    $.ajax(
+                    {
+                        data: {command: 'reset'},
+                        url: "/Server/SendCommand",
+                        type: 'post',
+                        async: false,
+                        success: function (response)
+                        {
+                            var resp = JSON.parse(response);
+                            if (resp.success) {
+                                $('#commandStatus').html('<span style="color:green;">✓ Comando de reset enviado</span>');
+                            } else {
+                                $('#commandStatus').html('<span style="color:red;">✗ Error: ' + resp.error + '</span>');
+                            }
+                            setTimeout(function() { $('#commandStatus').html(''); }, 3000);
+                        },
+                        error: function() {
+                            $('#commandStatus').html('<span style="color:red;">✗ Error de conexión</span>');
+                        }
+                    });
+                }
+            }
+
         </script>
         <h1>SERVER EXAMPLE</h1>
         <br>
+        
+        <!-- Control de Alertas -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
+            <h3>Control de Alertas ESP32</h3>
+            <p>Selecciona el nivel de alerta a enviar:</p>
+            <button onclick="sendAlertLevel(0)" style="background-color: #28a745; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">
+                Nivel 0 - Sin Alerta
+            </button>
+            <button onclick="sendAlertLevel(1)" style="background-color: #17a2b8; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">
+                Nivel 1 - Baja
+            </button>
+            <button onclick="sendAlertLevel(2)" style="background-color: #ffc107; color: black; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">
+                Nivel 2 - Media
+            </button>
+            <button onclick="sendAlertLevel(3)" style="background-color: #fd7e14; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">
+                Nivel 3 - Alta
+            </button>
+            <button onclick="sendAlertLevel(4)" style="background-color: #dc3545; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">
+                Nivel 4 - Crítica
+            </button>
+            <br><br>
+            <button onclick="sendReset()" style="background-color: #6c757d; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">
+                🔄 Reiniciar Dispositivo
+            </button>
+            <div id="commandStatus" style="margin-top: 10px; font-weight: bold;"></div>
+        </div>
+        
         <label>New value</label>
         <input type="number" id="newValue"><br>
         <button onclick="insertData()">Send</button> 
@@ -81,8 +162,12 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">Sensor ID</th>
                     <th scope="col">Date</th>
                     <th scope="col">Temperature</th>
+                    <th scope="col">Humidity</th>
+                    <th scope="col">Pressure</th>
+                    <th scope="col">Altitude</th>
                 </tr>
             </thead>
             <tbody id="dataTable">

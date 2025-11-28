@@ -61,12 +61,30 @@ public class MQTTSuscriber implements MqttCallback {
     public void messageArrived(String topic, MqttMessage message) {
         Log.logmqtt.info("{}: {}", topic, message.toString());
         
+        // Ignorar mensajes de control (alertas y comandos)
+        if (topic.endsWith("/control")) {
+            Log.logmqtt.info("Mensaje de control ignorado (no se guarda en BD)");
+            return;
+        }
+        
         ConectionDDBB db = new ConectionDDBB();
         Connection con = null;
         
         try {
             // Parsear el JSON
             JsonObject json = JsonParser.parseString(message.toString()).getAsJsonObject();
+            
+            // Verificar si es un mensaje de control (por si llega por otro topic)
+            if (json.has("alert_level") || json.has("command")) {
+                Log.logmqtt.info("Mensaje de control ignorado (no se guarda en BD)");
+                return;
+            }
+            
+            // Verificar que tenga los campos necesarios de datos de sensor
+            if (!json.has("sensor_id") || !json.has("timestamp") || !json.has("data")) {
+                Log.logmqtt.warn("Mensaje ignorado: no tiene formato de datos de sensor");
+                return;
+            }
             
             String sensorId = json.get("sensor_id").getAsString();
             String timestampStr = json.get("timestamp").getAsString();

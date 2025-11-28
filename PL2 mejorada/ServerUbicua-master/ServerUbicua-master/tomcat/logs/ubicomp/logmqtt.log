@@ -1,9 +1,205 @@
 -- UBICOMP SERVER EXAMPLE MQTT LOG --
-2025-11-27 17:24:42.095 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to #
-2025-11-27 17:24:42.121 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
-2025-11-27 17:24:42.431 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
-2025-11-27 17:24:42.437 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
-2025-11-27 17:24:42.437 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
-2025-11-27 17:24:42.450 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
-2025-11-27 17:24:42.480 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+2025-11-28 07:13:08.505 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to #
+2025-11-28 07:13:08.526 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:13:08.836 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:13:08.840 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:13:08.840 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 07:13:08.851 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:13:08.889 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
 See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 07:18:16.899 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-27 18:30:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":22.4,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-11-28 07:18:17.739 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:102) logmqtt ### Datos guardados: sensor=LAB08JAV-G1, temp=22.4, humidity=58.7
+2025-11-28 07:29:29.148 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to #
+2025-11-28 07:29:29.151 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:29:29.459 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:29:29.462 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:29:29.462 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 07:29:29.469 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:29:29.505 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 07:29:40.630 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-27 18:30:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":22.4,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-11-28 07:29:40.685 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: SQL connection is null
+2025-11-28 07:32:19.178 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to #
+2025-11-28 07:32:19.185 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:32:19.511 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:32:19.519 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:32:19.519 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 07:32:19.542 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:32:19.602 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 07:32:21.847 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-27 18:30:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":22.4,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-11-28 07:32:25.673 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:102) logmqtt ### Datos guardados: sensor=LAB08JAV-G1, temp=22.4, humidity=58.7
+2025-11-28 07:34:59.624 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to #
+2025-11-28 07:34:59.629 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:34:59.941 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:34:59.948 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:34:59.948 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 07:34:59.975 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:34:59.993 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 07:35:05.099 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-27 18:30:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":22.4,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-11-28 07:35:05.586 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:102) logmqtt ### Datos guardados: sensor=LAB08JAV-G1, temp=22.4, humidity=58.7
+2025-11-28 07:40:32.674 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to #
+2025-11-28 07:40:32.677 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:40:32.991 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:40:33.006 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 07:40:33.006 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:40:33.048 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:40:33.055 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 07:40:38.191 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-27 18:30:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":22.4,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-11-28 07:40:38.705 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:102) logmqtt ### Datos guardados: sensor=LAB08JAV-G1, temp=22.4, humidity=58.7
+2025-11-28 07:40:50.572 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:40:50.915 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:40:50.920 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:40:50.922 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":4}
+2025-11-28 07:40:50.928 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:40:50.931 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:40:53.230 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:40:53.543 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:40:53.547 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:40:53.548 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":3}
+2025-11-28 07:40:53.551 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:40:53.551 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:40:54.023 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:40:54.243 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:40:54.247 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:40:54.247 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":2}
+2025-11-28 07:40:54.254 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:40:54.255 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:40:54.415 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:40:54.725 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:40:54.730 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:40:54.730 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":1}
+2025-11-28 07:40:54.738 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:40:54.740 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:40:54.757 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:40:55.079 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:40:55.092 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:40:55.092 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":0}
+2025-11-28 07:40:55.101 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:40:55.103 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:41:11.209 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:41:11.531 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:41:11.536 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:41:11.537 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":4}
+2025-11-28 07:41:11.545 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:41:11.546 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:41:11.560 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:41:11.870 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:41:11.875 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":3}
+2025-11-28 07:41:11.877 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:41:11.879 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:41:11.882 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:41:12.013 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:41:12.323 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:41:12.331 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":2}
+2025-11-28 07:41:12.332 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:41:12.335 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:41:12.341 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:41:12.430 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:41:12.741 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:41:12.747 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:41:12.747 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":1}
+2025-11-28 07:41:12.751 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:41:12.756 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:41:12.981 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:41:13.292 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:41:13.295 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":0}
+2025-11-28 07:41:13.296 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:41:13.306 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:41:13.320 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:41:13.349 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:41:13.660 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:41:13.668 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":1}
+2025-11-28 07:41:13.668 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:41:13.669 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:41:13.672 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:41:13.689 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:41:14.000 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:41:14.005 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":2}
+2025-11-28 07:41:14.006 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:41:14.008 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:41:14.012 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:41:14.031 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:41:14.340 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:41:14.342 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":3}
+2025-11-28 07:41:14.342 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:41:14.344 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:41:14.348 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:41:14.369 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:41:14.679 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:41:14.683 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":4}
+2025-11-28 07:41:14.684 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:41:14.685 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:41:14.691 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:43:29.642 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to #
+2025-11-28 07:43:29.645 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:43:29.951 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:43:29.954 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:43:29.954 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 07:43:29.980 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:43:30.003 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 07:43:49.043 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to /sensors
+2025-11-28 07:43:49.047 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:43:49.357 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:43:49.362 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:43:49.362 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 07:43:49.373 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:43:49.449 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 07:43:50.856 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-27 18:30:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":22.4,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-11-28 07:43:51.311 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:102) logmqtt ### Datos guardados: sensor=LAB08JAV-G1, temp=22.4, humidity=58.7
+2025-11-28 07:44:30.013 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:44:30.351 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:44:30.357 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:44:30.366 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:44:30.367 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":0}
+2025-11-28 07:44:30.380 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:44:31.058 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:44:31.368 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:44:31.372 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:44:31.372 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":0}
+2025-11-28 07:44:31.380 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:44:31.383 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:44:58.738 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:44:59.065 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:44:59.073 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:44:59.073 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":2}
+2025-11-28 07:44:59.088 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:44:59.089 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:105) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 07:49:13.597 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to /sensors
+2025-11-28 07:49:13.599 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:49:13.908 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:49:13.911 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:49:13.911 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 07:49:13.921 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:49:13.953 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:123) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 07:49:41.855 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G2","timestamp":"2025-11-27 18:30:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":22.4,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-11-28 07:49:42.072 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:120) logmqtt ### Datos guardados: sensor=LAB08JAV-G2, temp=22.4, humidity=58.7
+2025-11-28 07:49:57.791 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:49:58.106 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:49:58.112 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":4}
+2025-11-28 07:49:58.112 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:49:58.117 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:66) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-11-28 07:49:58.127 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:50:09.223 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:50:09.533 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:50:09.536 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:50:09.536 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"alert_level":0}
+2025-11-28 07:50:09.539 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:66) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-11-28 07:50:09.540 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:50:58.061 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:50:58.375 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:50:58.379 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"command":"reset"}
+2025-11-28 07:50:58.393 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:66) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-11-28 07:50:58.379 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:50:58.403 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 07:51:04.857 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 07:51:05.172 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 07:51:05.176 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### uah/alcala/weather/control: {"command":"reset"}
+2025-11-28 07:51:05.176 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 07:51:05.181 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:66) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-11-28 07:51:05.187 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected

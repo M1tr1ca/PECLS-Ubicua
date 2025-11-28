@@ -28,8 +28,12 @@ public class Logic
 			while (rs.next())
 			{
 				Measurement measure = new Measurement();
-				measure.setValue((int) rs.getDouble("temperature_celsius"));
+				measure.setSensorId(rs.getString("sensor_id"));
 				measure.setDate(rs.getTimestamp("timestamp"));
+				measure.setTemperature(rs.getDouble("temperature_celsius"));
+				measure.setHumidity(rs.getDouble("humidity_percent"));
+				measure.setPressure(rs.getDouble("atmospheric_pressure_hpa"));
+				measure.setAltitude(rs.getDouble("altitude_meters"));
 				values.add(measure);
 			}	
 		} catch (SQLException e)

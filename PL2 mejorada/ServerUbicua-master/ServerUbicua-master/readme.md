@@ -23,3 +23,10 @@ http://localhost:3002/Server/	Página principal
 http://localhost:3002/Server/GetData	API JSON directa
 
 docker-compose down
+
+
+
+mvn clean package -DskipTests
+
+
+docker-compose build --no-cache

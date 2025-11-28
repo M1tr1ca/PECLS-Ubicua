@@ -116,7 +116,7 @@ public class ConectionDDBB
 
     public static PreparedStatement GetDataBD(Connection con)
     {
-    	return getStatement(con,"SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50");  	
+    	return getStatement(con,"SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50");  	
     }
     
     public static PreparedStatement SetDataBD(Connection con)

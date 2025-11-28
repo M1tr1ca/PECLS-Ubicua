@@ -1,62 +1,458 @@
 -- UBICOMP SERVER EXAMPLE LOG --
-2025-11-27 17:24:41.688 INFO  logic.Projectinitializer.contextInitialized(Projectinitializer.java:34) log ### -->Suscribe Topics<--
-2025-11-27 17:26:40.124 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
-2025-11-27 17:26:40.140 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
-2025-11-27 17:26:40.975 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 2093573731, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-27
-2025-11-27 17:26:40.977 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
-2025-11-27 17:26:40.978 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
-2025-11-27 17:26:40.987 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
-2025-11-27 17:26:41.104 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
-2025-11-27 17:26:41.105 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 2093573731, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-27
-2025-11-27 17:26:41.108 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
-2025-11-27 17:26:41.139 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[]
-2025-11-27 17:26:46.391 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
-2025-11-27 17:26:46.419 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
-2025-11-27 17:26:46.442 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 718390253, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-27
-2025-11-27 17:26:46.513 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
-2025-11-27 17:26:46.555 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
-2025-11-27 17:26:46.597 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
-2025-11-27 17:26:46.641 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
-2025-11-27 17:26:46.689 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 718390253, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-27
-2025-11-27 17:26:46.723 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
-2025-11-27 17:26:46.773 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[]
-2025-11-27 17:33:08.893 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
-2025-11-27 17:33:08.920 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
-2025-11-27 17:33:08.957 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 2129383981, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-27
-2025-11-27 17:33:08.976 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
-2025-11-27 17:33:08.995 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
-2025-11-27 17:33:09.015 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
-2025-11-27 17:33:09.026 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
-2025-11-27 17:33:09.040 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 2129383981, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-27
-2025-11-27 17:33:09.052 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
-2025-11-27 17:33:09.075 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[]
-2025-11-27 17:33:22.323 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
-2025-11-27 17:33:22.324 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
-2025-11-27 17:33:22.330 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 608236680, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-27
-2025-11-27 17:33:22.331 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
-2025-11-27 17:33:22.333 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
-2025-11-27 17:33:22.334 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
-2025-11-27 17:33:22.351 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
-2025-11-27 17:33:22.353 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 608236680, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-27
-2025-11-27 17:33:22.354 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
-2025-11-27 17:33:22.379 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 5:33:15 PM"},{"value":23,"date":"Nov 27, 2025, 5:32:15 PM"},{"value":21,"date":"Nov 27, 2025, 5:31:15 PM"},{"value":22,"date":"Nov 27, 2025, 5:30:15 PM"},{"value":24,"date":"Nov 27, 2025, 5:29:15 PM"}]
-2025-11-27 17:33:26.977 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
-2025-11-27 17:33:27.210 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
-2025-11-27 17:33:27.317 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 1982007643, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-27
-2025-11-27 17:33:27.838 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
-2025-11-27 17:33:27.841 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
-2025-11-27 17:33:27.848 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
-2025-11-27 17:33:27.856 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
-2025-11-27 17:33:27.858 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 1982007643, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-27
-2025-11-27 17:33:27.860 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
-2025-11-27 17:33:27.863 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 5:33:15 PM"},{"value":23,"date":"Nov 27, 2025, 5:32:15 PM"},{"value":21,"date":"Nov 27, 2025, 5:31:15 PM"},{"value":22,"date":"Nov 27, 2025, 5:30:15 PM"},{"value":24,"date":"Nov 27, 2025, 5:29:15 PM"}]
-2025-11-27 17:34:00.592 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
-2025-11-27 17:34:00.656 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
-2025-11-27 17:34:00.716 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 787366511, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-27
-2025-11-27 17:34:00.756 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
-2025-11-27 17:34:00.803 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
-2025-11-27 17:34:00.852 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
-2025-11-27 17:34:00.908 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
-2025-11-27 17:34:00.975 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 787366511, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-27
-2025-11-27 17:34:01.019 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
-2025-11-27 17:34:01.107 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 5:33:15 PM"},{"value":23,"date":"Nov 27, 2025, 5:32:15 PM"},{"value":21,"date":"Nov 27, 2025, 5:31:15 PM"},{"value":22,"date":"Nov 27, 2025, 5:30:15 PM"},{"value":24,"date":"Nov 27, 2025, 5:29:15 PM"}]
+2025-11-28 07:13:08.121 INFO  logic.Projectinitializer.contextInitialized(Projectinitializer.java:34) log ### -->Suscribe Topics<--
+2025-11-28 07:18:16.923 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:18:17.620 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 216513949, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:18:17.622 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:18:17.741 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:18:17.742 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 216513949, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:18:17.743 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:20:35.344 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:20:35.351 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:20:35.353 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 1836070847, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:20:35.354 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:20:35.354 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:20:35.356 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:20:35.367 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:20:35.368 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 1836070847, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:20:35.370 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:20:35.401 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:21:02.023 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:21:02.028 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:21:02.032 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 1639503061, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:21:02.033 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:21:02.034 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:21:02.036 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:21:02.039 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:21:02.040 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 1639503061, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:21:02.041 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:21:02.042 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:22:33.059 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:22:33.061 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:22:33.063 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 1895794914, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:22:33.064 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:22:33.065 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:22:33.066 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:22:33.067 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:22:33.068 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 1895794914, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:22:33.069 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:22:33.071 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:29:28.796 INFO  logic.Projectinitializer.contextInitialized(Projectinitializer.java:34) log ### -->Suscribe Topics<--
+2025-11-28 07:29:40.636 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:29:40.684 ERROR Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:44) log ### ERROR sql getting connection while trying: 0 = null
+java.sql.SQLException: Cannot create PoolableConnectionFactory (Connection to base-datos-ubicua:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.)
+2025-11-28 07:29:45.313 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:29:45.333 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:29:45.348 ERROR Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:44) log ### ERROR sql getting connection while trying: 0 = null
+java.sql.SQLException: Cannot create PoolableConnectionFactory (Connection to base-datos-ubicua:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.)
+2025-11-28 07:29:45.354 ERROR logic.Logic.getDataFromDB(Logic.java:41) log ### Error: java.lang.NullPointerException: SQL connection is null
+2025-11-28 07:29:45.357 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:29:45.362 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:29:45.398 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[]
+2025-11-28 07:29:46.370 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:29:46.371 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:29:46.802 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 2138642568, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:29:46.804 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:29:46.805 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:29:46.810 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:29:46.870 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:29:46.871 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 2138642568, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:29:46.873 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:29:46.875 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[]
+2025-11-28 07:32:18.819 INFO  logic.Projectinitializer.contextInitialized(Projectinitializer.java:34) log ### -->Suscribe Topics<--
+2025-11-28 07:32:21.879 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:32:25.578 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 1065704303, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:25.582 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:32:25.676 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:32:25.677 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 1065704303, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:25.678 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:32:27.013 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:32:27.058 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:32:27.100 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 1910191527, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:27.138 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:32:27.158 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:32:27.179 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:32:27.500 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:32:27.505 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 1910191527, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:27.519 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:32:27.573 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:32:30.249 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:32:30.263 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:32:30.277 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 353748825, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:30.284 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:32:30.291 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:32:30.297 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:32:30.306 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:32:30.313 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 353748825, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:30.318 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:32:30.331 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:32:31.064 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:32:31.076 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:32:31.085 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 635031966, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:31.095 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:32:31.102 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:32:31.108 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:32:31.118 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:32:31.127 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 635031966, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:31.136 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:32:31.153 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:32:32.928 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:32:32.930 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:32:32.931 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 1160988460, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:32.937 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:32:32.937 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:32:32.938 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:32:32.939 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:32:32.940 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 1160988460, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:32.940 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:32:32.942 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:32:33.976 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:32:34.032 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:32:34.040 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 406164219, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:34.043 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:32:34.046 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:32:34.050 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:32:34.056 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:32:34.057 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 406164219, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:34.058 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:32:34.060 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:32:39.305 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:32:39.307 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:32:39.310 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 2146194779, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:39.311 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:32:39.311 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:32:39.313 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:32:39.321 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:32:39.322 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 2146194779, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:39.323 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:32:39.325 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:32:40.559 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:32:40.560 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:32:40.562 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 287985955, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:40.562 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:32:40.563 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:32:40.563 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:32:40.564 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:32:40.565 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 287985955, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:40.565 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:32:40.566 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:32:49.409 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:32:49.411 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:32:49.413 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 568742397, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:49.413 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:32:49.414 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:32:49.415 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:32:49.417 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:32:49.417 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 568742397, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:49.418 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:32:49.419 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:32:50.000 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:32:50.001 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:32:50.002 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 1091357522, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:50.003 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:32:50.003 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:32:50.004 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:32:50.005 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:32:50.005 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 1091357522, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:50.006 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:32:50.007 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:32:50.226 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:32:50.229 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:32:50.230 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 406022516, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:50.231 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:32:50.231 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:32:50.232 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:32:50.233 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:32:50.233 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 406022516, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:50.233 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:32:50.234 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:32:50.402 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:32:50.406 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:32:50.412 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 1411960162, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:50.416 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:32:50.417 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:32:50.417 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:32:50.419 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:32:50.419 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 1411960162, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:50.420 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:32:50.421 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:32:50.595 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:32:50.599 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:32:50.600 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 1692720037, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:50.601 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:32:50.601 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:32:50.602 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:32:50.603 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:32:50.603 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 1692720037, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:50.604 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:32:50.605 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:32:50.748 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:32:50.749 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:32:50.751 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:35) log ### Connection creation. Bd connection identifier: 68046103, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:50.751 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:37) log ### Conection obtained in the attempt: 0
+2025-11-28 07:32:50.752 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:32:50.753 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:32:50.754 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### Closing the connection
+2025-11-28 07:32:50.754 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:84) log ### Connection closed. Bd connection identifier: 68046103, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:32:50.754 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:88) log ### The connection has been closed
+2025-11-28 07:32:50.755 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"value":22,"date":"Nov 27, 2025, 6:30:00 PM"}]
+2025-11-28 07:34:59.258 INFO  logic.Projectinitializer.contextInitialized(Projectinitializer.java:34) log ### -->Suscribe Topics<--
+2025-11-28 07:35:05.107 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:35:05.523 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1065704303, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:35:05.524 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:35:05.588 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:35:05.590 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1065704303, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:35:05.591 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:35:08.663 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:35:08.665 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:35:08.667 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1308927304, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:35:08.668 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:35:08.670 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:35:08.671 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:35:08.697 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:35:08.698 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1308927304, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:35:08.700 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:35:08.735 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:40:32.307 INFO  logic.Projectinitializer.contextInitialized(Projectinitializer.java:34) log ### -->Suscribe Topics<--
+2025-11-28 07:40:38.198 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:40:38.634 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1238987744, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:40:38.637 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:40:38.707 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:40:38.708 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1238987744, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:40:38.709 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:40:43.554 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:40:43.585 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:40:43.612 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1144841878, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:40:43.627 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:40:43.641 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:40:43.650 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:40:43.909 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:40:43.916 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1144841878, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:40:43.922 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:40:43.973 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:40:50.562 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 4
+2025-11-28 07:40:50.932 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":4}
+2025-11-28 07:40:53.227 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 3
+2025-11-28 07:40:53.553 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":3}
+2025-11-28 07:40:54.021 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 2
+2025-11-28 07:40:54.262 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":2}
+2025-11-28 07:40:54.413 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 1
+2025-11-28 07:40:54.743 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":1}
+2025-11-28 07:40:54.756 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 0
+2025-11-28 07:40:55.106 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":0}
+2025-11-28 07:41:11.202 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 4
+2025-11-28 07:41:11.546 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":4}
+2025-11-28 07:41:11.557 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 3
+2025-11-28 07:41:11.884 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":3}
+2025-11-28 07:41:12.011 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 2
+2025-11-28 07:41:12.343 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":2}
+2025-11-28 07:41:12.427 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 1
+2025-11-28 07:41:12.761 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":1}
+2025-11-28 07:41:12.972 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 0
+2025-11-28 07:41:13.336 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":0}
+2025-11-28 07:41:13.346 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 1
+2025-11-28 07:41:13.674 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":1}
+2025-11-28 07:41:13.687 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 2
+2025-11-28 07:41:14.016 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":2}
+2025-11-28 07:41:14.030 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 3
+2025-11-28 07:41:14.351 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":3}
+2025-11-28 07:41:14.366 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 4
+2025-11-28 07:41:14.697 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":4}
+2025-11-28 07:43:29.277 INFO  logic.Projectinitializer.contextInitialized(Projectinitializer.java:34) log ### -->Suscribe Topics<--
+2025-11-28 07:43:48.680 INFO  logic.Projectinitializer.contextInitialized(Projectinitializer.java:34) log ### -->Suscribe Topics<--
+2025-11-28 07:43:50.865 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:43:51.255 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1105230961, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:43:51.256 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:43:51.313 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:43:51.314 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1105230961, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:43:51.315 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:43:55.295 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:43:55.305 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:43:55.311 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 878456398, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:43:55.322 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:43:55.332 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:43:55.343 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:43:55.596 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:43:55.611 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 878456398, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:43:55.626 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:43:55.684 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:43:59.173 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:43:59.177 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:43:59.183 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1391427088, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:43:59.188 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:43:59.194 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:43:59.203 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:43:59.214 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:43:59.220 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1391427088, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:43:59.225 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:43:59.237 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:44:14.146 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:44:14.156 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:44:14.159 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1559761194, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:44:14.160 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:44:14.161 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:44:14.161 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:44:14.163 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:44:14.163 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1559761194, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:44:14.164 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:44:14.167 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:44:14.980 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:44:15.113 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:44:15.118 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1783921878, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:44:15.123 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:44:15.126 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:44:15.135 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:44:15.144 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:44:15.149 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1783921878, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:44:15.150 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:44:15.177 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:44:29.988 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 0
+2025-11-28 07:44:30.370 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":0}
+2025-11-28 07:44:31.053 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 0
+2025-11-28 07:44:31.387 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":0}
+2025-11-28 07:44:58.728 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 2
+2025-11-28 07:44:59.097 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":2}
+2025-11-28 07:45:21.303 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:45:21.311 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:45:21.322 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 741747756, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:45:21.332 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:45:21.335 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:45:21.336 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:45:21.338 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:45:21.344 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 741747756, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:45:21.347 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:45:21.368 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:45:22.272 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:45:22.277 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:45:22.279 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1206545778, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:45:22.285 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:45:22.294 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:45:22.295 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:45:22.306 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:45:22.310 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1206545778, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:45:22.314 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:45:22.331 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:47:32.862 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:47:32.865 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:47:32.874 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1698442921, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:47:32.875 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:47:32.878 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:47:32.880 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:47:32.883 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:47:32.884 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1698442921, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:47:32.884 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:47:32.886 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:47:33.502 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:47:33.504 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:47:33.508 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 762689702, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:47:33.508 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:47:33.509 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:47:33.510 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:47:33.512 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:47:33.513 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 762689702, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:47:33.513 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:47:33.515 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:47:35.785 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:47:35.937 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:47:35.944 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1489477229, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:47:35.948 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:47:35.952 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:47:35.954 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:47:35.956 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:47:35.962 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1489477229, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:47:35.966 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:47:36.009 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:49:13.240 INFO  logic.Projectinitializer.contextInitialized(Projectinitializer.java:34) log ### -->Suscribe Topics<--
+2025-11-28 07:49:21.409 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:49:21.438 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:49:22.448 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1018862341, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:22.449 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:49:22.450 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:49:22.454 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:49:22.530 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:49:22.531 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1018862341, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:22.541 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:49:22.584 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:49:24.926 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:49:24.935 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:49:24.941 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1773194946, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:24.945 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:49:24.950 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:49:24.961 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:49:24.969 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:49:24.979 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1773194946, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:24.985 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:49:24.993 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:49:26.621 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:49:26.634 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:49:26.637 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1977589726, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:26.639 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:49:26.640 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:49:26.641 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:49:26.642 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:49:26.643 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1977589726, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:26.643 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:49:26.645 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:49:27.506 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:49:27.515 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:49:27.517 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1845544839, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:27.517 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:49:27.518 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:49:27.518 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:49:27.519 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:49:27.520 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1845544839, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:27.521 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:49:27.522 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:49:27.887 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:49:27.888 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:49:27.895 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 2117892571, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:27.902 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:49:27.903 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:49:27.903 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:49:27.905 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:49:27.906 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 2117892571, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:27.907 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:49:27.909 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:49:28.104 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:49:28.105 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:49:28.108 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 387680484, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:28.109 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:49:28.110 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:49:28.110 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:49:28.114 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:49:28.118 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 387680484, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:28.119 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:49:28.122 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:49:41.884 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:49:41.897 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1050504758, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:41.901 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:49:42.075 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:49:42.077 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1050504758, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:42.081 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:49:46.463 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:49:46.465 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:49:46.467 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 262217358, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:46.469 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:49:46.469 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:49:46.470 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:49:46.471 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:49:46.472 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 262217358, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:46.472 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:49:46.476 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G2","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:49:49.112 INFO  servlets.GetData.doGet(GetData.java:36) log ### --Set new value into the DB--
+2025-11-28 07:49:49.115 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:24) log ### Attempt 0 to connect to the database
+2025-11-28 07:49:49.117 DEBUG Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection creation. Bd connection identifier: 1910511037, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:49.117 INFO  Database.ConectionDDBB.obtainConnection(ConectionDDBB.java:38) log ### Conection obtained in the attempt: 0
+2025-11-28 07:49:49.118 INFO  logic.Logic.getDataFromDB(Logic.java:23) log ### Database Connected
+2025-11-28 07:49:49.119 INFO  logic.Logic.getDataFromDB(Logic.java:26) log ### Query=>SELECT sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters FROM sensor_readings ORDER BY timestamp DESC LIMIT 50
+2025-11-28 07:49:49.120 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:82) log ### Closing the connection
+2025-11-28 07:49:49.121 DEBUG Database.ConectionDDBB.closeConnection(ConectionDDBB.java:87) log ### Connection closed. Bd connection identifier: 1910511037, URL=jdbc:postgresql://base-datos-ubicua:5432/ubicua, PostgreSQL JDBC Driver obtained in 2025-11-28
+2025-11-28 07:49:49.122 INFO  Database.ConectionDDBB.closeConnection(ConectionDDBB.java:91) log ### The connection has been closed
+2025-11-28 07:49:49.124 INFO  servlets.GetData.doGet(GetData.java:43) log ### Values=>[{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G1","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3},{"sensorId":"LAB08JAV-G2","date":"Nov 27, 2025, 6:30:00 PM","temperature":22.4,"humidity":58.7,"pressure":1013.2,"altitude":667.3}]
+2025-11-28 07:49:57.786 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 4
+2025-11-28 07:49:58.129 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":4}
+2025-11-28 07:50:09.206 INFO  servlets.SendCommand.doGet(SendCommand.java:42) log ### Sending alert level: 0
+2025-11-28 07:50:09.542 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"alert_level":0}
+2025-11-28 07:50:58.058 INFO  servlets.SendCommand.doGet(SendCommand.java:49) log ### Sending command: reset
+2025-11-28 07:50:58.404 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"command":"reset"}
+2025-11-28 07:51:04.845 INFO  servlets.SendCommand.doGet(SendCommand.java:49) log ### Sending command: reset
+2025-11-28 07:51:05.192 INFO  servlets.SendCommand.doGet(SendCommand.java:56) log ### Message sent to topic uah/alcala/weather/control: {"command":"reset"}
