@@ -341,3 +341,1480 @@ See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
 2025-11-28 09:28:54.350 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
 2025-11-28 09:28:54.392 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:122) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
 See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 09:39:50.349 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to /sensors
+2025-11-28 09:39:50.352 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 09:39:50.659 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 09:39:50.662 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 09:39:50.662 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 09:39:50.668 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 09:39:50.691 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:123) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 09:40:12.768 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to /sensors
+2025-11-28 09:40:12.772 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 09:40:13.085 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 09:40:13.090 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 09:40:13.091 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 09:40:13.098 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 09:40:13.190 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:123) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 09:41:55.662 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 09:41:55.674 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:123) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsDouble()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 09:42:40.067 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:48) logmqtt ### Subscribed to /sensors
+2025-11-28 09:42:40.069 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 09:42:40.376 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 09:42:40.379 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 09:42:40.379 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 09:42:40.386 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 09:42:40.456 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:123) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 09:43:50.830 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 09:43:50.836 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:123) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsDouble()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 09:46:01.037 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 09:46:01.039 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:123) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsDouble()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 09:46:01.976 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 09:46:01.981 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:123) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsDouble()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 09:46:02.124 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 09:46:02.132 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:123) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsDouble()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 09:46:02.350 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 09:46:02.352 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:123) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsDouble()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 09:48:29.890 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### sensors: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":22.4,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-11-28 09:48:29.942 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:120) logmqtt ### Datos guardados: sensor=LAB08JAV-G1, temp=22.4, humidity=58.7
+2025-11-28 09:48:30.910 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### sensors: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":22.4,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-11-28 09:48:30.936 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:120) logmqtt ### Datos guardados: sensor=LAB08JAV-G1, temp=22.4, humidity=58.7
+2025-11-28 09:48:31.031 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### sensors: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":22.4,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-11-28 09:48:31.042 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:120) logmqtt ### Datos guardados: sensor=LAB08JAV-G1, temp=22.4, humidity=58.7
+2025-11-28 09:48:31.217 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:62) logmqtt ### sensors: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":22.4,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-11-28 09:48:31.227 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:120) logmqtt ### Datos guardados: sensor=LAB08JAV-G1, temp=22.4, humidity=58.7
+2025-11-28 09:59:41.516 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-11-28 09:59:41.518 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 09:59:41.824 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 09:59:41.826 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 09:59:41.827 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 09:59:41.868 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 09:59:41.882 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:129) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 10:00:16.731 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 10:00:16.773 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:129) logmqtt ### Error guardando en BD: ERROR: insert or update on table "traffic_counter_readings" violates foreign key constraint "traffic_counter_readings_sensor_id_fkey"
+  Detail: Key (sensor_id)=(LAB08JAV-G1) is not present in table "sensors".
+2025-11-28 10:01:06.881 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-11-28 10:01:06.882 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 10:01:07.188 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 10:01:07.190 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 10:01:07.190 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:01:07.234 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 10:01:07.253 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:129) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 10:01:47.297 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 10:01:47.362 INFO  mqtt.MQTTSuscriber.saveTrafficCounter(MQTTSuscriber.java:194) logmqtt ### Datos traffic_counter guardados: sensor=LAB08JAV-G1, vehicles=55, pedestrians=200
+2025-11-28 10:03:48.480 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+  }
+}
+  
+2025-11-28 10:03:48.490 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:129) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Expected name at line 10 column 4 path $.data.direction
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 10:03:50.152 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+  }
+}
+  
+2025-11-28 10:03:50.154 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:129) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Expected name at line 10 column 4 path $.data.direction
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 10:06:00.536 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+  }
+}
+  
+2025-11-28 10:06:00.538 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:129) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Expected name at line 10 column 4 path $.data.direction
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 10:08:27.785 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "fds",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+  
+2025-11-28 10:08:27.806 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:129) logmqtt ### Error guardando en BD: JsonObject
+2025-11-28 10:09:01.780 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "fd",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 10:09:01.794 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:129) logmqtt ### Error guardando en BD: JsonObject
+2025-11-28 10:09:02.346 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "fd",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 10:09:02.359 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:129) logmqtt ### Error guardando en BD: JsonObject
+2025-11-28 10:09:02.480 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "fd",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 10:09:02.484 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:129) logmqtt ### Error guardando en BD: JsonObject
+2025-11-28 10:09:02.697 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "fd",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 10:09:02.705 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:129) logmqtt ### Error guardando en BD: JsonObject
+2025-11-28 10:11:36.712 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-11-28 10:11:36.714 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 10:11:37.020 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 10:11:37.023 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 10:11:37.023 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:11:37.069 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 10:11:37.100 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:130) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 10:12:10.641 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "fd",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 10:12:10.728 INFO  mqtt.MQTTSuscriber.saveOther(MQTTSuscriber.java:172) logmqtt ### Datos other guardados: json={"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-28 10:15:00:000","sensor_type":"fd","data":{"vehicle_count":55,"pedestrian_count":200,"bicycle_count":15,"direction":"west","counter_type":"mixed","technology":"infrared","average_speed_kmh":35.5,"occupancy_percentage":85,"traffic_density":"medium"},"location":{"altitude_meters":650}}
+2025-11-28 10:13:07.231 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "weather",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 10:13:07.245 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:130) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsDouble()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 10:21:29.705 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-11-28 10:21:29.707 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 10:21:30.012 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 10:21:30.015 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 10:21:30.015 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:30.053 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 10:21:30.092 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:31.406 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:31.407 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:32.713 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:32.715 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:34.021 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:34.022 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:35.330 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:35.332 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:36.639 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:36.640 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:37.948 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:37.949 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:39.255 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:39.256 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:40.562 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:40.563 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:41.870 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:41.871 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:43.179 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:43.181 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:44.489 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:44.490 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:45.796 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:45.797 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:47.103 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:47.104 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:48.413 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:48.415 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:49.721 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:49.723 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:51.033 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:51.035 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:52.353 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:52.386 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:53.699 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:53.701 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:55.014 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:55.016 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:56.330 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:56.331 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:57.645 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:57.647 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:21:58.956 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:21:58.958 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:00.269 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:00.271 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:01.582 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:01.584 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:02.894 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:02.895 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:04.203 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:04.205 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:05.519 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:05.521 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:06.829 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:06.830 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:08.141 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:08.143 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:09.455 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:09.457 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:10.771 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:10.773 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:12.106 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:12.108 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:13.422 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:13.424 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:14.742 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:14.744 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:16.060 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:16.061 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:17.377 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:17.380 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:18.697 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:18.699 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:20.012 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:20.013 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:21.326 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:21.329 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:22.641 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:22.642 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:23.954 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:23.958 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:25.274 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:25.276 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:26.588 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:26.590 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:27.901 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:27.903 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:29.216 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:29.217 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:30.530 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:30.532 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:31.843 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:31.845 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:33.162 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:33.164 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:34.478 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:34.481 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:35.797 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:35.801 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:37.116 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:37.118 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:38.431 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:38.432 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:22:39.744 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:22:39.747 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:27.330 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:27.332 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-11-28 10:23:27.334 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 10:23:27.408 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:27.673 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 10:23:27.675 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 10:23:27.678 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 10:23:28.724 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:28.725 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:30.031 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:30.032 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:31.342 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:31.343 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:32.650 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:32.653 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:33.960 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:33.961 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:35.268 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:35.269 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:36.575 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:36.576 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:37.882 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:37.883 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:39.189 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:39.190 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:40.496 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:40.498 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:41.805 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:41.806 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:43.113 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:43.114 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:44.422 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:44.424 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:45.735 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:45.737 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:47.045 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:47.046 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:48.355 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:48.357 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:49.666 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:49.668 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:50.983 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:50.989 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:52.298 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:52.299 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:53.611 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:53.613 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:54.992 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:55.010 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:56.341 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:56.343 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:57.652 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:57.654 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:23:58.968 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:23:58.975 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:00.291 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:00.295 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:01.607 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:01.609 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:02.919 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:02.921 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:04.229 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:04.230 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:05.541 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:05.542 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:06.851 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:06.854 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:08.165 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:08.167 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:09.477 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:09.479 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:10.790 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:10.792 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:12.111 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:12.112 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:13.422 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:13.426 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:14.739 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:14.740 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:16.049 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:16.051 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:17.362 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:17.364 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:18.673 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:18.676 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:19.986 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:19.987 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:21.300 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:21.304 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:22.625 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:22.627 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:23.943 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:23.946 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:25.261 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:25.263 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:26.579 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:26.580 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:27.898 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:27.901 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:29.221 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:29.226 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:30.536 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:30.538 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:31.850 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:31.851 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:33.172 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:33.183 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:34.494 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:34.496 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:35.827 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:35.829 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:37.145 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:37.146 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:38.466 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:38.467 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:39.775 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:39.776 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:41.086 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:41.091 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:42.403 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:42.404 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:43.712 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:43.714 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:45.026 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:45.028 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:46.340 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:46.342 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:47.657 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:47.659 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:48.973 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:48.975 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:50.297 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:50.299 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:51.612 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:51.614 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:52.926 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:52.927 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:54.241 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:54.243 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:55.563 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:55.565 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:56.876 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:56.878 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:58.190 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:58.191 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:24:59.524 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:24:59.532 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:00.840 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:00.847 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:02.158 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:02.160 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:03.475 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:03.478 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:04.790 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:04.791 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:06.100 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:06.101 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:07.413 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:07.415 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:08.722 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:08.724 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:10.030 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:10.031 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:11.344 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:11.346 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:12.665 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:12.667 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:13.983 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:13.986 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:15.295 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:15.297 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:16.606 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:16.607 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:17.916 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:17.918 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:19.226 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:19.227 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:20.536 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:20.537 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:21.845 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:21.847 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:23.156 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:23.157 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:24.467 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:24.468 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:25.783 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:25.784 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:27.092 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:27.093 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:28.423 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:28.424 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:29.732 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:29.734 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:31.040 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:31.041 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:32.352 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:32.354 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:33.666 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:33.667 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:34.975 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:34.977 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:36.290 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:36.291 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:37.608 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:37.609 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:38.944 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:38.945 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:40.256 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:40.257 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:41.568 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:41.571 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:42.887 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:42.907 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:44.219 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:44.221 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:45.533 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:45.535 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:46.847 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:46.848 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:48.156 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:48.159 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:49.468 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:49.469 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:50.778 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:50.779 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:52.089 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:52.090 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:53.404 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:53.407 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:54.718 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:54.721 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:56.029 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:56.030 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:57.339 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:57.341 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:58.658 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:58.660 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:25:59.968 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:25:59.969 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:01.283 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:01.286 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:02.597 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:02.598 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:03.950 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:03.952 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:05.263 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:05.264 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:06.575 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:06.576 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:07.886 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:07.887 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:09.196 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:09.198 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:10.509 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:10.511 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:11.821 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:11.823 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:13.132 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:13.133 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:14.442 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:14.446 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:15.755 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:15.757 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:17.064 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:17.066 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:18.377 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:18.378 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:19.692 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:19.695 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:21.002 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:21.006 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:22.316 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:22.317 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:23.624 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:23.624 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:24.934 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:24.935 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:26.286 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:26.290 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:27.599 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:27.600 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:28.908 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:28.909 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:30.228 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:30.229 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:31.538 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:31.540 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:32.854 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:32.858 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:34.168 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:34.170 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:35.479 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:35.481 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:36.794 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:36.798 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:38.111 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:38.113 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:39.435 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:39.439 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:40.753 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:40.755 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:42.062 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:42.063 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:43.377 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:43.379 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:44.698 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:44.703 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:46.016 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:46.018 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:47.335 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:47.351 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:48.672 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:48.673 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:49.985 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:49.987 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:51.297 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:51.298 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:52.612 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:52.614 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:53.930 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:53.932 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:55.242 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:55.243 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:56.553 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:56.553 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:57.860 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:57.862 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:26:59.175 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:26:59.176 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:00.483 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:00.486 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:01.792 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:01.793 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:03.101 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:03.102 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:04.411 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:04.412 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:05.721 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:05.723 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:07.034 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:07.036 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:08.344 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:08.347 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:09.656 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:09.659 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:10.968 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:10.970 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:12.279 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:12.281 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:13.587 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:13.588 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:14.898 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:14.899 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:16.207 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:16.209 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:17.515 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:17.516 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:18.828 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:18.831 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:20.139 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:20.140 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:21.449 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:21.450 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:22.757 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:22.758 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:24.068 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:24.069 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:25.375 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:25.376 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:26.682 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:26.684 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:27.994 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:27.996 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:29.306 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:29.308 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:30.618 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:30.620 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:31.928 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:31.929 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:33.237 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:33.238 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:34.546 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:34.547 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:35.857 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:35.858 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:37.168 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:37.169 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:38.479 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:38.480 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:39.789 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:39.789 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:41.098 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:41.101 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:42.411 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:42.412 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:43.721 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:43.722 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:45.031 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:45.032 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:46.342 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:46.343 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:47.663 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:47.665 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:48.981 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:48.982 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:50.322 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:50.323 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:51.632 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:51.634 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:52.943 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:52.944 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:54.252 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:54.253 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:55.563 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:55.565 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:56.880 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:56.883 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:58.201 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:58.203 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:27:59.513 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:27:59.514 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:00.829 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:00.832 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:02.140 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:02.142 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:03.449 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:03.450 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:04.757 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:04.759 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:06.076 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:06.077 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:07.386 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:07.389 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:08.698 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:08.700 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:10.008 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:10.009 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:11.316 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:11.317 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:12.630 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:12.631 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:13.996 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:13.999 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:15.304 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:15.305 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:16.615 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:16.616 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:17.925 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:17.926 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:19.232 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:19.234 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:20.542 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:20.543 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:21.871 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:21.872 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:23.182 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:23.184 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:24.501 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:24.503 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:25.815 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:25.817 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:27.129 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:27.130 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:28.438 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:28.446 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:29.764 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:29.766 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:31.079 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:31.085 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:32.401 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:32.403 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:33.716 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:33.718 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:35.029 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:35.030 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:36.344 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:36.345 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:37.669 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:37.670 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:38.979 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:38.980 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:40.290 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:40.291 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:41.605 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:41.607 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:42.922 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:42.924 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:44.238 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:44.239 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:45.550 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:45.551 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:46.866 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:46.868 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:48.178 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:48.180 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:49.501 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:49.506 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:50.814 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:50.815 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:52.121 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:52.123 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:53.432 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:53.434 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:54.757 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:54.759 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:56.076 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:56.093 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:57.402 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:57.407 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:28:58.719 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:28:58.720 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:00.046 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:00.067 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:01.392 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:01.393 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:02.707 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:02.710 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:04.021 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:04.023 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:05.331 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:05.333 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:06.646 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:06.647 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:07.980 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:07.981 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:09.304 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:09.305 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:10.619 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:10.621 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:11.934 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:11.935 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:13.246 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:13.248 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:14.558 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:14.559 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:15.872 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:15.878 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:17.194 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:17.198 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:18.509 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:18.510 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:19.823 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:19.825 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:21.133 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:21.135 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:22.443 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:22.444 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:23.750 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:23.751 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:25.064 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:25.066 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:26.374 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:26.375 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:27.683 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:27.685 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:28.994 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:28.995 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:30.308 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:30.310 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:31.624 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:31.625 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:32.939 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:32.941 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:34.256 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:34.257 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:35.569 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:35.571 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:36.883 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:36.885 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:38.204 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:38.206 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:39.522 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:39.524 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:40.838 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:40.839 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:42.152 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:42.154 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:43.468 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:43.470 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:44.778 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:44.780 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:46.088 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:46.088 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:47.405 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:47.408 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:48.717 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:48.719 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:50.027 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:50.029 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:51.340 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:51.342 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:52.656 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:52.658 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:53.971 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:53.973 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:55.283 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:55.284 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:56.594 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:56.596 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:57.908 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:57.910 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:29:59.222 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:29:59.223 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:00.554 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:00.557 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:01.867 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:01.868 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:03.177 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:03.179 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:04.493 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:04.494 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:05.804 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:05.805 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:07.113 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:07.114 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:08.421 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:08.423 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:09.731 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:09.731 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:11.039 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:11.040 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:12.348 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:12.349 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:13.662 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:13.663 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:14.974 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:14.975 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:21.073 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:21.074 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-11-28 10:30:21.078 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 10:30:21.132 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:21.387 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 10:30:21.392 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 10:30:21.398 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 10:30:22.453 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:22.455 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:23.765 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:23.773 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:25.085 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:25.088 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:26.403 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:26.405 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:27.717 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:27.720 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:29.037 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:29.042 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:30.359 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:30.360 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:31.676 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:31.679 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:32.990 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:32.993 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:34.310 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:34.315 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:35.628 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:35.630 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:36.942 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:36.944 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:38.255 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:38.259 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:39.578 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:39.580 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:40.901 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:40.904 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:42.220 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:42.223 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:43.533 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:43.534 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:44.844 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:44.845 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:46.153 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:46.155 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:47.465 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:47.466 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:48.779 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:48.780 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:50.093 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:50.096 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:51.408 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:51.411 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:52.719 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:52.720 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:54.034 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:54.038 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:55.357 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:55.359 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:56.673 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:56.675 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:57.991 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:57.995 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:30:59.306 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:30:59.307 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:00.623 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:00.625 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:01.948 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:01.950 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:03.258 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:03.260 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:04.573 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:04.575 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:05.888 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:05.890 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:07.197 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:07.198 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:08.510 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:08.512 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:09.826 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:09.828 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:11.141 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:11.143 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:12.453 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:12.458 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:13.769 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:13.770 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:15.079 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:15.080 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:16.394 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:16.397 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:17.732 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:17.735 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:19.050 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:19.053 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:20.368 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:20.372 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:21.692 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:21.697 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:23.011 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:23.014 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:24.329 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:24.334 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:25.653 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:25.657 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:26.969 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:26.972 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:28.282 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:28.285 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:29.595 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:29.599 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:30.917 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:30.919 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:32.230 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:32.233 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:33.542 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:33.543 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:34.850 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:34.851 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:36.161 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:36.163 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:37.470 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:37.471 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:38.783 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:38.786 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:40.101 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:40.104 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:41.422 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:41.424 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:42.733 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:42.735 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:44.045 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:44.046 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:45.356 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:45.357 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:46.670 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:46.672 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:47.986 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:47.988 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:49.298 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:49.300 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:50.610 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:50.612 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:51.926 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:51.928 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:53.238 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:53.241 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:54.550 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:54.552 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:55.866 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:55.867 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:57.177 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:57.179 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:58.490 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:58.491 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:31:59.800 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:31:59.802 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:01.111 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:01.115 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:02.425 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:02.427 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:03.738 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:03.740 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:05.048 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:05.050 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:06.360 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:06.362 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:07.671 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:07.673 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:08.983 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:08.986 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:10.293 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:10.294 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:11.602 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:11.603 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:12.910 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:12.911 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:14.224 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:14.225 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:15.532 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:15.534 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:16.841 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:16.842 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:18.147 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:18.149 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:19.458 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:19.459 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:20.769 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:20.771 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:22.085 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:22.086 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:23.392 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:23.394 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:24.701 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:24.702 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:26.010 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:26.012 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:27.319 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:27.320 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:28.638 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:28.640 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:29.953 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:29.954 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:31.271 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:31.272 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:32.580 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:32.581 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:33.896 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:33.905 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:35.215 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:35.216 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:36.526 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:36.529 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:37.844 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:37.847 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:39.162 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:39.165 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:40.483 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:40.485 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:41.804 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:41.805 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:43.113 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:43.114 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:44.426 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:44.427 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:45.736 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:45.738 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:47.048 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:47.049 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:48.358 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:48.360 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:49.671 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:49.676 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:50.991 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:50.993 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:52.310 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:52.312 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:53.631 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:53.633 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:54.945 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:54.946 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:56.262 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:56.264 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:57.571 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:57.573 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:32:58.882 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:32:58.884 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:00.198 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:00.201 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:01.515 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:01.529 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:02.855 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:02.856 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:04.170 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:04.174 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:05.492 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:05.493 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:06.805 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:06.807 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:08.113 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:08.115 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:09.421 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:09.423 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:10.728 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:10.729 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:12.034 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:12.035 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:13.353 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:13.354 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:14.660 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:14.661 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:15.967 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:15.969 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:17.277 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:17.278 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:18.585 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:18.586 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:19.892 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:19.894 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:21.203 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:21.210 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:22.523 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:22.524 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: MqttException
+2025-11-28 10:33:58.476 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:58.477 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-11-28 10:33:58.479 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-11-28 10:33:58.539 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:137) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 10:33:58.541 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:58.542 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:137) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 10:33:58.544 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:58.547 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:137) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 10:33:58.817 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-11-28 10:33:58.819 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-11-28 10:33:58.819 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-11-28 10:33:58.820 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:137) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-11-28 10:33:58.825 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-11-28 10:34:31.765 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "weather",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-11-28 10:34:32.235 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:133) logmqtt ### Error guardando en BD: Cannot invoke "com.google.gson.JsonElement.getAsDouble()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+2025-11-28 10:34:32.309 INFO  mqtt.MQTTSuscriber.saveOther(MQTTSuscriber.java:181) logmqtt ### Datos other guardados: json={"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-28 10:15:00:000","sensor_type":"weather","data":{"vehicle_count":55,"pedestrian_count":200,"bicycle_count":15,"direction":"west","counter_type":"mixed","technology":"infrared","average_speed_kmh":35.5,"occupancy_percentage":85,"traffic_density":"medium"},"location":{"altitude_meters":650}}

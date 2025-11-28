@@ -861,3 +861,1910 @@
 1764322297: Client WheatherStationUAH-subscriber closed its connection.
 1764322297: mosquitto version 2.0.22 terminating
 1764322297: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764322787: mosquitto version 2.0.22 starting
+1764322787: Config loaded from /mosquitto/config/mosquitto.conf.
+1764322787: Opening ipv4 listen socket on port 1883.
+1764322787: Opening ipv6 listen socket on port 1883.
+1764322787: mosquitto version 2.0.22 running
+1764322790: New connection from 172.18.0.2:57364 on port 1883.
+1764322790: New client connected from 172.18.0.2:57364 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764322790: New connection from 172.18.0.2:57378 on port 1883.
+1764322790: New client connected from 172.18.0.2:57378 as WheatherStationUAH-publisher (p2, c1, k60).
+1764322790: Client WheatherStationUAH-publisher disconnected.
+1764322809: Client WheatherStationUAH-subscriber closed its connection.
+1764322812: New connection from 172.18.0.2:53772 on port 1883.
+1764322812: New client connected from 172.18.0.2:53772 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764322812: New connection from 172.18.0.2:53774 on port 1883.
+1764322813: New client connected from 172.18.0.2:53774 as WheatherStationUAH-publisher (p2, c1, k60).
+1764322813: Client WheatherStationUAH-publisher disconnected.
+1764322830: New connection from 172.18.0.2:58562 on port 1883.
+1764322831: New client connected from 172.18.0.2:58562 as StatusChecker-1764322830860 (p2, c1, k60).
+1764322831: Client StatusChecker-1764322830860 disconnected.
+1764322834: New connection from 172.18.0.2:58120 on port 1883.
+1764322835: New client connected from 172.18.0.2:58120 as StatusChecker-1764322834735 (p2, c1, k60).
+1764322835: Client StatusChecker-1764322834735 disconnected.
+1764322835: New connection from 172.18.0.2:58124 on port 1883.
+1764322835: New client connected from 172.18.0.2:58124 as StatusChecker-1764322835193 (p2, c1, k60).
+1764322835: Client StatusChecker-1764322835193 disconnected.
+1764322869: New connection from 172.18.0.2:51536 on port 1883.
+1764322870: New client connected from 172.18.0.2:51536 as StatusChecker-1764322869817 (p2, c1, k60).
+1764322870: Client StatusChecker-1764322869817 disconnected.
+1764322895: New connection from 172.18.0.1:41930 on port 1883.
+1764322895: New client connected from 172.18.0.1:41930 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764322923: New connection from 172.18.0.2:38468 on port 1883.
+1764322923: New connection from 172.18.0.2:38484 on port 1883.
+1764322923: New connection from 172.18.0.2:38496 on port 1883.
+1764322923: New client connected from 172.18.0.2:38468 as StatusChecker-1764322923431 (p2, c1, k60).
+1764322923: Client StatusChecker-1764322923431 disconnected.
+1764322923: New client connected from 172.18.0.2:38484 as StatusChecker-1764322923462 (p2, c1, k60).
+1764322923: Client StatusChecker-1764322923462 disconnected.
+1764322923: New client connected from 172.18.0.2:38496 as StatusChecker-1764322923507 (p2, c1, k60).
+1764322923: Client StatusChecker-1764322923507 disconnected.
+1764322940: Client WheatherStationUAH-subscriber closed its connection.
+1764322940: mosquitto version 2.0.22 terminating
+1764322940: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764322957: mosquitto version 2.0.22 starting
+1764322957: Config loaded from /mosquitto/config/mosquitto.conf.
+1764322957: Opening ipv4 listen socket on port 1883.
+1764322957: Opening ipv6 listen socket on port 1883.
+1764322957: mosquitto version 2.0.22 running
+1764322957: New connection from 172.18.0.1:60498 on port 1883.
+1764322957: New client connected from 172.18.0.1:60498 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764322959: New connection from 172.18.0.4:57380 on port 1883.
+1764322960: New client connected from 172.18.0.4:57380 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764322960: New connection from 172.18.0.4:57390 on port 1883.
+1764322960: New client connected from 172.18.0.4:57390 as WheatherStationUAH-publisher (p2, c1, k60).
+1764322960: Client WheatherStationUAH-publisher disconnected.
+1764323025: New connection from 172.18.0.4:55200 on port 1883.
+1764323025: New client connected from 172.18.0.4:55200 as StatusChecker-1764323025061 (p2, c1, k60).
+1764323025: Client StatusChecker-1764323025061 disconnected.
+1764323037: New connection from 172.18.0.4:52808 on port 1883.
+1764323037: New client connected from 172.18.0.4:52808 as StatusChecker-1764323037589 (p2, c1, k60).
+1764323037: Client StatusChecker-1764323037589 disconnected.
+1764323039: New connection from 172.18.0.4:52822 on port 1883.
+1764323039: New client connected from 172.18.0.4:52822 as StatusChecker-1764323039258 (p2, c1, k60).
+1764323039: Client StatusChecker-1764323039258 disconnected.
+1764323039: New connection from 172.18.0.4:52834 on port 1883.
+1764323039: New connection from 172.18.0.4:52842 on port 1883.
+1764323040: New client connected from 172.18.0.4:52834 as StatusChecker-1764323039764 (p2, c1, k60).
+1764323040: Client StatusChecker-1764323039764 disconnected.
+1764323040: New connection from 172.18.0.4:52856 on port 1883.
+1764323040: New client connected from 172.18.0.4:52842 as StatusChecker-1764323039949 (p2, c1, k60).
+1764323040: Client StatusChecker-1764323039949 disconnected.
+1764323040: New client connected from 172.18.0.4:52856 as StatusChecker-1764323040114 (p2, c1, k60).
+1764323040: Client StatusChecker-1764323040114 disconnected.
+1764323071: New connection from 172.18.0.4:60058 on port 1883.
+1764323071: New client connected from 172.18.0.4:60058 as StatusChecker-1764323071112 (p2, c1, k60).
+1764323071: Client StatusChecker-1764323071112 disconnected.
+1764323101: New connection from 172.18.0.4:59226 on port 1883.
+1764323101: New client connected from 172.18.0.4:59226 as StatusChecker-1764323101088 (p2, c1, k60).
+1764323101: Client StatusChecker-1764323101088 disconnected.
+1764323131: New connection from 172.18.0.4:42236 on port 1883.
+1764323131: New client connected from 172.18.0.4:42236 as StatusChecker-1764323131113 (p2, c1, k60).
+1764323131: Client StatusChecker-1764323131113 disconnected.
+1764323161: New connection from 172.18.0.4:57688 on port 1883.
+1764323161: New client connected from 172.18.0.4:57688 as StatusChecker-1764323161079 (p2, c1, k60).
+1764323161: Client StatusChecker-1764323161079 disconnected.
+1764323191: New connection from 172.18.0.4:53016 on port 1883.
+1764323191: New client connected from 172.18.0.4:53016 as StatusChecker-1764323191091 (p2, c1, k60).
+1764323191: Client StatusChecker-1764323191091 disconnected.
+1764323221: New connection from 172.18.0.4:53072 on port 1883.
+1764323221: New client connected from 172.18.0.4:53072 as StatusChecker-1764323221097 (p2, c1, k60).
+1764323221: Client StatusChecker-1764323221097 disconnected.
+1764323282: New connection from 172.18.0.4:44404 on port 1883.
+1764323282: New client connected from 172.18.0.4:44404 as StatusChecker-1764323282129 (p2, c1, k60).
+1764323282: Client StatusChecker-1764323282129 disconnected.
+1764323312: New connection from 172.18.0.4:45036 on port 1883.
+1764323312: New client connected from 172.18.0.4:45036 as StatusChecker-1764323312499 (p2, c1, k60).
+1764323312: Client StatusChecker-1764323312499 disconnected.
+1764323340: New connection from 172.18.0.4:43072 on port 1883.
+1764323340: New client connected from 172.18.0.4:43072 as StatusChecker-1764323340163 (p2, c1, k60).
+1764323340: Client StatusChecker-1764323340163 disconnected.
+1764323370: New connection from 172.18.0.4:59810 on port 1883.
+1764323370: New client connected from 172.18.0.4:59810 as StatusChecker-1764323370154 (p2, c1, k60).
+1764323370: Client StatusChecker-1764323370154 disconnected.
+1764323401: New connection from 172.18.0.4:60938 on port 1883.
+1764323401: New client connected from 172.18.0.4:60938 as StatusChecker-1764323401062 (p2, c1, k60).
+1764323401: Client StatusChecker-1764323401062 disconnected.
+1764323431: New connection from 172.18.0.4:44688 on port 1883.
+1764323431: New client connected from 172.18.0.4:44688 as StatusChecker-1764323431072 (p2, c1, k60).
+1764323431: Client StatusChecker-1764323431072 disconnected.
+1764323461: New connection from 172.18.0.4:57546 on port 1883.
+1764323461: New client connected from 172.18.0.4:57546 as StatusChecker-1764323461103 (p2, c1, k60).
+1764323461: Client StatusChecker-1764323461103 disconnected.
+1764323491: New connection from 172.18.0.4:41418 on port 1883.
+1764323491: New client connected from 172.18.0.4:41418 as StatusChecker-1764323491086 (p2, c1, k60).
+1764323491: Client StatusChecker-1764323491086 disconnected.
+1764323527: New connection from 172.18.0.4:49648 on port 1883.
+1764323527: New client connected from 172.18.0.4:49648 as StatusChecker-1764323527107 (p2, c1, k60).
+1764323527: Client StatusChecker-1764323527107 disconnected.
+1764323587: New connection from 172.18.0.4:51390 on port 1883.
+1764323587: New client connected from 172.18.0.4:51390 as StatusChecker-1764323587099 (p2, c1, k60).
+1764323587: Client StatusChecker-1764323587099 disconnected.
+1764323647: New connection from 172.18.0.4:34506 on port 1883.
+1764323647: New client connected from 172.18.0.4:34506 as StatusChecker-1764323647074 (p2, c1, k60).
+1764323647: Client StatusChecker-1764323647074 disconnected.
+1764323707: New connection from 172.18.0.4:50242 on port 1883.
+1764323707: New client connected from 172.18.0.4:50242 as StatusChecker-1764323707087 (p2, c1, k60).
+1764323707: Client StatusChecker-1764323707087 disconnected.
+1764323767: New connection from 172.18.0.4:33248 on port 1883.
+1764323767: New client connected from 172.18.0.4:33248 as StatusChecker-1764323767090 (p2, c1, k60).
+1764323767: Client StatusChecker-1764323767090 disconnected.
+1764323827: New connection from 172.18.0.4:42024 on port 1883.
+1764323827: New client connected from 172.18.0.4:42024 as StatusChecker-1764323827106 (p2, c1, k60).
+1764323827: Client StatusChecker-1764323827106 disconnected.
+1764323887: New connection from 172.18.0.4:58094 on port 1883.
+1764323887: New client connected from 172.18.0.4:58094 as StatusChecker-1764323887084 (p2, c1, k60).
+1764323887: Client StatusChecker-1764323887084 disconnected.
+1764323942: Client WheatherStationUAH-subscriber closed its connection.
+1764323942: mosquitto version 2.0.22 terminating
+1764323942: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764323978: mosquitto version 2.0.22 starting
+1764323978: Config loaded from /mosquitto/config/mosquitto.conf.
+1764323978: Opening ipv4 listen socket on port 1883.
+1764323978: Opening ipv6 listen socket on port 1883.
+1764323978: mosquitto version 2.0.22 running
+1764323978: New connection from 172.18.0.1:34270 on port 1883.
+1764323978: New client connected from 172.18.0.1:34270 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764323981: New connection from 172.18.0.4:37374 on port 1883.
+1764323981: New client connected from 172.18.0.4:37374 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764323981: New connection from 172.18.0.4:37386 on port 1883.
+1764323981: New client connected from 172.18.0.4:37386 as WheatherStationUAH-publisher (p2, c1, k60).
+1764323981: Client WheatherStationUAH-publisher disconnected.
+1764324007: New connection from 172.18.0.4:56494 on port 1883.
+1764324007: New client connected from 172.18.0.4:56494 as StatusChecker-1764324007344 (p2, c1, k60).
+1764324007: Client StatusChecker-1764324007344 disconnected.
+1764324011: New connection from 172.18.0.4:56508 on port 1883.
+1764324011: New client connected from 172.18.0.4:56508 as StatusChecker-1764324011604 (p2, c1, k60).
+1764324011: Client StatusChecker-1764324011604 disconnected.
+1764324013: New connection from 172.18.0.4:48812 on port 1883.
+1764324013: New client connected from 172.18.0.4:48812 as StatusChecker-1764324013091 (p2, c1, k60).
+1764324013: Client StatusChecker-1764324013091 disconnected.
+1764324044: New connection from 172.18.0.4:60252 on port 1883.
+1764324044: New client connected from 172.18.0.4:60252 as StatusChecker-1764324044090 (p2, c1, k60).
+1764324044: Client StatusChecker-1764324044090 disconnected.
+1764324049: Client WheatherStationUAH-subscriber closed its connection.
+1764324050: mosquitto version 2.0.22 terminating
+1764324050: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764324063: mosquitto version 2.0.22 starting
+1764324063: Config loaded from /mosquitto/config/mosquitto.conf.
+1764324063: Opening ipv4 listen socket on port 1883.
+1764324063: Opening ipv6 listen socket on port 1883.
+1764324063: mosquitto version 2.0.22 running
+1764324064: New connection from 172.18.0.1:51362 on port 1883.
+1764324064: New client connected from 172.18.0.1:51362 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764324066: New connection from 172.18.0.4:38724 on port 1883.
+1764324066: New client connected from 172.18.0.4:38724 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764324066: New connection from 172.18.0.4:38734 on port 1883.
+1764324067: New client connected from 172.18.0.4:38734 as WheatherStationUAH-publisher (p2, c1, k60).
+1764324067: Client WheatherStationUAH-publisher disconnected.
+1764324074: New connection from 172.18.0.4:35278 on port 1883.
+1764324074: New client connected from 172.18.0.4:35278 as StatusChecker-1764324074277 (p2, c1, k60).
+1764324074: Client StatusChecker-1764324074277 disconnected.
+1764324098: New connection from 172.18.0.4:53154 on port 1883.
+1764324098: New client connected from 172.18.0.4:53154 as StatusChecker-1764324098599 (p2, c1, k60).
+1764324098: Client StatusChecker-1764324098599 disconnected.
+1764324100: New connection from 172.18.0.4:53164 on port 1883.
+1764324100: New client connected from 172.18.0.4:53164 as StatusChecker-1764324100300 (p2, c1, k60).
+1764324100: Client StatusChecker-1764324100300 disconnected.
+1764324102: New connection from 172.18.0.4:33466 on port 1883.
+1764324102: New client connected from 172.18.0.4:33466 as StatusChecker-1764324102433 (p2, c1, k60).
+1764324102: Client StatusChecker-1764324102433 disconnected.
+1764324121: New connection from 172.18.0.4:50886 on port 1883.
+1764324122: New client connected from 172.18.0.4:50886 as StatusChecker-1764324121964 (p2, c1, k60).
+1764324122: Client StatusChecker-1764324121964 disconnected.
+1764324124: New connection from 172.18.0.4:50892 on port 1883.
+1764324124: New client connected from 172.18.0.4:50892 as StatusChecker-1764324124293 (p2, c1, k60).
+1764324124: Client StatusChecker-1764324124293 disconnected.
+1764324124: New connection from 172.18.0.4:50902 on port 1883.
+1764324125: New connection from 172.18.0.4:50904 on port 1883.
+1764324125: New client connected from 172.18.0.4:50902 as StatusChecker-1764324124970 (p2, c1, k60).
+1764324125: Client StatusChecker-1764324124970 disconnected.
+1764324125: New connection from 172.18.0.4:50918 on port 1883.
+1764324125: New client connected from 172.18.0.4:50904 as StatusChecker-1764324125096 (p2, c1, k60).
+1764324125: Client StatusChecker-1764324125096 disconnected.
+1764324125: New client connected from 172.18.0.4:50918 as StatusChecker-1764324125333 (p2, c1, k60).
+1764324125: Client StatusChecker-1764324125333 disconnected.
+1764324156: New connection from 172.18.0.4:43294 on port 1883.
+1764324156: New client connected from 172.18.0.4:43294 as StatusChecker-1764324156076 (p2, c1, k60).
+1764324156: Client StatusChecker-1764324156076 disconnected.
+1764324186: New connection from 172.18.0.4:51628 on port 1883.
+1764324186: New client connected from 172.18.0.4:51628 as StatusChecker-1764324186129 (p2, c1, k60).
+1764324186: Client StatusChecker-1764324186129 disconnected.
+1764324216: New connection from 172.18.0.4:39660 on port 1883.
+1764324216: New client connected from 172.18.0.4:39660 as StatusChecker-1764324216105 (p2, c1, k60).
+1764324216: Client StatusChecker-1764324216105 disconnected.
+1764324349: New connection from 172.18.0.4:44286 on port 1883.
+1764324350: New client connected from 172.18.0.4:44286 as StatusChecker-1764324349709 (p2, c1, k60).
+1764324350: Client StatusChecker-1764324349709 disconnected.
+1764324365: New connection from 172.18.0.4:47142 on port 1883.
+1764324366: New client connected from 172.18.0.4:47142 as StatusChecker-1764324365928 (p2, c1, k60).
+1764324366: Client StatusChecker-1764324365928 disconnected.
+1764324395: New connection from 172.18.0.4:33656 on port 1883.
+1764324396: New client connected from 172.18.0.4:33656 as StatusChecker-1764324395926 (p2, c1, k60).
+1764324396: Client StatusChecker-1764324395926 disconnected.
+1764324426: New connection from 172.18.0.4:51904 on port 1883.
+1764324427: New client connected from 172.18.0.4:51904 as StatusChecker-1764324426927 (p2, c1, k60).
+1764324427: Client StatusChecker-1764324426927 disconnected.
+1764324486: New connection from 172.18.0.4:54934 on port 1883.
+1764324487: New client connected from 172.18.0.4:54934 as StatusChecker-1764324486995 (p2, c1, k60).
+1764324487: Client StatusChecker-1764324486995 disconnected.
+1764324546: New connection from 172.18.0.4:34634 on port 1883.
+1764324547: New client connected from 172.18.0.4:34634 as StatusChecker-1764324546947 (p2, c1, k60).
+1764324547: Client StatusChecker-1764324546947 disconnected.
+1764324575: New connection from 172.18.0.4:33484 on port 1883.
+1764324576: New client connected from 172.18.0.4:33484 as StatusChecker-1764324575928 (p2, c1, k60).
+1764324576: Client StatusChecker-1764324575928 disconnected.
+1764324605: New connection from 172.18.0.4:54464 on port 1883.
+1764324606: New client connected from 172.18.0.4:54464 as StatusChecker-1764324605953 (p2, c1, k60).
+1764324606: Client StatusChecker-1764324605953 disconnected.
+1764324666: New connection from 172.18.0.4:46918 on port 1883.
+1764324667: New client connected from 172.18.0.4:46918 as StatusChecker-1764324666945 (p2, c1, k60).
+1764324667: Client StatusChecker-1764324666945 disconnected.
+1764324675: Client WheatherStationUAH-subscriber closed its connection.
+1764324676: mosquitto version 2.0.22 terminating
+1764324676: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764324693: mosquitto version 2.0.22 starting
+1764324693: Config loaded from /mosquitto/config/mosquitto.conf.
+1764324693: Opening ipv4 listen socket on port 1883.
+1764324693: Opening ipv6 listen socket on port 1883.
+1764324693: mosquitto version 2.0.22 running
+1764324694: New connection from 172.18.0.1:46964 on port 1883.
+1764324694: New client connected from 172.18.0.1:46964 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764324696: New connection from 172.18.0.4:55064 on port 1883.
+1764324696: New client connected from 172.18.0.4:55064 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764324696: New connection from 172.18.0.4:55068 on port 1883.
+1764324697: New client connected from 172.18.0.4:55068 as WheatherStationUAH-publisher (p2, c1, k60).
+1764324697: Client WheatherStationUAH-publisher disconnected.
+1764324722: New connection from 172.18.0.4:55978 on port 1883.
+1764324722: New connection from 172.18.0.4:55990 on port 1883.
+1764324722: New client connected from 172.18.0.4:55978 as StatusChecker-1764324722655 (p2, c1, k60).
+1764324722: Client StatusChecker-1764324722655 disconnected.
+1764324723: New client connected from 172.18.0.4:55990 as StatusChecker-1764324722723 (p2, c1, k60).
+1764324723: Client StatusChecker-1764324722723 disconnected.
+1764324752: New connection from 172.18.0.4:48366 on port 1883.
+1764324753: New client connected from 172.18.0.4:48366 as StatusChecker-1764324752939 (p2, c1, k60).
+1764324753: Client StatusChecker-1764324752939 disconnected.
+1764324782: New connection from 172.18.0.4:45236 on port 1883.
+1764324783: New client connected from 172.18.0.4:45236 as StatusChecker-1764324782955 (p2, c1, k60).
+1764324783: Client StatusChecker-1764324782955 disconnected.
+1764324812: New connection from 172.18.0.4:54716 on port 1883.
+1764324813: New client connected from 172.18.0.4:54716 as StatusChecker-1764324812940 (p2, c1, k60).
+1764324813: Client StatusChecker-1764324812940 disconnected.
+1764324842: New connection from 172.18.0.4:42200 on port 1883.
+1764324843: New client connected from 172.18.0.4:42200 as StatusChecker-1764324842929 (p2, c1, k60).
+1764324843: Client StatusChecker-1764324842929 disconnected.
+1764324872: New connection from 172.18.0.4:51430 on port 1883.
+1764324873: New client connected from 172.18.0.4:51430 as StatusChecker-1764324872960 (p2, c1, k60).
+1764324873: Client StatusChecker-1764324872960 disconnected.
+1764324902: New connection from 172.18.0.4:42326 on port 1883.
+1764324903: New client connected from 172.18.0.4:42326 as StatusChecker-1764324902955 (p2, c1, k60).
+1764324903: Client StatusChecker-1764324902955 disconnected.
+1764324963: New connection from 172.18.0.4:52760 on port 1883.
+1764324964: New client connected from 172.18.0.4:52760 as StatusChecker-1764324963936 (p2, c1, k60).
+1764324964: Client StatusChecker-1764324963936 disconnected.
+1764325024: New connection from 172.18.0.4:57806 on port 1883.
+1764325025: New client connected from 172.18.0.4:57806 as StatusChecker-1764325024959 (p2, c1, k60).
+1764325025: Client StatusChecker-1764325024959 disconnected.
+1764325085: New connection from 172.18.0.4:60258 on port 1883.
+1764325086: New client connected from 172.18.0.4:60258 as StatusChecker-1764325085954 (p2, c1, k60).
+1764325086: Client StatusChecker-1764325085954 disconnected.
+1764325121: Client WheatherStationUAH-subscriber closed its connection.
+1764325121: mosquitto version 2.0.22 terminating
+1764325121: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764325286: mosquitto version 2.0.22 starting
+1764325286: Config loaded from /mosquitto/config/mosquitto.conf.
+1764325286: Opening ipv4 listen socket on port 1883.
+1764325286: Opening ipv6 listen socket on port 1883.
+1764325286: mosquitto version 2.0.22 running
+1764325286: New connection from 172.18.0.1:40832 on port 1883.
+1764325286: New client connected from 172.18.0.1:40832 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764325289: New connection from 172.18.0.4:60240 on port 1883.
+1764325289: New client connected from 172.18.0.4:60240 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325289: New connection from 172.18.0.4:60252 on port 1883.
+1764325290: New client connected from 172.18.0.4:60252 as WheatherStationUAH-publisher (p2, c1, k60).
+1764325290: Client WheatherStationUAH-publisher disconnected.
+1764325290: Client WheatherStationUAH-subscriber closed its connection.
+1764325291: New connection from 172.18.0.4:60268 on port 1883.
+1764325291: New client connected from 172.18.0.4:60268 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325291: Client WheatherStationUAH-subscriber closed its connection.
+1764325292: New connection from 172.18.0.4:60280 on port 1883.
+1764325292: New client connected from 172.18.0.4:60280 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325292: Client WheatherStationUAH-subscriber closed its connection.
+1764325293: New connection from 172.18.0.4:60294 on port 1883.
+1764325294: New client connected from 172.18.0.4:60294 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325294: Client WheatherStationUAH-subscriber closed its connection.
+1764325295: New connection from 172.18.0.4:60302 on port 1883.
+1764325295: New client connected from 172.18.0.4:60302 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325295: Client WheatherStationUAH-subscriber closed its connection.
+1764325296: New connection from 172.18.0.4:60314 on port 1883.
+1764325296: New client connected from 172.18.0.4:60314 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325296: Client WheatherStationUAH-subscriber closed its connection.
+1764325297: New connection from 172.18.0.4:32962 on port 1883.
+1764325297: New client connected from 172.18.0.4:32962 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325297: Client WheatherStationUAH-subscriber closed its connection.
+1764325298: New connection from 172.18.0.4:32976 on port 1883.
+1764325299: New client connected from 172.18.0.4:32976 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325299: Client WheatherStationUAH-subscriber closed its connection.
+1764325300: New connection from 172.18.0.4:32982 on port 1883.
+1764325300: New client connected from 172.18.0.4:32982 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325300: Client WheatherStationUAH-subscriber closed its connection.
+1764325301: New connection from 172.18.0.4:32986 on port 1883.
+1764325301: New client connected from 172.18.0.4:32986 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325301: Client WheatherStationUAH-subscriber closed its connection.
+1764325302: New connection from 172.18.0.4:32994 on port 1883.
+1764325303: New client connected from 172.18.0.4:32994 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325303: Client WheatherStationUAH-subscriber closed its connection.
+1764325304: New connection from 172.18.0.4:33000 on port 1883.
+1764325304: New client connected from 172.18.0.4:33000 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325304: Client WheatherStationUAH-subscriber closed its connection.
+1764325305: New connection from 172.18.0.4:33002 on port 1883.
+1764325305: New client connected from 172.18.0.4:33002 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325305: Client WheatherStationUAH-subscriber closed its connection.
+1764325306: New connection from 172.18.0.4:33018 on port 1883.
+1764325307: New client connected from 172.18.0.4:33018 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325307: Client WheatherStationUAH-subscriber closed its connection.
+1764325308: New connection from 172.18.0.4:59462 on port 1883.
+1764325308: New client connected from 172.18.0.4:59462 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325308: Client WheatherStationUAH-subscriber closed its connection.
+1764325309: New connection from 172.18.0.4:59464 on port 1883.
+1764325309: New client connected from 172.18.0.4:59464 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325309: Client WheatherStationUAH-subscriber closed its connection.
+1764325310: New connection from 172.18.0.4:59478 on port 1883.
+1764325311: New client connected from 172.18.0.4:59478 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325311: Client WheatherStationUAH-subscriber closed its connection.
+1764325312: New connection from 172.18.0.4:59492 on port 1883.
+1764325312: New client connected from 172.18.0.4:59492 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325312: Client WheatherStationUAH-subscriber closed its connection.
+1764325313: New connection from 172.18.0.4:59500 on port 1883.
+1764325313: New client connected from 172.18.0.4:59500 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325313: Client WheatherStationUAH-subscriber closed its connection.
+1764325314: New connection from 172.18.0.4:59504 on port 1883.
+1764325315: New client connected from 172.18.0.4:59504 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325315: Client WheatherStationUAH-subscriber closed its connection.
+1764325316: New connection from 172.18.0.4:59508 on port 1883.
+1764325316: New client connected from 172.18.0.4:59508 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325316: Client WheatherStationUAH-subscriber closed its connection.
+1764325317: New connection from 172.18.0.4:58770 on port 1883.
+1764325317: New client connected from 172.18.0.4:58770 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325317: Client WheatherStationUAH-subscriber closed its connection.
+1764325318: New connection from 172.18.0.4:58772 on port 1883.
+1764325318: New client connected from 172.18.0.4:58772 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325318: Client WheatherStationUAH-subscriber closed its connection.
+1764325319: New connection from 172.18.0.4:58784 on port 1883.
+1764325320: New connection from 172.18.0.4:58792 on port 1883.
+1764325320: New client connected from 172.18.0.4:58784 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325320: Client WheatherStationUAH-subscriber closed its connection.
+1764325320: New client connected from 172.18.0.4:58792 as StatusChecker-1764325320114 (p2, c1, k60).
+1764325320: Client StatusChecker-1764325320114 disconnected.
+1764325321: New connection from 172.18.0.4:58798 on port 1883.
+1764325321: New client connected from 172.18.0.4:58798 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325321: Client WheatherStationUAH-subscriber closed its connection.
+1764325322: New connection from 172.18.0.4:58800 on port 1883.
+1764325322: New connection from 172.18.0.4:58812 on port 1883.
+1764325322: New connection from 172.18.0.4:58814 on port 1883.
+1764325322: New client connected from 172.18.0.4:58800 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325322: Client WheatherStationUAH-subscriber closed its connection.
+1764325323: New client connected from 172.18.0.4:58812 as StatusChecker-1764325322773 (p2, c1, k60).
+1764325323: Client StatusChecker-1764325322773 disconnected.
+1764325323: New client connected from 172.18.0.4:58814 as StatusChecker-1764325322868 (p2, c1, k60).
+1764325323: Client StatusChecker-1764325322868 disconnected.
+1764325323: New connection from 172.18.0.4:58822 on port 1883.
+1764325324: New client connected from 172.18.0.4:58822 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325324: Client WheatherStationUAH-subscriber closed its connection.
+1764325325: New connection from 172.18.0.4:58826 on port 1883.
+1764325325: New client connected from 172.18.0.4:58826 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325325: Client WheatherStationUAH-subscriber closed its connection.
+1764325326: New connection from 172.18.0.4:58828 on port 1883.
+1764325326: New client connected from 172.18.0.4:58828 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325326: Client WheatherStationUAH-subscriber closed its connection.
+1764325327: New connection from 172.18.0.4:35230 on port 1883.
+1764325328: New client connected from 172.18.0.4:35230 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325328: Client WheatherStationUAH-subscriber closed its connection.
+1764325329: New connection from 172.18.0.4:35234 on port 1883.
+1764325329: New client connected from 172.18.0.4:35234 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325329: Client WheatherStationUAH-subscriber closed its connection.
+1764325330: New connection from 172.18.0.4:35238 on port 1883.
+1764325330: New client connected from 172.18.0.4:35238 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325330: Client WheatherStationUAH-subscriber closed its connection.
+1764325331: New connection from 172.18.0.4:35246 on port 1883.
+1764325332: New client connected from 172.18.0.4:35246 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325332: Client WheatherStationUAH-subscriber closed its connection.
+1764325333: New connection from 172.18.0.4:35256 on port 1883.
+1764325333: New client connected from 172.18.0.4:35256 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325333: Client WheatherStationUAH-subscriber closed its connection.
+1764325334: New connection from 172.18.0.4:35262 on port 1883.
+1764325334: New client connected from 172.18.0.4:35262 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325334: Client WheatherStationUAH-subscriber closed its connection.
+1764325335: New connection from 172.18.0.4:35270 on port 1883.
+1764325336: New client connected from 172.18.0.4:35270 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325336: Client WheatherStationUAH-subscriber closed its connection.
+1764325337: New connection from 172.18.0.4:35282 on port 1883.
+1764325337: New client connected from 172.18.0.4:35282 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325337: Client WheatherStationUAH-subscriber closed its connection.
+1764325338: New connection from 172.18.0.4:33830 on port 1883.
+1764325338: New client connected from 172.18.0.4:33830 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325338: Client WheatherStationUAH-subscriber closed its connection.
+1764325339: New connection from 172.18.0.4:33842 on port 1883.
+1764325340: New client connected from 172.18.0.4:33842 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325340: Client WheatherStationUAH-subscriber closed its connection.
+1764325341: New connection from 172.18.0.4:33850 on port 1883.
+1764325341: New client connected from 172.18.0.4:33850 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325341: Client WheatherStationUAH-subscriber closed its connection.
+1764325342: New connection from 172.18.0.4:33862 on port 1883.
+1764325342: New client connected from 172.18.0.4:33862 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325342: Client WheatherStationUAH-subscriber closed its connection.
+1764325343: New connection from 172.18.0.4:33876 on port 1883.
+1764325343: New client connected from 172.18.0.4:33876 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325343: Client WheatherStationUAH-subscriber closed its connection.
+1764325344: New connection from 172.18.0.4:33884 on port 1883.
+1764325345: New client connected from 172.18.0.4:33884 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325345: Client WheatherStationUAH-subscriber closed its connection.
+1764325346: New connection from 172.18.0.4:33892 on port 1883.
+1764325346: New client connected from 172.18.0.4:33892 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325346: Client WheatherStationUAH-subscriber closed its connection.
+1764325347: New connection from 172.18.0.4:53002 on port 1883.
+1764325347: New client connected from 172.18.0.4:53002 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325347: Client WheatherStationUAH-subscriber closed its connection.
+1764325348: New connection from 172.18.0.4:53016 on port 1883.
+1764325349: New client connected from 172.18.0.4:53016 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325349: Client WheatherStationUAH-subscriber closed its connection.
+1764325350: New connection from 172.18.0.4:53032 on port 1883.
+1764325350: New client connected from 172.18.0.4:53032 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325350: Client WheatherStationUAH-subscriber closed its connection.
+1764325351: New connection from 172.18.0.4:53038 on port 1883.
+1764325351: New client connected from 172.18.0.4:53038 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325351: Client WheatherStationUAH-subscriber closed its connection.
+1764325352: New connection from 172.18.0.4:53046 on port 1883.
+1764325352: New connection from 172.18.0.4:53054 on port 1883.
+1764325353: New client connected from 172.18.0.4:53046 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325353: Client WheatherStationUAH-subscriber closed its connection.
+1764325353: New client connected from 172.18.0.4:53054 as StatusChecker-1764325352941 (p2, c1, k60).
+1764325353: Client StatusChecker-1764325352941 disconnected.
+1764325354: New connection from 172.18.0.4:53066 on port 1883.
+1764325354: New client connected from 172.18.0.4:53066 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325354: Client WheatherStationUAH-subscriber closed its connection.
+1764325355: New connection from 172.18.0.4:53076 on port 1883.
+1764325355: New client connected from 172.18.0.4:53076 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325355: Client WheatherStationUAH-subscriber closed its connection.
+1764325356: New connection from 172.18.0.4:53080 on port 1883.
+1764325357: New client connected from 172.18.0.4:53080 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325357: Client WheatherStationUAH-subscriber closed its connection.
+1764325358: New connection from 172.18.0.4:46116 on port 1883.
+1764325358: New client connected from 172.18.0.4:46116 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325358: Client WheatherStationUAH-subscriber closed its connection.
+1764325359: New connection from 172.18.0.4:46132 on port 1883.
+1764325359: New client connected from 172.18.0.4:46132 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325359: Client WheatherStationUAH-subscriber closed its connection.
+1764325360: New connection from 172.18.0.4:46146 on port 1883.
+1764325361: Client <unknown> closed its connection.
+1764325361: mosquitto version 2.0.22 terminating
+1764325361: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764325404: mosquitto version 2.0.22 starting
+1764325404: Config loaded from /mosquitto/config/mosquitto.conf.
+1764325404: Opening ipv4 listen socket on port 1883.
+1764325404: Opening ipv6 listen socket on port 1883.
+1764325404: mosquitto version 2.0.22 running
+1764325404: New connection from 172.18.0.1:41528 on port 1883.
+1764325404: New client connected from 172.18.0.1:41528 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764325407: New connection from 172.18.0.4:35960 on port 1883.
+1764325407: New client connected from 172.18.0.4:35960 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325407: New connection from 172.18.0.4:40988 on port 1883.
+1764325407: Client WheatherStationUAH-subscriber closed its connection.
+1764325407: New client connected from 172.18.0.4:40988 as WheatherStationUAH-publisher (p2, c1, k60).
+1764325407: Client WheatherStationUAH-publisher disconnected.
+1764325408: New connection from 172.18.0.4:40990 on port 1883.
+1764325408: New client connected from 172.18.0.4:40990 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325408: Client WheatherStationUAH-subscriber closed its connection.
+1764325409: New connection from 172.18.0.4:40998 on port 1883.
+1764325410: New client connected from 172.18.0.4:40998 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325410: Client WheatherStationUAH-subscriber closed its connection.
+1764325411: New connection from 172.18.0.4:41012 on port 1883.
+1764325411: New client connected from 172.18.0.4:41012 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325411: Client WheatherStationUAH-subscriber closed its connection.
+1764325412: New connection from 172.18.0.4:41018 on port 1883.
+1764325412: New client connected from 172.18.0.4:41018 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325412: Client WheatherStationUAH-subscriber closed its connection.
+1764325413: New connection from 172.18.0.4:41020 on port 1883.
+1764325413: New client connected from 172.18.0.4:41020 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325413: Client WheatherStationUAH-subscriber closed its connection.
+1764325414: New connection from 172.18.0.4:41030 on port 1883.
+1764325415: New client connected from 172.18.0.4:41030 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325415: Client WheatherStationUAH-subscriber closed its connection.
+1764325416: New connection from 172.18.0.4:41044 on port 1883.
+1764325416: New client connected from 172.18.0.4:41044 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325416: Client WheatherStationUAH-subscriber closed its connection.
+1764325417: New connection from 172.18.0.4:54198 on port 1883.
+1764325417: New client connected from 172.18.0.4:54198 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325417: Client WheatherStationUAH-subscriber closed its connection.
+1764325418: New connection from 172.18.0.4:54210 on port 1883.
+1764325419: New client connected from 172.18.0.4:54210 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325419: Client WheatherStationUAH-subscriber closed its connection.
+1764325420: New connection from 172.18.0.4:54222 on port 1883.
+1764325420: New client connected from 172.18.0.4:54222 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325420: Client WheatherStationUAH-subscriber closed its connection.
+1764325421: New connection from 172.18.0.4:54234 on port 1883.
+1764325421: New client connected from 172.18.0.4:54234 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325421: Client WheatherStationUAH-subscriber closed its connection.
+1764325422: New connection from 172.18.0.4:54248 on port 1883.
+1764325423: New client connected from 172.18.0.4:54248 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325423: Client WheatherStationUAH-subscriber closed its connection.
+1764325424: New connection from 172.18.0.4:54258 on port 1883.
+1764325424: New client connected from 172.18.0.4:54258 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325424: Client WheatherStationUAH-subscriber closed its connection.
+1764325425: New connection from 172.18.0.4:54270 on port 1883.
+1764325425: New client connected from 172.18.0.4:54270 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325425: Client WheatherStationUAH-subscriber closed its connection.
+1764325426: New connection from 172.18.0.4:54278 on port 1883.
+1764325427: New client connected from 172.18.0.4:54278 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325427: Client WheatherStationUAH-subscriber closed its connection.
+1764325428: New connection from 172.18.0.4:43494 on port 1883.
+1764325428: New connection from 172.18.0.4:43502 on port 1883.
+1764325428: New client connected from 172.18.0.4:43494 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325428: Client WheatherStationUAH-subscriber closed its connection.
+1764325428: New client connected from 172.18.0.4:43502 as StatusChecker-1764325428207 (p2, c1, k60).
+1764325428: Client StatusChecker-1764325428207 disconnected.
+1764325429: New connection from 172.18.0.4:43504 on port 1883.
+1764325429: New client connected from 172.18.0.4:43504 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325429: Client WheatherStationUAH-subscriber closed its connection.
+1764325430: New connection from 172.18.0.4:43506 on port 1883.
+1764325430: New client connected from 172.18.0.4:43506 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325430: Client WheatherStationUAH-subscriber closed its connection.
+1764325431: New connection from 172.18.0.4:43512 on port 1883.
+1764325432: New client connected from 172.18.0.4:43512 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325432: Client WheatherStationUAH-subscriber closed its connection.
+1764325433: New connection from 172.18.0.4:43516 on port 1883.
+1764325433: New client connected from 172.18.0.4:43516 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325433: Client WheatherStationUAH-subscriber closed its connection.
+1764325434: New connection from 172.18.0.4:43526 on port 1883.
+1764325434: New client connected from 172.18.0.4:43526 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325435: Client WheatherStationUAH-subscriber closed its connection.
+1764325436: New connection from 172.18.0.4:43536 on port 1883.
+1764325436: New client connected from 172.18.0.4:43536 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325436: Client WheatherStationUAH-subscriber closed its connection.
+1764325437: New connection from 172.18.0.4:34374 on port 1883.
+1764325437: New client connected from 172.18.0.4:34374 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325437: Client WheatherStationUAH-subscriber closed its connection.
+1764325438: New connection from 172.18.0.4:34382 on port 1883.
+1764325438: New client connected from 172.18.0.4:34382 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325438: Client WheatherStationUAH-subscriber closed its connection.
+1764325439: New connection from 172.18.0.4:34392 on port 1883.
+1764325440: New client connected from 172.18.0.4:34392 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325440: Client WheatherStationUAH-subscriber closed its connection.
+1764325441: New connection from 172.18.0.4:34398 on port 1883.
+1764325441: New client connected from 172.18.0.4:34398 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325441: Client WheatherStationUAH-subscriber closed its connection.
+1764325442: New connection from 172.18.0.4:34400 on port 1883.
+1764325442: New client connected from 172.18.0.4:34400 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325442: Client WheatherStationUAH-subscriber closed its connection.
+1764325443: New connection from 172.18.0.4:34406 on port 1883.
+1764325444: New client connected from 172.18.0.4:34406 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325444: Client WheatherStationUAH-subscriber closed its connection.
+1764325445: New connection from 172.18.0.4:34420 on port 1883.
+1764325445: New client connected from 172.18.0.4:34420 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325445: Client WheatherStationUAH-subscriber closed its connection.
+1764325446: New connection from 172.18.0.4:34434 on port 1883.
+1764325446: New client connected from 172.18.0.4:34434 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325446: Client WheatherStationUAH-subscriber closed its connection.
+1764325447: New connection from 172.18.0.4:57856 on port 1883.
+1764325448: New client connected from 172.18.0.4:57856 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325448: Client WheatherStationUAH-subscriber closed its connection.
+1764325449: New connection from 172.18.0.4:57858 on port 1883.
+1764325449: New client connected from 172.18.0.4:57858 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325449: Client WheatherStationUAH-subscriber closed its connection.
+1764325450: New connection from 172.18.0.4:57864 on port 1883.
+1764325450: New client connected from 172.18.0.4:57864 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325450: Client WheatherStationUAH-subscriber closed its connection.
+1764325451: New connection from 172.18.0.4:57868 on port 1883.
+1764325452: New client connected from 172.18.0.4:57868 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325452: Client WheatherStationUAH-subscriber closed its connection.
+1764325453: New connection from 172.18.0.4:57884 on port 1883.
+1764325453: New client connected from 172.18.0.4:57884 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325453: Client WheatherStationUAH-subscriber closed its connection.
+1764325454: New connection from 172.18.0.4:57888 on port 1883.
+1764325454: New client connected from 172.18.0.4:57888 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325454: Client WheatherStationUAH-subscriber closed its connection.
+1764325455: New connection from 172.18.0.4:57890 on port 1883.
+1764325456: New client connected from 172.18.0.4:57890 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325456: Client WheatherStationUAH-subscriber closed its connection.
+1764325457: New connection from 172.18.0.4:57906 on port 1883.
+1764325457: New client connected from 172.18.0.4:57906 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325457: Client WheatherStationUAH-subscriber closed its connection.
+1764325458: New connection from 172.18.0.4:58948 on port 1883.
+1764325458: New client connected from 172.18.0.4:58948 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325458: Client WheatherStationUAH-subscriber closed its connection.
+1764325459: New connection from 172.18.0.4:58954 on port 1883.
+1764325459: New client connected from 172.18.0.4:58954 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325459: Client WheatherStationUAH-subscriber closed its connection.
+1764325460: New connection from 172.18.0.4:58968 on port 1883.
+1764325461: New client connected from 172.18.0.4:58968 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325461: Client WheatherStationUAH-subscriber closed its connection.
+1764325462: New connection from 172.18.0.4:58978 on port 1883.
+1764325462: New client connected from 172.18.0.4:58978 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325462: Client WheatherStationUAH-subscriber closed its connection.
+1764325463: New connection from 172.18.0.4:58980 on port 1883.
+1764325463: New client connected from 172.18.0.4:58980 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325463: Client WheatherStationUAH-subscriber closed its connection.
+1764325464: New connection from 172.18.0.4:58982 on port 1883.
+1764325465: New client connected from 172.18.0.4:58982 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325465: Client WheatherStationUAH-subscriber closed its connection.
+1764325466: New connection from 172.18.0.4:58984 on port 1883.
+1764325466: New client connected from 172.18.0.4:58984 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325466: Client WheatherStationUAH-subscriber closed its connection.
+1764325467: New connection from 172.18.0.4:35916 on port 1883.
+1764325467: New client connected from 172.18.0.4:35916 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325467: Client WheatherStationUAH-subscriber closed its connection.
+1764325468: New connection from 172.18.0.4:35924 on port 1883.
+1764325469: New client connected from 172.18.0.4:35924 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325469: Client WheatherStationUAH-subscriber closed its connection.
+1764325470: New connection from 172.18.0.4:35938 on port 1883.
+1764325470: New client connected from 172.18.0.4:35938 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325470: Client WheatherStationUAH-subscriber closed its connection.
+1764325471: New connection from 172.18.0.4:35950 on port 1883.
+1764325471: New client connected from 172.18.0.4:35950 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325471: Client WheatherStationUAH-subscriber closed its connection.
+1764325472: New connection from 172.18.0.4:35952 on port 1883.
+1764325473: New client connected from 172.18.0.4:35952 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325473: Client WheatherStationUAH-subscriber closed its connection.
+1764325474: New connection from 172.18.0.4:35964 on port 1883.
+1764325474: New client connected from 172.18.0.4:35964 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325474: Client WheatherStationUAH-subscriber closed its connection.
+1764325475: New connection from 172.18.0.4:35980 on port 1883.
+1764325475: New client connected from 172.18.0.4:35980 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325475: Client WheatherStationUAH-subscriber closed its connection.
+1764325476: New connection from 172.18.0.4:35994 on port 1883.
+1764325477: New client connected from 172.18.0.4:35994 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325477: Client WheatherStationUAH-subscriber closed its connection.
+1764325478: New connection from 172.18.0.4:39422 on port 1883.
+1764325478: New client connected from 172.18.0.4:39422 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325478: Client WheatherStationUAH-subscriber closed its connection.
+1764325479: New connection from 172.18.0.4:39426 on port 1883.
+1764325479: New client connected from 172.18.0.4:39426 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325479: Client WheatherStationUAH-subscriber closed its connection.
+1764325480: New connection from 172.18.0.4:39438 on port 1883.
+1764325481: New client connected from 172.18.0.4:39438 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325481: Client WheatherStationUAH-subscriber closed its connection.
+1764325482: New connection from 172.18.0.4:39444 on port 1883.
+1764325482: New client connected from 172.18.0.4:39444 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325482: Client WheatherStationUAH-subscriber closed its connection.
+1764325483: New connection from 172.18.0.4:39452 on port 1883.
+1764325483: New client connected from 172.18.0.4:39452 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325483: Client WheatherStationUAH-subscriber closed its connection.
+1764325484: New connection from 172.18.0.4:39466 on port 1883.
+1764325485: New client connected from 172.18.0.4:39466 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325485: Client WheatherStationUAH-subscriber closed its connection.
+1764325486: New connection from 172.18.0.4:39472 on port 1883.
+1764325486: New client connected from 172.18.0.4:39472 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325486: Client WheatherStationUAH-subscriber closed its connection.
+1764325487: New connection from 172.18.0.4:45212 on port 1883.
+1764325487: New client connected from 172.18.0.4:45212 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325487: Client WheatherStationUAH-subscriber closed its connection.
+1764325488: New connection from 172.18.0.4:45220 on port 1883.
+1764325488: New client connected from 172.18.0.4:45220 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325488: Client WheatherStationUAH-subscriber closed its connection.
+1764325489: New connection from 172.18.0.4:45222 on port 1883.
+1764325490: New client connected from 172.18.0.4:45222 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325490: Client WheatherStationUAH-subscriber closed its connection.
+1764325491: New connection from 172.18.0.4:45236 on port 1883.
+1764325491: New client connected from 172.18.0.4:45236 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325491: Client WheatherStationUAH-subscriber closed its connection.
+1764325492: New connection from 172.18.0.4:45248 on port 1883.
+1764325492: New client connected from 172.18.0.4:45248 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325492: Client WheatherStationUAH-subscriber closed its connection.
+1764325493: New connection from 172.18.0.4:45252 on port 1883.
+1764325494: New client connected from 172.18.0.4:45252 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325494: Client WheatherStationUAH-subscriber closed its connection.
+1764325495: New connection from 172.18.0.4:45260 on port 1883.
+1764325495: New client connected from 172.18.0.4:45260 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325495: Client WheatherStationUAH-subscriber closed its connection.
+1764325496: New connection from 172.18.0.4:45266 on port 1883.
+1764325496: New client connected from 172.18.0.4:45266 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325496: Client WheatherStationUAH-subscriber closed its connection.
+1764325497: New connection from 172.18.0.4:55762 on port 1883.
+1764325498: New client connected from 172.18.0.4:55762 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325498: Client WheatherStationUAH-subscriber closed its connection.
+1764325499: New connection from 172.18.0.4:55764 on port 1883.
+1764325499: New client connected from 172.18.0.4:55764 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325499: Client WheatherStationUAH-subscriber closed its connection.
+1764325500: New connection from 172.18.0.4:55776 on port 1883.
+1764325500: New client connected from 172.18.0.4:55776 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325500: Client WheatherStationUAH-subscriber closed its connection.
+1764325501: New connection from 172.18.0.4:55788 on port 1883.
+1764325502: New client connected from 172.18.0.4:55788 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325502: Client WheatherStationUAH-subscriber closed its connection.
+1764325503: New connection from 172.18.0.4:55800 on port 1883.
+1764325503: New client connected from 172.18.0.4:55800 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325503: Client WheatherStationUAH-subscriber closed its connection.
+1764325504: New connection from 172.18.0.4:55804 on port 1883.
+1764325504: New client connected from 172.18.0.4:55804 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325504: Client WheatherStationUAH-subscriber closed its connection.
+1764325505: New connection from 172.18.0.4:55812 on port 1883.
+1764325506: New client connected from 172.18.0.4:55812 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325506: Client WheatherStationUAH-subscriber closed its connection.
+1764325507: New connection from 172.18.0.4:55814 on port 1883.
+1764325507: New client connected from 172.18.0.4:55814 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325507: Client WheatherStationUAH-subscriber closed its connection.
+1764325508: New connection from 172.18.0.4:51636 on port 1883.
+1764325508: New client connected from 172.18.0.4:51636 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325508: Client WheatherStationUAH-subscriber closed its connection.
+1764325509: New connection from 172.18.0.4:51648 on port 1883.
+1764325510: New client connected from 172.18.0.4:51648 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325510: Client WheatherStationUAH-subscriber closed its connection.
+1764325511: New connection from 172.18.0.4:51662 on port 1883.
+1764325511: New client connected from 172.18.0.4:51662 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325511: Client WheatherStationUAH-subscriber closed its connection.
+1764325512: New connection from 172.18.0.4:51666 on port 1883.
+1764325512: New client connected from 172.18.0.4:51666 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325512: Client WheatherStationUAH-subscriber closed its connection.
+1764325513: New connection from 172.18.0.4:51670 on port 1883.
+1764325513: New client connected from 172.18.0.4:51670 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325513: Client WheatherStationUAH-subscriber closed its connection.
+1764325514: New connection from 172.18.0.4:51686 on port 1883.
+1764325515: New client connected from 172.18.0.4:51686 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325515: Client WheatherStationUAH-subscriber closed its connection.
+1764325516: New connection from 172.18.0.4:51700 on port 1883.
+1764325516: New client connected from 172.18.0.4:51700 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325516: Client WheatherStationUAH-subscriber closed its connection.
+1764325517: New connection from 172.18.0.4:52058 on port 1883.
+1764325517: New client connected from 172.18.0.4:52058 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325517: Client WheatherStationUAH-subscriber closed its connection.
+1764325518: New connection from 172.18.0.4:52072 on port 1883.
+1764325519: New client connected from 172.18.0.4:52072 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325519: Client WheatherStationUAH-subscriber closed its connection.
+1764325520: New connection from 172.18.0.4:52088 on port 1883.
+1764325520: New client connected from 172.18.0.4:52088 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325520: Client WheatherStationUAH-subscriber closed its connection.
+1764325521: New connection from 172.18.0.4:52102 on port 1883.
+1764325521: New client connected from 172.18.0.4:52102 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325521: Client WheatherStationUAH-subscriber closed its connection.
+1764325522: New connection from 172.18.0.4:52110 on port 1883.
+1764325523: New client connected from 172.18.0.4:52110 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325523: Client WheatherStationUAH-subscriber closed its connection.
+1764325524: New connection from 172.18.0.4:52116 on port 1883.
+1764325524: New client connected from 172.18.0.4:52116 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325524: Client WheatherStationUAH-subscriber closed its connection.
+1764325525: New connection from 172.18.0.4:52120 on port 1883.
+1764325525: New client connected from 172.18.0.4:52120 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325525: Client WheatherStationUAH-subscriber closed its connection.
+1764325526: New connection from 172.18.0.4:52136 on port 1883.
+1764325527: New client connected from 172.18.0.4:52136 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325527: Client WheatherStationUAH-subscriber closed its connection.
+1764325528: New connection from 172.18.0.4:59160 on port 1883.
+1764325528: New client connected from 172.18.0.4:59160 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325528: Client WheatherStationUAH-subscriber closed its connection.
+1764325529: New connection from 172.18.0.4:59168 on port 1883.
+1764325529: New client connected from 172.18.0.4:59168 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325529: Client WheatherStationUAH-subscriber closed its connection.
+1764325530: New connection from 172.18.0.4:59180 on port 1883.
+1764325531: New client connected from 172.18.0.4:59180 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325531: Client WheatherStationUAH-subscriber closed its connection.
+1764325532: New connection from 172.18.0.4:59186 on port 1883.
+1764325532: New client connected from 172.18.0.4:59186 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325532: Client WheatherStationUAH-subscriber closed its connection.
+1764325533: New connection from 172.18.0.4:59202 on port 1883.
+1764325533: New client connected from 172.18.0.4:59202 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325533: Client WheatherStationUAH-subscriber closed its connection.
+1764325534: New connection from 172.18.0.4:59216 on port 1883.
+1764325534: New client connected from 172.18.0.4:59216 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325534: Client WheatherStationUAH-subscriber closed its connection.
+1764325535: New connection from 172.18.0.4:59220 on port 1883.
+1764325536: New client connected from 172.18.0.4:59220 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325536: Client WheatherStationUAH-subscriber closed its connection.
+1764325537: New connection from 172.18.0.4:38036 on port 1883.
+1764325537: New client connected from 172.18.0.4:38036 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325537: Client WheatherStationUAH-subscriber closed its connection.
+1764325538: New connection from 172.18.0.4:38048 on port 1883.
+1764325538: New client connected from 172.18.0.4:38048 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325538: Client WheatherStationUAH-subscriber closed its connection.
+1764325539: New connection from 172.18.0.4:38052 on port 1883.
+1764325540: New client connected from 172.18.0.4:38052 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325540: Client WheatherStationUAH-subscriber closed its connection.
+1764325541: New connection from 172.18.0.4:38068 on port 1883.
+1764325541: New client connected from 172.18.0.4:38068 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325541: Client WheatherStationUAH-subscriber closed its connection.
+1764325542: New connection from 172.18.0.4:38070 on port 1883.
+1764325542: New client connected from 172.18.0.4:38070 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325542: Client WheatherStationUAH-subscriber closed its connection.
+1764325543: New connection from 172.18.0.4:38080 on port 1883.
+1764325544: New client connected from 172.18.0.4:38080 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325544: Client WheatherStationUAH-subscriber closed its connection.
+1764325545: New connection from 172.18.0.4:38086 on port 1883.
+1764325545: New client connected from 172.18.0.4:38086 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325545: Client WheatherStationUAH-subscriber closed its connection.
+1764325546: New connection from 172.18.0.4:38090 on port 1883.
+1764325546: New client connected from 172.18.0.4:38090 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325546: Client WheatherStationUAH-subscriber closed its connection.
+1764325547: New connection from 172.18.0.4:53480 on port 1883.
+1764325548: New client connected from 172.18.0.4:53480 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325548: Client WheatherStationUAH-subscriber closed its connection.
+1764325549: New connection from 172.18.0.4:53490 on port 1883.
+1764325549: New client connected from 172.18.0.4:53490 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325549: Client WheatherStationUAH-subscriber closed its connection.
+1764325550: New connection from 172.18.0.4:53502 on port 1883.
+1764325550: New client connected from 172.18.0.4:53502 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325550: Client WheatherStationUAH-subscriber closed its connection.
+1764325551: New connection from 172.18.0.4:53514 on port 1883.
+1764325552: New client connected from 172.18.0.4:53514 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325552: Client WheatherStationUAH-subscriber closed its connection.
+1764325553: New connection from 172.18.0.4:53522 on port 1883.
+1764325553: New client connected from 172.18.0.4:53522 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325553: Client WheatherStationUAH-subscriber closed its connection.
+1764325554: New connection from 172.18.0.4:53536 on port 1883.
+1764325554: New client connected from 172.18.0.4:53536 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325554: Client WheatherStationUAH-subscriber closed its connection.
+1764325555: New connection from 172.18.0.4:53546 on port 1883.
+1764325556: New client connected from 172.18.0.4:53546 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325556: Client WheatherStationUAH-subscriber closed its connection.
+1764325557: New connection from 172.18.0.4:53558 on port 1883.
+1764325557: New connection from 172.18.0.4:53566 on port 1883.
+1764325557: New client connected from 172.18.0.4:53558 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325557: Client WheatherStationUAH-subscriber closed its connection.
+1764325557: New client connected from 172.18.0.4:53566 as StatusChecker-1764325557098 (p2, c1, k60).
+1764325557: Client StatusChecker-1764325557098 disconnected.
+1764325558: New connection from 172.18.0.4:45886 on port 1883.
+1764325558: New client connected from 172.18.0.4:45886 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325558: Client WheatherStationUAH-subscriber closed its connection.
+1764325559: New connection from 172.18.0.4:45888 on port 1883.
+1764325559: New client connected from 172.18.0.4:45888 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325559: Client WheatherStationUAH-subscriber closed its connection.
+1764325560: New connection from 172.18.0.4:45902 on port 1883.
+1764325561: New client connected from 172.18.0.4:45902 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325561: Client WheatherStationUAH-subscriber closed its connection.
+1764325562: New connection from 172.18.0.4:45918 on port 1883.
+1764325562: New client connected from 172.18.0.4:45918 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325562: Client WheatherStationUAH-subscriber closed its connection.
+1764325562: New connection from 172.18.0.4:45930 on port 1883.
+1764325563: New client connected from 172.18.0.4:45930 as StatusChecker-1764325562969 (p2, c1, k60).
+1764325563: Client StatusChecker-1764325562969 disconnected.
+1764325563: New connection from 172.18.0.4:45944 on port 1883.
+1764325563: New client connected from 172.18.0.4:45944 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325563: Client WheatherStationUAH-subscriber closed its connection.
+1764325564: New connection from 172.18.0.4:45960 on port 1883.
+1764325565: New client connected from 172.18.0.4:45960 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325565: Client WheatherStationUAH-subscriber closed its connection.
+1764325566: New connection from 172.18.0.4:45966 on port 1883.
+1764325566: New client connected from 172.18.0.4:45966 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325566: Client WheatherStationUAH-subscriber closed its connection.
+1764325567: New connection from 172.18.0.4:50998 on port 1883.
+1764325567: New client connected from 172.18.0.4:50998 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325567: Client WheatherStationUAH-subscriber closed its connection.
+1764325568: New connection from 172.18.0.4:51010 on port 1883.
+1764325569: New client connected from 172.18.0.4:51010 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325569: Client WheatherStationUAH-subscriber closed its connection.
+1764325570: New connection from 172.18.0.4:51014 on port 1883.
+1764325570: New client connected from 172.18.0.4:51014 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325570: Client WheatherStationUAH-subscriber closed its connection.
+1764325571: New connection from 172.18.0.4:51016 on port 1883.
+1764325571: New client connected from 172.18.0.4:51016 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325571: Client WheatherStationUAH-subscriber closed its connection.
+1764325572: New connection from 172.18.0.4:51024 on port 1883.
+1764325573: New client connected from 172.18.0.4:51024 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325573: Client WheatherStationUAH-subscriber closed its connection.
+1764325574: New connection from 172.18.0.4:51036 on port 1883.
+1764325574: New client connected from 172.18.0.4:51036 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325574: Client WheatherStationUAH-subscriber closed its connection.
+1764325575: New connection from 172.18.0.4:51050 on port 1883.
+1764325575: New client connected from 172.18.0.4:51050 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325575: Client WheatherStationUAH-subscriber closed its connection.
+1764325576: New connection from 172.18.0.4:51062 on port 1883.
+1764325577: New client connected from 172.18.0.4:51062 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325577: Client WheatherStationUAH-subscriber closed its connection.
+1764325578: New connection from 172.18.0.4:42174 on port 1883.
+1764325578: New client connected from 172.18.0.4:42174 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325578: Client WheatherStationUAH-subscriber closed its connection.
+1764325579: New connection from 172.18.0.4:42188 on port 1883.
+1764325579: New client connected from 172.18.0.4:42188 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325579: Client WheatherStationUAH-subscriber closed its connection.
+1764325580: New connection from 172.18.0.4:42196 on port 1883.
+1764325581: New client connected from 172.18.0.4:42196 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325581: Client WheatherStationUAH-subscriber closed its connection.
+1764325582: New connection from 172.18.0.4:42212 on port 1883.
+1764325582: New client connected from 172.18.0.4:42212 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325582: Client WheatherStationUAH-subscriber closed its connection.
+1764325583: New connection from 172.18.0.4:42224 on port 1883.
+1764325583: New client connected from 172.18.0.4:42224 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325583: Client WheatherStationUAH-subscriber closed its connection.
+1764325584: New connection from 172.18.0.4:42230 on port 1883.
+1764325584: New client connected from 172.18.0.4:42230 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325584: Client WheatherStationUAH-subscriber closed its connection.
+1764325585: New connection from 172.18.0.4:42232 on port 1883.
+1764325586: New client connected from 172.18.0.4:42232 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325586: Client WheatherStationUAH-subscriber closed its connection.
+1764325587: New connection from 172.18.0.4:53568 on port 1883.
+1764325587: New client connected from 172.18.0.4:53568 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325587: Client WheatherStationUAH-subscriber closed its connection.
+1764325588: New connection from 172.18.0.4:53574 on port 1883.
+1764325588: New client connected from 172.18.0.4:53574 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325588: Client WheatherStationUAH-subscriber closed its connection.
+1764325589: New connection from 172.18.0.4:53576 on port 1883.
+1764325590: New client connected from 172.18.0.4:53576 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325590: Client WheatherStationUAH-subscriber closed its connection.
+1764325591: New connection from 172.18.0.4:53584 on port 1883.
+1764325591: New client connected from 172.18.0.4:53584 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325591: Client WheatherStationUAH-subscriber closed its connection.
+1764325592: New connection from 172.18.0.4:53588 on port 1883.
+1764325592: New client connected from 172.18.0.4:53588 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325592: Client WheatherStationUAH-subscriber closed its connection.
+1764325592: New connection from 172.18.0.4:53598 on port 1883.
+1764325593: New client connected from 172.18.0.4:53598 as StatusChecker-1764325592943 (p2, c1, k60).
+1764325593: Client StatusChecker-1764325592943 disconnected.
+1764325593: New connection from 172.18.0.4:53606 on port 1883.
+1764325594: New client connected from 172.18.0.4:53606 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325594: Client WheatherStationUAH-subscriber closed its connection.
+1764325595: New connection from 172.18.0.4:53618 on port 1883.
+1764325595: New client connected from 172.18.0.4:53618 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325595: Client WheatherStationUAH-subscriber closed its connection.
+1764325596: New connection from 172.18.0.4:53634 on port 1883.
+1764325596: New client connected from 172.18.0.4:53634 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325596: Client WheatherStationUAH-subscriber closed its connection.
+1764325597: New connection from 172.18.0.4:55670 on port 1883.
+1764325598: New client connected from 172.18.0.4:55670 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325598: Client WheatherStationUAH-subscriber closed its connection.
+1764325599: New connection from 172.18.0.4:55676 on port 1883.
+1764325599: New client connected from 172.18.0.4:55676 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325599: Client WheatherStationUAH-subscriber closed its connection.
+1764325600: New connection from 172.18.0.4:55678 on port 1883.
+1764325600: New client connected from 172.18.0.4:55678 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325600: Client WheatherStationUAH-subscriber closed its connection.
+1764325601: New connection from 172.18.0.4:55682 on port 1883.
+1764325602: New client connected from 172.18.0.4:55682 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325602: Client WheatherStationUAH-subscriber closed its connection.
+1764325603: New connection from 172.18.0.4:55694 on port 1883.
+1764325603: New client connected from 172.18.0.4:55694 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325603: Client WheatherStationUAH-subscriber closed its connection.
+1764325604: New connection from 172.18.0.4:55702 on port 1883.
+1764325604: New client connected from 172.18.0.4:55702 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325604: Client WheatherStationUAH-subscriber closed its connection.
+1764325605: New connection from 172.18.0.4:55710 on port 1883.
+1764325606: New client connected from 172.18.0.4:55710 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325606: Client WheatherStationUAH-subscriber closed its connection.
+1764325607: New connection from 172.18.0.4:55724 on port 1883.
+1764325607: New client connected from 172.18.0.4:55724 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325607: Client WheatherStationUAH-subscriber closed its connection.
+1764325608: New connection from 172.18.0.4:57290 on port 1883.
+1764325608: New client connected from 172.18.0.4:57290 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325608: Client WheatherStationUAH-subscriber closed its connection.
+1764325609: New connection from 172.18.0.4:57298 on port 1883.
+1764325609: New client connected from 172.18.0.4:57298 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325609: Client WheatherStationUAH-subscriber closed its connection.
+1764325610: New connection from 172.18.0.4:57302 on port 1883.
+1764325611: New client connected from 172.18.0.4:57302 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325611: Client WheatherStationUAH-subscriber closed its connection.
+1764325612: New connection from 172.18.0.4:57308 on port 1883.
+1764325612: New client connected from 172.18.0.4:57308 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325612: Client WheatherStationUAH-subscriber closed its connection.
+1764325613: New connection from 172.18.0.4:57324 on port 1883.
+1764325613: New client connected from 172.18.0.4:57324 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325613: Client WheatherStationUAH-subscriber closed its connection.
+1764325614: New connection from 172.18.0.4:57328 on port 1883.
+1764325615: New client connected from 172.18.0.4:57328 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325615: Client WheatherStationUAH-subscriber closed its connection.
+1764325616: New connection from 172.18.0.4:57332 on port 1883.
+1764325616: New client connected from 172.18.0.4:57332 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325616: Client WheatherStationUAH-subscriber closed its connection.
+1764325617: New connection from 172.18.0.4:34142 on port 1883.
+1764325617: New client connected from 172.18.0.4:34142 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325617: Client WheatherStationUAH-subscriber closed its connection.
+1764325618: New connection from 172.18.0.4:34156 on port 1883.
+1764325619: New client connected from 172.18.0.4:34156 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325619: Client WheatherStationUAH-subscriber closed its connection.
+1764325620: New connection from 172.18.0.4:34166 on port 1883.
+1764325620: New client connected from 172.18.0.4:34166 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325620: Client WheatherStationUAH-subscriber closed its connection.
+1764325621: New connection from 172.18.0.4:34178 on port 1883.
+1764325621: New client connected from 172.18.0.4:34178 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325621: Client WheatherStationUAH-subscriber closed its connection.
+1764325622: New connection from 172.18.0.4:34188 on port 1883.
+1764325623: New client connected from 172.18.0.4:34188 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325623: Client WheatherStationUAH-subscriber closed its connection.
+1764325624: New connection from 172.18.0.4:34190 on port 1883.
+1764325624: New client connected from 172.18.0.4:34190 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325624: Client WheatherStationUAH-subscriber closed its connection.
+1764325625: New connection from 172.18.0.4:34194 on port 1883.
+1764325625: New client connected from 172.18.0.4:34194 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325625: Client WheatherStationUAH-subscriber closed its connection.
+1764325626: New connection from 172.18.0.4:34204 on port 1883.
+1764325626: New connection from 172.18.0.4:34220 on port 1883.
+1764325627: New client connected from 172.18.0.4:34204 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325627: Client WheatherStationUAH-subscriber closed its connection.
+1764325627: New client connected from 172.18.0.4:34220 as StatusChecker-1764325626945 (p2, c1, k60).
+1764325627: Client StatusChecker-1764325626945 disconnected.
+1764325628: New connection from 172.18.0.4:39878 on port 1883.
+1764325628: New client connected from 172.18.0.4:39878 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325628: Client WheatherStationUAH-subscriber closed its connection.
+1764325629: New connection from 172.18.0.4:39892 on port 1883.
+1764325629: New client connected from 172.18.0.4:39892 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325629: Client WheatherStationUAH-subscriber closed its connection.
+1764325630: New connection from 172.18.0.4:39894 on port 1883.
+1764325630: New client connected from 172.18.0.4:39894 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325630: Client WheatherStationUAH-subscriber closed its connection.
+1764325631: New connection from 172.18.0.4:39896 on port 1883.
+1764325632: New client connected from 172.18.0.4:39896 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325632: Client WheatherStationUAH-subscriber closed its connection.
+1764325633: New connection from 172.18.0.4:39906 on port 1883.
+1764325633: New client connected from 172.18.0.4:39906 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325633: Client WheatherStationUAH-subscriber closed its connection.
+1764325634: New connection from 172.18.0.4:39910 on port 1883.
+1764325634: New client connected from 172.18.0.4:39910 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325634: Client WheatherStationUAH-subscriber closed its connection.
+1764325635: New connection from 172.18.0.4:39924 on port 1883.
+1764325636: New client connected from 172.18.0.4:39924 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325636: Client WheatherStationUAH-subscriber closed its connection.
+1764325637: New connection from 172.18.0.4:39928 on port 1883.
+1764325637: New client connected from 172.18.0.4:39928 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325637: Client WheatherStationUAH-subscriber closed its connection.
+1764325638: New connection from 172.18.0.4:47682 on port 1883.
+1764325638: New client connected from 172.18.0.4:47682 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325638: Client WheatherStationUAH-subscriber closed its connection.
+1764325639: New connection from 172.18.0.4:47694 on port 1883.
+1764325640: New client connected from 172.18.0.4:47694 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325640: Client WheatherStationUAH-subscriber closed its connection.
+1764325641: New connection from 172.18.0.4:47702 on port 1883.
+1764325641: New client connected from 172.18.0.4:47702 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325641: Client WheatherStationUAH-subscriber closed its connection.
+1764325642: New connection from 172.18.0.4:47712 on port 1883.
+1764325642: New client connected from 172.18.0.4:47712 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325642: Client WheatherStationUAH-subscriber closed its connection.
+1764325643: New connection from 172.18.0.4:47718 on port 1883.
+1764325644: New client connected from 172.18.0.4:47718 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325644: Client WheatherStationUAH-subscriber closed its connection.
+1764325645: New connection from 172.18.0.4:47728 on port 1883.
+1764325645: New client connected from 172.18.0.4:47728 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325645: Client WheatherStationUAH-subscriber closed its connection.
+1764325646: New connection from 172.18.0.4:47744 on port 1883.
+1764325646: New client connected from 172.18.0.4:47744 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325646: Client WheatherStationUAH-subscriber closed its connection.
+1764325647: New connection from 172.18.0.4:41274 on port 1883.
+1764325647: New client connected from 172.18.0.4:41274 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325647: Client WheatherStationUAH-subscriber closed its connection.
+1764325649: New connection from 172.18.0.4:41276 on port 1883.
+1764325649: New client connected from 172.18.0.4:41276 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325649: Client WheatherStationUAH-subscriber closed its connection.
+1764325650: New connection from 172.18.0.4:41292 on port 1883.
+1764325650: New client connected from 172.18.0.4:41292 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325650: Client WheatherStationUAH-subscriber closed its connection.
+1764325651: New connection from 172.18.0.4:41298 on port 1883.
+1764325651: New client connected from 172.18.0.4:41298 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325651: Client WheatherStationUAH-subscriber closed its connection.
+1764325652: New connection from 172.18.0.4:41312 on port 1883.
+1764325653: New client connected from 172.18.0.4:41312 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325653: Client WheatherStationUAH-subscriber closed its connection.
+1764325654: New connection from 172.18.0.4:41324 on port 1883.
+1764325654: New client connected from 172.18.0.4:41324 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325654: Client WheatherStationUAH-subscriber closed its connection.
+1764325655: New connection from 172.18.0.4:41330 on port 1883.
+1764325655: New client connected from 172.18.0.4:41330 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325655: Client WheatherStationUAH-subscriber closed its connection.
+1764325656: New connection from 172.18.0.4:41338 on port 1883.
+1764325657: New client connected from 172.18.0.4:41338 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325657: Client WheatherStationUAH-subscriber closed its connection.
+1764325658: New connection from 172.18.0.4:46716 on port 1883.
+1764325658: New client connected from 172.18.0.4:46716 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325658: Client WheatherStationUAH-subscriber closed its connection.
+1764325659: New connection from 172.18.0.4:46732 on port 1883.
+1764325659: New client connected from 172.18.0.4:46732 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325659: Client WheatherStationUAH-subscriber closed its connection.
+1764325660: New connection from 172.18.0.4:46736 on port 1883.
+1764325661: New client connected from 172.18.0.4:46736 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325661: Client WheatherStationUAH-subscriber closed its connection.
+1764325662: New connection from 172.18.0.4:46742 on port 1883.
+1764325662: New client connected from 172.18.0.4:46742 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325662: Client WheatherStationUAH-subscriber closed its connection.
+1764325663: New connection from 172.18.0.4:46758 on port 1883.
+1764325663: New client connected from 172.18.0.4:46758 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325663: Client WheatherStationUAH-subscriber closed its connection.
+1764325664: New connection from 172.18.0.4:46766 on port 1883.
+1764325665: New client connected from 172.18.0.4:46766 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325665: Client WheatherStationUAH-subscriber closed its connection.
+1764325666: New connection from 172.18.0.4:46778 on port 1883.
+1764325666: New client connected from 172.18.0.4:46778 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325666: Client WheatherStationUAH-subscriber closed its connection.
+1764325667: New connection from 172.18.0.4:43668 on port 1883.
+1764325667: New client connected from 172.18.0.4:43668 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325667: Client WheatherStationUAH-subscriber closed its connection.
+1764325668: New connection from 172.18.0.4:43684 on port 1883.
+1764325668: New client connected from 172.18.0.4:43684 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325668: Client WheatherStationUAH-subscriber closed its connection.
+1764325669: New connection from 172.18.0.4:43690 on port 1883.
+1764325670: New client connected from 172.18.0.4:43690 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325670: Client WheatherStationUAH-subscriber closed its connection.
+1764325671: New connection from 172.18.0.4:43704 on port 1883.
+1764325671: New client connected from 172.18.0.4:43704 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325671: Client WheatherStationUAH-subscriber closed its connection.
+1764325672: New connection from 172.18.0.4:43716 on port 1883.
+1764325672: New client connected from 172.18.0.4:43716 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325672: Client WheatherStationUAH-subscriber closed its connection.
+1764325673: New connection from 172.18.0.4:43718 on port 1883.
+1764325674: New client connected from 172.18.0.4:43718 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325674: Client WheatherStationUAH-subscriber closed its connection.
+1764325675: New connection from 172.18.0.4:43732 on port 1883.
+1764325675: New client connected from 172.18.0.4:43732 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325675: Client WheatherStationUAH-subscriber closed its connection.
+1764325676: New connection from 172.18.0.4:43738 on port 1883.
+1764325676: New client connected from 172.18.0.4:43738 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325676: Client WheatherStationUAH-subscriber closed its connection.
+1764325677: New connection from 172.18.0.4:43024 on port 1883.
+1764325678: New client connected from 172.18.0.4:43024 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325678: Client WheatherStationUAH-subscriber closed its connection.
+1764325679: New connection from 172.18.0.4:43032 on port 1883.
+1764325679: New client connected from 172.18.0.4:43032 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325679: Client WheatherStationUAH-subscriber closed its connection.
+1764325680: New connection from 172.18.0.4:43036 on port 1883.
+1764325680: New client connected from 172.18.0.4:43036 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325680: Client WheatherStationUAH-subscriber closed its connection.
+1764325681: New connection from 172.18.0.4:43050 on port 1883.
+1764325682: New client connected from 172.18.0.4:43050 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325682: Client WheatherStationUAH-subscriber closed its connection.
+1764325683: New connection from 172.18.0.4:43058 on port 1883.
+1764325683: New client connected from 172.18.0.4:43058 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325683: Client WheatherStationUAH-subscriber closed its connection.
+1764325684: New connection from 172.18.0.4:43068 on port 1883.
+1764325684: New client connected from 172.18.0.4:43068 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325684: Client WheatherStationUAH-subscriber closed its connection.
+1764325685: New connection from 172.18.0.4:43072 on port 1883.
+1764325686: New client connected from 172.18.0.4:43072 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325686: Client WheatherStationUAH-subscriber closed its connection.
+1764325686: New connection from 172.18.0.4:43084 on port 1883.
+1764325687: New connection from 172.18.0.4:43094 on port 1883.
+1764325687: New client connected from 172.18.0.4:43084 as StatusChecker-1764325686988 (p2, c1, k60).
+1764325687: Client StatusChecker-1764325686988 disconnected.
+1764325687: New client connected from 172.18.0.4:43094 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325687: Client WheatherStationUAH-subscriber closed its connection.
+1764325688: New connection from 172.18.0.4:57940 on port 1883.
+1764325688: New client connected from 172.18.0.4:57940 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325688: Client WheatherStationUAH-subscriber closed its connection.
+1764325689: New connection from 172.18.0.4:57942 on port 1883.
+1764325690: New client connected from 172.18.0.4:57942 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325690: Client WheatherStationUAH-subscriber closed its connection.
+1764325691: New connection from 172.18.0.4:57956 on port 1883.
+1764325691: New client connected from 172.18.0.4:57956 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325691: Client WheatherStationUAH-subscriber closed its connection.
+1764325692: New connection from 172.18.0.4:57972 on port 1883.
+1764325692: New client connected from 172.18.0.4:57972 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325692: Client WheatherStationUAH-subscriber closed its connection.
+1764325693: New connection from 172.18.0.4:57986 on port 1883.
+1764325693: New client connected from 172.18.0.4:57986 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325693: Client WheatherStationUAH-subscriber closed its connection.
+1764325695: New connection from 172.18.0.4:57996 on port 1883.
+1764325695: New client connected from 172.18.0.4:57996 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325695: Client WheatherStationUAH-subscriber closed its connection.
+1764325696: New connection from 172.18.0.4:57998 on port 1883.
+1764325696: New client connected from 172.18.0.4:57998 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325696: Client WheatherStationUAH-subscriber closed its connection.
+1764325697: New connection from 172.18.0.4:50062 on port 1883.
+1764325697: New client connected from 172.18.0.4:50062 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325697: Client WheatherStationUAH-subscriber closed its connection.
+1764325698: New connection from 172.18.0.4:50074 on port 1883.
+1764325699: New client connected from 172.18.0.4:50074 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325699: Client WheatherStationUAH-subscriber closed its connection.
+1764325700: New connection from 172.18.0.4:50078 on port 1883.
+1764325700: New client connected from 172.18.0.4:50078 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325700: Client WheatherStationUAH-subscriber closed its connection.
+1764325701: New connection from 172.18.0.4:50090 on port 1883.
+1764325701: New client connected from 172.18.0.4:50090 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325701: Client WheatherStationUAH-subscriber closed its connection.
+1764325702: New connection from 172.18.0.4:50106 on port 1883.
+1764325703: New client connected from 172.18.0.4:50106 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325703: Client WheatherStationUAH-subscriber closed its connection.
+1764325704: New connection from 172.18.0.4:50116 on port 1883.
+1764325704: New client connected from 172.18.0.4:50116 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325704: Client WheatherStationUAH-subscriber closed its connection.
+1764325705: New connection from 172.18.0.4:50132 on port 1883.
+1764325705: New client connected from 172.18.0.4:50132 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325705: Client WheatherStationUAH-subscriber closed its connection.
+1764325706: New connection from 172.18.0.4:50148 on port 1883.
+1764325707: New client connected from 172.18.0.4:50148 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325707: Client WheatherStationUAH-subscriber closed its connection.
+1764325708: New connection from 172.18.0.4:59190 on port 1883.
+1764325708: New client connected from 172.18.0.4:59190 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325708: Client WheatherStationUAH-subscriber closed its connection.
+1764325709: New connection from 172.18.0.4:59198 on port 1883.
+1764325709: New client connected from 172.18.0.4:59198 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325709: Client WheatherStationUAH-subscriber closed its connection.
+1764325710: New connection from 172.18.0.4:59206 on port 1883.
+1764325711: New client connected from 172.18.0.4:59206 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325711: Client WheatherStationUAH-subscriber closed its connection.
+1764325712: New connection from 172.18.0.4:59214 on port 1883.
+1764325712: New client connected from 172.18.0.4:59214 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325712: Client WheatherStationUAH-subscriber closed its connection.
+1764325713: New connection from 172.18.0.4:59218 on port 1883.
+1764325713: New client connected from 172.18.0.4:59218 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325713: Client WheatherStationUAH-subscriber closed its connection.
+1764325714: New connection from 172.18.0.4:59220 on port 1883.
+1764325715: New client connected from 172.18.0.4:59220 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325715: Client WheatherStationUAH-subscriber closed its connection.
+1764325716: New connection from 172.18.0.4:59226 on port 1883.
+1764325716: New client connected from 172.18.0.4:59226 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325716: Client WheatherStationUAH-subscriber closed its connection.
+1764325717: New connection from 172.18.0.4:59276 on port 1883.
+1764325717: New client connected from 172.18.0.4:59276 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325717: Client WheatherStationUAH-subscriber closed its connection.
+1764325718: New connection from 172.18.0.4:59280 on port 1883.
+1764325718: New client connected from 172.18.0.4:59280 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325718: Client WheatherStationUAH-subscriber closed its connection.
+1764325719: New connection from 172.18.0.4:59288 on port 1883.
+1764325720: New client connected from 172.18.0.4:59288 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325720: Client WheatherStationUAH-subscriber closed its connection.
+1764325721: New connection from 172.18.0.4:59302 on port 1883.
+1764325721: New client connected from 172.18.0.4:59302 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325721: Client WheatherStationUAH-subscriber closed its connection.
+1764325722: New connection from 172.18.0.4:59318 on port 1883.
+1764325722: New client connected from 172.18.0.4:59318 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325722: Client WheatherStationUAH-subscriber closed its connection.
+1764325723: New connection from 172.18.0.4:59324 on port 1883.
+1764325724: New client connected from 172.18.0.4:59324 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325724: Client WheatherStationUAH-subscriber closed its connection.
+1764325725: New connection from 172.18.0.4:59340 on port 1883.
+1764325725: New client connected from 172.18.0.4:59340 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325725: Client WheatherStationUAH-subscriber closed its connection.
+1764325726: New connection from 172.18.0.4:59342 on port 1883.
+1764325726: New client connected from 172.18.0.4:59342 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325726: Client WheatherStationUAH-subscriber closed its connection.
+1764325727: New connection from 172.18.0.4:58152 on port 1883.
+1764325728: New client connected from 172.18.0.4:58152 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325728: Client WheatherStationUAH-subscriber closed its connection.
+1764325729: New connection from 172.18.0.4:58168 on port 1883.
+1764325729: New client connected from 172.18.0.4:58168 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325729: Client WheatherStationUAH-subscriber closed its connection.
+1764325730: New connection from 172.18.0.4:58184 on port 1883.
+1764325730: New client connected from 172.18.0.4:58184 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325730: Client WheatherStationUAH-subscriber closed its connection.
+1764325731: New connection from 172.18.0.4:58192 on port 1883.
+1764325732: New client connected from 172.18.0.4:58192 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325732: Client WheatherStationUAH-subscriber closed its connection.
+1764325733: New connection from 172.18.0.4:58202 on port 1883.
+1764325733: New client connected from 172.18.0.4:58202 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325733: Client WheatherStationUAH-subscriber closed its connection.
+1764325734: New connection from 172.18.0.4:58208 on port 1883.
+1764325734: New client connected from 172.18.0.4:58208 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325734: Client WheatherStationUAH-subscriber closed its connection.
+1764325735: New connection from 172.18.0.4:58220 on port 1883.
+1764325736: New client connected from 172.18.0.4:58220 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325736: Client WheatherStationUAH-subscriber closed its connection.
+1764325737: New connection from 172.18.0.4:58224 on port 1883.
+1764325737: New client connected from 172.18.0.4:58224 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325737: Client WheatherStationUAH-subscriber closed its connection.
+1764325738: New connection from 172.18.0.4:39676 on port 1883.
+1764325738: New client connected from 172.18.0.4:39676 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325738: Client WheatherStationUAH-subscriber closed its connection.
+1764325739: New connection from 172.18.0.4:39686 on port 1883.
+1764325740: New client connected from 172.18.0.4:39686 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325740: Client WheatherStationUAH-subscriber closed its connection.
+1764325741: New connection from 172.18.0.4:39692 on port 1883.
+1764325741: New client connected from 172.18.0.4:39692 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325741: Client WheatherStationUAH-subscriber closed its connection.
+1764325742: New connection from 172.18.0.4:39708 on port 1883.
+1764325742: New client connected from 172.18.0.4:39708 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325742: Client WheatherStationUAH-subscriber closed its connection.
+1764325743: New connection from 172.18.0.4:39714 on port 1883.
+1764325744: New client connected from 172.18.0.4:39714 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325744: Client WheatherStationUAH-subscriber closed its connection.
+1764325745: New connection from 172.18.0.4:39716 on port 1883.
+1764325745: New client connected from 172.18.0.4:39716 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325745: Client WheatherStationUAH-subscriber closed its connection.
+1764325746: New connection from 172.18.0.4:39718 on port 1883.
+1764325746: New client connected from 172.18.0.4:39718 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325746: Client WheatherStationUAH-subscriber closed its connection.
+1764325746: New connection from 172.18.0.4:39734 on port 1883.
+1764325747: New client connected from 172.18.0.4:39734 as StatusChecker-1764325746956 (p2, c1, k60).
+1764325747: Client StatusChecker-1764325746956 disconnected.
+1764325747: New connection from 172.18.0.4:37234 on port 1883.
+1764325747: New client connected from 172.18.0.4:37234 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325747: Client WheatherStationUAH-subscriber closed its connection.
+1764325748: New connection from 172.18.0.4:37236 on port 1883.
+1764325749: New client connected from 172.18.0.4:37236 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325749: Client WheatherStationUAH-subscriber closed its connection.
+1764325750: New connection from 172.18.0.4:37242 on port 1883.
+1764325750: New client connected from 172.18.0.4:37242 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325750: Client WheatherStationUAH-subscriber closed its connection.
+1764325751: New connection from 172.18.0.4:37244 on port 1883.
+1764325751: New client connected from 172.18.0.4:37244 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325751: Client WheatherStationUAH-subscriber closed its connection.
+1764325752: New connection from 172.18.0.4:37260 on port 1883.
+1764325753: New client connected from 172.18.0.4:37260 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325753: Client WheatherStationUAH-subscriber closed its connection.
+1764325754: New connection from 172.18.0.4:37276 on port 1883.
+1764325754: New client connected from 172.18.0.4:37276 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325754: Client WheatherStationUAH-subscriber closed its connection.
+1764325755: New connection from 172.18.0.4:37290 on port 1883.
+1764325755: New client connected from 172.18.0.4:37290 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325755: Client WheatherStationUAH-subscriber closed its connection.
+1764325756: New connection from 172.18.0.4:37292 on port 1883.
+1764325757: New client connected from 172.18.0.4:37292 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325757: Client WheatherStationUAH-subscriber closed its connection.
+1764325758: New connection from 172.18.0.4:60704 on port 1883.
+1764325758: New client connected from 172.18.0.4:60704 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325758: Client WheatherStationUAH-subscriber closed its connection.
+1764325759: New connection from 172.18.0.4:60720 on port 1883.
+1764325759: New client connected from 172.18.0.4:60720 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325759: Client WheatherStationUAH-subscriber closed its connection.
+1764325760: New connection from 172.18.0.4:60728 on port 1883.
+1764325761: New client connected from 172.18.0.4:60728 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325761: Client WheatherStationUAH-subscriber closed its connection.
+1764325762: New connection from 172.18.0.4:60730 on port 1883.
+1764325762: New client connected from 172.18.0.4:60730 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325762: Client WheatherStationUAH-subscriber closed its connection.
+1764325763: New connection from 172.18.0.4:60736 on port 1883.
+1764325763: New client connected from 172.18.0.4:60736 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325763: Client WheatherStationUAH-subscriber closed its connection.
+1764325764: New connection from 172.18.0.4:60740 on port 1883.
+1764325765: New client connected from 172.18.0.4:60740 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325765: Client WheatherStationUAH-subscriber closed its connection.
+1764325766: New connection from 172.18.0.4:60756 on port 1883.
+1764325766: New client connected from 172.18.0.4:60756 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325766: Client WheatherStationUAH-subscriber closed its connection.
+1764325767: New connection from 172.18.0.4:55008 on port 1883.
+1764325767: New client connected from 172.18.0.4:55008 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325767: Client WheatherStationUAH-subscriber closed its connection.
+1764325768: New connection from 172.18.0.4:55012 on port 1883.
+1764325768: New client connected from 172.18.0.4:55012 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325768: Client WheatherStationUAH-subscriber closed its connection.
+1764325770: New connection from 172.18.0.4:55028 on port 1883.
+1764325770: New client connected from 172.18.0.4:55028 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325770: Client WheatherStationUAH-subscriber closed its connection.
+1764325771: New connection from 172.18.0.4:55038 on port 1883.
+1764325771: New client connected from 172.18.0.4:55038 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325771: Client WheatherStationUAH-subscriber closed its connection.
+1764325772: New connection from 172.18.0.4:55054 on port 1883.
+1764325772: New client connected from 172.18.0.4:55054 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325772: Client WheatherStationUAH-subscriber closed its connection.
+1764325773: New connection from 172.18.0.4:55058 on port 1883.
+1764325774: New client connected from 172.18.0.4:55058 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325774: Client WheatherStationUAH-subscriber closed its connection.
+1764325775: New connection from 172.18.0.4:55072 on port 1883.
+1764325775: New client connected from 172.18.0.4:55072 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325775: Client WheatherStationUAH-subscriber closed its connection.
+1764325776: New connection from 172.18.0.4:55088 on port 1883.
+1764325776: New client connected from 172.18.0.4:55088 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325776: Client WheatherStationUAH-subscriber closed its connection.
+1764325777: New connection from 172.18.0.4:42242 on port 1883.
+1764325778: New client connected from 172.18.0.4:42242 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325778: Client WheatherStationUAH-subscriber closed its connection.
+1764325779: New connection from 172.18.0.4:42248 on port 1883.
+1764325779: New client connected from 172.18.0.4:42248 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325779: Client WheatherStationUAH-subscriber closed its connection.
+1764325780: New connection from 172.18.0.4:42262 on port 1883.
+1764325780: New client connected from 172.18.0.4:42262 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325780: Client WheatherStationUAH-subscriber closed its connection.
+1764325781: New connection from 172.18.0.4:42266 on port 1883.
+1764325782: New client connected from 172.18.0.4:42266 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325782: Client WheatherStationUAH-subscriber closed its connection.
+1764325783: New connection from 172.18.0.4:42274 on port 1883.
+1764325783: New client connected from 172.18.0.4:42274 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325783: Client WheatherStationUAH-subscriber closed its connection.
+1764325784: New connection from 172.18.0.4:42286 on port 1883.
+1764325784: New client connected from 172.18.0.4:42286 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325784: Client WheatherStationUAH-subscriber closed its connection.
+1764325785: New connection from 172.18.0.4:42302 on port 1883.
+1764325786: New client connected from 172.18.0.4:42302 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325786: Client WheatherStationUAH-subscriber closed its connection.
+1764325787: New connection from 172.18.0.4:42312 on port 1883.
+1764325787: New client connected from 172.18.0.4:42312 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325787: Client WheatherStationUAH-subscriber closed its connection.
+1764325788: New connection from 172.18.0.4:54944 on port 1883.
+1764325788: New client connected from 172.18.0.4:54944 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325788: Client WheatherStationUAH-subscriber closed its connection.
+1764325789: New connection from 172.18.0.4:54952 on port 1883.
+1764325790: New client connected from 172.18.0.4:54952 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325790: Client WheatherStationUAH-subscriber closed its connection.
+1764325791: New connection from 172.18.0.4:54958 on port 1883.
+1764325791: New client connected from 172.18.0.4:54958 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325791: Client WheatherStationUAH-subscriber closed its connection.
+1764325792: New connection from 172.18.0.4:54972 on port 1883.
+1764325792: New client connected from 172.18.0.4:54972 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325792: Client WheatherStationUAH-subscriber closed its connection.
+1764325793: New connection from 172.18.0.4:54982 on port 1883.
+1764325793: New client connected from 172.18.0.4:54982 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325793: Client WheatherStationUAH-subscriber closed its connection.
+1764325794: New connection from 172.18.0.4:54994 on port 1883.
+1764325795: New client connected from 172.18.0.4:54994 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325795: Client WheatherStationUAH-subscriber closed its connection.
+1764325796: New connection from 172.18.0.4:54998 on port 1883.
+1764325796: New client connected from 172.18.0.4:54998 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325796: Client WheatherStationUAH-subscriber closed its connection.
+1764325797: New connection from 172.18.0.4:35070 on port 1883.
+1764325797: New client connected from 172.18.0.4:35070 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325797: Client WheatherStationUAH-subscriber closed its connection.
+1764325798: New connection from 172.18.0.4:35082 on port 1883.
+1764325799: New client connected from 172.18.0.4:35082 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325799: Client WheatherStationUAH-subscriber closed its connection.
+1764325800: New connection from 172.18.0.4:35094 on port 1883.
+1764325800: New client connected from 172.18.0.4:35094 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325800: Client WheatherStationUAH-subscriber closed its connection.
+1764325801: New connection from 172.18.0.4:35100 on port 1883.
+1764325801: New client connected from 172.18.0.4:35100 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325801: Client WheatherStationUAH-subscriber closed its connection.
+1764325802: New connection from 172.18.0.4:35116 on port 1883.
+1764325803: New client connected from 172.18.0.4:35116 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325803: Client WheatherStationUAH-subscriber closed its connection.
+1764325804: New connection from 172.18.0.4:35124 on port 1883.
+1764325804: New client connected from 172.18.0.4:35124 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325804: Client WheatherStationUAH-subscriber closed its connection.
+1764325805: New connection from 172.18.0.4:35126 on port 1883.
+1764325805: New client connected from 172.18.0.4:35126 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325805: Client WheatherStationUAH-subscriber closed its connection.
+1764325806: New connection from 172.18.0.4:35128 on port 1883.
+1764325806: New connection from 172.18.0.4:35130 on port 1883.
+1764325807: New client connected from 172.18.0.4:35128 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325807: Client WheatherStationUAH-subscriber closed its connection.
+1764325807: New client connected from 172.18.0.4:35130 as StatusChecker-1764325806980 (p2, c1, k60).
+1764325807: Client StatusChecker-1764325806980 disconnected.
+1764325808: New connection from 172.18.0.4:51610 on port 1883.
+1764325808: New client connected from 172.18.0.4:51610 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325808: Client WheatherStationUAH-subscriber closed its connection.
+1764325809: New connection from 172.18.0.4:51622 on port 1883.
+1764325809: New client connected from 172.18.0.4:51622 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325809: Client WheatherStationUAH-subscriber closed its connection.
+1764325810: New connection from 172.18.0.4:51624 on port 1883.
+1764325811: New client connected from 172.18.0.4:51624 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325811: Client WheatherStationUAH-subscriber closed its connection.
+1764325812: New connection from 172.18.0.4:51626 on port 1883.
+1764325812: New client connected from 172.18.0.4:51626 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325812: Client WheatherStationUAH-subscriber closed its connection.
+1764325813: New connection from 172.18.0.4:51636 on port 1883.
+1764325813: New client connected from 172.18.0.4:51636 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325813: Client WheatherStationUAH-subscriber closed its connection.
+1764325814: New connection from 172.18.0.4:51650 on port 1883.
+1764325814: New client connected from 172.18.0.4:51650 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325814: Client WheatherStationUAH-subscriber closed its connection.
+1764325820: New connection from 172.18.0.4:35528 on port 1883.
+1764325821: New client connected from 172.18.0.4:35528 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325821: New connection from 172.18.0.4:35536 on port 1883.
+1764325821: Client WheatherStationUAH-subscriber closed its connection.
+1764325821: New client connected from 172.18.0.4:35536 as WheatherStationUAH-publisher (p2, c1, k60).
+1764325821: Client WheatherStationUAH-publisher disconnected.
+1764325822: New connection from 172.18.0.4:35544 on port 1883.
+1764325822: New client connected from 172.18.0.4:35544 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325822: Client WheatherStationUAH-subscriber closed its connection.
+1764325823: New connection from 172.18.0.4:35558 on port 1883.
+1764325823: New client connected from 172.18.0.4:35558 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325823: Client WheatherStationUAH-subscriber closed its connection.
+1764325824: New connection from 172.18.0.4:35574 on port 1883.
+1764325825: New client connected from 172.18.0.4:35574 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325825: Client WheatherStationUAH-subscriber closed its connection.
+1764325826: New connection from 172.18.0.4:35580 on port 1883.
+1764325826: New client connected from 172.18.0.4:35580 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325826: Client WheatherStationUAH-subscriber closed its connection.
+1764325827: New connection from 172.18.0.4:42746 on port 1883.
+1764325827: New client connected from 172.18.0.4:42746 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325827: Client WheatherStationUAH-subscriber closed its connection.
+1764325828: New connection from 172.18.0.4:42762 on port 1883.
+1764325829: New client connected from 172.18.0.4:42762 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325829: Client WheatherStationUAH-subscriber closed its connection.
+1764325830: New connection from 172.18.0.4:42776 on port 1883.
+1764325830: New client connected from 172.18.0.4:42776 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325830: Client WheatherStationUAH-subscriber closed its connection.
+1764325831: New connection from 172.18.0.4:42782 on port 1883.
+1764325831: New client connected from 172.18.0.4:42782 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325831: Client WheatherStationUAH-subscriber closed its connection.
+1764325832: New connection from 172.18.0.4:42784 on port 1883.
+1764325832: New client connected from 172.18.0.4:42784 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325832: Client WheatherStationUAH-subscriber closed its connection.
+1764325834: New connection from 172.18.0.4:42792 on port 1883.
+1764325834: New client connected from 172.18.0.4:42792 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325834: Client WheatherStationUAH-subscriber closed its connection.
+1764325835: New connection from 172.18.0.4:42808 on port 1883.
+1764325835: New client connected from 172.18.0.4:42808 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325835: Client WheatherStationUAH-subscriber closed its connection.
+1764325836: New connection from 172.18.0.4:42812 on port 1883.
+1764325836: New client connected from 172.18.0.4:42812 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325836: Client WheatherStationUAH-subscriber closed its connection.
+1764325837: New connection from 172.18.0.4:58508 on port 1883.
+1764325838: New client connected from 172.18.0.4:58508 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325838: Client WheatherStationUAH-subscriber closed its connection.
+1764325839: New connection from 172.18.0.4:58512 on port 1883.
+1764325839: New client connected from 172.18.0.4:58512 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325839: Client WheatherStationUAH-subscriber closed its connection.
+1764325840: New connection from 172.18.0.4:58528 on port 1883.
+1764325840: New client connected from 172.18.0.4:58528 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325840: Client WheatherStationUAH-subscriber closed its connection.
+1764325841: New connection from 172.18.0.4:58532 on port 1883.
+1764325842: New client connected from 172.18.0.4:58532 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325842: Client WheatherStationUAH-subscriber closed its connection.
+1764325843: New connection from 172.18.0.4:58538 on port 1883.
+1764325843: New client connected from 172.18.0.4:58538 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325843: Client WheatherStationUAH-subscriber closed its connection.
+1764325844: New connection from 172.18.0.4:58544 on port 1883.
+1764325844: New client connected from 172.18.0.4:58544 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325844: Client WheatherStationUAH-subscriber closed its connection.
+1764325845: New connection from 172.18.0.4:58552 on port 1883.
+1764325846: New client connected from 172.18.0.4:58552 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325846: Client WheatherStationUAH-subscriber closed its connection.
+1764325847: New connection from 172.18.0.4:58564 on port 1883.
+1764325847: New client connected from 172.18.0.4:58564 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325847: Client WheatherStationUAH-subscriber closed its connection.
+1764325848: New connection from 172.18.0.4:34568 on port 1883.
+1764325848: New client connected from 172.18.0.4:34568 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325848: Client WheatherStationUAH-subscriber closed its connection.
+1764325849: New connection from 172.18.0.4:34574 on port 1883.
+1764325850: New client connected from 172.18.0.4:34574 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325850: Client WheatherStationUAH-subscriber closed its connection.
+1764325851: New connection from 172.18.0.4:34584 on port 1883.
+1764325851: New client connected from 172.18.0.4:34584 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325851: Client WheatherStationUAH-subscriber closed its connection.
+1764325852: New connection from 172.18.0.4:34594 on port 1883.
+1764325852: New client connected from 172.18.0.4:34594 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325852: Client WheatherStationUAH-subscriber closed its connection.
+1764325853: New connection from 172.18.0.4:34604 on port 1883.
+1764325854: New client connected from 172.18.0.4:34604 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325854: Client WheatherStationUAH-subscriber closed its connection.
+1764325855: New connection from 172.18.0.4:34614 on port 1883.
+1764325855: New client connected from 172.18.0.4:34614 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325855: Client WheatherStationUAH-subscriber closed its connection.
+1764325856: New connection from 172.18.0.4:34618 on port 1883.
+1764325856: New client connected from 172.18.0.4:34618 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325856: Client WheatherStationUAH-subscriber closed its connection.
+1764325857: New connection from 172.18.0.4:51256 on port 1883.
+1764325857: New client connected from 172.18.0.4:51256 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325857: Client WheatherStationUAH-subscriber closed its connection.
+1764325859: New connection from 172.18.0.4:51266 on port 1883.
+1764325859: New client connected from 172.18.0.4:51266 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325859: Client WheatherStationUAH-subscriber closed its connection.
+1764325860: New connection from 172.18.0.4:51270 on port 1883.
+1764325860: New client connected from 172.18.0.4:51270 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325860: Client WheatherStationUAH-subscriber closed its connection.
+1764325861: New connection from 172.18.0.4:51272 on port 1883.
+1764325861: New client connected from 172.18.0.4:51272 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325861: Client WheatherStationUAH-subscriber closed its connection.
+1764325862: New connection from 172.18.0.4:51284 on port 1883.
+1764325863: New client connected from 172.18.0.4:51284 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325863: Client WheatherStationUAH-subscriber closed its connection.
+1764325864: New connection from 172.18.0.4:51288 on port 1883.
+1764325864: New client connected from 172.18.0.4:51288 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325864: Client WheatherStationUAH-subscriber closed its connection.
+1764325865: New connection from 172.18.0.4:51290 on port 1883.
+1764325865: New client connected from 172.18.0.4:51290 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325865: Client WheatherStationUAH-subscriber closed its connection.
+1764325866: New connection from 172.18.0.4:51292 on port 1883.
+1764325867: New client connected from 172.18.0.4:51292 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325867: Client WheatherStationUAH-subscriber closed its connection.
+1764325867: New connection from 172.18.0.4:53006 on port 1883.
+1764325867: New client connected from 172.18.0.4:53006 as StatusChecker-1764325867429 (p2, c1, k60).
+1764325867: Client StatusChecker-1764325867429 disconnected.
+1764325868: New connection from 172.18.0.4:53020 on port 1883.
+1764325868: New client connected from 172.18.0.4:53020 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325868: Client WheatherStationUAH-subscriber closed its connection.
+1764325869: New connection from 172.18.0.4:53034 on port 1883.
+1764325869: New client connected from 172.18.0.4:53034 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325869: Client WheatherStationUAH-subscriber closed its connection.
+1764325870: New connection from 172.18.0.4:53050 on port 1883.
+1764325871: New client connected from 172.18.0.4:53050 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325871: Client WheatherStationUAH-subscriber closed its connection.
+1764325872: New connection from 172.18.0.4:53060 on port 1883.
+1764325872: New client connected from 172.18.0.4:53060 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325872: Client WheatherStationUAH-subscriber closed its connection.
+1764325873: New connection from 172.18.0.4:53072 on port 1883.
+1764325873: New client connected from 172.18.0.4:53072 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325873: Client WheatherStationUAH-subscriber closed its connection.
+1764325874: New connection from 172.18.0.4:53084 on port 1883.
+1764325875: New client connected from 172.18.0.4:53084 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325875: Client WheatherStationUAH-subscriber closed its connection.
+1764325876: New connection from 172.18.0.4:53096 on port 1883.
+1764325876: New client connected from 172.18.0.4:53096 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325876: Client WheatherStationUAH-subscriber closed its connection.
+1764325877: New connection from 172.18.0.4:60468 on port 1883.
+1764325877: New client connected from 172.18.0.4:60468 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325877: Client WheatherStationUAH-subscriber closed its connection.
+1764325878: New connection from 172.18.0.4:60482 on port 1883.
+1764325879: New client connected from 172.18.0.4:60482 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325879: Client WheatherStationUAH-subscriber closed its connection.
+1764325880: New connection from 172.18.0.4:60490 on port 1883.
+1764325880: New client connected from 172.18.0.4:60490 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325880: Client WheatherStationUAH-subscriber closed its connection.
+1764325881: New connection from 172.18.0.4:60502 on port 1883.
+1764325881: New client connected from 172.18.0.4:60502 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325881: Client WheatherStationUAH-subscriber closed its connection.
+1764325882: New connection from 172.18.0.4:60504 on port 1883.
+1764325883: New client connected from 172.18.0.4:60504 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325883: Client WheatherStationUAH-subscriber closed its connection.
+1764325884: New connection from 172.18.0.4:60516 on port 1883.
+1764325884: New client connected from 172.18.0.4:60516 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325884: Client WheatherStationUAH-subscriber closed its connection.
+1764325885: New connection from 172.18.0.4:60528 on port 1883.
+1764325885: New client connected from 172.18.0.4:60528 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325885: Client WheatherStationUAH-subscriber closed its connection.
+1764325886: New connection from 172.18.0.4:60542 on port 1883.
+1764325886: New client connected from 172.18.0.4:60542 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325886: Client WheatherStationUAH-subscriber closed its connection.
+1764325887: New connection from 172.18.0.4:58120 on port 1883.
+1764325888: New client connected from 172.18.0.4:58120 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325888: Client WheatherStationUAH-subscriber closed its connection.
+1764325889: New connection from 172.18.0.4:58126 on port 1883.
+1764325889: New client connected from 172.18.0.4:58126 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325889: Client WheatherStationUAH-subscriber closed its connection.
+1764325890: New connection from 172.18.0.4:58138 on port 1883.
+1764325890: New client connected from 172.18.0.4:58138 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325890: Client WheatherStationUAH-subscriber closed its connection.
+1764325891: New connection from 172.18.0.4:58142 on port 1883.
+1764325892: New client connected from 172.18.0.4:58142 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325892: Client WheatherStationUAH-subscriber closed its connection.
+1764325893: New connection from 172.18.0.4:58150 on port 1883.
+1764325893: New client connected from 172.18.0.4:58150 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325893: Client WheatherStationUAH-subscriber closed its connection.
+1764325894: New connection from 172.18.0.4:58160 on port 1883.
+1764325894: New client connected from 172.18.0.4:58160 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325894: Client WheatherStationUAH-subscriber closed its connection.
+1764325895: New connection from 172.18.0.4:58164 on port 1883.
+1764325896: New client connected from 172.18.0.4:58164 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325896: Client WheatherStationUAH-subscriber closed its connection.
+1764325897: New connection from 172.18.0.4:58174 on port 1883.
+1764325897: New client connected from 172.18.0.4:58174 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325897: Client WheatherStationUAH-subscriber closed its connection.
+1764325898: New connection from 172.18.0.4:32822 on port 1883.
+1764325898: New client connected from 172.18.0.4:32822 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325898: Client WheatherStationUAH-subscriber closed its connection.
+1764325899: New connection from 172.18.0.4:32824 on port 1883.
+1764325900: New client connected from 172.18.0.4:32824 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325900: Client WheatherStationUAH-subscriber closed its connection.
+1764325901: New connection from 172.18.0.4:32838 on port 1883.
+1764325901: New client connected from 172.18.0.4:32838 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325901: Client WheatherStationUAH-subscriber closed its connection.
+1764325902: New connection from 172.18.0.4:32848 on port 1883.
+1764325902: New client connected from 172.18.0.4:32848 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325902: Client WheatherStationUAH-subscriber closed its connection.
+1764325903: New connection from 172.18.0.4:32856 on port 1883.
+1764325904: New client connected from 172.18.0.4:32856 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325904: Client WheatherStationUAH-subscriber closed its connection.
+1764325905: New connection from 172.18.0.4:32862 on port 1883.
+1764325905: New client connected from 172.18.0.4:32862 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325905: Client WheatherStationUAH-subscriber closed its connection.
+1764325906: New connection from 172.18.0.4:32876 on port 1883.
+1764325906: New client connected from 172.18.0.4:32876 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325906: Client WheatherStationUAH-subscriber closed its connection.
+1764325907: New connection from 172.18.0.4:32864 on port 1883.
+1764325907: New client connected from 172.18.0.4:32864 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325907: Client WheatherStationUAH-subscriber closed its connection.
+1764325908: New connection from 172.18.0.4:32872 on port 1883.
+1764325909: New client connected from 172.18.0.4:32872 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325909: Client WheatherStationUAH-subscriber closed its connection.
+1764325910: New connection from 172.18.0.4:32874 on port 1883.
+1764325910: New client connected from 172.18.0.4:32874 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325910: Client WheatherStationUAH-subscriber closed its connection.
+1764325911: New connection from 172.18.0.4:32890 on port 1883.
+1764325911: New client connected from 172.18.0.4:32890 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325911: Client WheatherStationUAH-subscriber closed its connection.
+1764325912: New connection from 172.18.0.4:32900 on port 1883.
+1764325913: New client connected from 172.18.0.4:32900 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325913: Client WheatherStationUAH-subscriber closed its connection.
+1764325914: New connection from 172.18.0.4:32912 on port 1883.
+1764325914: New client connected from 172.18.0.4:32912 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325914: Client WheatherStationUAH-subscriber closed its connection.
+1764325915: New connection from 172.18.0.4:32916 on port 1883.
+1764325915: New client connected from 172.18.0.4:32916 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325915: Client WheatherStationUAH-subscriber closed its connection.
+1764325916: New connection from 172.18.0.4:32930 on port 1883.
+1764325917: New client connected from 172.18.0.4:32930 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325917: Client WheatherStationUAH-subscriber closed its connection.
+1764325918: New connection from 172.18.0.4:49812 on port 1883.
+1764325918: New client connected from 172.18.0.4:49812 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325918: Client WheatherStationUAH-subscriber closed its connection.
+1764325919: New connection from 172.18.0.4:49822 on port 1883.
+1764325919: New client connected from 172.18.0.4:49822 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325919: Client WheatherStationUAH-subscriber closed its connection.
+1764325920: New connection from 172.18.0.4:49826 on port 1883.
+1764325921: New client connected from 172.18.0.4:49826 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325921: Client WheatherStationUAH-subscriber closed its connection.
+1764325922: New connection from 172.18.0.4:49832 on port 1883.
+1764325922: New client connected from 172.18.0.4:49832 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325922: Client WheatherStationUAH-subscriber closed its connection.
+1764325923: New connection from 172.18.0.4:49838 on port 1883.
+1764325923: New client connected from 172.18.0.4:49838 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325923: Client WheatherStationUAH-subscriber closed its connection.
+1764325924: New connection from 172.18.0.4:49846 on port 1883.
+1764325925: New client connected from 172.18.0.4:49846 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325925: Client WheatherStationUAH-subscriber closed its connection.
+1764325926: New connection from 172.18.0.4:49854 on port 1883.
+1764325926: New client connected from 172.18.0.4:49854 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325926: Client WheatherStationUAH-subscriber closed its connection.
+1764325926: New connection from 172.18.0.4:49870 on port 1883.
+1764325927: New client connected from 172.18.0.4:49870 as StatusChecker-1764325926924 (p2, c1, k60).
+1764325927: Client StatusChecker-1764325926924 disconnected.
+1764325927: New connection from 172.18.0.4:45688 on port 1883.
+1764325927: New client connected from 172.18.0.4:45688 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325927: Client WheatherStationUAH-subscriber closed its connection.
+1764325928: New connection from 172.18.0.4:45702 on port 1883.
+1764325928: New client connected from 172.18.0.4:45702 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325928: Client WheatherStationUAH-subscriber closed its connection.
+1764325929: New connection from 172.18.0.4:45718 on port 1883.
+1764325930: New client connected from 172.18.0.4:45718 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325930: Client WheatherStationUAH-subscriber closed its connection.
+1764325931: New connection from 172.18.0.4:45732 on port 1883.
+1764325931: New client connected from 172.18.0.4:45732 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325931: Client WheatherStationUAH-subscriber closed its connection.
+1764325932: New connection from 172.18.0.4:45740 on port 1883.
+1764325932: New client connected from 172.18.0.4:45740 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325932: Client WheatherStationUAH-subscriber closed its connection.
+1764325933: New connection from 172.18.0.4:45752 on port 1883.
+1764325934: New client connected from 172.18.0.4:45752 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325934: Client WheatherStationUAH-subscriber closed its connection.
+1764325935: New connection from 172.18.0.4:45760 on port 1883.
+1764325935: New client connected from 172.18.0.4:45760 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325935: Client WheatherStationUAH-subscriber closed its connection.
+1764325936: New connection from 172.18.0.4:45770 on port 1883.
+1764325936: New client connected from 172.18.0.4:45770 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325936: Client WheatherStationUAH-subscriber closed its connection.
+1764325937: New connection from 172.18.0.4:46272 on port 1883.
+1764325938: New client connected from 172.18.0.4:46272 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325938: Client WheatherStationUAH-subscriber closed its connection.
+1764325939: New connection from 172.18.0.4:46282 on port 1883.
+1764325939: New client connected from 172.18.0.4:46282 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325939: Client WheatherStationUAH-subscriber closed its connection.
+1764325940: New connection from 172.18.0.4:46288 on port 1883.
+1764325940: New client connected from 172.18.0.4:46288 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325940: Client WheatherStationUAH-subscriber closed its connection.
+1764325941: New connection from 172.18.0.4:46302 on port 1883.
+1764325942: New client connected from 172.18.0.4:46302 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325942: Client WheatherStationUAH-subscriber closed its connection.
+1764325943: New connection from 172.18.0.4:46318 on port 1883.
+1764325943: New client connected from 172.18.0.4:46318 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325943: Client WheatherStationUAH-subscriber closed its connection.
+1764325944: New connection from 172.18.0.4:46334 on port 1883.
+1764325944: New client connected from 172.18.0.4:46334 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325944: Client WheatherStationUAH-subscriber closed its connection.
+1764325945: New connection from 172.18.0.4:46350 on port 1883.
+1764325946: New client connected from 172.18.0.4:46350 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325946: Client WheatherStationUAH-subscriber closed its connection.
+1764325947: New connection from 172.18.0.4:46364 on port 1883.
+1764325947: New client connected from 172.18.0.4:46364 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325947: Client WheatherStationUAH-subscriber closed its connection.
+1764325948: New connection from 172.18.0.4:41478 on port 1883.
+1764325948: New client connected from 172.18.0.4:41478 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325948: Client WheatherStationUAH-subscriber closed its connection.
+1764325949: New connection from 172.18.0.4:41486 on port 1883.
+1764325949: New client connected from 172.18.0.4:41486 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325949: Client WheatherStationUAH-subscriber closed its connection.
+1764325950: New connection from 172.18.0.4:41496 on port 1883.
+1764325951: New client connected from 172.18.0.4:41496 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325951: Client WheatherStationUAH-subscriber closed its connection.
+1764325952: New connection from 172.18.0.4:41502 on port 1883.
+1764325952: New client connected from 172.18.0.4:41502 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325952: Client WheatherStationUAH-subscriber closed its connection.
+1764325953: New connection from 172.18.0.4:41510 on port 1883.
+1764325953: New client connected from 172.18.0.4:41510 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325953: Client WheatherStationUAH-subscriber closed its connection.
+1764325954: New connection from 172.18.0.4:41518 on port 1883.
+1764325955: New client connected from 172.18.0.4:41518 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325955: Client WheatherStationUAH-subscriber closed its connection.
+1764325956: New connection from 172.18.0.4:41520 on port 1883.
+1764325956: New client connected from 172.18.0.4:41520 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325956: Client WheatherStationUAH-subscriber closed its connection.
+1764325957: New connection from 172.18.0.4:48768 on port 1883.
+1764325957: New client connected from 172.18.0.4:48768 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325957: Client WheatherStationUAH-subscriber closed its connection.
+1764325958: New connection from 172.18.0.4:48778 on port 1883.
+1764325959: New client connected from 172.18.0.4:48778 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325959: Client WheatherStationUAH-subscriber closed its connection.
+1764325960: New connection from 172.18.0.4:48780 on port 1883.
+1764325960: New client connected from 172.18.0.4:48780 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325960: Client WheatherStationUAH-subscriber closed its connection.
+1764325961: New connection from 172.18.0.4:48788 on port 1883.
+1764325961: New client connected from 172.18.0.4:48788 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325961: Client WheatherStationUAH-subscriber closed its connection.
+1764325962: New connection from 172.18.0.4:48790 on port 1883.
+1764325963: New client connected from 172.18.0.4:48790 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325963: Client WheatherStationUAH-subscriber closed its connection.
+1764325964: New connection from 172.18.0.4:48800 on port 1883.
+1764325964: New client connected from 172.18.0.4:48800 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325964: Client WheatherStationUAH-subscriber closed its connection.
+1764325965: New connection from 172.18.0.4:48814 on port 1883.
+1764325965: New client connected from 172.18.0.4:48814 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325965: Client WheatherStationUAH-subscriber closed its connection.
+1764325966: New connection from 172.18.0.4:48820 on port 1883.
+1764325967: New client connected from 172.18.0.4:48820 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325967: Client WheatherStationUAH-subscriber closed its connection.
+1764325968: New connection from 172.18.0.4:58468 on port 1883.
+1764325968: New client connected from 172.18.0.4:58468 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325968: Client WheatherStationUAH-subscriber closed its connection.
+1764325969: New connection from 172.18.0.4:58480 on port 1883.
+1764325969: New client connected from 172.18.0.4:58480 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325969: Client WheatherStationUAH-subscriber closed its connection.
+1764325970: New connection from 172.18.0.4:58488 on port 1883.
+1764325970: New client connected from 172.18.0.4:58488 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325970: Client WheatherStationUAH-subscriber closed its connection.
+1764325972: New connection from 172.18.0.4:58500 on port 1883.
+1764325972: New client connected from 172.18.0.4:58500 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325972: Client WheatherStationUAH-subscriber closed its connection.
+1764325973: New connection from 172.18.0.4:58508 on port 1883.
+1764325973: New client connected from 172.18.0.4:58508 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325973: Client WheatherStationUAH-subscriber closed its connection.
+1764325974: New connection from 172.18.0.4:58524 on port 1883.
+1764325974: New client connected from 172.18.0.4:58524 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325974: Client WheatherStationUAH-subscriber closed its connection.
+1764325975: New connection from 172.18.0.4:58532 on port 1883.
+1764325976: New client connected from 172.18.0.4:58532 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325976: Client WheatherStationUAH-subscriber closed its connection.
+1764325977: New connection from 172.18.0.4:58824 on port 1883.
+1764325977: New client connected from 172.18.0.4:58824 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325977: Client WheatherStationUAH-subscriber closed its connection.
+1764325978: New connection from 172.18.0.4:58832 on port 1883.
+1764325978: New client connected from 172.18.0.4:58832 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325978: Client WheatherStationUAH-subscriber closed its connection.
+1764325979: New connection from 172.18.0.4:58838 on port 1883.
+1764325980: New client connected from 172.18.0.4:58838 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325980: Client WheatherStationUAH-subscriber closed its connection.
+1764325981: New connection from 172.18.0.4:58842 on port 1883.
+1764325981: New client connected from 172.18.0.4:58842 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325981: Client WheatherStationUAH-subscriber closed its connection.
+1764325982: New connection from 172.18.0.4:58852 on port 1883.
+1764325982: New client connected from 172.18.0.4:58852 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325982: Client WheatherStationUAH-subscriber closed its connection.
+1764325983: New connection from 172.18.0.4:58858 on port 1883.
+1764325984: New client connected from 172.18.0.4:58858 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325984: Client WheatherStationUAH-subscriber closed its connection.
+1764325985: New connection from 172.18.0.4:58870 on port 1883.
+1764325985: New client connected from 172.18.0.4:58870 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325985: Client WheatherStationUAH-subscriber closed its connection.
+1764325986: New connection from 172.18.0.4:58884 on port 1883.
+1764325986: New client connected from 172.18.0.4:58884 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325986: Client WheatherStationUAH-subscriber closed its connection.
+1764325986: New connection from 172.18.0.4:58896 on port 1883.
+1764325987: New client connected from 172.18.0.4:58896 as StatusChecker-1764325986959 (p2, c1, k60).
+1764325987: Client StatusChecker-1764325986959 disconnected.
+1764325987: New connection from 172.18.0.4:43378 on port 1883.
+1764325988: New client connected from 172.18.0.4:43378 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325988: Client WheatherStationUAH-subscriber closed its connection.
+1764325989: New connection from 172.18.0.4:43388 on port 1883.
+1764325989: New client connected from 172.18.0.4:43388 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325989: Client WheatherStationUAH-subscriber closed its connection.
+1764325990: New connection from 172.18.0.4:43404 on port 1883.
+1764325990: New client connected from 172.18.0.4:43404 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325990: Client WheatherStationUAH-subscriber closed its connection.
+1764325991: New connection from 172.18.0.4:43406 on port 1883.
+1764325992: New client connected from 172.18.0.4:43406 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325992: Client WheatherStationUAH-subscriber closed its connection.
+1764325993: New connection from 172.18.0.4:43414 on port 1883.
+1764325993: New client connected from 172.18.0.4:43414 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325993: Client WheatherStationUAH-subscriber closed its connection.
+1764325994: New connection from 172.18.0.4:43420 on port 1883.
+1764325994: New client connected from 172.18.0.4:43420 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325994: Client WheatherStationUAH-subscriber closed its connection.
+1764325995: New connection from 172.18.0.4:43426 on port 1883.
+1764325995: New client connected from 172.18.0.4:43426 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325995: Client WheatherStationUAH-subscriber closed its connection.
+1764325996: New connection from 172.18.0.4:43430 on port 1883.
+1764325997: New client connected from 172.18.0.4:43430 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325997: Client WheatherStationUAH-subscriber closed its connection.
+1764325998: New connection from 172.18.0.4:49264 on port 1883.
+1764325998: New client connected from 172.18.0.4:49264 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325998: Client WheatherStationUAH-subscriber closed its connection.
+1764325999: New connection from 172.18.0.4:49270 on port 1883.
+1764325999: New client connected from 172.18.0.4:49270 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764325999: Client WheatherStationUAH-subscriber closed its connection.
+1764326000: New connection from 172.18.0.4:49286 on port 1883.
+1764326001: New client connected from 172.18.0.4:49286 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764326001: Client WheatherStationUAH-subscriber closed its connection.
+1764326002: New connection from 172.18.0.4:49300 on port 1883.
+1764326002: New client connected from 172.18.0.4:49300 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764326002: Client WheatherStationUAH-subscriber closed its connection.
+1764326003: mosquitto version 2.0.22 terminating
+1764326003: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764326035: mosquitto version 2.0.22 starting
+1764326035: Config loaded from /mosquitto/config/mosquitto.conf.
+1764326035: Opening ipv4 listen socket on port 1883.
+1764326035: Opening ipv6 listen socket on port 1883.
+1764326035: mosquitto version 2.0.22 running
+1764326035: New connection from 172.18.0.1:45754 on port 1883.
+1764326035: New client connected from 172.18.0.1:45754 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764326038: New connection from 172.18.0.4:43368 on port 1883.
+1764326038: New client connected from 172.18.0.4:43368 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764326038: New connection from 172.18.0.4:43382 on port 1883.
+1764326038: New client connected from 172.18.0.4:43382 as WheatherStationUAH-publisher (p2, c1, k60).
+1764326038: Client WheatherStationUAH-publisher disconnected.
+1764326047: New connection from 172.18.0.4:43388 on port 1883.
+1764326047: New client connected from 172.18.0.4:43388 as StatusChecker-1764326047099 (p2, c1, k60).
+1764326047: Client StatusChecker-1764326047099 disconnected.
+1764326106: New connection from 172.18.0.4:37652 on port 1883.
+1764326107: New client connected from 172.18.0.4:37652 as StatusChecker-1764326106990 (p2, c1, k60).
+1764326107: Client StatusChecker-1764326106990 disconnected.
+1764326166: New connection from 172.18.0.4:54370 on port 1883.
+1764326167: New client connected from 172.18.0.4:54370 as StatusChecker-1764326166930 (p2, c1, k60).
+1764326167: Client StatusChecker-1764326166930 disconnected.
+1764326226: New connection from 172.18.0.4:43442 on port 1883.
+1764326227: New client connected from 172.18.0.4:43442 as StatusChecker-1764326226941 (p2, c1, k60).
+1764326227: Client StatusChecker-1764326226941 disconnected.
+1764326286: New connection from 172.18.0.4:41132 on port 1883.
+1764326287: New client connected from 172.18.0.4:41132 as StatusChecker-1764326286949 (p2, c1, k60).
+1764326287: Client StatusChecker-1764326286949 disconnected.
+1764326293: Client WheatherStationUAH-subscriber closed its connection.
+1764326294: mosquitto version 2.0.22 terminating
+1764326294: Saving in-memory database to /mosquitto/data//mosquitto.db.

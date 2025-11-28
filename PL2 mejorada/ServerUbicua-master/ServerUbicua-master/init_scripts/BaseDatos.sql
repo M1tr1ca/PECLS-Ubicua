@@ -79,6 +79,14 @@ CREATE TABLE information_display_readings (
   FOREIGN KEY (sensor_id) REFERENCES sensors(sensor_id)
 );
 
+CREATE TABLE other(
+  sensor_id TEXT NOT NULL,
+  timestamp TEXT NOT NULL,
+  JSON TEXT,
+  FOREIGN KEY (sensor_id) REFERENCES sensors(sensor_id)
+
+);
+
 -- Índice para mejorar consultas por timestamp
 CREATE INDEX idx_sensor_readings_timestamp ON sensor_readings(timestamp DESC);
 CREATE INDEX idx_sensor_readings_sensor_timestamp ON sensor_readings(sensor_id, timestamp DESC);

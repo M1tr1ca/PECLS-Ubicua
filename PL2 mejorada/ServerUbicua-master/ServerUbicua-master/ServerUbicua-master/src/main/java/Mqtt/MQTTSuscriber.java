@@ -1,6 +1,18 @@
 package mqtt;
 
-import org.eclipse.paho.client.mqttv3.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.time.OffsetDateTime;
+import java.time.format.DateTimeFormatter;
+
+import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
+import org.eclipse.paho.client.mqttv3.MqttCallback;
+import org.eclipse.paho.client.mqttv3.MqttClient;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
 import com.google.gson.JsonObject;
@@ -8,13 +20,6 @@ import com.google.gson.JsonParser;
 
 import Database.ConectionDDBB;
 import logic.Log;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.time.OffsetDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class MQTTSuscriber implements MqttCallback {
 
@@ -112,15 +117,27 @@ public class MQTTSuscriber implements MqttCallback {
                 case "information_display":
                     saveInformationDisplay(con, sensorId, timestamp, data);
                     break;
-                default:
+                case "weather":
                     // Sensor meteorológico (weather) - comportamiento original
                     saveWeatherSensor(con, sensorId, timestamp, data, json);
+                    break;
+                default:
+                    saveOther(con, sensorId, json.get("timestamp").getAsString(), json);
                     break;
             }
             
         } catch (Exception e) {
-            Log.logmqtt.error("Error guardando en BD: {}", e.getMessage());
-            e.printStackTrace();
+            
+            try {
+                JsonObject json = JsonParser.parseString(message.toString()).getAsJsonObject();
+                Log.logmqtt.error("Error guardando en BD: {}", e.getMessage(), " guardando en tabla Other");
+                saveOther(con, json.get("sensor_id").getAsString(), json.get("timestamp").getAsString(), JsonParser.parseString(message.toString()).getAsJsonObject());
+
+            } catch (Exception i) {
+                Log.logmqtt.error("Error guardando en BD: {}", e.getMessage());
+                i.printStackTrace();
+            }
+            
         } finally {
             if (con != null) {
                 db.closeConnection(con);
@@ -150,6 +167,19 @@ public class MQTTSuscriber implements MqttCallback {
         ps.close();
         
         Log.logmqtt.info("Datos weather guardados: sensor={}, temp={}, humidity={}", sensorId, temperature, humidity);
+    }
+    private void saveOther(Connection con, String sensorId, String timestamp, JsonObject json) throws Exception{
+        String sql ="INSERT INTO other (sensor_id, timestamp, json) VALUES (?, ?, ?)";
+        PreparedStatement ps = con.prepareStatement(sql);
+
+        ps.setString(1, sensorId);
+        ps.setString(2, timestamp);
+        ps.setString(3, json.toString());
+
+        ps.executeUpdate();
+        ps.close();
+        Log.logmqtt.info("Datos other guardados: json={}", json.toString());
+
     }
     
     private void saveTrafficCounter(Connection con, String sensorId, Timestamp timestamp, JsonObject data) throws Exception {
