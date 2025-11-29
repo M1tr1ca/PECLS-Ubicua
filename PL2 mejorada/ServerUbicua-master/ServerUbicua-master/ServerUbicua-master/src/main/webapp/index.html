@@ -269,11 +269,31 @@
             /* Main Grid */
             .main-grid {
                 display: grid;
-                grid-template-columns: 1fr 350px;
+                grid-template-columns: 1fr 320px;
                 gap: 24px;
+                align-items: start;
             }
 
-            @media (max-width: 1024px) {
+            /* Make the main data table card span the full width of the layout (both columns)
+               so it appears as wide as the header / stats cards above. */
+            .main-grid .table-card {
+                grid-column: 1 / -1;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            /* Slightly larger title for emphasis in the table card */
+            .main-grid .table-card .card-header .card-title {
+                font-size: 1.65rem;
+            }
+
+            /* Make the table card header a bit taller and match spacing of top banner */
+            .main-grid .table-card .card-header {
+                padding: 28px 32px;
+                min-height: 72px;
+            }
+
+            @media (max-width: 1280px) {
                 .main-grid {
                     grid-template-columns: 1fr;
                 }
@@ -496,6 +516,16 @@
             .btn-alert.level-3:hover { background: #fdba74; }
             .btn-alert.level-4 { background: #fecaca; color: #991b1b; }
             .btn-alert.level-4:hover { background: #fca5a5; }
+
+            .btn-alert.active {
+                box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+                transform: scale(1.05);
+            }
+
+            .btn-sensor-type {
+                font-size: 0.85rem;
+                padding: 14px 10px;
+            }
 
             .btn-alert i {
                 font-size: 1.25rem;
@@ -832,10 +862,15 @@
     <body>
         <script>
             var allData = []; // Almacenar todos los datos para filtrar
+            var currentSensorType = 'weather'; // Tipo de sensor actual
             var currentSort = { column: 'date', direction: 'desc' };
 
             $(document).ready(function ()
             {
+                // Inicializar filtros para el tipo por defecto (weather)
+                updateFilters('weather');
+                updateTableHeaders('weather');
+                
                 checkSystemStatus();
                 loadData();
                 // Auto-refresh cada 30 segundos
@@ -912,20 +947,56 @@
 
             function loadData()
             {
-                $.ajax(
-                {
-                    data: {},
-                    url: "/Server/GetData",
-                    type: 'post',
-                    async: false,
-                    success: function (response)
-                    {
-                        var resp = JSON.parse(response);
-                        console.log(resp);
-                        allData = resp;
-                        updateSensorFilter(resp);
-                        updateStats(resp);
+                $.ajax({
+                    type: "GET",
+                    url: "/Server/GetAllData",
+                    dataType: "json",
+                    success: function(data) {
+                        console.log("Data received:", data);
+                        console.log("Current sensor type:", currentSensorType);
+                        
+                        // Procesar datos según el tipo de sensor actual
+                        if (currentSensorType === 'weather' && data.weather) {
+                            console.log("Processing weather data:", data.weather);
+                            allData = data.weather.map(item => ({
+                                sensorId: item.sensorId,
+                                timestamp: item.date,
+                                date: new Date(item.date).toLocaleString('es-ES'),
+                                temperature: item.temperature,
+                                humidity: item.humidity,
+                                pressure: item.pressure,
+                                altitude: item.altitude
+                            }));
+                            console.log("Processed allData:", allData);
+                        } else if (currentSensorType === 'trafficCounter' && data.trafficCounter) {
+                            allData = data.trafficCounter.map(item => ({
+                                ...item,
+                                date: new Date(item.timestamp).toLocaleString('es-ES')
+                            }));
+                        } else if (currentSensorType === 'trafficLight' && data.trafficLight) {
+                            allData = data.trafficLight.map(item => ({
+                                ...item,
+                                currentState: item.currentState ? item.currentState.toUpperCase() : null,
+                                date: new Date(item.timestamp).toLocaleString('es-ES')
+                            }));
+                        } else if (currentSensorType === 'informationDisplay' && data.informationDisplay) {
+                            allData = data.informationDisplay.map(item => ({
+                                ...item,
+                                date: new Date(item.timestamp).toLocaleString('es-ES')
+                            }));
+                        } else {
+                            allData = [];
+                        }
+                        
+                        updateSensorFilter(allData);
+                        updateStats(allData);
+                        updateQuickStats(allData);
                         applyFiltersAndRender();
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error loading data:", error);
+                        allData = [];
+                        renderTable([]);
                     }
                 });
             }
@@ -942,31 +1013,87 @@
             }
 
             function updateStats(data) {
+                var statsHtml = '';
+                
                 if (data.length === 0) {
-                    $('#totalRecords').text('0');
-                    $('#avgTemp').text('--');
-                    $('#avgHumidity').text('--');
-                    $('#avgPressure').text('--');
-                    $('#maxTemp').text('--');
-                    $('#minTemp').text('--');
-                    $('#maxHumidity').text('--');
-                    $('#maxAltitude').text('--');
+                    statsHtml = '<div class="stat-card"><div class="icon" style="background: #fee2e2; color: #dc2626;"><i class="fas fa-exclamation-circle"></i></div><div class="label">Sin Datos</div><div class="value">0</div></div>';
+                    $('#statsContainer').html(statsHtml);
                     return;
                 }
 
-                var temps = data.map(d => d.temperature);
-                var humidities = data.map(d => d.humidity);
-                var pressures = data.map(d => d.pressure);
-                var altitudes = data.map(d => d.altitude);
+                if (currentSensorType === 'weather') {
+                    var temps = data.map(d => d.temperature).filter(t => t != null);
+                    var humidities = data.map(d => d.humidity).filter(h => h != null);
+                    var pressures = data.map(d => d.pressure).filter(p => p != null);
+                    var altitudes = data.map(d => d.altitude).filter(a => a != null);
 
-                $('#totalRecords').text(data.length);
-                $('#avgTemp').text((temps.reduce((a,b) => a+b, 0) / temps.length).toFixed(1) + '°C');
-                $('#avgHumidity').text((humidities.reduce((a,b) => a+b, 0) / humidities.length).toFixed(1) + '%');
-                $('#avgPressure').text((pressures.reduce((a,b) => a+b, 0) / pressures.length).toFixed(0) + ' hPa');
-                $('#maxTemp').text(Math.max(...temps).toFixed(1) + '°C');
-                $('#minTemp').text(Math.min(...temps).toFixed(1) + '°C');
-                $('#maxHumidity').text(Math.max(...humidities).toFixed(1) + '%');
-                $('#maxAltitude').text(Math.max(...altitudes).toFixed(0) + 'm');
+                    statsHtml += '<div class="stat-card temp"><div class="icon"><i class="fas fa-thermometer-half"></i></div><div class="label">Temperatura Promedio</div><div class="value">' + 
+                                 (temps.length > 0 ? (temps.reduce((a,b) => a+b, 0) / temps.length).toFixed(1) + '°C' : '--') + '</div><div class="sub">Max: ' + 
+                                 (temps.length > 0 ? Math.max(...temps).toFixed(1) + '°C' : '--') + ' | Min: ' + 
+                                 (temps.length > 0 ? Math.min(...temps).toFixed(1) + '°C' : '--') + '</div></div>';
+                    statsHtml += '<div class="stat-card humidity"><div class="icon"><i class="fas fa-tint"></i></div><div class="label">Humedad Promedio</div><div class="value">' + 
+                                 (humidities.length > 0 ? (humidities.reduce((a,b) => a+b, 0) / humidities.length).toFixed(1) + '%' : '--') + '</div><div class="sub">Max: ' + 
+                                 (humidities.length > 0 ? Math.max(...humidities).toFixed(1) + '%' : '--') + '</div></div>';
+                    statsHtml += '<div class="stat-card pressure"><div class="icon"><i class="fas fa-tachometer-alt"></i></div><div class="label">Presión Promedio</div><div class="value">' + 
+                                 (pressures.length > 0 ? (pressures.reduce((a,b) => a+b, 0) / pressures.length).toFixed(0) + ' hPa' : '--') + '</div></div>';
+                    statsHtml += '<div class="stat-card altitude"><div class="icon"><i class="fas fa-mountain"></i></div><div class="label">Total Registros</div><div class="value">' + data.length + '</div></div>';
+                    
+                } else if (currentSensorType === 'trafficCounter') {
+                    var vehicles = data.map(d => d.vehicleCount || 0);
+                    var pedestrians = data.map(d => d.pedestrianCount || 0);
+                    var bicycles = data.map(d => d.bicycleCount || 0);
+                    var speeds = data.map(d => d.averageSpeedKmh).filter(s => s != null);
+
+                    statsHtml += '<div class="stat-card"><div class="icon" style="background: #dbeafe; color: #2563eb;"><i class="fas fa-car"></i></div><div class="label">Total Vehículos</div><div class="value">' + 
+                                 vehicles.reduce((a,b) => a+b, 0) + '</div><div class="sub">Promedio: ' + (vehicles.length > 0 ? (vehicles.reduce((a,b) => a+b, 0) / vehicles.length).toFixed(1) : '0') + '</div></div>';
+                    statsHtml += '<div class="stat-card"><div class="icon" style="background: #fef3c7; color: #d97706;"><i class="fas fa-walking"></i></div><div class="label">Total Peatones</div><div class="value">' + 
+                                 pedestrians.reduce((a,b) => a+b, 0) + '</div><div class="sub">Promedio: ' + (pedestrians.length > 0 ? (pedestrians.reduce((a,b) => a+b, 0) / pedestrians.length).toFixed(1) : '0') + '</div></div>';
+                    statsHtml += '<div class="stat-card"><div class="icon" style="background: #d1fae5; color: #059669;"><i class="fas fa-bicycle"></i></div><div class="label">Total Bicicletas</div><div class="value">' + 
+                                 bicycles.reduce((a,b) => a+b, 0) + '</div></div>';
+                    statsHtml += '<div class="stat-card"><div class="icon" style="background: #ede9fe; color: #7c3aed;"><i class="fas fa-tachometer-alt"></i></div><div class="label">Velocidad Promedio</div><div class="value">' + 
+                                 (speeds.length > 0 ? (speeds.reduce((a,b) => a+b, 0) / speeds.length).toFixed(1) + ' km/h' : '--') + '</div><div class="sub">Registros: ' + data.length + '</div></div>';
+                    
+                } else if (currentSensorType === 'trafficLight') {
+                    var states = {};
+                    data.forEach(d => {
+                        var state = d.currentState ? d.currentState.toUpperCase() : 'UNKNOWN';
+                        states[state] = (states[state] || 0) + 1;
+                    });
+                    var malfunctions = data.filter(d => d.malfunctionDetected).length;
+                    var avgCycle = data.map(d => d.cycleDurationSeconds).filter(c => c != null);
+
+                    statsHtml += '<div class="stat-card"><div class="icon" style="background: #d1fae5; color: #059669;"><i class="fas fa-circle" style="color: #10b981;"></i></div><div class="label">Estado VERDE</div><div class="value">' + 
+                                 (states['GREEN'] || 0) + '</div><div class="sub">' + ((states['GREEN'] || 0) / data.length * 100).toFixed(1) + '%</div></div>';
+                    statsHtml += '<div class="stat-card"><div class="icon" style="background: #fef3c7; color: #d97706;"><i class="fas fa-circle" style="color: #f59e0b;"></i></div><div class="label">Estado AMARILLO</div><div class="value">' + 
+                                 (states['YELLOW'] || 0) + '</div><div class="sub">' + ((states['YELLOW'] || 0) / data.length * 100).toFixed(1) + '%</div></div>';
+                    statsHtml += '<div class="stat-card"><div class="icon" style="background: #fecaca; color: #dc2626;"><i class="fas fa-circle" style="color: #ef4444;"></i></div><div class="label">Estado ROJO</div><div class="value">' + 
+                                 (states['RED'] || 0) + '</div><div class="sub">' + ((states['RED'] || 0) / data.length * 100).toFixed(1) + '%</div></div>';
+                    statsHtml += '<div class="stat-card"><div class="icon" style="background: #fee2e2; color: #991b1b;"><i class="fas fa-exclamation-triangle"></i></div><div class="label">Fallos Detectados</div><div class="value">' + 
+                                 malfunctions + '</div><div class="sub">Ciclo Prom: ' + (avgCycle.length > 0 ? (avgCycle.reduce((a,b) => a+b, 0) / avgCycle.length).toFixed(0) + 's' : '--') + '</div></div>';
+                    
+                } else if (currentSensorType === 'informationDisplay') {
+                    var statusCount = {};
+                    var contentTypes = {};
+                    data.forEach(d => {
+                        var st = d.displayStatus || 'UNKNOWN';
+                        statusCount[st] = (statusCount[st] || 0) + 1;
+                        var ct = d.contentType || 'UNKNOWN';
+                        contentTypes[ct] = (contentTypes[ct] || 0) + 1;
+                    });
+                    var avgBrightness = data.map(d => d.brightnessLevel).filter(b => b != null);
+                    var avgEnergy = data.map(d => d.energyConsumptionWatts).filter(e => e != null);
+
+                    statsHtml += '<div class="stat-card"><div class="icon" style="background: #d1fae5; color: #059669;"><i class="fas fa-power-off"></i></div><div class="label">Pantallas ON</div><div class="value">' + 
+                                 (statusCount['ON'] || 0) + '</div><div class="sub">OFF: ' + (statusCount['OFF'] || 0) + '</div></div>';
+                    statsHtml += '<div class="stat-card"><div class="icon" style="background: #fef3c7; color: #d97706;"><i class="fas fa-sun"></i></div><div class="label">Brillo Promedio</div><div class="value">' + 
+                                 (avgBrightness.length > 0 ? (avgBrightness.reduce((a,b) => a+b, 0) / avgBrightness.length).toFixed(0) + '%' : '--') + '</div></div>';
+                    statsHtml += '<div class="stat-card"><div class="icon" style="background: #dbeafe; color: #2563eb;"><i class="fas fa-bolt"></i></div><div class="label">Consumo Promedio</div><div class="value">' + 
+                                 (avgEnergy.length > 0 ? (avgEnergy.reduce((a,b) => a+b, 0) / avgEnergy.length).toFixed(1) + ' W' : '--') + '</div></div>';
+                    statsHtml += '<div class="stat-card"><div class="icon" style="background: #ede9fe; color: #7c3aed;"><i class="fas fa-database"></i></div><div class="label">Total Registros</div><div class="value">' + 
+                                 data.length + '</div><div class="sub">Tipos: ' + Object.keys(contentTypes).length + '</div></div>';
+                }
+                
+                $('#statsContainer').html(statsHtml);
             }
 
             function applyFiltersAndRender() {
@@ -978,16 +1105,56 @@
                     filtered = filtered.filter(d => d.sensorId == sensorFilter);
                 }
 
-                // Filtrar por temperatura mínima
-                var minTemp = parseFloat($('#minTempFilter').val());
-                if (!isNaN(minTemp)) {
-                    filtered = filtered.filter(d => d.temperature >= minTemp);
-                }
-
-                // Filtrar por temperatura máxima
-                var maxTemp = parseFloat($('#maxTempFilter').val());
-                if (!isNaN(maxTemp)) {
-                    filtered = filtered.filter(d => d.temperature <= maxTemp);
+                // Filtros específicos por tipo de sensor
+                if (currentSensorType === 'weather') {
+                    var minTemp = parseFloat($('#minTempFilter').val());
+                    if (!isNaN(minTemp)) {
+                        filtered = filtered.filter(d => d.temperature >= minTemp);
+                    }
+                    var maxTemp = parseFloat($('#maxTempFilter').val());
+                    if (!isNaN(maxTemp)) {
+                        filtered = filtered.filter(d => d.temperature <= maxTemp);
+                    }
+                    var minHumidity = parseFloat($('#minHumidityFilter').val());
+                    if (!isNaN(minHumidity)) {
+                        filtered = filtered.filter(d => d.humidity >= minHumidity);
+                    }
+                } else if (currentSensorType === 'trafficCounter') {
+                    var minVehicle = parseInt($('#minVehicleFilter').val());
+                    if (!isNaN(minVehicle)) {
+                        filtered = filtered.filter(d => (d.vehicleCount || 0) >= minVehicle);
+                    }
+                    var directionFilter = $('#directionFilter').val();
+                    if (directionFilter) {
+                        filtered = filtered.filter(d => (d.direction || '').toUpperCase() === directionFilter);
+                    }
+                    var densityFilter = $('#densityFilter').val();
+                    if (densityFilter) {
+                        filtered = filtered.filter(d => (d.trafficDensity || '').toUpperCase() === densityFilter);
+                    }
+                } else if (currentSensorType === 'trafficLight') {
+                    var stateFilter = $('#stateFilter').val();
+                    if (stateFilter) {
+                        filtered = filtered.filter(d => (d.currentState || '').toUpperCase() === stateFilter);
+                    }
+                    var malfunctionFilter = $('#malfunctionFilter').val();
+                    if (malfunctionFilter) {
+                        var isMalfunction = malfunctionFilter === 'true';
+                        filtered = filtered.filter(d => d.malfunctionDetected === isMalfunction);
+                    }
+                } else if (currentSensorType === 'informationDisplay') {
+                    var displayStatusFilter = $('#displayStatusFilter').val();
+                    if (displayStatusFilter) {
+                        filtered = filtered.filter(d => (d.displayStatus || '').toUpperCase() === displayStatusFilter);
+                    }
+                    var contentTypeFilter = $('#contentTypeFilter').val();
+                    if (contentTypeFilter) {
+                        filtered = filtered.filter(d => (d.contentType || '').toUpperCase() === contentTypeFilter);
+                    }
+                    var minBrightness = parseInt($('#minBrightnessFilter').val());
+                    if (!isNaN(minBrightness)) {
+                        filtered = filtered.filter(d => (d.brightnessLevel || 0) >= minBrightness);
+                    }
                 }
 
                 // Ordenar
@@ -1008,32 +1175,240 @@
                 renderTable(filtered);
                 updateFilteredStats(filtered);
             }
+            
+            // Nuevas funciones de filtro rápido
+            function showHighTraffic() {
+                $('#minVehicleFilter').val('20');
+                $('#densityFilter').val('HIGH');
+                applyFiltersAndRender();
+            }
+            
+            function showMalfunctions() {
+                $('#malfunctionFilter').val('true');
+                applyFiltersAndRender();
+            }
 
             function updateFilteredStats(data) {
                 $('#filteredCount').text(data.length + ' de ' + allData.length + ' registros');
             }
 
+            function changeSensorType(type) {
+                currentSensorType = type;
+                $('.btn-sensor-type').removeClass('active');
+                $('#btn-' + type).addClass('active');
+                
+                // Actualizar título de la tabla
+                var titles = {
+                    'weather': '<i class="fas fa-cloud-sun"></i> Datos de Sensores Meteorológicos',
+                    'trafficCounter': '<i class="fas fa-car"></i> Datos de Contadores de Tráfico',
+                    'trafficLight': '<i class="fas fa-traffic-light"></i> Datos de Semáforos',
+                    'informationDisplay': '<i class="fas fa-tv"></i> Datos de Pantallas de Información'
+                };
+                $('#tableTitle').html(titles[type] || '<i class="fas fa-table"></i> Datos de Sensores');
+                
+                // Mostrar/ocultar controles de alerta según el tipo
+                if (type === 'weather') {
+                    $('#weatherControlsCard').show();
+                } else {
+                    $('#weatherControlsCard').hide();
+                }
+                
+                // Actualizar encabezados de tabla según el tipo
+                updateTableHeaders(type);
+                
+                // Actualizar filtros dinámicos
+                updateFilters(type);
+                
+                // Recargar datos
+                loadData();
+            }
+            
+            function updateQuickStats(data) {
+                var quickStatsHtml = '<div class="quick-stats">';
+                
+                if (data.length === 0) {
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Sin Datos</div><div class="value">--</div></div>';
+                } else if (currentSensorType === 'weather') {
+                    var temps = data.map(d => d.temperature).filter(t => t != null);
+                    var humidities = data.map(d => d.humidity).filter(h => h != null);
+                    
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Temp. Máx</div><div class="value" style="color: #dc2626;">' + 
+                                      (temps.length > 0 ? Math.max(...temps).toFixed(1) + '°C' : '--') + '</div></div>';
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Temp. Mín</div><div class="value" style="color: #2563eb;">' + 
+                                      (temps.length > 0 ? Math.min(...temps).toFixed(1) + '°C' : '--') + '</div></div>';
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Humedad Máx</div><div class="value" style="color: #0891b2;">' + 
+                                      (humidities.length > 0 ? Math.max(...humidities).toFixed(1) + '%' : '--') + '</div></div>';
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Registros</div><div class="value" style="color: #059669;">' + 
+                                      data.length + '</div></div>';
+                } else if (currentSensorType === 'trafficCounter') {
+                    var vehicles = data.map(d => d.vehicleCount || 0);
+                    var pedestrians = data.map(d => d.pedestrianCount || 0);
+                    
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Veh. Total</div><div class="value" style="color: #2563eb;">' + 
+                                      vehicles.reduce((a,b) => a+b, 0) + '</div></div>';
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Peat. Total</div><div class="value" style="color: #d97706;">' + 
+                                      pedestrians.reduce((a,b) => a+b, 0) + '</div></div>';
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Veh. Máx</div><div class="value" style="color: #dc2626;">' + 
+                                      (vehicles.length > 0 ? Math.max(...vehicles) : 0) + '</div></div>';
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Registros</div><div class="value" style="color: #059669;">' + 
+                                      data.length + '</div></div>';
+                } else if (currentSensorType === 'trafficLight') {
+                    var malfunctions = data.filter(d => d.malfunctionDetected).length;
+                    var greenCount = data.filter(d => (d.currentState || '').toUpperCase() === 'GREEN').length;
+                    var redCount = data.filter(d => (d.currentState || '').toUpperCase() === 'RED').length;
+                    
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Estado Verde</div><div class="value" style="color: #10b981;">' + 
+                                      greenCount + '</div></div>';
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Estado Rojo</div><div class="value" style="color: #ef4444;">' + 
+                                      redCount + '</div></div>';
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Fallos</div><div class="value" style="color: #dc2626;">' + 
+                                      malfunctions + '</div></div>';
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Registros</div><div class="value" style="color: #059669;">' + 
+                                      data.length + '</div></div>';
+                } else if (currentSensorType === 'informationDisplay') {
+                    var onCount = data.filter(d => d.displayStatus === 'ON').length;
+                    var avgBrightness = data.map(d => d.brightnessLevel).filter(b => b != null);
+                    
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Encendidas</div><div class="value" style="color: #10b981;">' + 
+                                      onCount + '</div></div>';
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Apagadas</div><div class="value" style="color: #64748b;">' + 
+                                      (data.length - onCount) + '</div></div>';
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Brillo Prom</div><div class="value" style="color: #d97706;">' + 
+                                      (avgBrightness.length > 0 ? (avgBrightness.reduce((a,b) => a+b, 0) / avgBrightness.length).toFixed(0) + '%' : '--') + '</div></div>';
+                    quickStatsHtml += '<div class="quick-stat"><div class="label">Registros</div><div class="value" style="color: #059669;">' + 
+                                      data.length + '</div></div>';
+                }
+                
+                quickStatsHtml += '</div>';
+                $('#quickStatsBody').html(quickStatsHtml);
+            }
+            
+            function updateFilters(type) {
+                var filtersHtml = '<div class="filter-group"><label>Sensor:</label><select class="filter-select" id="sensorFilter" onchange="applyFiltersAndRender()"><option value="">Todos</option></select></div>';
+                
+                if (type === 'weather') {
+                    filtersHtml += '<div class="filter-group"><label>Temp Min:</label><input type="number" class="filter-input" id="minTempFilter" placeholder="°C" onchange="applyFiltersAndRender()" style="width: 80px;"></div>';
+                    filtersHtml += '<div class="filter-group"><label>Temp Max:</label><input type="number" class="filter-input" id="maxTempFilter" placeholder="°C" onchange="applyFiltersAndRender()" style="width: 80px;"></div>';
+                    filtersHtml += '<div class="filter-group"><label>Humedad Min:</label><input type="number" class="filter-input" id="minHumidityFilter" placeholder="%" onchange="applyFiltersAndRender()" style="width: 80px;"></div>';
+                    filtersHtml += '<button class="btn-filter" onclick="showHighTemps()"><i class="fas fa-temperature-high"></i> Temp. Altas</button>';
+                    filtersHtml += '<button class="btn-filter" onclick="showLowTemps()"><i class="fas fa-temperature-low"></i> Temp. Bajas</button>';
+                } else if (type === 'trafficCounter') {
+                    filtersHtml += '<div class="filter-group"><label>Vehículos Min:</label><input type="number" class="filter-input" id="minVehicleFilter" placeholder="#" onchange="applyFiltersAndRender()" style="width: 80px;"></div>';
+                    filtersHtml += '<div class="filter-group"><label>Dirección:</label><select class="filter-select" id="directionFilter" onchange="applyFiltersAndRender()"><option value="">Todas</option><option value="NORTH">Norte</option><option value="SOUTH">Sur</option><option value="EAST">Este</option><option value="WEST">Oeste</option></select></div>';
+                    filtersHtml += '<div class="filter-group"><label>Densidad:</label><select class="filter-select" id="densityFilter" onchange="applyFiltersAndRender()"><option value="">Todas</option><option value="LOW">Baja</option><option value="MEDIUM">Media</option><option value="HIGH">Alta</option></select></div>';
+                    filtersHtml += '<button class="btn-filter" onclick="showHighTraffic()"><i class="fas fa-exclamation-triangle"></i> Tráfico Alto</button>';
+                } else if (type === 'trafficLight') {
+                    filtersHtml += '<div class="filter-group"><label>Estado:</label><select class="filter-select" id="stateFilter" onchange="applyFiltersAndRender()"><option value="">Todos</option><option value="GREEN">Verde</option><option value="YELLOW">Amarillo</option><option value="RED">Rojo</option></select></div>';
+                    filtersHtml += '<div class="filter-group"><label>Fallos:</label><select class="filter-select" id="malfunctionFilter" onchange="applyFiltersAndRender()"><option value="">Todos</option><option value="true">Con fallos</option><option value="false">Sin fallos</option></select></div>';
+                    filtersHtml += '<button class="btn-filter" onclick="showMalfunctions()"><i class="fas fa-exclamation-circle"></i> Solo Fallos</button>';
+                } else if (type === 'informationDisplay') {
+                    filtersHtml += '<div class="filter-group"><label>Estado:</label><select class="filter-select" id="displayStatusFilter" onchange="applyFiltersAndRender()"><option value="">Todos</option><option value="ON">Encendidas</option><option value="OFF">Apagadas</option></select></div>';
+                    filtersHtml += '<div class="filter-group"><label>Tipo:</label><select class="filter-select" id="contentTypeFilter" onchange="applyFiltersAndRender()"><option value="">Todos</option><option value="TEXT">Texto</option><option value="IMAGE">Imagen</option><option value="VIDEO">Video</option></select></div>';
+                    filtersHtml += '<div class="filter-group"><label>Brillo Min:</label><input type="number" class="filter-input" id="minBrightnessFilter" placeholder="%" onchange="applyFiltersAndRender()" style="width: 80px;"></div>';
+                }
+                
+                filtersHtml += '<button class="btn-filter" onclick="clearFilters()"><i class="fas fa-times"></i> Limpiar</button>';
+                $('#filtersContainer').html(filtersHtml);
+            }
+
+            function updateTableHeaders(type) {
+                var headers = '';
+                if (type === 'weather') {
+                    headers = '<tr><th data-column="sensorId" onclick="sortTable(\'sensorId\')">Sensor <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="date" onclick="sortTable(\'date\')">Fecha/Hora <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="temperature" onclick="sortTable(\'temperature\')">Temperatura <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="humidity" onclick="sortTable(\'humidity\')">Humedad <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="pressure" onclick="sortTable(\'pressure\')">Presión <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="altitude" onclick="sortTable(\'altitude\')">Altitud <i class="fas fa-sort"></i></th></tr>';
+                } else if (type === 'trafficCounter') {
+                    headers = '<tr><th data-column="sensorId" onclick="sortTable(\'sensorId\')">Sensor <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="date" onclick="sortTable(\'date\')">Fecha/Hora <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="vehicleCount" onclick="sortTable(\'vehicleCount\')">Vehículos <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="pedestrianCount" onclick="sortTable(\'pedestrianCount\')">Peatones <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="bicycleCount" onclick="sortTable(\'bicycleCount\')">Bicicletas <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="direction" onclick="sortTable(\'direction\')">Dirección <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="averageSpeedKmh" onclick="sortTable(\'averageSpeedKmh\')">Vel. Media <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="trafficDensity" onclick="sortTable(\'trafficDensity\')">Densidad <i class="fas fa-sort"></i></th></tr>';
+                } else if (type === 'trafficLight') {
+                    headers = '<tr><th data-column="sensorId" onclick="sortTable(\'sensorId\')">Sensor <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="date" onclick="sortTable(\'date\')">Fecha/Hora <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="currentState" onclick="sortTable(\'currentState\')">Estado <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="timeRemainingSeconds" onclick="sortTable(\'timeRemainingSeconds\')">Tiempo Rest. <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="cycleDurationSeconds" onclick="sortTable(\'cycleDurationSeconds\')">Duración Ciclo <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="circulationDirection" onclick="sortTable(\'circulationDirection\')">Dirección <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="pedestrianWaiting" onclick="sortTable(\'pedestrianWaiting\')">Peatones <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="malfunctionDetected" onclick="sortTable(\'malfunctionDetected\')">Fallo <i class="fas fa-sort"></i></th></tr>';
+                } else if (type === 'informationDisplay') {
+                    headers = '<tr><th data-column="sensorId" onclick="sortTable(\'sensorId\')">Sensor <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="date" onclick="sortTable(\'date\')">Fecha/Hora <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="displayStatus" onclick="sortTable(\'displayStatus\')">Estado <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="currentMessage" onclick="sortTable(\'currentMessage\')">Mensaje <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="contentType" onclick="sortTable(\'contentType\')">Tipo Contenido <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="brightnessLevel" onclick="sortTable(\'brightnessLevel\')">Brillo <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="displayType" onclick="sortTable(\'displayType\')">Tipo Pantalla <i class="fas fa-sort"></i></th>' +
+                              '<th data-column="energyConsumptionWatts" onclick="sortTable(\'energyConsumptionWatts\')">Consumo <i class="fas fa-sort"></i></th></tr>';
+                }
+                $('#tableHeader').html(headers);
+            }
+
             function renderTable(data) {
                 $("#dataTable").empty();
                 if (data.length === 0) {
-                    $("#dataTable").append('<tr><td colspan="6" class="empty-state"><i class="fas fa-database"></i><p>No hay datos disponibles</p></td></tr>');
+                    var colspan = currentSensorType === 'weather' ? 6 : 8;
+                    $("#dataTable").append('<tr><td colspan="' + colspan + '" class="empty-state"><i class="fas fa-database"></i><p>No hay datos disponibles</p></td></tr>');
                     return;
                 }
                 var newRow = "";
                 $.each(data, function (i, value)
                 {
-                    var tempClass = 'temp-value';
-                    if (value.temperature > 30) tempClass += ' temp-high';
-                    else if (value.temperature < 15) tempClass += ' temp-low';
+                    if (currentSensorType === 'weather') {
+                        var tempClass = 'temp-value';
+                        var temp = value.temperature != null ? value.temperature : 0;
+                        if (temp > 30) tempClass += ' temp-high';
+                        else if (temp < 15) tempClass += ' temp-low';
 
-                    newRow += "<tr>";
-                    newRow += "<td><span class='sensor-badge'><i class='fas fa-microchip'></i>" + value.sensorId + "</span></td>";
-                    newRow += "<td>" + value.date + "</td>";
-                    newRow += "<td class='" + tempClass + "'>" + value.temperature.toFixed(2) + " °C</td>";
-                    newRow += "<td class='humidity-value'>" + value.humidity.toFixed(2) + " %</td>";
-                    newRow += "<td class='pressure-value'>" + value.pressure.toFixed(2) + " hPa</td>";
-                    newRow += "<td class='altitude-value'>" + value.altitude.toFixed(2) + " m</td>";
-                    newRow += "</tr>";
+                        newRow += "<tr>";
+                        newRow += "<td><span class='sensor-badge'><i class='fas fa-thermometer-half'></i>" + (value.sensorId || 'N/A') + "</span></td>";
+                        newRow += "<td>" + (value.date || 'N/A') + "</td>";
+                        newRow += "<td class='" + tempClass + "'>" + (value.temperature != null ? value.temperature.toFixed(2) : '--') + " °C</td>";
+                        newRow += "<td class='humidity-value'>" + (value.humidity != null ? value.humidity.toFixed(2) : '--') + " %</td>";
+                        newRow += "<td class='pressure-value'>" + (value.pressure != null ? value.pressure.toFixed(2) : '--') + " hPa</td>";
+                        newRow += "<td class='altitude-value'>" + (value.altitude != null ? value.altitude.toFixed(2) : '--') + " m</td>";
+                        newRow += "</tr>";
+                    } else if (currentSensorType === 'trafficCounter') {
+                        newRow += "<tr>";
+                        newRow += "<td><span class='sensor-badge'><i class='fas fa-car'></i>" + value.sensorId + "</span></td>";
+                        newRow += "<td>" + value.date + "</td>";
+                        newRow += "<td>" + (value.vehicleCount || 0) + "</td>";
+                        newRow += "<td>" + (value.pedestrianCount || 0) + "</td>";
+                        newRow += "<td>" + (value.bicycleCount || 0) + "</td>";
+                        newRow += "<td>" + (value.direction || 'N/A') + "</td>";
+                        newRow += "<td>" + (value.averageSpeedKmh ? value.averageSpeedKmh.toFixed(1) + " km/h" : 'N/A') + "</td>";
+                        newRow += "<td>" + (value.trafficDensity || 'N/A') + "</td>";
+                        newRow += "</tr>";
+                    } else if (currentSensorType === 'trafficLight') {
+                        newRow += "<tr>";
+                        newRow += "<td><span class='sensor-badge'><i class='fas fa-traffic-light'></i>" + value.sensorId + "</span></td>";
+                        newRow += "<td>" + value.date + "</td>";
+                        newRow += "<td><strong>" + (value.currentState || 'N/A') + "</strong></td>";
+                        newRow += "<td>" + (value.timeRemainingSeconds || 0) + "s</td>";
+                        newRow += "<td>" + (value.cycleDurationSeconds || 0) + "s</td>";
+                        newRow += "<td>" + (value.circulationDirection || 'N/A') + "</td>";
+                        newRow += "<td>" + (value.pedestrianWaiting ? 'Sí' : 'No') + "</td>";
+                        newRow += "<td>" + (value.malfunctionDetected ? '<span style="color:red">Sí</span>' : 'No') + "</td>";
+                        newRow += "</tr>";
+                    } else if (currentSensorType === 'informationDisplay') {
+                        newRow += "<tr>";
+                        newRow += "<td><span class='sensor-badge'><i class='fas fa-tv'></i>" + value.sensorId + "</span></td>";
+                        newRow += "<td>" + value.date + "</td>";
+                        newRow += "<td>" + (value.displayStatus || 'N/A') + "</td>";
+                        newRow += "<td style='max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>" + (value.currentMessage || 'N/A') + "</td>";
+                        newRow += "<td>" + (value.contentType || 'N/A') + "</td>";
+                        newRow += "<td>" + (value.brightnessLevel || 0) + "%</td>";
+                        newRow += "<td>" + (value.displayType || 'N/A') + "</td>";
+                        newRow += "<td>" + (value.energyConsumptionWatts ? value.energyConsumptionWatts.toFixed(1) + " W" : 'N/A') + "</td>";
+                        newRow += "</tr>";
+                    }
                 });
                 $("#dataTable").append(newRow);
             }
@@ -1056,9 +1431,28 @@
             }
 
             function clearFilters() {
+                // Limpiar todos los filtros comunes
                 $('#sensorFilter').val('');
+                
+                // Limpiar filtros específicos de weather
                 $('#minTempFilter').val('');
                 $('#maxTempFilter').val('');
+                $('#minHumidityFilter').val('');
+                
+                // Limpiar filtros de trafficCounter
+                $('#minVehicleFilter').val('');
+                $('#directionFilter').val('');
+                $('#densityFilter').val('');
+                
+                // Limpiar filtros de trafficLight
+                $('#stateFilter').val('');
+                $('#malfunctionFilter').val('');
+                
+                // Limpiar filtros de informationDisplay
+                $('#displayStatusFilter').val('');
+                $('#contentTypeFilter').val('');
+                $('#minBrightnessFilter').val('');
+                
                 applyFiltersAndRender();
             }
 
@@ -1155,10 +1549,12 @@
 
             function insertJsonTemplate(template) {
                 var templates = {
+                    'weather': '{\n  "sensorId": "SENSOR_001",\n  "temperature": 25.5,\n  "humidity": 60.0,\n  "pressure": 1013.25,\n  "altitude": 650.0\n}',
+                    'traffic': '{\n  "sensorId": "TRAFFIC_001",\n  "vehicleCount": 15,\n  "pedestrianCount": 5,\n  "bicycleCount": 2,\n  "direction": "NORTH",\n  "averageSpeed": 45.5,\n  "trafficDensity": "MEDIUM"\n}',
+                    'light': '{\n  "sensorId": "LIGHT_001",\n  "currentState": "GREEN",\n  "timeRemaining": 30,\n  "cycleDuration": 60,\n  "pedestrianWaiting": false,\n  "malfunctionDetected": false\n}',
+                    'display': '{\n  "sensorId": "DISPLAY_001",\n  "displayStatus": "ON",\n  "currentMessage": "Bienvenido a la ciudad",\n  "contentType": "TEXT",\n  "brightnessLevel": 80,\n  "energyConsumption": 150.5\n}',
                     'alert': '{\n  "alert_level": 1,\n  "message": "Alerta de prueba"\n}',
-                    'sensor': '{\n  "sensor_id": "ESP32_001",\n  "temperature": 25.5,\n  "humidity": 60.0\n}',
-                    'command': '{\n  "command": "restart",\n  "delay": 5000\n}',
-                    'config': '{\n  "interval": 30,\n  "enabled": true\n}'
+                    'command': '{\n  "command": "restart",\n  "delay": 5000\n}'
                 };
                 $('#mqttMessage').val(templates[template] || '{}');
             }
@@ -1253,91 +1649,94 @@
                 </div>
             </header>
 
-            <!-- Stats Cards -->
-            <div class="stats-grid">
-                <div class="stat-card temp">
-                    <div class="icon"><i class="fas fa-thermometer-half"></i></div>
-                    <div class="label">Temperatura Promedio</div>
-                    <div class="value" id="avgTemp">--</div>
-                    <div class="sub">Última actualización</div>
+            <!-- Selector de Tipo de Sensor - PROMINENTE -->
+            <div class="card" style="margin-bottom: 24px;">
+                <div class="card-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
+                    <h2 class="card-title" style="color: white;">
+                        <i class="fas fa-layer-group"></i>
+                        Selecciona el Tipo de Sensor a Visualizar
+                    </h2>
                 </div>
-                <div class="stat-card humidity">
-                    <div class="icon"><i class="fas fa-tint"></i></div>
-                    <div class="label">Humedad Promedio</div>
-                    <div class="value" id="avgHumidity">--</div>
-                    <div class="sub">Última actualización</div>
+                <div class="card-body">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                        <button class="btn-alert btn-sensor-type active" id="btn-weather" onclick="changeSensorType('weather')" 
+                                style="padding: 28px 20px; background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; font-size: 1rem; cursor: pointer;">
+                            <i class="fas fa-cloud-sun" style="font-size: 2.2rem; margin-bottom: 8px;"></i>
+                            <span style="font-weight: 600;">Meteorológico</span>
+                            <small style="opacity: 0.9; font-size: 0.8rem; margin-top: 4px;">Temp, Humedad, Presión</small>
+                        </button>
+                        <button class="btn-alert btn-sensor-type" id="btn-trafficCounter" onclick="changeSensorType('trafficCounter')" 
+                                style="padding: 24px 16px; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; font-size: 0.95rem; cursor: pointer;">
+                            <i class="fas fa-car" style="font-size: 2rem; margin-bottom: 8px;"></i>
+                            <span style="font-weight: 600;">Contador Tráfico</span>
+                            <small style="opacity: 0.9; font-size: 0.75rem; margin-top: 4px;">Vehículos, Peatones</small>
+                        </button>
+                        <button class="btn-alert btn-sensor-type" id="btn-trafficLight" onclick="changeSensorType('trafficLight')" 
+                                style="padding: 24px 16px; background: linear-gradient(135deg, #ef4444, #dc2626); color: white; font-size: 0.95rem; cursor: pointer;">
+                            <i class="fas fa-traffic-light" style="font-size: 2rem; margin-bottom: 8px;"></i>
+                            <span style="font-weight: 600;">Semáforos</span>
+                            <small style="opacity: 0.9; font-size: 0.75rem; margin-top: 4px;">Estados, Ciclos</small>
+                        </button>
+                        <button class="btn-alert btn-sensor-type" id="btn-informationDisplay" onclick="changeSensorType('informationDisplay')" 
+                                style="padding: 24px 16px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; font-size: 0.95rem; cursor: pointer;">
+                            <i class="fas fa-tv" style="font-size: 2rem; margin-bottom: 8px;"></i>
+                            <span style="font-weight: 600;">Pantallas Info</span>
+                            <small style="opacity: 0.9; font-size: 0.75rem; margin-top: 4px;">Displays, Mensajes</small>
+                        </button>
+                    </div>
                 </div>
-                <div class="stat-card pressure">
-                    <div class="icon"><i class="fas fa-tachometer-alt"></i></div>
-                    <div class="label">Presión Promedio</div>
-                    <div class="value" id="avgPressure">--</div>
-                    <div class="sub">Última actualización</div>
-                </div>
-                <div class="stat-card altitude">
-                    <div class="icon"><i class="fas fa-mountain"></i></div>
-                    <div class="label">Total Registros</div>
-                    <div class="value" id="totalRecords">0</div>
-                    <div class="sub">En base de datos</div>
-                </div>
+            </div>
+
+            <!-- Stats Cards - Dinámicas según tipo de sensor -->
+            <div class="stats-grid" id="statsContainer">
+                <!-- Se llenarán dinámicamente según el tipo de sensor -->
             </div>
 
             <!-- Main Content -->
             <div class="main-grid">
-                <!-- Data Table Section -->
-                <div class="card">
-                    <div class="card-header">
-                        <h2 class="card-title">
-                            <i class="fas fa-table"></i>
-                            Datos de Sensores
+                <!-- Data Table Section - ahora ocupa todo el ancho de la grid -->
+                    <div class="card table-card">
+                    <div class="card-header" style="padding: 24px 32px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
+                        <h2 class="card-title" id="tableTitle" style="color: white; font-size: 1.5rem;">
+                            <i class="fas fa-cloud-sun"></i>
+                            Datos de Sensores Meteorológicos
                         </h2>
-                        <div class="filters-section">
-                            <div class="filter-group">
-                                <label><i class="fas fa-microchip"></i></label>
-                                <select id="sensorFilter" class="filter-select" onchange="applyFiltersAndRender()">
-                                    <option value="">Todos los sensores</option>
-                                </select>
-                            </div>
-                            <div class="filter-group">
-                                <label>Temp:</label>
-                                <input type="number" id="minTempFilter" class="filter-input" placeholder="Mín" style="width:70px" onchange="applyFiltersAndRender()">
-                                <span>-</span>
-                                <input type="number" id="maxTempFilter" class="filter-input" placeholder="Máx" style="width:70px" onchange="applyFiltersAndRender()">
-                            </div>
-                            <button class="btn-filter" onclick="showHighTemps()">
-                                <i class="fas fa-temperature-high"></i> Altas
-                            </button>
-                            <button class="btn-filter" onclick="showLowTemps()">
-                                <i class="fas fa-temperature-low"></i> Bajas
-                            </button>
-                            <button class="btn-filter" onclick="clearFilters()">
-                                <i class="fas fa-times"></i> Limpiar
-                            </button>
-                        </div>
+                        <button class="btn-refresh" onclick="loadData()" style="background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.3);">
+                            <i class="fas fa-sync-alt"></i> Actualizar
+                        </button>
                     </div>
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th data-column="sensorId" onclick="sortTable('sensorId')">
-                                        Sensor ID <i class="fas fa-sort"></i>
-                                    </th>
-                                    <th data-column="date" onclick="sortTable('date')">
-                                        Fecha <i class="fas fa-sort"></i>
-                                    </th>
-                                    <th data-column="temperature" onclick="sortTable('temperature')">
-                                        Temperatura <i class="fas fa-sort"></i>
-                                    </th>
-                                    <th data-column="humidity" onclick="sortTable('humidity')">
-                                        Humedad <i class="fas fa-sort"></i>
-                                    </th>
-                                    <th data-column="pressure" onclick="sortTable('pressure')">
-                                        Presión <i class="fas fa-sort"></i>
-                                    </th>
-                                    <th data-column="altitude" onclick="sortTable('altitude')">
-                                        Altitud <i class="fas fa-sort"></i>
-                                    </th>
-                                </tr>
-                            </thead>
+                    
+                    <div class="card-body" style="padding: 0;">
+                        <!-- Filters Dinámicos -->
+                        <div class="filters-section" style="padding: 20px; border-bottom: 1px solid var(--border-color);" id="filtersContainer">
+                            <!-- Se llenarán dinámicamente según el tipo de sensor -->
+                        </div>
+                        
+                        <!-- Table -->
+                        <div class="table-container">
+                            <table>
+                                <thead id="tableHeader">
+                                    <tr>
+                                        <th data-column="sensorId" onclick="sortTable('sensorId')">
+                                            Sensor ID <i class="fas fa-sort"></i>
+                                        </th>
+                                        <th data-column="date" onclick="sortTable('date')">
+                                            Fecha <i class="fas fa-sort"></i>
+                                        </th>
+                                        <th data-column="temperature" onclick="sortTable('temperature')">
+                                            Temperatura <i class="fas fa-sort"></i>
+                                        </th>
+                                        <th data-column="humidity" onclick="sortTable('humidity')">
+                                            Humedad <i class="fas fa-sort"></i>
+                                        </th>
+                                        <th data-column="pressure" onclick="sortTable('pressure')">
+                                            Presión <i class="fas fa-sort"></i>
+                                        </th>
+                                        <th data-column="altitude" onclick="sortTable('altitude')">
+                                            Altitud <i class="fas fa-sort"></i>
+                                        </th>
+                                    </tr>
+                                </thead>
                             <tbody id="dataTable">
                             </tbody>
                         </table>
@@ -1355,38 +1754,21 @@
 
                 <!-- Sidebar - Controls -->
                 <div>
-                    <!-- Quick Stats -->
-                    <div class="card" style="margin-bottom: 20px;">
+                    <!-- Quick Stats - Siempre visible -->
+                    <div class="card" style="margin-bottom: 20px;" id="quickStatsCard">
                         <div class="card-header">
                             <h2 class="card-title">
                                 <i class="fas fa-chart-bar"></i>
                                 Estadísticas Rápidas
                             </h2>
                         </div>
-                        <div class="card-body">
-                            <div class="quick-stats">
-                                <div class="quick-stat">
-                                    <div class="label">Temp. Máx</div>
-                                    <div class="value" id="maxTemp" style="color: #dc2626;">--</div>
-                                </div>
-                                <div class="quick-stat">
-                                    <div class="label">Temp. Mín</div>
-                                    <div class="value" id="minTemp" style="color: #2563eb;">--</div>
-                                </div>
-                                <div class="quick-stat">
-                                    <div class="label">Humedad Máx</div>
-                                    <div class="value" id="maxHumidity" style="color: #0891b2;">--</div>
-                                </div>
-                                <div class="quick-stat">
-                                    <div class="label">Altitud Máx</div>
-                                    <div class="value" id="maxAltitude" style="color: #059669;">--</div>
-                                </div>
-                            </div>
+                        <div class="card-body" id="quickStatsBody">
+                            <!-- Se llenarán dinámicamente -->
                         </div>
                     </div>
 
-                    <!-- Alert Controls -->
-                    <div class="card">
+                    <!-- Alert Controls - Solo para Weather -->
+                    <div class="card" id="weatherControlsCard" style="display: block;">
                         <div class="card-header">
                             <h2 class="card-title">
                                 <i class="fas fa-bell"></i>
@@ -1431,36 +1813,37 @@
                             </button>
 
                             <div id="commandStatus"></div>
-
-                            <div class="input-section">
-                                <label><i class="fas fa-database"></i> Enviar Valor a BD</label>
-                                <div class="input-group">
-                                    <input type="number" id="newValue" placeholder="Ingresa un valor...">
-                                    <button class="btn-send" onclick="insertData()">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </button>
-                                </div>
-                            </div>
-
+                        </div>
+                    </div>
+                    
+                    <!-- MQTT Publisher - Siempre visible -->
+                    <div class="card" style="margin-top: 20px;">
+                        <div class="card-header" style="background: linear-gradient(135deg, #0284c7, #0369a1); color: white;">
+                            <h2 class="card-title" style="color: white;">
+                                <i class="fas fa-paper-plane"></i>
+                                Publicar Mensaje MQTT
+                            </h2>
+                        </div>
+                        <div class="card-body">
                             <div class="input-section mqtt-section">
-                                <label><i class="fas fa-broadcast-tower"></i> Publicar Mensaje MQTT</label>
                                 <div class="input-row">
-                                    <span class="input-label">Topic</span>
-                                    <input type="text" id="mqttTopic" placeholder="ej: uah/alcala/weather/control">
+                                    <label class="input-label">Topic MQTT</label>
+                                    <input type="text" id="mqttTopic" placeholder="ej: uah/alcala/weather/data" value="uah/alcala/weather/data">
                                 </div>
                                 <div class="input-row">
-                                    <span class="input-label">Mensaje JSON</span>
-                                    <textarea id="mqttMessage" placeholder='{"key": "value"}'></textarea>
-                                </div>
-                                <div class="json-helper">
-                                    <button onclick="insertJsonTemplate('alert')" title="Plantilla de alerta">📢 Alerta</button>
-                                    <button onclick="insertJsonTemplate('sensor')" title="Plantilla de sensor">🌡️ Sensor</button>
-                                    <button onclick="insertJsonTemplate('command')" title="Plantilla de comando">⚙️ Comando</button>
-                                    <button onclick="insertJsonTemplate('config')" title="Plantilla de config">🔧 Config</button>
-                                    <button onclick="formatJson()" title="Formatear JSON">✨ Formatear</button>
+                                    <label class="input-label">Mensaje JSON</label>
+                                    <textarea id="mqttMessage" placeholder='{"sensorId": "SENSOR_001", "temperature": 25.5}'></textarea>
+                                    <div class="json-helper">
+                                        <button onclick="insertJsonTemplate('weather')">Weather</button>
+                                        <button onclick="insertJsonTemplate('traffic')">Traffic</button>
+                                        <button onclick="insertJsonTemplate('light')">Light</button>
+                                        <button onclick="insertJsonTemplate('display')">Display</button>
+                                        <button onclick="formatJson()">Format</button>
+                                    </div>
                                 </div>
                                 <button class="btn-mqtt" id="btnPublishMqtt" onclick="publishMQTT()">
-                                    <i class="fas fa-paper-plane"></i> Publicar Mensaje
+                                    <i class="fas fa-paper-plane"></i>
+                                    Publicar Mensaje
                                 </button>
                                 <div id="mqttStatus"></div>
                             </div>
