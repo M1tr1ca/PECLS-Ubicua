@@ -149,7 +149,37 @@ public class Logic
 		conector.closeConnection(con);
 		return values;
 	}
+	public static ArrayList<String> getOtherFromDB(){
 
+		ArrayList<String> values = new ArrayList<>();
+
+		ConectionDDBB conector = new ConectionDDBB();
+		Connection con = null;
+		try {
+			con = conector.obtainConnection(true);
+			Log.log.info("Database Connected - Other");
+			PreparedStatement ps = ConectionDDBB.getOther(con);
+			Log.log.info("Query=>" + ps.toString());
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()){
+				values.add(rs.getString("sensor_id") + "," + rs.getString("timestamp") + "," + rs.getString("json"));
+			}
+		} catch (SQLException e)
+		{
+			Log.log.error("Error: " + e);
+			values = new ArrayList<>();
+		} catch (NullPointerException e)
+		{
+			Log.log.error("Error: " + e);
+			values = new ArrayList<>();
+		} catch (Exception e)
+		{
+			Log.log.error("Error:" + e);
+			values = new ArrayList<>();
+		}
+		conector.closeConnection(con);
+		return values;
+	}
 	public static ArrayList<InformationDisplayMeasurement> getInformationDisplayDataFromDB()
 	{
 		ArrayList<InformationDisplayMeasurement> values = new ArrayList<InformationDisplayMeasurement>();

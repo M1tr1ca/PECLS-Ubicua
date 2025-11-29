@@ -1,1 +1,1 @@
-{"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"temperature_celsius":22.4,"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+{"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}

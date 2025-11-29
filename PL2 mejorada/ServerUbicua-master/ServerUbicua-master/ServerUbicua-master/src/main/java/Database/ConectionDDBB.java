@@ -10,6 +10,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
+
 import logic.Log;
 
 
@@ -137,5 +138,8 @@ public class ConectionDDBB
     public static PreparedStatement SetDataBD(Connection con)
     {
     	return getStatement(con,"INSERT INTO sensor_readings (sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters) VALUES (?,?,?,?,?,?)");  	
+    }
+    public static PreparedStatement getOther(Connection con){
+      return getStatement(con, "SELECT * FROM other ORDER BY timestamp DESC LIMIT 50");
     }
 }

@@ -130,7 +130,7 @@ public class MQTTSuscriber implements MqttCallback {
             
             try {
                 JsonObject json = JsonParser.parseString(message.toString()).getAsJsonObject();
-                Log.logmqtt.error("Error guardando en BD: {}", e.getMessage(), " guardando en tabla Other");
+                Log.logmqtt.error("Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje " + json.toString());
                 saveOther(con, json.get("sensor_id").getAsString(), json.get("timestamp").getAsString(), JsonParser.parseString(message.toString()).getAsJsonObject());
 
             } catch (Exception i) {

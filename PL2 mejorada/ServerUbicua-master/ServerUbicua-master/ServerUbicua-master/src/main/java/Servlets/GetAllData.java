@@ -1,23 +1,25 @@
 package servlets;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
+import logic.InformationDisplayMeasurement;
 import logic.Log;
 import logic.Logic;
 import logic.Measurement;
 import logic.TrafficCounterMeasurement;
 import logic.TrafficLightMeasurement;
-import logic.InformationDisplayMeasurement;
 
 /**
  * Servlet que devuelve datos de todos los tipos de sensores
@@ -55,6 +57,24 @@ public class GetAllData extends HttpServlet {
             // Obtener datos de pantallas de información
             ArrayList<InformationDisplayMeasurement> displayData = Logic.getInformationDisplayDataFromDB();
             result.add("informationDisplay", gson.toJsonTree(displayData));
+
+            //Obtener datos de otros
+            ArrayList<String> rawList = Logic.getOtherFromDB();
+            JsonArray cleanArray = new JsonArray();
+
+            for (String linea : rawList) {
+                // Buscamos dónde empieza la llave '{' y cogemos todo desde ahí
+                int inicio = linea.indexOf("{");
+                if (inicio != -1) {
+                    // Cortamos el texto sucio del principio
+                    String jsonPuro = linea.substring(inicio);
+                    // Convertimos el texto a objeto JSON real
+                    cleanArray.add(JsonParser.parseString(jsonPuro));
+                }
+            }
+            // Añadimos la lista limpia al resultado
+            result.add("Other", cleanArray);
+        
             
             Log.log.info("All data retrieved successfully");
             out.println(result.toString());
