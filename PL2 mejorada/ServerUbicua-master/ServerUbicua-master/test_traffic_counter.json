@@ -1,7 +1,7 @@
 {
   "sensor_id": "LAB08JAV-G1",
   "timestamp": "2025-11-28 10:15:00:000",
-  "sensor_type": "fd",
+  "sensor_type": "traffic_counter",
   "data": {
     "vehicle_count": 55,
     "pedestrian_count": 200,

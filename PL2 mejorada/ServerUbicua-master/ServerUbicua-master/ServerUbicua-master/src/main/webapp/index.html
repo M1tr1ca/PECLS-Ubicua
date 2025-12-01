@@ -1022,10 +1022,11 @@
                 }
 
                 if (currentSensorType === 'weather') {
-                    var temps = data.map(d => d.temperature).filter(t => t != null);
-                    var humidities = data.map(d => d.humidity).filter(h => h != null);
-                    var pressures = data.map(d => d.pressure).filter(p => p != null);
-                    var altitudes = data.map(d => d.altitude).filter(a => a != null);
+                    // Filtrar datos: excluir temperatura=999 (valor null/error), humidity=-1, pressure=-1, altitude=-1
+                    var temps = data.map(d => d.temperature).filter(t => t != null && t !== 999);
+                    var humidities = data.map(d => d.humidity).filter(h => h != null && h !== -1);
+                    var pressures = data.map(d => d.pressure).filter(p => p != null && p !== -1);
+                    var altitudes = data.map(d => d.altitude).filter(a => a != null && a !== -1);
 
                     statsHtml += '<div class="stat-card temp"><div class="icon"><i class="fas fa-thermometer-half"></i></div><div class="label">Temperatura Promedio</div><div class="value">' + 
                                  (temps.length > 0 ? (temps.reduce((a,b) => a+b, 0) / temps.length).toFixed(1) + '°C' : '--') + '</div><div class="sub">Max: ' + 
@@ -1229,8 +1230,9 @@
                 if (data.length === 0) {
                     quickStatsHtml += '<div class="quick-stat"><div class="label">Sin Datos</div><div class="value">--</div></div>';
                 } else if (currentSensorType === 'weather') {
-                    var temps = data.map(d => d.temperature).filter(t => t != null);
-                    var humidities = data.map(d => d.humidity).filter(h => h != null);
+                    // Filtrar datos: excluir temperatura=999 (valor null/error), humidity=-1
+                    var temps = data.map(d => d.temperature).filter(t => t != null && t !== 999);
+                    var humidities = data.map(d => d.humidity).filter(h => h != null && h !== -1);
                     
                     quickStatsHtml += '<div class="quick-stat"><div class="label">Temp. Máx</div><div class="value" style="color: #dc2626;">' + 
                                       (temps.length > 0 ? Math.max(...temps).toFixed(1) + '°C' : '--') + '</div></div>';
@@ -1366,14 +1368,19 @@
                         var temp = value.temperature != null ? value.temperature : 0;
                         if (temp > 30) tempClass += ' temp-high';
                         else if (temp < 15) tempClass += ' temp-low';
+                        
+                        // Si temperatura es 999 (valor de error), mostrar como N/A
+                        var tempDisplay = (value.temperature != null && value.temperature !== 999) 
+                            ? value.temperature.toFixed(2) + " °C" 
+                            : '<span style="color: #94a3b8;">N/A</span>';
 
                         newRow += "<tr>";
                         newRow += "<td><span class='sensor-badge'><i class='fas fa-thermometer-half'></i>" + (value.sensorId || 'N/A') + "</span></td>";
                         newRow += "<td>" + (value.date || 'N/A') + "</td>";
-                        newRow += "<td class='" + tempClass + "'>" + (value.temperature != null ? value.temperature.toFixed(2) : '--') + " °C</td>";
-                        newRow += "<td class='humidity-value'>" + (value.humidity != null ? value.humidity.toFixed(2) : '--') + " %</td>";
-                        newRow += "<td class='pressure-value'>" + (value.pressure != null ? value.pressure.toFixed(2) : '--') + " hPa</td>";
-                        newRow += "<td class='altitude-value'>" + (value.altitude != null ? value.altitude.toFixed(2) : '--') + " m</td>";
+                        newRow += "<td class='" + tempClass + "'>" + tempDisplay + "</td>";
+                        newRow += "<td class='humidity-value'>" + (value.humidity != null && value.humidity !== -1 ? value.humidity.toFixed(2) : '--') + " %</td>";
+                        newRow += "<td class='pressure-value'>" + (value.pressure != null && value.pressure !== -1 ? value.pressure.toFixed(2) : '--') + " hPa</td>";
+                        newRow += "<td class='altitude-value'>" + (value.altitude != null && value.altitude !== -1 ? value.altitude.toFixed(2) : '--') + " m</td>";
                         newRow += "</tr>";
                     } else if (currentSensorType === 'trafficCounter') {
                         newRow += "<tr>";
@@ -1552,7 +1559,8 @@
                 var templates = {
                     'weather': '{\n' +
             '  "sensor_id": "LAB08JAV-G1",\n' +
-            '  "timestamp": "2025-12-01 18:30:00",\n' +
+            '  "timestamp": "2025-12-01 18:30:00:000",\n' +
+            '  "sensor_type": "weather",\n' +
             '  "location": {\n' +
             '    "altitude_meters": 650.0\n' +
             '  },\n' +

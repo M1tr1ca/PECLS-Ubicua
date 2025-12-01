@@ -104,10 +104,11 @@ public class MQTTSuscriber implements MqttCallback {
             String sensorId = json.get("sensor_id").getAsString();
             String timestampStr = json.get("timestamp").getAsString();
             
-            // Parsear timestamp (formato: "2025-11-14 10:23:45:127")
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
-            java.util.Date parsedDate = sdf.parse(timestampStr);
-            Timestamp timestamp = new Timestamp(parsedDate.getTime());
+            // Parsear timestamp - soporta múltiples formatos:
+            // "2025-11-14 10:23:45:127" (con milisegundos usando :)
+            // "2025-11-14 10:23:45.127" (con milisegundos usando .)
+            // "2025-11-14 10:23:45" (sin milisegundos)
+            Timestamp timestamp = parseTimestamp(timestampStr);
             
             // Detectar tipo de sensor
             String sensorType = json.has("sensor_type") ? json.get("sensor_type").getAsString() : "weather";
@@ -301,6 +302,41 @@ public class MQTTSuscriber implements MqttCallback {
     }
     
     // Helper methods
+    
+    /**
+     * Parsea el timestamp soportando múltiples formatos:
+     * - "2025-11-14 10:23:45:127" (milisegundos con :)
+     * - "2025-11-14 10:23:45.127" (milisegundos con .)
+     * - "2025-11-14 10:23:45" (sin milisegundos)
+     */
+    private Timestamp parseTimestamp(String timestampStr) throws Exception {
+        java.util.Date parsedDate = null;
+        
+        // Lista de formatos a probar en orden
+        String[] formats = {
+            "yyyy-MM-dd HH:mm:ss:SSS",  // formato con : para milisegundos
+            "yyyy-MM-dd HH:mm:ss.SSS",  // formato con . para milisegundos
+            "yyyy-MM-dd HH:mm:ss"       // formato sin milisegundos
+        };
+        
+        for (String format : formats) {
+            try {
+                SimpleDateFormat sdf = new SimpleDateFormat(format);
+                sdf.setLenient(false);
+                parsedDate = sdf.parse(timestampStr);
+                break;
+            } catch (Exception e) {
+                // Probar el siguiente formato
+            }
+        }
+        
+        if (parsedDate == null) {
+            throw new Exception("No se pudo parsear el timestamp: " + timestampStr);
+        }
+        
+        return new Timestamp(parsedDate.getTime());
+    }
+    
     private int getIntOrDefault(JsonObject obj, String key, int defaultValue) {
         return obj.has(key) && !obj.get(key).isJsonNull() ? obj.get(key).getAsInt() : defaultValue;
     }
