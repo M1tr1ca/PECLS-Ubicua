@@ -8,7 +8,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 import logic.Log;
 import mqtt.MQTTBroker;
 import mqtt.MQTTPublisher;
@@ -19,7 +18,7 @@ import mqtt.MQTTPublisher;
 @WebServlet("/SendCommand")
 public class SendCommand extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private static final String CONTROL_TOPIC = "uah/alcala/weather/control";
+    private static final String CONTROL_TOPIC = "sensors/ST_1617/alerts";
     
     public SendCommand() {
         super();

@@ -12,8 +12,6 @@ services:
   base-datos:
     image: postgres:16
     container_name: base-datos-ubicua #nombre con el que se comunicará el servidor Java
-    ports:
-      - "3001:5432"
     environment: #Se debe configurar la base de datos
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=admin

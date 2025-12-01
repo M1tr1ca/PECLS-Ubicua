@@ -3449,3 +3449,684 @@
 1764450497: Client WheatherStationUAH-subscriber closed its connection.
 1764450498: mosquitto version 2.0.22 terminating
 1764450498: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764604850: mosquitto version 2.0.22 starting
+1764604850: Config loaded from /mosquitto/config/mosquitto.conf.
+1764604850: Opening ipv4 listen socket on port 1883.
+1764604850: Opening ipv6 listen socket on port 1883.
+1764604850: mosquitto version 2.0.22 running
+1764604852: New connection from 172.18.0.4:40098 on port 1883.
+1764604852: New client connected from 172.18.0.4:40098 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764604852: New connection from 172.18.0.4:40102 on port 1883.
+1764604852: New client connected from 172.18.0.4:40102 as WheatherStationUAH-publisher (p2, c1, k60).
+1764604852: Client WheatherStationUAH-publisher disconnected.
+1764604893: New connection from 172.18.0.4:54156 on port 1883.
+1764604893: New client connected from 172.18.0.4:54156 as StatusChecker-1764604893523 (p2, c1, k60).
+1764604893: Client StatusChecker-1764604893523 disconnected.
+1764604899: New connection from 172.18.0.4:54904 on port 1883.
+1764604899: New client connected from 172.18.0.4:54904 as StatusChecker-1764604899056 (p2, c1, k60).
+1764604899: Client StatusChecker-1764604899056 disconnected.
+1764604900: New connection from 172.18.0.4:54910 on port 1883.
+1764604900: New connection from 172.18.0.4:54922 on port 1883.
+1764604900: New client connected from 172.18.0.4:54910 as StatusChecker-1764604900165 (p2, c1, k60).
+1764604900: Client StatusChecker-1764604900165 disconnected.
+1764604900: New client connected from 172.18.0.4:54922 as StatusChecker-1764604900391 (p2, c1, k60).
+1764604900: Client StatusChecker-1764604900391 disconnected.
+1764604902: New connection from 172.18.0.4:54924 on port 1883.
+1764604903: New client connected from 172.18.0.4:54924 as StatusChecker-1764604902923 (p2, c1, k60).
+1764604903: Client StatusChecker-1764604902923 disconnected.
+1764604904: New connection from 172.18.0.4:39144 on port 1883.
+1764604904: New client connected from 172.18.0.4:39144 as StatusChecker-1764604904427 (p2, c1, k60).
+1764604904: Client StatusChecker-1764604904427 disconnected.
+1764604905: New connection from 172.18.0.4:39158 on port 1883.
+1764604905: New client connected from 172.18.0.4:39158 as StatusChecker-1764604905573 (p2, c1, k60).
+1764604905: Client StatusChecker-1764604905573 disconnected.
+1764604928: New connection from 172.18.0.1:55678 on port 1883.
+1764604928: New client connected from 172.18.0.1:55678 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764604930: New connection from 172.18.0.4:41274 on port 1883.
+1764604930: New client connected from 172.18.0.4:41274 as StatusChecker-1764604930426 (p2, c1, k60).
+1764604930: Client StatusChecker-1764604930426 disconnected.
+1764604960: New connection from 172.18.0.4:56816 on port 1883.
+1764604961: New client connected from 172.18.0.4:56816 as StatusChecker-1764604960981 (p2, c1, k60).
+1764604961: Client StatusChecker-1764604960981 disconnected.
+1764604990: New connection from 172.18.0.4:55680 on port 1883.
+1764604991: New client connected from 172.18.0.4:55680 as StatusChecker-1764604990987 (p2, c1, k60).
+1764604991: Client StatusChecker-1764604990987 disconnected.
+1764605021: New connection from 172.18.0.4:47036 on port 1883.
+1764605021: New client connected from 172.18.0.4:47036 as StatusChecker-1764605020998 (p2, c1, k60).
+1764605021: Client StatusChecker-1764605020998 disconnected.
+1764605050: New connection from 172.18.0.4:55900 on port 1883.
+1764605051: New client connected from 172.18.0.4:55900 as StatusChecker-1764605050966 (p2, c1, k60).
+1764605051: Client StatusChecker-1764605050966 disconnected.
+1764605069: New connection from 172.18.0.4:60160 on port 1883.
+1764605069: New client connected from 172.18.0.4:60160 as StatusChecker-1764605069327 (p2, c1, k60).
+1764605069: Client StatusChecker-1764605069327 disconnected.
+1764605100: New connection from 172.18.0.4:43144 on port 1883.
+1764605100: New client connected from 172.18.0.4:43144 as StatusChecker-1764605099998 (p2, c1, k60).
+1764605100: Client StatusChecker-1764605099998 disconnected.
+1764605120: New connection from 172.18.0.4:38712 on port 1883.
+1764605120: New connection from 172.18.0.4:38720 on port 1883.
+1764605120: New client connected from 172.18.0.4:38712 as StatusChecker-1764605120660 (p2, c1, k60).
+1764605120: Client StatusChecker-1764605120660 disconnected.
+1764605121: New connection from 172.18.0.4:38722 on port 1883.
+1764605121: New client connected from 172.18.0.4:38720 as StatusChecker-1764605120923 (p2, c1, k60).
+1764605121: Client StatusChecker-1764605120923 disconnected.
+1764605121: New connection from 172.18.0.4:38724 on port 1883.
+1764605121: New client connected from 172.18.0.4:38722 as StatusChecker-1764605121120 (p2, c1, k60).
+1764605121: Client StatusChecker-1764605121120 disconnected.
+1764605121: New client connected from 172.18.0.4:38724 as StatusChecker-1764605121275 (p2, c1, k60).
+1764605121: Client StatusChecker-1764605121275 disconnected.
+1764605445: mosquitto version 2.0.22 starting
+1764605445: Config loaded from /mosquitto/config/mosquitto.conf.
+1764605445: Opening ipv4 listen socket on port 1883.
+1764605445: Opening ipv6 listen socket on port 1883.
+1764605445: mosquitto version 2.0.22 running
+1764605447: New connection from 172.18.0.2:55452 on port 1883.
+1764605447: New client connected from 172.18.0.2:55452 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764605447: New connection from 172.18.0.2:55462 on port 1883.
+1764605448: New client connected from 172.18.0.2:55462 as WheatherStationUAH-publisher (p2, c1, k60).
+1764605448: Client WheatherStationUAH-publisher disconnected.
+1764605496: Client WheatherStationUAH-subscriber closed its connection.
+1764605498: New connection from 172.18.0.2:47610 on port 1883.
+1764605498: New client connected from 172.18.0.2:47610 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764605498: New connection from 172.18.0.2:42896 on port 1883.
+1764605498: New client connected from 172.18.0.2:42896 as WheatherStationUAH-publisher (p2, c1, k60).
+1764605498: Client WheatherStationUAH-publisher disconnected.
+1764605578: New connection from 172.18.0.1:45920 on port 1883.
+1764605578: New client connected from 172.18.0.1:45920 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764605587: New connection from 172.18.0.2:38632 on port 1883.
+1764605587: New client connected from 172.18.0.2:38632 as StatusChecker-1764605587338 (p2, c1, k60).
+1764605587: Client StatusChecker-1764605587338 disconnected.
+1764605588: New connection from 172.18.0.2:48428 on port 1883.
+1764605588: New client connected from 172.18.0.2:48428 as StatusChecker-1764605588665 (p2, c1, k60).
+1764605588: Client StatusChecker-1764605588665 disconnected.
+1764605589: New connection from 172.18.0.2:48432 on port 1883.
+1764605590: New client connected from 172.18.0.2:48432 as StatusChecker-1764605589931 (p2, c1, k60).
+1764605590: Client StatusChecker-1764605589931 disconnected.
+1764605590: New connection from 172.18.0.2:48446 on port 1883.
+1764605591: New client connected from 172.18.0.2:48446 as StatusChecker-1764605590724 (p2, c1, k60).
+1764605591: Client StatusChecker-1764605590724 disconnected.
+1764605620: New connection from 172.18.0.2:36578 on port 1883.
+1764605621: New client connected from 172.18.0.2:36578 as StatusChecker-1764605620973 (p2, c1, k60).
+1764605621: Client StatusChecker-1764605620973 disconnected.
+1764605650: New connection from 172.18.0.2:43824 on port 1883.
+1764605651: New client connected from 172.18.0.2:43824 as StatusChecker-1764605650958 (p2, c1, k60).
+1764605651: Client StatusChecker-1764605650958 disconnected.
+1764605680: New connection from 172.18.0.2:47344 on port 1883.
+1764605681: New client connected from 172.18.0.2:47344 as StatusChecker-1764605680965 (p2, c1, k60).
+1764605681: Client StatusChecker-1764605680965 disconnected.
+1764605710: New connection from 172.18.0.2:49444 on port 1883.
+1764605711: New client connected from 172.18.0.2:49444 as StatusChecker-1764605710957 (p2, c1, k60).
+1764605711: Client StatusChecker-1764605710957 disconnected.
+1764605740: New connection from 172.18.0.2:55970 on port 1883.
+1764605741: New client connected from 172.18.0.2:55970 as StatusChecker-1764605740963 (p2, c1, k60).
+1764605741: Client StatusChecker-1764605740963 disconnected.
+1764605770: New connection from 172.18.0.2:35130 on port 1883.
+1764605771: New client connected from 172.18.0.2:35130 as StatusChecker-1764605770968 (p2, c1, k60).
+1764605771: Client StatusChecker-1764605770968 disconnected.
+1764605831: New connection from 172.18.0.2:32796 on port 1883.
+1764605832: New client connected from 172.18.0.2:32796 as StatusChecker-1764605831961 (p2, c1, k60).
+1764605832: Client StatusChecker-1764605831961 disconnected.
+1764605892: New connection from 172.18.0.2:52372 on port 1883.
+1764605893: New client connected from 172.18.0.2:52372 as StatusChecker-1764605892963 (p2, c1, k60).
+1764605893: Client StatusChecker-1764605892963 disconnected.
+1764605953: New connection from 172.18.0.2:38346 on port 1883.
+1764605954: New client connected from 172.18.0.2:38346 as StatusChecker-1764605953973 (p2, c1, k60).
+1764605954: Client StatusChecker-1764605953973 disconnected.
+1764606014: New connection from 172.18.0.2:52548 on port 1883.
+1764606015: New client connected from 172.18.0.2:52548 as StatusChecker-1764606014967 (p2, c1, k60).
+1764606015: Client StatusChecker-1764606014967 disconnected.
+1764606075: New connection from 172.18.0.2:55530 on port 1883.
+1764606076: New client connected from 172.18.0.2:55530 as StatusChecker-1764606075949 (p2, c1, k60).
+1764606076: Client StatusChecker-1764606075949 disconnected.
+1764606136: New connection from 172.18.0.2:47456 on port 1883.
+1764606137: New client connected from 172.18.0.2:47456 as StatusChecker-1764606136970 (p2, c1, k60).
+1764606137: Client StatusChecker-1764606136970 disconnected.
+1764606160: New connection from 172.18.0.2:58960 on port 1883.
+1764606161: New client connected from 172.18.0.2:58960 as StatusChecker-1764606160960 (p2, c1, k60).
+1764606161: Client StatusChecker-1764606160960 disconnected.
+1764606191: New connection from 172.18.0.2:37842 on port 1883.
+1764606191: New client connected from 172.18.0.2:37842 as StatusChecker-1764606191043 (p2, c1, k60).
+1764606191: Client StatusChecker-1764606191043 disconnected.
+1764606251: New connection from 172.18.0.2:59150 on port 1883.
+1764606252: New client connected from 172.18.0.2:59150 as StatusChecker-1764606251971 (p2, c1, k60).
+1764606252: Client StatusChecker-1764606251971 disconnected.
+1764606312: New connection from 172.18.0.2:41962 on port 1883.
+1764606313: New client connected from 172.18.0.2:41962 as StatusChecker-1764606312971 (p2, c1, k60).
+1764606313: Client StatusChecker-1764606312971 disconnected.
+1764606340: New connection from 172.18.0.2:32838 on port 1883.
+1764606341: New client connected from 172.18.0.2:32838 as StatusChecker-1764606340957 (p2, c1, k60).
+1764606341: Client StatusChecker-1764606340957 disconnected.
+1764606370: New connection from 172.18.0.2:59076 on port 1883.
+1764606371: New client connected from 172.18.0.2:59076 as StatusChecker-1764606370959 (p2, c1, k60).
+1764606371: Client StatusChecker-1764606370959 disconnected.
+1764606431: New connection from 172.18.0.2:39814 on port 1883.
+1764606432: New client connected from 172.18.0.2:39814 as StatusChecker-1764606431954 (p2, c1, k60).
+1764606432: Client StatusChecker-1764606431954 disconnected.
+1764606453: Client WheatherStationUAH-subscriber closed its connection.
+1764606453: mosquitto version 2.0.22 terminating
+1764606453: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764606825: mosquitto version 2.0.22 starting
+1764606825: Config loaded from /mosquitto/config/mosquitto.conf.
+1764606825: Opening ipv4 listen socket on port 1883.
+1764606825: Opening ipv6 listen socket on port 1883.
+1764606825: mosquitto version 2.0.22 running
+1764606827: New connection from 172.18.0.4:60568 on port 1883.
+1764606827: New client connected from 172.18.0.4:60568 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764606827: New connection from 172.18.0.4:60574 on port 1883.
+1764606827: New client connected from 172.18.0.4:60574 as WheatherStationUAH-publisher (p2, c1, k60).
+1764606827: Client WheatherStationUAH-publisher disconnected.
+1764606851: New connection from 172.18.0.4:34544 on port 1883.
+1764606851: New client connected from 172.18.0.4:34544 as StatusChecker-1764606851055 (p2, c1, k60).
+1764606851: Client StatusChecker-1764606851055 disconnected.
+1764606880: New connection from 172.18.0.4:36692 on port 1883.
+1764606881: New client connected from 172.18.0.4:36692 as StatusChecker-1764606880973 (p2, c1, k60).
+1764606881: Client StatusChecker-1764606880973 disconnected.
+1764606910: New connection from 172.18.0.4:48534 on port 1883.
+1764606911: New client connected from 172.18.0.4:48534 as StatusChecker-1764606910958 (p2, c1, k60).
+1764606911: Client StatusChecker-1764606910958 disconnected.
+1764606940: New connection from 172.18.0.4:34848 on port 1883.
+1764606941: New client connected from 172.18.0.4:34848 as StatusChecker-1764606940959 (p2, c1, k60).
+1764606941: Client StatusChecker-1764606940959 disconnected.
+1764606970: New connection from 172.18.0.4:44786 on port 1883.
+1764606971: New client connected from 172.18.0.4:44786 as StatusChecker-1764606970973 (p2, c1, k60).
+1764606971: Client StatusChecker-1764606970973 disconnected.
+1764607000: New connection from 172.18.0.4:36400 on port 1883.
+1764607001: New client connected from 172.18.0.4:36400 as StatusChecker-1764607000957 (p2, c1, k60).
+1764607001: Client StatusChecker-1764607000957 disconnected.
+1764607030: New connection from 172.18.0.4:58706 on port 1883.
+1764607031: New client connected from 172.18.0.4:58706 as StatusChecker-1764607030964 (p2, c1, k60).
+1764607031: Client StatusChecker-1764607030964 disconnected.
+1764607036: New connection from 172.18.0.1:60782 on port 1883.
+1764607036: New client connected from 172.18.0.1:60782 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764607060: New connection from 172.18.0.4:40196 on port 1883.
+1764607061: New client connected from 172.18.0.4:40196 as StatusChecker-1764607060737 (p2, c1, k60).
+1764607061: Client StatusChecker-1764607060737 disconnected.
+1764607075: New connection from 172.18.0.4:42534 on port 1883.
+1764607075: New client connected from 172.18.0.4:42534 as StatusChecker-1764607075428 (p2, c1, k60).
+1764607075: Client StatusChecker-1764607075428 disconnected.
+1764607105: New connection from 172.18.0.4:51882 on port 1883.
+1764607105: New client connected from 172.18.0.4:51882 as StatusChecker-1764607105442 (p2, c1, k60).
+1764607105: Client StatusChecker-1764607105442 disconnected.
+1764607135: New connection from 172.18.0.4:38026 on port 1883.
+1764607136: New client connected from 172.18.0.4:38026 as StatusChecker-1764607135972 (p2, c1, k60).
+1764607136: Client StatusChecker-1764607135972 disconnected.
+1764607165: New connection from 172.18.0.4:50452 on port 1883.
+1764607166: New client connected from 172.18.0.4:50452 as StatusChecker-1764607165967 (p2, c1, k60).
+1764607166: Client StatusChecker-1764607165967 disconnected.
+1764607195: New connection from 172.18.0.4:45406 on port 1883.
+1764607196: New client connected from 172.18.0.4:45406 as StatusChecker-1764607195959 (p2, c1, k60).
+1764607196: Client StatusChecker-1764607195959 disconnected.
+1764607225: New connection from 172.18.0.4:39962 on port 1883.
+1764607226: New client connected from 172.18.0.4:39962 as StatusChecker-1764607225959 (p2, c1, k60).
+1764607226: Client StatusChecker-1764607225959 disconnected.
+1764607255: New connection from 172.18.0.4:58526 on port 1883.
+1764607256: New client connected from 172.18.0.4:58526 as StatusChecker-1764607255960 (p2, c1, k60).
+1764607256: Client StatusChecker-1764607255960 disconnected.
+1764607285: New connection from 172.18.0.4:34318 on port 1883.
+1764607286: New client connected from 172.18.0.4:34318 as StatusChecker-1764607285964 (p2, c1, k60).
+1764607286: Client StatusChecker-1764607285964 disconnected.
+1764607315: New connection from 172.18.0.4:34524 on port 1883.
+1764607316: New client connected from 172.18.0.4:34524 as StatusChecker-1764607315949 (p2, c1, k60).
+1764607316: Client StatusChecker-1764607315949 disconnected.
+1764607345: New connection from 172.18.0.4:50488 on port 1883.
+1764607346: New client connected from 172.18.0.4:50488 as StatusChecker-1764607345961 (p2, c1, k60).
+1764607346: Client StatusChecker-1764607345961 disconnected.
+1764607375: New connection from 172.18.0.4:41672 on port 1883.
+1764607376: New client connected from 172.18.0.4:41672 as StatusChecker-1764607375962 (p2, c1, k60).
+1764607376: Client StatusChecker-1764607375962 disconnected.
+1764607405: New connection from 172.18.0.4:49920 on port 1883.
+1764607406: New client connected from 172.18.0.4:49920 as StatusChecker-1764607405954 (p2, c1, k60).
+1764607406: Client StatusChecker-1764607405954 disconnected.
+1764607456: New connection from 172.18.0.4:35838 on port 1883.
+1764607457: New client connected from 172.18.0.4:35838 as StatusChecker-1764607456962 (p2, c1, k60).
+1764607457: Client StatusChecker-1764607456962 disconnected.
+1764607516: New connection from 172.18.0.4:52682 on port 1883.
+1764607517: New client connected from 172.18.0.4:52682 as StatusChecker-1764607516955 (p2, c1, k60).
+1764607517: Client StatusChecker-1764607516955 disconnected.
+1764607574: New connection from 172.18.0.4:41750 on port 1883.
+1764607575: New client connected from 172.18.0.4:41750 as StatusChecker-1764607574907 (p2, c1, k60).
+1764607575: Client StatusChecker-1764607574907 disconnected.
+1764607585: New connection from 172.18.0.4:58798 on port 1883.
+1764607586: New client connected from 172.18.0.4:58798 as StatusChecker-1764607585980 (p2, c1, k60).
+1764607586: Client StatusChecker-1764607585980 disconnected.
+1764607615: New connection from 172.18.0.4:56500 on port 1883.
+1764607616: New client connected from 172.18.0.4:56500 as StatusChecker-1764607615952 (p2, c1, k60).
+1764607616: Client StatusChecker-1764607615952 disconnected.
+1764607645: New connection from 172.18.0.4:34408 on port 1883.
+1764607646: New client connected from 172.18.0.4:34408 as StatusChecker-1764607645966 (p2, c1, k60).
+1764607646: Client StatusChecker-1764607645966 disconnected.
+1764607675: New connection from 172.18.0.4:45690 on port 1883.
+1764607676: New client connected from 172.18.0.4:45690 as StatusChecker-1764607675956 (p2, c1, k60).
+1764607676: Client StatusChecker-1764607675956 disconnected.
+1764607705: New connection from 172.18.0.4:58314 on port 1883.
+1764607706: New client connected from 172.18.0.4:58314 as StatusChecker-1764607705968 (p2, c1, k60).
+1764607706: Client StatusChecker-1764607705968 disconnected.
+1764607738: New connection from 172.18.0.4:46428 on port 1883.
+1764607739: New client connected from 172.18.0.4:46428 as StatusChecker-1764607738866 (p2, c1, k60).
+1764607739: Client StatusChecker-1764607738866 disconnected.
+1764607765: New connection from 172.18.0.4:42056 on port 1883.
+1764607766: New client connected from 172.18.0.4:42056 as StatusChecker-1764607765975 (p2, c1, k60).
+1764607766: Client StatusChecker-1764607765975 disconnected.
+1764607785: Client WheatherStationUAH-subscriber closed its connection.
+1764607785: mosquitto version 2.0.22 terminating
+1764607785: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764607817: mosquitto version 2.0.22 starting
+1764607817: Config loaded from /mosquitto/config/mosquitto.conf.
+1764607817: Opening ipv4 listen socket on port 1883.
+1764607817: Opening ipv6 listen socket on port 1883.
+1764607817: mosquitto version 2.0.22 running
+1764607819: New connection from 172.18.0.4:54128 on port 1883.
+1764607819: New client connected from 172.18.0.4:54128 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764607819: New connection from 172.18.0.4:54144 on port 1883.
+1764607819: New client connected from 172.18.0.4:54144 as WheatherStationUAH-publisher (p2, c1, k60).
+1764607819: Client WheatherStationUAH-publisher disconnected.
+1764607830: New connection from 172.18.0.4:51528 on port 1883.
+1764607831: New client connected from 172.18.0.4:51528 as StatusChecker-1764607830787 (p2, c1, k60).
+1764607831: Client StatusChecker-1764607830787 disconnected.
+1764607834: New connection from 172.18.0.4:51542 on port 1883.
+1764607835: New client connected from 172.18.0.4:51542 as StatusChecker-1764607834773 (p2, c1, k60).
+1764607835: Client StatusChecker-1764607834773 disconnected.
+1764607835: New connection from 172.18.0.4:51550 on port 1883.
+1764607836: New client connected from 172.18.0.4:51550 as StatusChecker-1764607835793 (p2, c1, k60).
+1764607836: Client StatusChecker-1764607835793 disconnected.
+1764607865: New connection from 172.18.0.4:38038 on port 1883.
+1764607866: New client connected from 172.18.0.4:38038 as StatusChecker-1764607865968 (p2, c1, k60).
+1764607866: Client StatusChecker-1764607865968 disconnected.
+1764607896: New connection from 172.18.0.4:46074 on port 1883.
+1764607896: New client connected from 172.18.0.4:46074 as StatusChecker-1764607896037 (p2, c1, k60).
+1764607896: Client StatusChecker-1764607896037 disconnected.
+1764607896: Client WheatherStationUAH-subscriber closed its connection.
+1764607897: mosquitto version 2.0.22 terminating
+1764607897: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764607908: mosquitto version 2.0.22 starting
+1764607908: Config loaded from /mosquitto/config/mosquitto.conf.
+1764607908: Opening ipv4 listen socket on port 1883.
+1764607908: Opening ipv6 listen socket on port 1883.
+1764607908: mosquitto version 2.0.22 running
+1764607909: New connection from 172.18.0.4:56024 on port 1883.
+1764607909: New client connected from 172.18.0.4:56024 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764607909: New connection from 172.18.0.4:56034 on port 1883.
+1764607910: New client connected from 172.18.0.4:56034 as WheatherStationUAH-publisher (p2, c1, k60).
+1764607910: Client WheatherStationUAH-publisher disconnected.
+1764607924: New connection from 172.18.0.4:56082 on port 1883.
+1764607924: New client connected from 172.18.0.4:56082 as StatusChecker-1764607924068 (p2, c1, k60).
+1764607924: Client StatusChecker-1764607924068 disconnected.
+1764607954: New connection from 172.18.0.4:38134 on port 1883.
+1764607955: New client connected from 172.18.0.4:38134 as StatusChecker-1764607954959 (p2, c1, k60).
+1764607955: Client StatusChecker-1764607954959 disconnected.
+1764607984: New connection from 172.18.0.4:40400 on port 1883.
+1764607985: New client connected from 172.18.0.4:40400 as StatusChecker-1764607984950 (p2, c1, k60).
+1764607985: Client StatusChecker-1764607984950 disconnected.
+1764608014: New connection from 172.18.0.4:60338 on port 1883.
+1764608015: New client connected from 172.18.0.4:60338 as StatusChecker-1764608014960 (p2, c1, k60).
+1764608015: Client StatusChecker-1764608014960 disconnected.
+1764608040: Client WheatherStationUAH-subscriber closed its connection.
+1764608040: mosquitto version 2.0.22 terminating
+1764608040: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764608050: mosquitto version 2.0.22 starting
+1764608050: Config loaded from /mosquitto/config/mosquitto.conf.
+1764608050: Opening ipv4 listen socket on port 1883.
+1764608050: Opening ipv6 listen socket on port 1883.
+1764608050: mosquitto version 2.0.22 running
+1764608052: New connection from 172.18.0.4:60138 on port 1883.
+1764608052: New client connected from 172.18.0.4:60138 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764608052: New connection from 172.18.0.4:60150 on port 1883.
+1764608052: New client connected from 172.18.0.4:60150 as WheatherStationUAH-publisher (p2, c1, k60).
+1764608052: Client WheatherStationUAH-publisher disconnected.
+1764608056: New connection from 172.18.0.4:60154 on port 1883.
+1764608057: New client connected from 172.18.0.4:60154 as StatusChecker-1764608056964 (p2, c1, k60).
+1764608057: Client StatusChecker-1764608056964 disconnected.
+1764608087: New connection from 172.18.0.4:55684 on port 1883.
+1764608088: New client connected from 172.18.0.4:55684 as StatusChecker-1764608087965 (p2, c1, k60).
+1764608088: Client StatusChecker-1764608087965 disconnected.
+1764608117: New connection from 172.18.0.4:51810 on port 1883.
+1764608118: New client connected from 172.18.0.4:51810 as StatusChecker-1764608117951 (p2, c1, k60).
+1764608118: Client StatusChecker-1764608117951 disconnected.
+1764608134: Client WheatherStationUAH-subscriber closed its connection.
+1764608134: mosquitto version 2.0.22 terminating
+1764608134: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764608146: mosquitto version 2.0.22 starting
+1764608146: Config loaded from /mosquitto/config/mosquitto.conf.
+1764608146: Opening ipv4 listen socket on port 1883.
+1764608146: Opening ipv6 listen socket on port 1883.
+1764608146: mosquitto version 2.0.22 running
+1764608148: New connection from 172.18.0.4:51070 on port 1883.
+1764608148: New client connected from 172.18.0.4:51070 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764608148: New connection from 172.18.0.4:43134 on port 1883.
+1764608148: New client connected from 172.18.0.4:43134 as WheatherStationUAH-publisher (p2, c1, k60).
+1764608148: Client WheatherStationUAH-publisher disconnected.
+1764608148: New connection from 172.18.0.4:43144 on port 1883.
+1764608149: New client connected from 172.18.0.4:43144 as StatusChecker-1764608148801 (p2, c1, k60).
+1764608149: Client StatusChecker-1764608148801 disconnected.
+1764608157: New connection from 172.18.0.4:43156 on port 1883.
+1764608158: New client connected from 172.18.0.4:43156 as StatusChecker-1764608157983 (p2, c1, k60).
+1764608158: Client StatusChecker-1764608157983 disconnected.
+1764608187: New connection from 172.18.0.4:54110 on port 1883.
+1764608188: New client connected from 172.18.0.4:54110 as StatusChecker-1764608187990 (p2, c1, k60).
+1764608188: Client StatusChecker-1764608187990 disconnected.
+1764608218: New connection from 172.18.0.4:60418 on port 1883.
+1764608219: New client connected from 172.18.0.4:60418 as StatusChecker-1764608218963 (p2, c1, k60).
+1764608219: Client StatusChecker-1764608218963 disconnected.
+1764608248: New connection from 172.18.0.4:36268 on port 1883.
+1764608249: New client connected from 172.18.0.4:36268 as StatusChecker-1764608248961 (p2, c1, k60).
+1764608249: Client StatusChecker-1764608248961 disconnected.
+1764608278: New connection from 172.18.0.4:55176 on port 1883.
+1764608279: New client connected from 172.18.0.4:55176 as StatusChecker-1764608278950 (p2, c1, k60).
+1764608279: Client StatusChecker-1764608278950 disconnected.
+1764608308: New connection from 172.18.0.4:41020 on port 1883.
+1764608309: New client connected from 172.18.0.4:41020 as StatusChecker-1764608308963 (p2, c1, k60).
+1764608309: Client StatusChecker-1764608308963 disconnected.
+1764608338: New connection from 172.18.0.4:54146 on port 1883.
+1764608339: New client connected from 172.18.0.4:54146 as StatusChecker-1764608338967 (p2, c1, k60).
+1764608339: Client StatusChecker-1764608338967 disconnected.
+1764608347: Client WheatherStationUAH-subscriber closed its connection.
+1764608348: mosquitto version 2.0.22 terminating
+1764608348: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764608377: mosquitto version 2.0.22 starting
+1764608377: Config loaded from /mosquitto/config/mosquitto.conf.
+1764608377: Opening ipv4 listen socket on port 1883.
+1764608377: Opening ipv6 listen socket on port 1883.
+1764608377: mosquitto version 2.0.22 running
+1764608379: New connection from 172.18.0.4:52072 on port 1883.
+1764608379: New client connected from 172.18.0.4:52072 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764608379: New connection from 172.18.0.4:52074 on port 1883.
+1764608379: New client connected from 172.18.0.4:52074 as WheatherStationUAH-publisher (p2, c1, k60).
+1764608379: Client WheatherStationUAH-publisher disconnected.
+1764608385: New connection from 172.18.0.4:52076 on port 1883.
+1764608386: New client connected from 172.18.0.4:52076 as StatusChecker-1764608385750 (p2, c1, k60).
+1764608386: Client StatusChecker-1764608385750 disconnected.
+1764608391: New connection from 172.18.0.4:59340 on port 1883.
+1764608391: New client connected from 172.18.0.4:59340 as StatusChecker-1764608391441 (p2, c1, k60).
+1764608391: Client StatusChecker-1764608391441 disconnected.
+1764608394: New connection from 172.18.0.4:59356 on port 1883.
+1764608394: New client connected from 172.18.0.4:59356 as WheatherStationUAH-publisher (p2, c1, k60).
+1764608394: Client WheatherStationUAH-publisher disconnected.
+1764608401: New connection from 172.18.0.1:50944 on port 1883.
+1764608401: New client connected from 172.18.0.1:50944 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764608404: New connection from 172.18.0.4:33138 on port 1883.
+1764608404: New client connected from 172.18.0.4:33138 as WheatherStationUAH-publisher (p2, c1, k60).
+1764608404: Client WheatherStationUAH-publisher disconnected.
+1764608423: New connection from 172.18.0.4:40868 on port 1883.
+1764608424: New client connected from 172.18.0.4:40868 as StatusChecker-1764608423705 (p2, c1, k60).
+1764608424: Client StatusChecker-1764608423705 disconnected.
+1764608427: New connection from 172.18.0.4:40870 on port 1883.
+1764608427: New client connected from 172.18.0.4:40870 as WheatherStationUAH-publisher (p2, c1, k60).
+1764608427: Client WheatherStationUAH-publisher disconnected.
+1764608437: New connection from 172.18.0.4:52114 on port 1883.
+1764608438: New client connected from 172.18.0.4:52114 as WheatherStationUAH-publisher (p2, c1, k60).
+1764608438: Client WheatherStationUAH-publisher disconnected.
+1764608451: New connection from 172.18.0.4:47172 on port 1883.
+1764608451: New client connected from 172.18.0.4:47172 as StatusChecker-1764608451447 (p2, c1, k60).
+1764608451: Client StatusChecker-1764608451447 disconnected.
+1764608478: New connection from 172.18.0.4:60332 on port 1883.
+1764608479: New client connected from 172.18.0.4:60332 as WheatherStationUAH-publisher (p2, c1, k60).
+1764608479: Client WheatherStationUAH-publisher disconnected.
+1764608481: New connection from 172.18.0.4:60346 on port 1883.
+1764608482: New client connected from 172.18.0.4:60346 as StatusChecker-1764608481952 (p2, c1, k60).
+1764608482: Client StatusChecker-1764608481952 disconnected.
+1764609122: Client WheatherStationUAH-subscriber closed its connection.
+1764609123: mosquitto version 2.0.22 terminating
+1764609123: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764609131: mosquitto version 2.0.22 starting
+1764609131: Config loaded from /mosquitto/config/mosquitto.conf.
+1764609131: Opening ipv4 listen socket on port 1883.
+1764609131: Opening ipv6 listen socket on port 1883.
+1764609131: mosquitto version 2.0.22 running
+1764609133: New connection from 172.18.0.4:45830 on port 1883.
+1764609133: New client connected from 172.18.0.4:45830 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764609133: New connection from 172.18.0.4:45842 on port 1883.
+1764609133: New client connected from 172.18.0.4:45842 as WheatherStationUAH-publisher (p2, c1, k60).
+1764609133: Client WheatherStationUAH-publisher disconnected.
+1764609143: New connection from 172.18.0.1:56964 on port 1883.
+1764609143: New client connected from 172.18.0.1:56964 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764609180: New connection from 172.18.0.4:35714 on port 1883.
+1764609181: New client connected from 172.18.0.4:35714 as StatusChecker-1764609180855 (p2, c1, k60).
+1764609181: Client StatusChecker-1764609180855 disconnected.
+1764609184: New connection from 172.18.0.4:35730 on port 1883.
+1764609184: New client connected from 172.18.0.4:35730 as StatusChecker-1764609184030 (p2, c1, k60).
+1764609184: Client StatusChecker-1764609184030 disconnected.
+1764609210: New connection from 172.18.0.4:47882 on port 1883.
+1764609211: New client connected from 172.18.0.4:47882 as StatusChecker-1764609210866 (p2, c1, k60).
+1764609211: Client StatusChecker-1764609210866 disconnected.
+1764609240: New connection from 172.18.0.4:36182 on port 1883.
+1764609241: New client connected from 172.18.0.4:36182 as StatusChecker-1764609240873 (p2, c1, k60).
+1764609241: Client StatusChecker-1764609240873 disconnected.
+1764609270: New connection from 172.18.0.4:54228 on port 1883.
+1764609271: New client connected from 172.18.0.4:54228 as StatusChecker-1764609270959 (p2, c1, k60).
+1764609271: Client StatusChecker-1764609270959 disconnected.
+1764609300: New connection from 172.18.0.4:40480 on port 1883.
+1764609301: New client connected from 172.18.0.4:40480 as StatusChecker-1764609300980 (p2, c1, k60).
+1764609301: Client StatusChecker-1764609300980 disconnected.
+1764609330: New connection from 172.18.0.4:46150 on port 1883.
+1764609331: New client connected from 172.18.0.4:46150 as StatusChecker-1764609330975 (p2, c1, k60).
+1764609331: Client StatusChecker-1764609330975 disconnected.
+1764609360: New connection from 172.18.0.4:44136 on port 1883.
+1764609361: New client connected from 172.18.0.4:44136 as StatusChecker-1764609360959 (p2, c1, k60).
+1764609361: Client StatusChecker-1764609360959 disconnected.
+1764609388: Client WheatherStationUAH-subscriber closed its connection.
+1764609389: mosquitto version 2.0.22 terminating
+1764609389: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764609396: mosquitto version 2.0.22 starting
+1764609396: Config loaded from /mosquitto/config/mosquitto.conf.
+1764609396: Opening ipv4 listen socket on port 1883.
+1764609396: Opening ipv6 listen socket on port 1883.
+1764609396: mosquitto version 2.0.22 running
+1764609398: New connection from 172.18.0.4:40964 on port 1883.
+1764609398: New client connected from 172.18.0.4:40964 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764609398: New connection from 172.18.0.4:40976 on port 1883.
+1764609398: New client connected from 172.18.0.4:40976 as WheatherStationUAH-publisher (p2, c1, k60).
+1764609398: Client WheatherStationUAH-publisher disconnected.
+1764609409: New connection from 172.18.0.4:37726 on port 1883.
+1764609409: New client connected from 172.18.0.4:37726 as StatusChecker-1764609409414 (p2, c1, k60).
+1764609409: Client StatusChecker-1764609409414 disconnected.
+1764609411: New connection from 172.18.0.4:37736 on port 1883.
+1764609411: New client connected from 172.18.0.4:37736 as StatusChecker-1764609411284 (p2, c1, k60).
+1764609411: Client StatusChecker-1764609411284 disconnected.
+1764609411: New connection from 172.18.0.4:37752 on port 1883.
+1764609412: New client connected from 172.18.0.4:37752 as StatusChecker-1764609411793 (p2, c1, k60).
+1764609412: Client StatusChecker-1764609411793 disconnected.
+1764609414: New connection from 172.18.0.4:37756 on port 1883.
+1764609414: New client connected from 172.18.0.4:37756 as WheatherStationUAH-publisher (p2, c1, k60).
+1764609414: Client WheatherStationUAH-publisher disconnected.
+1764609441: New connection from 172.18.0.4:39720 on port 1883.
+1764609442: New client connected from 172.18.0.4:39720 as StatusChecker-1764609441799 (p2, c1, k60).
+1764609442: Client StatusChecker-1764609441799 disconnected.
+1764609471: New connection from 172.18.0.4:45780 on port 1883.
+1764609472: New client connected from 172.18.0.4:45780 as StatusChecker-1764609471966 (p2, c1, k60).
+1764609472: Client StatusChecker-1764609471966 disconnected.
+1764609501: New connection from 172.18.0.4:36292 on port 1883.
+1764609502: New client connected from 172.18.0.4:36292 as StatusChecker-1764609501974 (p2, c1, k60).
+1764609502: Client StatusChecker-1764609501974 disconnected.
+1764609531: New connection from 172.18.0.4:57974 on port 1883.
+1764609532: New client connected from 172.18.0.4:57974 as StatusChecker-1764609531963 (p2, c1, k60).
+1764609532: Client StatusChecker-1764609531963 disconnected.
+1764609561: New connection from 172.18.0.4:60162 on port 1883.
+1764609562: New client connected from 172.18.0.4:60162 as StatusChecker-1764609561998 (p2, c1, k60).
+1764609562: Client StatusChecker-1764609561998 disconnected.
+1764609591: New connection from 172.18.0.4:44158 on port 1883.
+1764609592: New client connected from 172.18.0.4:44158 as StatusChecker-1764609591983 (p2, c1, k60).
+1764609592: Client StatusChecker-1764609591983 disconnected.
+1764609643: Client WheatherStationUAH-subscriber closed its connection.
+1764609643: mosquitto version 2.0.22 terminating
+1764609643: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764609666: mosquitto version 2.0.22 starting
+1764609666: Config loaded from /mosquitto/config/mosquitto.conf.
+1764609666: Opening ipv4 listen socket on port 1883.
+1764609666: Opening ipv6 listen socket on port 1883.
+1764609666: mosquitto version 2.0.22 running
+1764609668: New connection from 172.18.0.4:49846 on port 1883.
+1764609668: New client connected from 172.18.0.4:49846 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764609668: New connection from 172.18.0.4:49858 on port 1883.
+1764609668: New client connected from 172.18.0.4:49858 as WheatherStationUAH-publisher (p2, c1, k60).
+1764609668: Client WheatherStationUAH-publisher disconnected.
+1764609681: New connection from 172.18.0.4:60172 on port 1883.
+1764609682: New client connected from 172.18.0.4:60172 as StatusChecker-1764609681840 (p2, c1, k60).
+1764609682: Client StatusChecker-1764609681840 disconnected.
+1764609707: New connection from 172.18.0.4:38772 on port 1883.
+1764609707: New client connected from 172.18.0.4:38772 as StatusChecker-1764609707673 (p2, c1, k60).
+1764609707: Client StatusChecker-1764609707673 disconnected.
+1764609713: New connection from 172.18.0.4:39234 on port 1883.
+1764609714: New client connected from 172.18.0.4:39234 as WheatherStationUAH-publisher (p2, c1, k60).
+1764609714: Client WheatherStationUAH-publisher disconnected.
+1764609737: New connection from 172.18.0.4:58726 on port 1883.
+1764609738: New client connected from 172.18.0.4:58726 as StatusChecker-1764609737955 (p2, c1, k60).
+1764609738: Client StatusChecker-1764609737955 disconnected.
+1764609767: New connection from 172.18.0.4:39290 on port 1883.
+1764609768: New client connected from 172.18.0.4:39290 as StatusChecker-1764609767973 (p2, c1, k60).
+1764609768: Client StatusChecker-1764609767973 disconnected.
+1764609797: New connection from 172.18.0.4:38226 on port 1883.
+1764609798: New client connected from 172.18.0.4:38226 as StatusChecker-1764609797966 (p2, c1, k60).
+1764609798: Client StatusChecker-1764609797966 disconnected.
+1764609827: New connection from 172.18.0.4:36360 on port 1883.
+1764609828: New client connected from 172.18.0.4:36360 as StatusChecker-1764609827996 (p2, c1, k60).
+1764609828: Client StatusChecker-1764609827996 disconnected.
+1764609857: New connection from 172.18.0.4:47960 on port 1883.
+1764609858: New client connected from 172.18.0.4:47960 as StatusChecker-1764609857973 (p2, c1, k60).
+1764609858: Client StatusChecker-1764609857973 disconnected.
+1764609887: New connection from 172.18.0.4:40722 on port 1883.
+1764609888: New client connected from 172.18.0.4:40722 as StatusChecker-1764609887969 (p2, c1, k60).
+1764609888: Client StatusChecker-1764609887969 disconnected.
+1764609948: New connection from 172.18.0.4:55720 on port 1883.
+1764609949: New client connected from 172.18.0.4:55720 as StatusChecker-1764609948960 (p2, c1, k60).
+1764609949: Client StatusChecker-1764609948960 disconnected.
+1764610009: New connection from 172.18.0.4:41540 on port 1883.
+1764610010: New client connected from 172.18.0.4:41540 as StatusChecker-1764610009955 (p2, c1, k60).
+1764610010: Client StatusChecker-1764610009955 disconnected.
+1764610070: New connection from 172.18.0.4:41416 on port 1883.
+1764610071: New client connected from 172.18.0.4:41416 as StatusChecker-1764610070962 (p2, c1, k60).
+1764610071: Client StatusChecker-1764610070962 disconnected.
+1764610131: New connection from 172.18.0.4:38244 on port 1883.
+1764610132: New client connected from 172.18.0.4:38244 as StatusChecker-1764610131968 (p2, c1, k60).
+1764610132: Client StatusChecker-1764610131968 disconnected.
+1764610192: New connection from 172.18.0.4:47144 on port 1883.
+1764610193: New client connected from 172.18.0.4:47144 as StatusChecker-1764610192966 (p2, c1, k60).
+1764610193: Client StatusChecker-1764610192966 disconnected.
+1764610242: Client WheatherStationUAH-subscriber closed its connection.
+1764610242: mosquitto version 2.0.22 terminating
+1764610242: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764610249: mosquitto version 2.0.22 starting
+1764610249: Config loaded from /mosquitto/config/mosquitto.conf.
+1764610249: Opening ipv4 listen socket on port 1883.
+1764610249: Opening ipv6 listen socket on port 1883.
+1764610249: mosquitto version 2.0.22 running
+1764610251: New connection from 172.18.0.4:58788 on port 1883.
+1764610251: New client connected from 172.18.0.4:58788 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764610251: New connection from 172.18.0.4:58798 on port 1883.
+1764610251: New client connected from 172.18.0.4:58798 as WheatherStationUAH-publisher (p2, c1, k60).
+1764610252: Client WheatherStationUAH-publisher disconnected.
+1764610254: New connection from 172.18.0.4:58804 on port 1883.
+1764610254: New client connected from 172.18.0.4:58804 as StatusChecker-1764610254032 (p2, c1, k60).
+1764610254: Client StatusChecker-1764610254032 disconnected.
+1764610258: New connection from 172.18.0.4:49704 on port 1883.
+1764610258: New client connected from 172.18.0.4:49704 as StatusChecker-1764610258559 (p2, c1, k60).
+1764610258: Client StatusChecker-1764610258559 disconnected.
+1764610262: New connection from 172.18.0.4:49712 on port 1883.
+1764610262: New client connected from 172.18.0.4:49712 as WheatherStationUAH-publisher (p2, c1, k60).
+1764610262: Client WheatherStationUAH-publisher disconnected.
+1764610288: New connection from 172.18.0.4:46906 on port 1883.
+1764610289: New client connected from 172.18.0.4:46906 as StatusChecker-1764610288977 (p2, c1, k60).
+1764610289: Client StatusChecker-1764610288977 disconnected.
+1764610295: New connection from 172.18.0.4:46918 on port 1883.
+1764610295: New client connected from 172.18.0.4:46918 as StatusChecker-1764610295578 (p2, c1, k60).
+1764610295: Client StatusChecker-1764610295578 disconnected.
+1764610298: New connection from 172.18.0.4:46586 on port 1883.
+1764610298: New client connected from 172.18.0.4:46586 as StatusChecker-1764610298105 (p2, c1, k60).
+1764610298: Client StatusChecker-1764610298105 disconnected.
+1764610303: New connection from 172.18.0.1:55554 on port 1883.
+1764610303: New client connected from 172.18.0.1:55554 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764610318: New connection from 172.18.0.4:57030 on port 1883.
+1764610319: New client connected from 172.18.0.4:57030 as WheatherStationUAH-publisher (p2, c1, k60).
+1764610319: Client WheatherStationUAH-publisher disconnected.
+1764610325: New connection from 172.18.0.4:57040 on port 1883.
+1764610326: New client connected from 172.18.0.4:57040 as StatusChecker-1764610325972 (p2, c1, k60).
+1764610326: Client StatusChecker-1764610325972 disconnected.
+1764610355: New connection from 172.18.0.4:54484 on port 1883.
+1764610356: New client connected from 172.18.0.4:54484 as StatusChecker-1764610355959 (p2, c1, k60).
+1764610356: Client StatusChecker-1764610355959 disconnected.
+1764610385: New connection from 172.18.0.4:37230 on port 1883.
+1764610386: New client connected from 172.18.0.4:37230 as StatusChecker-1764610385970 (p2, c1, k60).
+1764610386: Client StatusChecker-1764610385970 disconnected.
+1764610408: New connection from 172.18.0.4:58944 on port 1883.
+1764610408: New client connected from 172.18.0.4:58944 as WheatherStationUAH-publisher (p2, c1, k60).
+1764610408: Client WheatherStationUAH-publisher disconnected.
+1764610415: New connection from 172.18.0.4:58956 on port 1883.
+1764610416: New client connected from 172.18.0.4:58956 as StatusChecker-1764610415959 (p2, c1, k60).
+1764610416: Client StatusChecker-1764610415959 disconnected.
+1764610445: New connection from 172.18.0.4:36266 on port 1883.
+1764610446: New client connected from 172.18.0.4:36266 as StatusChecker-1764610445965 (p2, c1, k60).
+1764610446: Client StatusChecker-1764610445965 disconnected.
+1764610475: New connection from 172.18.0.4:49434 on port 1883.
+1764610476: New client connected from 172.18.0.4:49434 as StatusChecker-1764610475971 (p2, c1, k60).
+1764610476: Client StatusChecker-1764610475971 disconnected.
+1764610502: New connection from 172.18.0.4:44460 on port 1883.
+1764610502: New client connected from 172.18.0.4:44460 as WheatherStationUAH-publisher (p2, c1, k60).
+1764610502: Client WheatherStationUAH-publisher disconnected.
+1764610505: New connection from 172.18.0.4:44474 on port 1883.
+1764610506: New client connected from 172.18.0.4:44474 as StatusChecker-1764610505964 (p2, c1, k60).
+1764610506: Client StatusChecker-1764610505964 disconnected.
+1764610535: New connection from 172.18.0.4:51474 on port 1883.
+1764610536: New client connected from 172.18.0.4:51474 as StatusChecker-1764610535954 (p2, c1, k60).
+1764610536: Client StatusChecker-1764610535954 disconnected.
+1764610565: New connection from 172.18.0.4:37862 on port 1883.
+1764610566: New client connected from 172.18.0.4:37862 as StatusChecker-1764610565963 (p2, c1, k60).
+1764610566: Client StatusChecker-1764610565963 disconnected.
+1764610595: New connection from 172.18.0.4:51876 on port 1883.
+1764610596: New client connected from 172.18.0.4:51876 as StatusChecker-1764610595969 (p2, c1, k60).
+1764610596: Client StatusChecker-1764610595969 disconnected.
+1764610636: New connection from 172.18.0.4:35170 on port 1883.
+1764610637: New client connected from 172.18.0.4:35170 as StatusChecker-1764610636961 (p2, c1, k60).
+1764610637: Client StatusChecker-1764610636961 disconnected.
+1764610696: New connection from 172.18.0.4:37072 on port 1883.
+1764610697: New client connected from 172.18.0.4:37072 as StatusChecker-1764610696969 (p2, c1, k60).
+1764610697: Client StatusChecker-1764610696969 disconnected.
+1764610756: New connection from 172.18.0.4:58248 on port 1883.
+1764610757: New client connected from 172.18.0.4:58248 as StatusChecker-1764610756965 (p2, c1, k60).
+1764610757: Client StatusChecker-1764610756965 disconnected.
+1764610796: Client WheatherStationUAH-subscriber closed its connection.
+1764610796: mosquitto version 2.0.22 terminating
+1764610796: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764610816: mosquitto version 2.0.22 starting
+1764610816: Config loaded from /mosquitto/config/mosquitto.conf.
+1764610816: Opening ipv4 listen socket on port 1883.
+1764610816: Opening ipv6 listen socket on port 1883.
+1764610816: mosquitto version 2.0.22 running
+1764610818: New connection from 172.18.0.4:57042 on port 1883.
+1764610818: New client connected from 172.18.0.4:57042 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764610818: New connection from 172.18.0.4:57044 on port 1883.
+1764610819: New client connected from 172.18.0.4:57044 as WheatherStationUAH-publisher (p2, c1, k60).
+1764610819: Client WheatherStationUAH-publisher disconnected.
+1764610827: New connection from 172.18.0.4:57054 on port 1883.
+1764610827: New client connected from 172.18.0.4:57054 as StatusChecker-1764610827071 (p2, c1, k60).
+1764610827: Client StatusChecker-1764610827071 disconnected.
+1764610827: New connection from 172.18.0.4:57062 on port 1883.
+1764610828: New client connected from 172.18.0.4:57062 as StatusChecker-1764610827722 (p2, c1, k60).
+1764610828: Client StatusChecker-1764610827722 disconnected.
+1764610832: New connection from 172.18.0.4:55350 on port 1883.
+1764610832: New client connected from 172.18.0.4:55350 as WheatherStationUAH-publisher (p2, c1, k60).
+1764610832: Client WheatherStationUAH-publisher disconnected.
+1764610857: New connection from 172.18.0.4:60012 on port 1883.
+1764610858: New client connected from 172.18.0.4:60012 as StatusChecker-1764610857987 (p2, c1, k60).
+1764610858: Client StatusChecker-1764610857987 disconnected.
+1764610887: New connection from 172.18.0.4:55044 on port 1883.
+1764610888: New client connected from 172.18.0.4:55044 as StatusChecker-1764610887954 (p2, c1, k60).
+1764610888: Client StatusChecker-1764610887954 disconnected.
+1764610917: New connection from 172.18.0.4:39424 on port 1883.
+1764610918: New client connected from 172.18.0.4:39424 as StatusChecker-1764610917970 (p2, c1, k60).
+1764610918: Client StatusChecker-1764610917970 disconnected.
+1764610947: New connection from 172.18.0.4:37752 on port 1883.
+1764610948: New client connected from 172.18.0.4:37752 as StatusChecker-1764610947967 (p2, c1, k60).
+1764610948: Client StatusChecker-1764610947967 disconnected.
+1764610977: New connection from 172.18.0.4:50648 on port 1883.
+1764610978: New client connected from 172.18.0.4:50648 as StatusChecker-1764610977966 (p2, c1, k60).
+1764610978: Client StatusChecker-1764610977966 disconnected.
+1764610980: New connection from 172.18.0.1:35942 on port 1883.
+1764610980: New client connected from 172.18.0.1:35942 as mqtt-explorer-33d8c505 (p2, c1, k60).
+1764611007: New connection from 172.18.0.4:57024 on port 1883.
+1764611008: New client connected from 172.18.0.4:57024 as StatusChecker-1764611007976 (p2, c1, k60).
+1764611008: Client StatusChecker-1764611007976 disconnected.
+1764611056: New connection from 172.18.0.4:54852 on port 1883.
+1764611057: New client connected from 172.18.0.4:54852 as StatusChecker-1764611056956 (p2, c1, k60).
+1764611057: Client StatusChecker-1764611056956 disconnected.
+1764611095: Client WheatherStationUAH-subscriber closed its connection.
+1764611096: mosquitto version 2.0.22 terminating
+1764611096: Saving in-memory database to /mosquitto/data//mosquitto.db.

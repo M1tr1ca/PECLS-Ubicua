@@ -69,7 +69,7 @@ public class MQTTSuscriber implements MqttCallback {
         Log.logmqtt.info("{}: {}", topic, message.toString());
         
         // Ignorar mensajes de control (alertas y comandos)
-        if (topic.endsWith("/control")) {
+        if (topic.endsWith("sensors/ST_1617/alerts")) {
             Log.logmqtt.info("Mensaje de control ignorado (no se guarda en BD)");
             return;
         }
@@ -79,7 +79,14 @@ public class MQTTSuscriber implements MqttCallback {
         
         try {
             // Parsear el JSON
-            JsonObject json = JsonParser.parseString(message.toString()).getAsJsonObject();
+            JsonObject json;
+            try {
+                json = JsonParser.parseString(message.toString()).getAsJsonObject();
+            } catch (Exception e) {
+                Log.logmqtt.error("Ignorando mensaje: no tiene formato de JSON");
+                return;
+            }
+            
             
             // Verificar si es un mensaje de control (por si llega por otro topic)
             if (json.has("alert_level") || json.has("command")) {
@@ -89,9 +96,10 @@ public class MQTTSuscriber implements MqttCallback {
             
             // Verificar que tenga los campos necesarios de datos de sensor
             if (!json.has("sensor_id") || !json.has("timestamp") || !json.has("data")) {
-                Log.logmqtt.warn("Mensaje ignorado: no tiene formato de datos de sensor");
+                Log.logmqtt.warn("Mensaje ignorado: no tiene formato de datos de sensor (no presenta campo sensor_id)");
                 return;
             }
+            
             
             String sensorId = json.get("sensor_id").getAsString();
             String timestampStr = json.get("timestamp").getAsString();
@@ -146,12 +154,13 @@ public class MQTTSuscriber implements MqttCallback {
     }
     
     private void saveWeatherSensor(Connection con, String sensorId, Timestamp timestamp, JsonObject data, JsonObject json) throws Exception {
-        double temperature = data.get("temperature_celsius").getAsDouble();
-        double humidity = data.get("humidity_percent").getAsDouble();
-        double pressure = data.get("atmospheric_pressure_hpa").getAsDouble();
+        double temperature = getDoubleOrDefault(data, "temperature_celsius", 999);
+        
+        double humidity = getDoubleOrDefault(data,"humidity_percent", -1);
+        double pressure = getDoubleOrDefault(data,"atmospheric_pressure_hpa", -1);
         
         JsonObject location = json.getAsJsonObject("location");
-        double altitude = location.get("altitude_meters").getAsDouble();
+        double altitude = getDoubleOrDefault(location,"altitude_meters", -1);
         
         String sql = "INSERT INTO sensor_readings (sensor_id, timestamp, temperature_celsius, humidity_percent, atmospheric_pressure_hpa, altitude_meters) VALUES (?, ?, ?, ?, ?, ?)";
         PreparedStatement ps = con.prepareStatement(sql);

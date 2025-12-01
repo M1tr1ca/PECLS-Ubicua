@@ -757,3 +757,348 @@ See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
 2025-11-29 21:07:42.074 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
 2025-11-29 21:07:42.122 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:137) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
 See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-12-01 16:00:52.518 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-01 16:00:52.520 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 16:00:52.824 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 16:00:52.827 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 16:00:52.827 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-01 16:00:52.833 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 16:00:52.868 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:137) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-12-01 16:02:17.025 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors: {
+  fdsfsdfs
+}
+2025-12-01 16:02:17.030 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:137) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Expected ':' at line 3 column 2 path $.fdsfsdfs
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-12-01 16:02:36.893 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors: {
+  "fdsfds":543543
+}
+2025-12-01 16:02:36.895 WARN  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:92) logmqtt ### Mensaje ignorado: no tiene formato de datos de sensor
+2025-12-01 16:03:02.252 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors: {
+  "sensor_id": "LAB08JAV-G2",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-01 16:03:02.299 INFO  mqtt.MQTTSuscriber.saveTrafficLight(MQTTSuscriber.java:248) logmqtt ### Datos traffic_light guardados: sensor=LAB08JAV-G2, state=red, remaining=60s
+2025-12-01 16:04:10.840 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-12-01 16:04:10.847 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:133) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-12-01 16:04:10.855 INFO  mqtt.MQTTSuscriber.saveOther(MQTTSuscriber.java:181) logmqtt ### Datos other guardados: json={"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-12-01 16:10:47.790 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-01 16:10:47.794 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 16:10:48.102 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 16:10:48.107 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 16:10:48.107 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-01 16:10:48.121 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 16:10:48.129 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:137) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-12-01 16:11:38.367 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-01 16:11:38.369 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 16:11:38.673 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 16:11:38.675 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 16:11:38.675 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-01 16:11:38.678 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 16:11:38.706 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:137) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-12-01 16:13:38.085 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### uah/alcala/weather/data: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-12-01 16:13:38.091 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:133) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-12-01 16:13:38.129 INFO  mqtt.MQTTSuscriber.saveOther(MQTTSuscriber.java:181) logmqtt ### Datos other guardados: json={"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-12-01 16:33:47.491 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-01 16:33:47.493 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 16:33:47.798 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 16:33:47.801 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 16:33:47.801 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-01 16:33:47.824 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 16:33:47.862 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:137) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-12-01 16:37:26.032 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-12-01 16:37:26.085 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:170) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G1, temp=999.0, humidity=58.7
+2025-12-01 16:50:19.657 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-01 16:50:19.659 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 16:50:19.968 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 16:50:19.971 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 16:50:19.971 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-01 16:50:19.999 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 16:50:20.014 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:138) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-12-01 16:51:49.982 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-01 16:51:49.983 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 16:51:50.290 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 16:51:50.296 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 16:51:50.296 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-01 16:51:50.329 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 16:51:50.358 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:138) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-12-01 16:54:12.483 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-01 16:54:12.485 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 16:54:12.795 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 16:54:12.800 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 16:54:12.800 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-01 16:54:12.820 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 16:54:12.855 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:138) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-12-01 16:55:48.386 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-01 16:55:48.389 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 16:55:48.700 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 16:55:48.711 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 16:55:48.711 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-01 16:55:48.733 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 16:55:48.742 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:138) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-12-01 16:59:39.398 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-01 16:59:39.401 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 16:59:39.709 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 16:59:39.711 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 16:59:39.711 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-01 16:59:39.738 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 16:59:39.759 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:138) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-12-01 16:59:54.402 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 16:59:54.711 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 16:59:54.714 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 16:59:54.714 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensorId": "SENSOR_001",
+  "temperature": 25.5,
+  "humidity": 60.0,
+  "pressure": 1013.25,
+  "altitude": 650.0
+}
+2025-12-01 16:59:54.715 WARN  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:92) logmqtt ### Mensaje ignorado: no tiene formato de datos de sensor
+2025-12-01 16:59:54.716 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:00:04.289 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:00:04.598 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:00:04.601 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:00:04.601 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensorId": "SENSOR_001",
+  "temperature": 25.5,
+  "humidity": 60.0,
+  "pressure": 1013.25,
+  "altitude": 650.0
+}
+2025-12-01 17:00:04.604 WARN  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:92) logmqtt ### Mensaje ignorado: no tiene formato de datos de sensor
+2025-12-01 17:00:04.605 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:00:27.056 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:00:27.366 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:00:27.369 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensorId": "SENSOR_001",
+  "temperature": 25.5,
+  "humidity": 60.0,
+  "pressure": 1013.25,
+  "altitude": 650.0
+}
+2025-12-01 17:00:27.369 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:00:27.370 WARN  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:92) logmqtt ### Mensaje ignorado: no tiene formato de datos de sensor
+2025-12-01 17:00:27.373 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:00:37.817 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:00:38.124 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:00:38.126 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:00:38.126 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensorId": "SENSOR_002",
+  "temperature": 25.5,
+  "humidity": 60.0,
+  "pressure": 1013.25,
+  "altitude": 650.0
+}
+2025-12-01 17:00:38.128 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:00:38.129 WARN  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:92) logmqtt ### Mensaje ignorado: no tiene formato de datos de sensor
+2025-12-01 17:01:18.792 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:01:19.125 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:01:19.128 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:01:19.128 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensorId": "DISPLAY_001",
+  "displayStatus": "ON",
+  "currentMessage": "Bienvenido a la ciudad",
+  "contentType": "TEXT",
+  "brightnessLevel": 80,
+  "energyConsumption": 150.5
+}
+2025-12-01 17:01:19.132 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:01:19.132 WARN  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:92) logmqtt ### Mensaje ignorado: no tiene formato de datos de sensor
+2025-12-01 17:12:13.502 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-01 17:12:13.505 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:12:13.815 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:12:13.819 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:12:13.819 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-01 17:12:13.835 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:12:13.862 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:138) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-12-01 17:16:38.432 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-01 17:16:38.433 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:16:38.740 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:16:38.743 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-01 17:16:38.743 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:16:38.761 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:16:38.783 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:138) logmqtt ### Error guardando en BD: com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 8 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+2025-12-01 17:16:54.132 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:16:54.441 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:16:54.444 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:16:54.444 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensorId": "SENSOR_001",
+  "timestamp": "2025-11-25 18:55:00:000",
+  "location": { "altitude": 650.0 },
+  "data": { "temperature": 25.5,
+  "humidity": 60.0,
+  "pressure": 1013.25 }
+}
+2025-12-01 17:16:54.446 WARN  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:92) logmqtt ### Mensaje ignorado: no tiene formato de datos de sensor (no presenta campo sensor_id)
+2025-12-01 17:16:54.447 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:21:08.333 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-01 17:21:08.336 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:21:08.647 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:21:08.653 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:21:08.653 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-01 17:21:08.677 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:21:08.711 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:86) logmqtt ### Ignorando mensaje: no tiene formato de JSON
+2025-12-01 17:21:53.717 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:21:54.024 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:21:54.026 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensor_id": "SENSOR_001",
+  "timestamp": "2025-11-25 18:55:00:000",
+  "location": { "altitude": 650.0 },
+  "data": { "temperature": 25.5,
+  "humidity": 60.0,
+  "pressure": 1013.25 }
+}
+2025-12-01 17:21:54.026 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:21:54.029 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:21:54.096 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:141) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"SENSOR_001","timestamp":"2025-11-25 18:55:00:000","location":{"altitude":650.0},"data":{"temperature":25.5,"humidity":60.0,"pressure":1013.25}}
+2025-12-01 17:21:54.099 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:145) logmqtt ### Error guardando en BD: ERROR: insert or update on table "sensor_readings" violates foreign key constraint "sensor_readings_sensor_id_fkey"
+  Detail: Key (sensor_id)=(SENSOR_001) is not present in table "sensors".
+2025-12-01 17:30:51.674 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-01 17:30:51.678 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:30:51.992 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:30:51.996 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:30:51.996 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-01 17:30:52.028 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:30:52.041 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:86) logmqtt ### Ignorando mensaje: no tiene formato de JSON
+2025-12-01 17:31:02.437 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:31:02.752 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:31:02.754 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:31:02.755 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-12-01 18:30:00",
+  "data": {
+    "temperature_celsius": 25.5,
+    "humidity_percent": 60.0,
+    "atmospheric_pressure_hpa": 1013.25,
+    "altitude_meters": 650.0
+  }
+}
+2025-12-01 17:31:02.757 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:31:02.759 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:141) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G1","timestamp":"2025-12-01 18:30:00","data":{"temperature_celsius":25.5,"humidity_percent":60.0,"atmospheric_pressure_hpa":1013.25,"altitude_meters":650.0}}
+2025-12-01 17:31:02.761 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:145) logmqtt ### Error guardando en BD: Unparseable date: "2025-12-01 18:30:00"
+2025-12-01 17:31:45.964 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-12-01 17:31:46.018 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:178) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G1, temp=999.0, humidity=58.7
+2025-12-01 17:31:58.885 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:31:59.211 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:31:59.212 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:31:59.212 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-12-01 18:30:00",
+  "data": {
+    "temperature_celsius": 25.5,
+    "humidity_percent": 60.0,
+    "atmospheric_pressure_hpa": 1013.25,
+    "altitude_meters": 650.0
+  }
+}
+2025-12-01 17:31:59.214 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:31:59.214 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:141) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G1","timestamp":"2025-12-01 18:30:00","data":{"temperature_celsius":25.5,"humidity_percent":60.0,"atmospheric_pressure_hpa":1013.25,"altitude_meters":650.0}}
+2025-12-01 17:31:59.234 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:145) logmqtt ### Error guardando en BD: Unparseable date: "2025-12-01 18:30:00"
+2025-12-01 17:33:14.111 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G2","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
+2025-12-01 17:33:14.123 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:178) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G2, temp=999.0, humidity=58.7
+2025-12-01 17:33:28.660 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:33:28.965 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:33:28.966 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:33:28.966 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-12-01 18:30:00",
+  "data": {
+    "temperature_celsius": 25.5,
+    "humidity_percent": 60.0,
+    "atmospheric_pressure_hpa": 1013.25,
+    "altitude_meters": 650.0
+  }
+}
+2025-12-01 17:33:28.967 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:141) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G1","timestamp":"2025-12-01 18:30:00","data":{"temperature_celsius":25.5,"humidity_percent":60.0,"atmospheric_pressure_hpa":1013.25,"altitude_meters":650.0}}
+2025-12-01 17:33:28.967 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:33:28.967 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:145) logmqtt ### Error guardando en BD: Unparseable date: "2025-12-01 18:30:00"
+2025-12-01 17:35:02.663 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:35:02.971 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:35:02.973 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:35:02.973 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G2",
+  "timestamp": "2025-12-01 18:30:00",
+  "data": {
+    "vehicle_count": 15,
+    "pedestrian_count": 5,
+    "bicycle_count": 2,
+    "direction": "NORTH",
+    "counter_type": "INDUCTIVE_LOOP",
+    "average_speed_kmh": 45.5,
+    "occupancy_percentage": 12.5,
+    "traffic_density": "MEDIUM"
+  }
+}
+2025-12-01 17:35:02.974 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:141) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G2","timestamp":"2025-12-01 18:30:00","data":{"vehicle_count":15,"pedestrian_count":5,"bicycle_count":2,"direction":"NORTH","counter_type":"INDUCTIVE_LOOP","average_speed_kmh":45.5,"occupancy_percentage":12.5,"traffic_density":"MEDIUM"}}
+2025-12-01 17:35:02.974 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:35:02.977 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:145) logmqtt ### Error guardando en BD: Unparseable date: "2025-12-01 18:30:00"
+2025-12-01 17:40:18.902 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-01 17:40:18.904 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:40:19.215 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:40:19.219 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:40:19.219 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-01 17:40:19.251 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:40:19.261 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:86) logmqtt ### Ignorando mensaje: no tiene formato de JSON
+2025-12-01 17:40:32.650 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-01 17:40:32.961 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-01 17:40:32.964 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-01 17:40:32.964 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-12-01 18:30:00",
+  "location": {
+    "altitude_meters": 650.0
+  },
+  "data": {
+    "temperature_celsius": 25.5,
+    "humidity_percent": 60.0,
+    "atmospheric_pressure_hpa": 1013.25
+  }
+}
+2025-12-01 17:40:32.967 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-01 17:40:32.969 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:141) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G1","timestamp":"2025-12-01 18:30:00","location":{"altitude_meters":650.0},"data":{"temperature_celsius":25.5,"humidity_percent":60.0,"atmospheric_pressure_hpa":1013.25}}
+2025-12-01 17:40:32.995 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:145) logmqtt ### Error guardando en BD: Unparseable date: "2025-12-01 18:30:00"
+2025-12-01 17:43:04.217 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G3",
+  "timestamp": "2025-11-28 10:17:00:000",
+  "sensor_type": "information_display",
+  "data": {
+    "display_status": "active",
+    "current_message": "Trafico fluido en zona centro",
+    "content_type": "traffic",
+    "brightness_level": 90,
+    "display_type": "led_matrix",
+    "display_size_inches": 42.0,
+    "supports_color": true,
+    "temperature_celsius": 35.5,
+    "energy_consumption_watts": 120.0,
+    "last_content_update": "2025-11-28T10:01:30.000000"
+  }
+}
+
+2025-12-01 17:43:04.282 INFO  mqtt.MQTTSuscriber.saveInformationDisplay(MQTTSuscriber.java:299) logmqtt ### Datos information_display guardados: sensor=LAB08JAV-G3, status=active, message=Trafico fluido en zona centro

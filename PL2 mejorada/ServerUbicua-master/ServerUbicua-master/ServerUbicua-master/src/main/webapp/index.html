@@ -1526,6 +1526,7 @@
                             showMqttStatus('✓ Mensaje enviado a: ' + topic, true);
                         } else {
                             showMqttStatus('✗ Error: ' + resp.error, false);
+                            showMqttStatus("EL topic es: " + JSON.stringify(resp), false);
                         }
                         resetMqttButton();
                     },
@@ -1549,12 +1550,75 @@
 
             function insertJsonTemplate(template) {
                 var templates = {
-                    'weather': '{\n  "sensorId": "SENSOR_001",\n  "temperature": 25.5,\n  "humidity": 60.0,\n  "pressure": 1013.25,\n  "altitude": 650.0\n}',
-                    'traffic': '{\n  "sensorId": "TRAFFIC_001",\n  "vehicleCount": 15,\n  "pedestrianCount": 5,\n  "bicycleCount": 2,\n  "direction": "NORTH",\n  "averageSpeed": 45.5,\n  "trafficDensity": "MEDIUM"\n}',
-                    'light': '{\n  "sensorId": "LIGHT_001",\n  "currentState": "GREEN",\n  "timeRemaining": 30,\n  "cycleDuration": 60,\n  "pedestrianWaiting": false,\n  "malfunctionDetected": false\n}',
-                    'display': '{\n  "sensorId": "DISPLAY_001",\n  "displayStatus": "ON",\n  "currentMessage": "Bienvenido a la ciudad",\n  "contentType": "TEXT",\n  "brightnessLevel": 80,\n  "energyConsumption": 150.5\n}',
-                    'alert': '{\n  "alert_level": 1,\n  "message": "Alerta de prueba"\n}',
-                    'command': '{\n  "command": "restart",\n  "delay": 5000\n}'
+                    'weather': '{\n' +
+            '  "sensor_id": "LAB08JAV-G1",\n' +
+            '  "timestamp": "2025-12-01 18:30:00",\n' +
+            '  "location": {\n' +
+            '    "altitude_meters": 650.0\n' +
+            '  },\n' +
+            '  "data": {\n' +
+            '    "temperature_celsius": 25.5,\n' +
+            '    "humidity_percent": 60.0,\n' +
+            '    "atmospheric_pressure_hpa": 1013.25\n' +
+            '  }\n' +
+            '}',
+            'traffic': '{\n' +
+            '  "sensor_id": "LAB08JAV-G1",\n' +
+            '  "timestamp": "2025-11-28 10:15:00:000",\n' +
+            '  "sensor_type": "fd",\n' +
+            '  "location": {\n' +
+            '    "altitude_meters": 650\n' +
+            '  },\n' +
+            '  "data": {\n' +
+            '    "vehicle_count": 55,\n' +
+            '    "pedestrian_count": 200,\n' +
+            '    "bicycle_count": 15,\n' +
+            '    "direction": "west",\n' +
+            '    "counter_type": "mixed",\n' +
+            '    "technology": "infrared",\n' +
+            '    "average_speed_kmh": 35.5,\n' +
+            '    "occupancy_percentage": 85,\n' +
+            '    "traffic_density": "medium"\n' +
+            '  }\n' +
+            '}',
+            'light': '{\n' +
+            '  "sensor_id": "LAB08JAV-G2",\n' +
+            '  "timestamp": "2025-11-28 10:16:00:000",\n' +
+            '  "sensor_type": "traffic_light",\n' +
+            '  "data": {\n' +
+            '    "current_state": "red",\n' +
+            '    "cycle_position_seconds": 30,\n' +
+            '    "time_remaining_seconds": 60,\n' +
+            '    "cycle_duration_seconds": 120,\n' +
+            '    "traffic_light_type": "pedestrian_vehicle",\n' +
+            '    "circulation_direction": "unidirectional",\n' +
+            '    "pedestrian_waiting": true,\n' +
+            '    "pedestrian_button_pressed": true,\n' +
+            '    "malfunction_detected": false,\n' +
+            '    "cycle_count": 15,\n' +
+            '    "state_changed": false,\n' +
+            '    "last_state_change": "2025-11-28T10:00:00.000000"\n' +
+            '  }\n' +
+            '}',
+            'display': '{\n' +
+            '  "sensor_id": "LAB08JAV-G3",\n' +
+            '  "timestamp": "2025-11-28 10:17:00:000",\n' +
+            '  "sensor_type": "information_display",\n' +
+            '  "data": {\n' +
+            '    "display_status": "active",\n' +
+            '    "current_message": "Trafico fluido en zona centro",\n' +
+            '    "content_type": "traffic",\n' +
+            '    "brightness_level": 90,\n' +
+            '    "display_type": "led_matrix",\n' +
+            '    "display_size_inches": 42.0,\n' +
+            '    "supports_color": true,\n' +
+            '    "temperature_celsius": 35.5,\n' +
+            '    "energy_consumption_watts": 120.0,\n' +
+            '    "last_content_update": "2025-11-28T10:01:30.000000"\n' +
+            '  }\n' +
+            '}',
+            'alert': '{\n  "alert_level": 1,\n}',
+            'command': '{\n  "command": "restart"\n}'
                 };
                 $('#mqttMessage').val(templates[template] || '{}');
             }
@@ -1828,7 +1892,7 @@
                             <div class="input-section mqtt-section">
                                 <div class="input-row">
                                     <label class="input-label">Topic MQTT</label>
-                                    <input type="text" id="mqttTopic" placeholder="ej: uah/alcala/weather/data" value="uah/alcala/weather/data">
+                                    <input type="text" id="mqttTopic" placeholder="ej: sensors/ST_1617/weather_station/LAB08JAV-G5" value="sensors/ST_1617/weather_station/LAB08JAV-G5">
                                 </div>
                                 <div class="input-row">
                                     <label class="input-label">Mensaje JSON</label>

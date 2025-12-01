@@ -3,7 +3,6 @@ package logic;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
-
 import mqtt.MQTTBroker;
 import mqtt.MQTTPublisher;
 import mqtt.MQTTSuscriber;

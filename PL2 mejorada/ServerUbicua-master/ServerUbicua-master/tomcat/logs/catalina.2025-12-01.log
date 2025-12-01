@@ -1,0 +1,999 @@
+01-Dec-2025 16:00:50.986 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.49
+01-Dec-2025 16:00:50.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 6 2025 01:31:11 UTC
+01-Dec-2025 16:00:50.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.49.0
+01-Dec-2025 16:00:50.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Dec-2025 16:00:50.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+01-Dec-2025 16:00:50.993 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Dec-2025 16:00:50.993 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+01-Dec-2025 16:00:50.993 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+10-LTS
+01-Dec-2025 16:00:50.993 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+01-Dec-2025 16:00:50.994 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+01-Dec-2025 16:00:50.994 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+01-Dec-2025 16:00:51.010 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+01-Dec-2025 16:00:51.010 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Dec-2025 16:00:51.010 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Dec-2025 16:00:51.010 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Dec-2025 16:00:51.011 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+01-Dec-2025 16:00:51.011 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Dec-2025 16:00:51.011 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Dec-2025 16:00:51.011 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+01-Dec-2025 16:00:51.011 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Dec-2025 16:00:51.012 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+01-Dec-2025 16:00:51.012 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+01-Dec-2025 16:00:51.012 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Dec-2025 16:00:51.012 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+01-Dec-2025 16:00:51.012 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+01-Dec-2025 16:00:51.012 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+01-Dec-2025 16:00:51.021 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+01-Dec-2025 16:00:51.033 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+01-Dec-2025 16:00:51.297 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:00:51.315 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [516] milliseconds
+01-Dec-2025 16:00:51.354 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Dec-2025 16:00:51.354 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.49]
+01-Dec-2025 16:00:51.373 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Server.war]
+01-Dec-2025 16:00:51.808 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Dec-2025 16:00:52.880 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Server.war] has finished in [1,507] ms
+01-Dec-2025 16:00:52.885 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:00:52.895 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1578] milliseconds
+01-Dec-2025 16:10:45.551 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.49
+01-Dec-2025 16:10:45.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 6 2025 01:31:11 UTC
+01-Dec-2025 16:10:45.559 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.49.0
+01-Dec-2025 16:10:45.559 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Dec-2025 16:10:45.559 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+01-Dec-2025 16:10:45.559 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Dec-2025 16:10:45.559 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+01-Dec-2025 16:10:45.559 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+10-LTS
+01-Dec-2025 16:10:45.559 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+01-Dec-2025 16:10:45.560 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+01-Dec-2025 16:10:45.560 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+01-Dec-2025 16:10:45.577 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+01-Dec-2025 16:10:45.578 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Dec-2025 16:10:45.578 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Dec-2025 16:10:45.578 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Dec-2025 16:10:45.578 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+01-Dec-2025 16:10:45.578 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Dec-2025 16:10:45.578 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Dec-2025 16:10:45.578 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+01-Dec-2025 16:10:45.578 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Dec-2025 16:10:45.579 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+01-Dec-2025 16:10:45.579 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+01-Dec-2025 16:10:45.579 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Dec-2025 16:10:45.579 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+01-Dec-2025 16:10:45.579 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+01-Dec-2025 16:10:45.579 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+01-Dec-2025 16:10:45.589 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+01-Dec-2025 16:10:45.600 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+01-Dec-2025 16:10:45.908 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:10:45.928 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [663] milliseconds
+01-Dec-2025 16:10:45.964 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Dec-2025 16:10:45.964 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.49]
+01-Dec-2025 16:10:46.090 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Server.war]
+01-Dec-2025 16:10:46.604 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Dec-2025 16:10:48.139 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Server.war] has finished in [2,049] ms
+01-Dec-2025 16:10:48.141 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:10:48.148 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2218] milliseconds
+01-Dec-2025 16:11:35.917 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:11:35.918 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Dec-2025 16:11:35.925 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:280)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1093)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:11:35.926 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:11:35.926 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:11:35.926 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+01-Dec-2025 16:11:35.935 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:11:35.941 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:11:37.018 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.49
+01-Dec-2025 16:11:37.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 6 2025 01:31:11 UTC
+01-Dec-2025 16:11:37.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.49.0
+01-Dec-2025 16:11:37.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Dec-2025 16:11:37.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+01-Dec-2025 16:11:37.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Dec-2025 16:11:37.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+01-Dec-2025 16:11:37.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+10-LTS
+01-Dec-2025 16:11:37.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+01-Dec-2025 16:11:37.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+01-Dec-2025 16:11:37.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+01-Dec-2025 16:11:37.039 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+01-Dec-2025 16:11:37.039 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Dec-2025 16:11:37.039 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Dec-2025 16:11:37.039 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Dec-2025 16:11:37.040 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+01-Dec-2025 16:11:37.040 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Dec-2025 16:11:37.040 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Dec-2025 16:11:37.040 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+01-Dec-2025 16:11:37.041 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Dec-2025 16:11:37.041 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+01-Dec-2025 16:11:37.041 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+01-Dec-2025 16:11:37.041 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Dec-2025 16:11:37.041 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+01-Dec-2025 16:11:37.041 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+01-Dec-2025 16:11:37.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+01-Dec-2025 16:11:37.044 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+01-Dec-2025 16:11:37.047 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+01-Dec-2025 16:11:37.261 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:11:37.282 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [386] milliseconds
+01-Dec-2025 16:11:37.314 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Dec-2025 16:11:37.314 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.49]
+01-Dec-2025 16:11:37.335 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Server.war]
+01-Dec-2025 16:11:37.735 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Dec-2025 16:11:38.699 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Server.war] has finished in [1,364] ms
+01-Dec-2025 16:11:38.703 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:11:38.712 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1429] milliseconds
+01-Dec-2025 16:27:33.075 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:27:33.076 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Dec-2025 16:27:33.085 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Server] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+01-Dec-2025 16:27:33.086 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:280)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1093)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:27:33.086 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:27:33.086 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:27:33.087 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+01-Dec-2025 16:27:33.097 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:27:33.111 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:33:46.040 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.49
+01-Dec-2025 16:33:46.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 6 2025 01:31:11 UTC
+01-Dec-2025 16:33:46.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.49.0
+01-Dec-2025 16:33:46.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Dec-2025 16:33:46.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+01-Dec-2025 16:33:46.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Dec-2025 16:33:46.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+01-Dec-2025 16:33:46.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+10-LTS
+01-Dec-2025 16:33:46.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+01-Dec-2025 16:33:46.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+01-Dec-2025 16:33:46.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+01-Dec-2025 16:33:46.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+01-Dec-2025 16:33:46.064 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Dec-2025 16:33:46.064 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Dec-2025 16:33:46.064 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Dec-2025 16:33:46.065 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+01-Dec-2025 16:33:46.065 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Dec-2025 16:33:46.065 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Dec-2025 16:33:46.065 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+01-Dec-2025 16:33:46.065 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Dec-2025 16:33:46.065 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+01-Dec-2025 16:33:46.066 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+01-Dec-2025 16:33:46.067 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Dec-2025 16:33:46.067 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+01-Dec-2025 16:33:46.068 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+01-Dec-2025 16:33:46.068 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+01-Dec-2025 16:33:46.072 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+01-Dec-2025 16:33:46.075 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+01-Dec-2025 16:33:46.325 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:33:46.345 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [483] milliseconds
+01-Dec-2025 16:33:46.379 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Dec-2025 16:33:46.379 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.49]
+01-Dec-2025 16:33:46.399 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Server.war]
+01-Dec-2025 16:33:46.830 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Dec-2025 16:33:47.869 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Server.war] has finished in [1,470] ms
+01-Dec-2025 16:33:47.872 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:33:47.890 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1543] milliseconds
+01-Dec-2025 16:49:44.884 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:49:44.886 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Dec-2025 16:49:44.899 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Server] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+01-Dec-2025 16:49:44.900 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:280)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1093)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:49:44.901 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:49:44.901 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:49:44.901 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+01-Dec-2025 16:49:44.912 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:49:44.922 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:50:18.255 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.49
+01-Dec-2025 16:50:18.261 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 6 2025 01:31:11 UTC
+01-Dec-2025 16:50:18.261 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.49.0
+01-Dec-2025 16:50:18.261 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Dec-2025 16:50:18.261 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+01-Dec-2025 16:50:18.261 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Dec-2025 16:50:18.261 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+01-Dec-2025 16:50:18.261 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+10-LTS
+01-Dec-2025 16:50:18.262 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+01-Dec-2025 16:50:18.262 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+01-Dec-2025 16:50:18.262 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+01-Dec-2025 16:50:18.276 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+01-Dec-2025 16:50:18.277 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Dec-2025 16:50:18.277 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Dec-2025 16:50:18.277 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Dec-2025 16:50:18.277 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+01-Dec-2025 16:50:18.277 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Dec-2025 16:50:18.277 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Dec-2025 16:50:18.277 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+01-Dec-2025 16:50:18.277 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Dec-2025 16:50:18.277 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+01-Dec-2025 16:50:18.278 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+01-Dec-2025 16:50:18.278 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Dec-2025 16:50:18.278 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+01-Dec-2025 16:50:18.278 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+01-Dec-2025 16:50:18.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+01-Dec-2025 16:50:18.283 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+01-Dec-2025 16:50:18.286 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+01-Dec-2025 16:50:18.524 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:50:18.545 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [460] milliseconds
+01-Dec-2025 16:50:18.577 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Dec-2025 16:50:18.578 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.49]
+01-Dec-2025 16:50:18.591 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Server.war]
+01-Dec-2025 16:50:19.022 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Dec-2025 16:50:20.029 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Server.war] has finished in [1,438] ms
+01-Dec-2025 16:50:20.033 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:50:20.040 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1493] milliseconds
+01-Dec-2025 16:51:36.122 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:51:36.124 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Dec-2025 16:51:36.141 INFO [Thread-12] org.apache.catalina.core.StandardWrapper.unload Waiting for [1] instance(s) to be deallocated for Servlet [servlets.SystemStatus]
+01-Dec-2025 16:51:36.468 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Server] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+01-Dec-2025 16:51:36.469 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:280)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1093)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:51:36.469 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:51:36.469 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:51:36.469 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+01-Dec-2025 16:51:36.479 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:51:36.485 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:51:48.564 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.49
+01-Dec-2025 16:51:48.569 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 6 2025 01:31:11 UTC
+01-Dec-2025 16:51:48.570 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.49.0
+01-Dec-2025 16:51:48.570 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Dec-2025 16:51:48.570 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+01-Dec-2025 16:51:48.570 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Dec-2025 16:51:48.570 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+01-Dec-2025 16:51:48.570 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+10-LTS
+01-Dec-2025 16:51:48.570 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+01-Dec-2025 16:51:48.570 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+01-Dec-2025 16:51:48.570 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+01-Dec-2025 16:51:48.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+01-Dec-2025 16:51:48.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Dec-2025 16:51:48.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Dec-2025 16:51:48.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Dec-2025 16:51:48.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+01-Dec-2025 16:51:48.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Dec-2025 16:51:48.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Dec-2025 16:51:48.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+01-Dec-2025 16:51:48.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Dec-2025 16:51:48.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+01-Dec-2025 16:51:48.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+01-Dec-2025 16:51:48.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Dec-2025 16:51:48.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+01-Dec-2025 16:51:48.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+01-Dec-2025 16:51:48.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+01-Dec-2025 16:51:48.591 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+01-Dec-2025 16:51:48.594 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+01-Dec-2025 16:51:48.847 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:51:48.868 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [475] milliseconds
+01-Dec-2025 16:51:48.906 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Dec-2025 16:51:48.906 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.49]
+01-Dec-2025 16:51:48.921 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Server.war]
+01-Dec-2025 16:51:49.354 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Dec-2025 16:51:50.369 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Server.war] has finished in [1,448] ms
+01-Dec-2025 16:51:50.373 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:51:50.384 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1514] milliseconds
+01-Dec-2025 16:54:00.206 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:54:00.207 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Dec-2025 16:54:00.214 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Server] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+01-Dec-2025 16:54:00.215 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:280)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1093)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:54:00.215 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:54:00.215 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:54:00.215 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+01-Dec-2025 16:54:00.224 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:54:00.230 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:54:11.091 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.49
+01-Dec-2025 16:54:11.099 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 6 2025 01:31:11 UTC
+01-Dec-2025 16:54:11.099 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.49.0
+01-Dec-2025 16:54:11.099 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Dec-2025 16:54:11.100 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+01-Dec-2025 16:54:11.100 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Dec-2025 16:54:11.100 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+01-Dec-2025 16:54:11.100 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+10-LTS
+01-Dec-2025 16:54:11.100 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+01-Dec-2025 16:54:11.100 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+01-Dec-2025 16:54:11.100 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+01-Dec-2025 16:54:11.115 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+01-Dec-2025 16:54:11.115 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Dec-2025 16:54:11.115 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Dec-2025 16:54:11.115 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Dec-2025 16:54:11.116 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+01-Dec-2025 16:54:11.116 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Dec-2025 16:54:11.116 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Dec-2025 16:54:11.116 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+01-Dec-2025 16:54:11.116 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Dec-2025 16:54:11.116 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+01-Dec-2025 16:54:11.116 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+01-Dec-2025 16:54:11.116 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Dec-2025 16:54:11.117 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+01-Dec-2025 16:54:11.117 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+01-Dec-2025 16:54:11.117 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+01-Dec-2025 16:54:11.122 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+01-Dec-2025 16:54:11.124 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+01-Dec-2025 16:54:11.373 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:54:11.393 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [495] milliseconds
+01-Dec-2025 16:54:11.427 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Dec-2025 16:54:11.427 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.49]
+01-Dec-2025 16:54:11.442 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Server.war]
+01-Dec-2025 16:54:11.851 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Dec-2025 16:54:12.862 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Server.war] has finished in [1,420] ms
+01-Dec-2025 16:54:12.865 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:54:12.872 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1481] milliseconds
+01-Dec-2025 16:55:34.059 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:55:34.060 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Dec-2025 16:55:34.071 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Server] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+01-Dec-2025 16:55:34.072 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:280)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1093)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:55:34.072 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:55:34.072 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:55:34.072 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+01-Dec-2025 16:55:34.079 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:55:34.084 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:55:47.024 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.49
+01-Dec-2025 16:55:47.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 6 2025 01:31:11 UTC
+01-Dec-2025 16:55:47.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.49.0
+01-Dec-2025 16:55:47.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Dec-2025 16:55:47.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+01-Dec-2025 16:55:47.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Dec-2025 16:55:47.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+01-Dec-2025 16:55:47.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+10-LTS
+01-Dec-2025 16:55:47.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+01-Dec-2025 16:55:47.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+01-Dec-2025 16:55:47.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+01-Dec-2025 16:55:47.045 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+01-Dec-2025 16:55:47.045 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Dec-2025 16:55:47.045 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Dec-2025 16:55:47.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Dec-2025 16:55:47.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+01-Dec-2025 16:55:47.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Dec-2025 16:55:47.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Dec-2025 16:55:47.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+01-Dec-2025 16:55:47.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Dec-2025 16:55:47.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+01-Dec-2025 16:55:47.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+01-Dec-2025 16:55:47.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Dec-2025 16:55:47.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+01-Dec-2025 16:55:47.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+01-Dec-2025 16:55:47.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+01-Dec-2025 16:55:47.051 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+01-Dec-2025 16:55:47.054 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+01-Dec-2025 16:55:47.293 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:55:47.314 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [455] milliseconds
+01-Dec-2025 16:55:47.346 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Dec-2025 16:55:47.346 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.49]
+01-Dec-2025 16:55:47.360 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Server.war]
+01-Dec-2025 16:55:47.767 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Dec-2025 16:55:48.753 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Server.war] has finished in [1,393] ms
+01-Dec-2025 16:55:48.756 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:55:48.763 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1448] milliseconds
+01-Dec-2025 16:59:07.239 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:59:07.240 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Dec-2025 16:59:07.247 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Server] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+01-Dec-2025 16:59:07.248 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:280)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1093)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:59:07.248 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:59:07.248 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 16:59:07.248 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+01-Dec-2025 16:59:07.256 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:59:07.263 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:59:37.998 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.49
+01-Dec-2025 16:59:38.002 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 6 2025 01:31:11 UTC
+01-Dec-2025 16:59:38.002 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.49.0
+01-Dec-2025 16:59:38.002 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Dec-2025 16:59:38.002 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+01-Dec-2025 16:59:38.002 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Dec-2025 16:59:38.002 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+01-Dec-2025 16:59:38.003 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+10-LTS
+01-Dec-2025 16:59:38.003 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+01-Dec-2025 16:59:38.003 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+01-Dec-2025 16:59:38.003 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+01-Dec-2025 16:59:38.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+01-Dec-2025 16:59:38.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Dec-2025 16:59:38.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Dec-2025 16:59:38.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Dec-2025 16:59:38.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+01-Dec-2025 16:59:38.021 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Dec-2025 16:59:38.021 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Dec-2025 16:59:38.021 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+01-Dec-2025 16:59:38.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Dec-2025 16:59:38.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+01-Dec-2025 16:59:38.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+01-Dec-2025 16:59:38.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Dec-2025 16:59:38.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+01-Dec-2025 16:59:38.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+01-Dec-2025 16:59:38.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+01-Dec-2025 16:59:38.027 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+01-Dec-2025 16:59:38.030 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+01-Dec-2025 16:59:38.271 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:59:38.288 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [457] milliseconds
+01-Dec-2025 16:59:38.319 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Dec-2025 16:59:38.320 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.49]
+01-Dec-2025 16:59:38.333 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Server.war]
+01-Dec-2025 16:59:38.758 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Dec-2025 16:59:39.770 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Server.war] has finished in [1,437] ms
+01-Dec-2025 16:59:39.774 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 16:59:39.783 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1494] milliseconds
+01-Dec-2025 17:12:02.383 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:12:02.387 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Dec-2025 17:12:02.409 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Server] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+01-Dec-2025 17:12:02.409 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:280)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1093)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:12:02.409 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:12:02.410 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:12:02.410 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+01-Dec-2025 17:12:02.423 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:12:02.435 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:12:12.099 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.49
+01-Dec-2025 17:12:12.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 6 2025 01:31:11 UTC
+01-Dec-2025 17:12:12.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.49.0
+01-Dec-2025 17:12:12.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Dec-2025 17:12:12.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+01-Dec-2025 17:12:12.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Dec-2025 17:12:12.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+01-Dec-2025 17:12:12.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+10-LTS
+01-Dec-2025 17:12:12.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+01-Dec-2025 17:12:12.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+01-Dec-2025 17:12:12.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+01-Dec-2025 17:12:12.123 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+01-Dec-2025 17:12:12.123 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Dec-2025 17:12:12.123 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Dec-2025 17:12:12.123 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Dec-2025 17:12:12.123 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+01-Dec-2025 17:12:12.123 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Dec-2025 17:12:12.123 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Dec-2025 17:12:12.123 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+01-Dec-2025 17:12:12.124 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Dec-2025 17:12:12.124 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+01-Dec-2025 17:12:12.124 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+01-Dec-2025 17:12:12.124 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Dec-2025 17:12:12.124 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+01-Dec-2025 17:12:12.124 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+01-Dec-2025 17:12:12.124 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+01-Dec-2025 17:12:12.129 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+01-Dec-2025 17:12:12.132 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+01-Dec-2025 17:12:12.374 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:12:12.391 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [468] milliseconds
+01-Dec-2025 17:12:12.424 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Dec-2025 17:12:12.424 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.49]
+01-Dec-2025 17:12:12.438 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Server.war]
+01-Dec-2025 17:12:12.862 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Dec-2025 17:12:13.868 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Server.war] has finished in [1,430] ms
+01-Dec-2025 17:12:13.872 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:12:13.882 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1490] milliseconds
+01-Dec-2025 17:16:28.407 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:16:28.408 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Dec-2025 17:16:28.429 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Server] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+01-Dec-2025 17:16:28.429 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:280)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1093)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:16:28.429 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:16:28.429 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:16:28.430 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+01-Dec-2025 17:16:28.437 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:16:28.442 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:16:37.049 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.49
+01-Dec-2025 17:16:37.054 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 6 2025 01:31:11 UTC
+01-Dec-2025 17:16:37.054 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.49.0
+01-Dec-2025 17:16:37.054 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Dec-2025 17:16:37.054 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+01-Dec-2025 17:16:37.054 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Dec-2025 17:16:37.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+01-Dec-2025 17:16:37.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+10-LTS
+01-Dec-2025 17:16:37.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+01-Dec-2025 17:16:37.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+01-Dec-2025 17:16:37.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+01-Dec-2025 17:16:37.072 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+01-Dec-2025 17:16:37.073 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Dec-2025 17:16:37.073 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Dec-2025 17:16:37.073 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Dec-2025 17:16:37.073 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+01-Dec-2025 17:16:37.074 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Dec-2025 17:16:37.074 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Dec-2025 17:16:37.074 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+01-Dec-2025 17:16:37.075 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Dec-2025 17:16:37.075 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+01-Dec-2025 17:16:37.075 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+01-Dec-2025 17:16:37.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Dec-2025 17:16:37.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+01-Dec-2025 17:16:37.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+01-Dec-2025 17:16:37.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+01-Dec-2025 17:16:37.081 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+01-Dec-2025 17:16:37.084 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+01-Dec-2025 17:16:37.324 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:16:37.358 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [476] milliseconds
+01-Dec-2025 17:16:37.390 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Dec-2025 17:16:37.391 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.49]
+01-Dec-2025 17:16:37.407 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Server.war]
+01-Dec-2025 17:16:37.811 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Dec-2025 17:16:38.798 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Server.war] has finished in [1,391] ms
+01-Dec-2025 17:16:38.802 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:16:38.811 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1451] milliseconds
+01-Dec-2025 17:20:42.828 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:20:42.829 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Dec-2025 17:20:42.837 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Server] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+01-Dec-2025 17:20:42.837 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:280)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1093)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:20:42.838 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:20:42.838 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:20:42.838 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+01-Dec-2025 17:20:42.846 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:20:42.853 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:21:06.869 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.49
+01-Dec-2025 17:21:06.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 6 2025 01:31:11 UTC
+01-Dec-2025 17:21:06.875 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.49.0
+01-Dec-2025 17:21:06.875 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Dec-2025 17:21:06.875 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+01-Dec-2025 17:21:06.875 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Dec-2025 17:21:06.875 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+01-Dec-2025 17:21:06.875 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+10-LTS
+01-Dec-2025 17:21:06.875 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+01-Dec-2025 17:21:06.876 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+01-Dec-2025 17:21:06.876 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+01-Dec-2025 17:21:06.892 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+01-Dec-2025 17:21:06.892 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Dec-2025 17:21:06.892 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Dec-2025 17:21:06.892 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Dec-2025 17:21:06.892 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+01-Dec-2025 17:21:06.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Dec-2025 17:21:06.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Dec-2025 17:21:06.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+01-Dec-2025 17:21:06.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Dec-2025 17:21:06.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+01-Dec-2025 17:21:06.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+01-Dec-2025 17:21:06.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Dec-2025 17:21:06.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+01-Dec-2025 17:21:06.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+01-Dec-2025 17:21:06.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+01-Dec-2025 17:21:06.899 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+01-Dec-2025 17:21:06.902 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+01-Dec-2025 17:21:07.188 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:21:07.212 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [515] milliseconds
+01-Dec-2025 17:21:07.249 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Dec-2025 17:21:07.250 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.49]
+01-Dec-2025 17:21:07.267 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Server.war]
+01-Dec-2025 17:21:07.692 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Dec-2025 17:21:08.721 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Server.war] has finished in [1,454] ms
+01-Dec-2025 17:21:08.725 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:21:08.734 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1520] milliseconds
+01-Dec-2025 17:30:42.135 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:30:42.137 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Dec-2025 17:30:42.146 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Server] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+01-Dec-2025 17:30:42.147 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:280)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1093)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:30:42.147 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:30:42.147 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:30:42.147 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+01-Dec-2025 17:30:42.155 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:30:42.160 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:30:50.299 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.49
+01-Dec-2025 17:30:50.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 6 2025 01:31:11 UTC
+01-Dec-2025 17:30:50.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.49.0
+01-Dec-2025 17:30:50.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Dec-2025 17:30:50.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+01-Dec-2025 17:30:50.304 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Dec-2025 17:30:50.304 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+01-Dec-2025 17:30:50.305 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+10-LTS
+01-Dec-2025 17:30:50.305 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+01-Dec-2025 17:30:50.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+01-Dec-2025 17:30:50.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+01-Dec-2025 17:30:50.321 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+01-Dec-2025 17:30:50.322 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Dec-2025 17:30:50.322 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Dec-2025 17:30:50.322 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Dec-2025 17:30:50.323 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+01-Dec-2025 17:30:50.323 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Dec-2025 17:30:50.323 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Dec-2025 17:30:50.324 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+01-Dec-2025 17:30:50.324 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Dec-2025 17:30:50.324 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+01-Dec-2025 17:30:50.324 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+01-Dec-2025 17:30:50.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Dec-2025 17:30:50.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+01-Dec-2025 17:30:50.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+01-Dec-2025 17:30:50.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+01-Dec-2025 17:30:50.332 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+01-Dec-2025 17:30:50.336 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+01-Dec-2025 17:30:50.572 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:30:50.589 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [455] milliseconds
+01-Dec-2025 17:30:50.622 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Dec-2025 17:30:50.622 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.49]
+01-Dec-2025 17:30:50.636 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Server.war]
+01-Dec-2025 17:30:51.039 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Dec-2025 17:30:52.049 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Server.war] has finished in [1,413] ms
+01-Dec-2025 17:30:52.052 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:30:52.059 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1469] milliseconds
+01-Dec-2025 17:39:55.884 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:39:55.886 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Dec-2025 17:39:55.897 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Server] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+01-Dec-2025 17:39:55.897 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:280)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1093)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:39:55.897 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:39:55.897 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:39:55.898 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+01-Dec-2025 17:39:55.907 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:39:55.920 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:40:17.529 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.49
+01-Dec-2025 17:40:17.534 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 6 2025 01:31:11 UTC
+01-Dec-2025 17:40:17.534 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.49.0
+01-Dec-2025 17:40:17.535 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Dec-2025 17:40:17.535 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+01-Dec-2025 17:40:17.535 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Dec-2025 17:40:17.535 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+01-Dec-2025 17:40:17.535 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.9+10-LTS
+01-Dec-2025 17:40:17.535 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+01-Dec-2025 17:40:17.535 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+01-Dec-2025 17:40:17.535 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+01-Dec-2025 17:40:17.551 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+01-Dec-2025 17:40:17.551 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Dec-2025 17:40:17.551 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Dec-2025 17:40:17.551 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Dec-2025 17:40:17.551 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+01-Dec-2025 17:40:17.551 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Dec-2025 17:40:17.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Dec-2025 17:40:17.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+01-Dec-2025 17:40:17.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Dec-2025 17:40:17.553 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+01-Dec-2025 17:40:17.553 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+01-Dec-2025 17:40:17.553 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Dec-2025 17:40:17.553 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+01-Dec-2025 17:40:17.553 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+01-Dec-2025 17:40:17.553 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+01-Dec-2025 17:40:17.558 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+01-Dec-2025 17:40:17.561 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+01-Dec-2025 17:40:17.804 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:40:17.823 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [459] milliseconds
+01-Dec-2025 17:40:17.854 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Dec-2025 17:40:17.854 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.49]
+01-Dec-2025 17:40:17.868 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Server.war]
+01-Dec-2025 17:40:18.280 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Dec-2025 17:40:19.271 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Server.war] has finished in [1,403] ms
+01-Dec-2025 17:40:19.274 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:40:19.281 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1457] milliseconds
+01-Dec-2025 17:44:55.318 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:44:55.319 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Dec-2025 17:44:55.332 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Server] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+01-Dec-2025 17:44:55.333 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:280)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1093)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:44:55.333 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:44:55.333 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.lang.Object.wait(Object.java:339)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2025 17:44:55.333 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Server] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+01-Dec-2025 17:44:55.344 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Dec-2025 17:44:55.354 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
