@@ -960,8 +960,7 @@
                             console.log("Processing weather data:", data.weather);
                             allData = data.weather.map(item => ({
                                 sensorId: item.sensorId,
-                                timestamp: item.date,
-                                date: new Date(item.date).toLocaleString('es-ES'),
+                                timestamp: item.timestamp,
                                 temperature: item.temperature,
                                 humidity: item.humidity,
                                 pressure: item.pressure,
@@ -971,18 +970,18 @@
                         } else if (currentSensorType === 'trafficCounter' && data.trafficCounter) {
                             allData = data.trafficCounter.map(item => ({
                                 ...item,
-                                date: new Date(item.timestamp).toLocaleString('es-ES')
+                                date: item.timestamp
                             }));
                         } else if (currentSensorType === 'trafficLight' && data.trafficLight) {
                             allData = data.trafficLight.map(item => ({
                                 ...item,
                                 currentState: item.currentState ? item.currentState.toUpperCase() : null,
-                                date: new Date(item.timestamp).toLocaleString('es-ES')
+                                date:item.timestamp
                             }));
                         } else if (currentSensorType === 'informationDisplay' && data.informationDisplay) {
                             allData = data.informationDisplay.map(item => ({
                                 ...item,
-                                date: new Date(item.timestamp).toLocaleString('es-ES')
+                                date: item.timestamp
                             }));
                         } else {
                             allData = [];
