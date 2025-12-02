@@ -1341,3 +1341,98 @@ See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
 2025-12-02 08:26:54.684 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G1, temp=25.5, humidity=60.0
 2025-12-02 08:29:48.244 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-25 18:55:00:000","location":{"altitude_meters":667.3},"data":{"humidity_percent":58.7,"atmospheric_pressure_hpa":1013.2}}
 2025-12-02 08:29:48.262 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G1, temp=999.0, humidity=58.7
+2025-12-02 08:31:08.367 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-02 08:31:08.369 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:31:08.674 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:31:08.676 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:31:08.676 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-02 08:31:08.678 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:31:08.695 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:86) logmqtt ### Ignorando mensaje: no tiene formato de JSON
+2025-12-02 08:31:53.033 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:31:53.343 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:31:53.346 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:31:53.346 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-12-01 18:30:00:000",
+  "sensor_type": "weather",
+  "location": {
+    "altitude_meters": 650.0
+  },
+  "data": {
+    "temperature_celsius": 25.5,
+    "humidity_percent": 60.0,
+    "atmospheric_pressure_hpa": 1013.25
+  }
+}
+2025-12-02 08:31:53.351 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:31:53.391 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G1, temp=25.5, humidity=60.0
+2025-12-02 08:31:55.490 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:31:55.800 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:31:55.804 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:31:55.804 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "fd",
+  "location": {
+    "altitude_meters": 650
+  },
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  }
+}
+2025-12-02 08:31:55.808 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:31:55.834 INFO  mqtt.MQTTSuscriber.saveOther(MQTTSuscriber.java:191) logmqtt ### Datos other guardados: json={"sensor_id":"LAB08JAV-G1","timestamp":"2025-11-28 10:15:00:000","sensor_type":"fd","location":{"altitude_meters":650},"data":{"vehicle_count":55,"pedestrian_count":200,"bicycle_count":15,"direction":"west","counter_type":"mixed","technology":"infrared","average_speed_kmh":35.5,"occupancy_percentage":85,"traffic_density":"medium"}}
+2025-12-02 08:31:57.831 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:31:58.140 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:31:58.142 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G2",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+2025-12-02 08:31:58.142 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:31:58.153 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:31:58.178 INFO  mqtt.MQTTSuscriber.saveTrafficLight(MQTTSuscriber.java:258) logmqtt ### Datos traffic_light guardados: sensor=LAB08JAV-G2, state=red, remaining=60s
+2025-12-02 08:32:00.454 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:32:00.766 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:32:00.768 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:32:00.768 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G3",
+  "timestamp": "2025-11-28 10:17:00:000",
+  "sensor_type": "information_display",
+  "data": {
+    "display_status": "active",
+    "current_message": "Trafico fluido en zona centro",
+    "content_type": "traffic",
+    "brightness_level": 90,
+    "display_type": "led_matrix",
+    "display_size_inches": 42.0,
+    "supports_color": true,
+    "temperature_celsius": 35.5,
+    "energy_consumption_watts": 120.0,
+    "last_content_update": "2025-11-28T10:01:30.000000"
+  }
+}
+2025-12-02 08:32:00.771 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:32:00.800 INFO  mqtt.MQTTSuscriber.saveInformationDisplay(MQTTSuscriber.java:300) logmqtt ### Datos information_display guardados: sensor=LAB08JAV-G3, status=active, message=Trafico fluido en zona centro
