@@ -34,7 +34,7 @@ public class SendCommand extends HttpServlet {
             
             String jsonMessage = "";
             
-            if (alertLevel != null && !alertLevel.isEmpty()) {
+            if (alertLevel != null) {
                 int level = Integer.parseInt(alertLevel);
                 if (level >= 0 && level <= 4) {
                     jsonMessage = "{\"alert_level\":" + level + "}";
@@ -43,7 +43,7 @@ public class SendCommand extends HttpServlet {
                     out.println("{\"success\":false,\"error\":\"Invalid alert level\"}");
                     return;
                 }
-            } else if (command != null && !command.isEmpty()) {
+            } else if (command != null) {
                 jsonMessage = "{\"command\":\"" + command + "\"}";
                 Log.log.info("Sending command: " + command);
             } else {
@@ -53,8 +53,7 @@ public class SendCommand extends HttpServlet {
             
             MQTTPublisher.publish(new MQTTBroker(), CONTROL_TOPIC, jsonMessage);
             Log.log.info("Message sent to topic " + CONTROL_TOPIC + ": " + jsonMessage);
-            out.println("{\"success\":true,\"message\":\"" + jsonMessage + "\"}");
-            
+            out.println("{\"success\":true,\"message\":\"" + jsonMessage.replace("\"", "\\\"") + "\"}");            
         } catch (NumberFormatException nfe) {
             out.println("{\"success\":false,\"error\":\"Invalid number format\"}");
             Log.log.error("Number Format Exception: " + nfe);

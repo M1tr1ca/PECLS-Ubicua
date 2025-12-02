@@ -1436,3 +1436,273 @@ See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
 }
 2025-12-02 08:32:00.771 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
 2025-12-02 08:32:00.800 INFO  mqtt.MQTTSuscriber.saveInformationDisplay(MQTTSuscriber.java:300) logmqtt ### Datos information_display guardados: sensor=LAB08JAV-G3, status=active, message=Trafico fluido en zona centro
+2025-12-02 08:34:38.609 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-02 08:34:38.611 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:34:38.914 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:34:38.916 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:34:38.916 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-02 08:34:38.925 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:34:38.942 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:86) logmqtt ### Ignorando mensaje: no tiene formato de JSON
+2025-12-02 08:35:27.986 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-02 08:35:27.987 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:35:28.294 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:35:28.297 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-02 08:35:28.297 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:35:28.308 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:35:28.333 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:86) logmqtt ### Ignorando mensaje: no tiene formato de JSON
+2025-12-02 08:35:50.040 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:35:50.349 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:35:50.351 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:35:50.351 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":0}
+2025-12-02 08:35:50.353 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:35:50.353 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:36:09.098 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:36:09.405 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:36:09.406 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:36:09.406 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":1}
+2025-12-02 08:36:09.407 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:36:09.408 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:36:13.635 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:36:13.946 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:36:13.951 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:36:13.952 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":2}
+2025-12-02 08:36:13.954 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:36:13.955 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:36:15.843 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:36:16.154 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:36:16.157 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":3}
+2025-12-02 08:36:16.157 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:36:16.161 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:36:16.165 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:36:17.932 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:36:18.238 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:36:18.241 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:36:18.241 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":4}
+2025-12-02 08:36:18.244 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:36:18.245 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:36:21.642 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:36:21.955 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:36:21.958 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:36:21.958 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"command":"reset"}
+2025-12-02 08:36:21.960 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:36:21.961 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:37:15.794 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:37:16.103 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:37:16.107 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:37:16.107 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":4}
+2025-12-02 08:37:16.110 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:37:16.112 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:37:26.072 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:37:26.391 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:37:26.393 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:37:26.393 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "location": {
+    "altitude_meters": 650
+  },
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  }
+}
+2025-12-02 08:37:26.396 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:37:26.626 INFO  mqtt.MQTTSuscriber.saveTrafficCounter(MQTTSuscriber.java:214) logmqtt ### Datos traffic_counter guardados: sensor=LAB08JAV-G1, vehicles=55, pedestrians=200
+2025-12-02 08:37:56.670 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:37:56.978 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:37:56.979 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/weather_station/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G1",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+  }
+}
+2025-12-02 08:37:56.979 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:37:56.983 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:37:56.987 INFO  mqtt.MQTTSuscriber.saveTrafficCounter(MQTTSuscriber.java:214) logmqtt ### Datos traffic_counter guardados: sensor=LAB08JAV-G1, vehicles=0, pedestrians=0
+2025-12-02 08:49:25.061 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-02 08:49:25.065 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:49:25.372 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:49:25.375 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:49:25.376 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-02 08:49:25.383 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:49:25.415 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:86) logmqtt ### Ignorando mensaje: no tiene formato de JSON
+2025-12-02 08:49:56.425 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:49:56.731 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:49:56.732 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":0}
+2025-12-02 08:49:56.732 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:49:56.733 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:49:56.734 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:54:39.429 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-02 08:54:39.432 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:54:39.739 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:54:39.742 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:54:39.742 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-02 08:54:39.752 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:54:39.777 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:86) logmqtt ### Ignorando mensaje: no tiene formato de JSON
+2025-12-02 08:55:04.584 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:55:04.889 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:55:04.891 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":0}
+2025-12-02 08:55:04.891 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:55:04.892 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:55:04.893 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:55:13.163 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:55:13.472 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:55:13.475 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":1}
+2025-12-02 08:55:13.475 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:55:13.476 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:55:13.478 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:55:13.790 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:55:14.096 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:55:14.099 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":1}
+2025-12-02 08:55:14.099 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:55:14.103 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:55:14.105 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:55:14.110 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:55:14.415 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:55:14.416 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":1}
+2025-12-02 08:55:14.416 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:55:14.417 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:55:14.418 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:55:14.424 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:55:14.728 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:55:14.730 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":1}
+2025-12-02 08:55:14.730 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:55:14.730 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:55:14.732 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:55:14.953 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:55:15.261 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:55:15.263 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:55:15.263 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":2}
+2025-12-02 08:55:15.264 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:55:15.264 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:55:15.349 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:55:15.654 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:55:15.657 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":2}
+2025-12-02 08:55:15.657 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:55:15.658 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:55:15.661 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:55:15.671 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:55:15.976 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:55:15.978 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:55:15.978 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":2}
+2025-12-02 08:55:15.980 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:55:15.981 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:55:15.987 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:55:16.292 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:55:16.293 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":2}
+2025-12-02 08:55:16.294 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:55:16.300 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:55:16.302 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:55:16.336 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:55:16.642 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:55:16.644 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":3}
+2025-12-02 08:55:16.644 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:55:16.646 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:55:16.648 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:55:17.281 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:55:17.586 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:55:17.587 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":3}
+2025-12-02 08:55:17.587 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:55:17.588 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:55:17.589 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:55:18.478 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:55:18.783 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:55:18.784 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:55:18.784 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":4}
+2025-12-02 08:55:18.785 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:55:18.787 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:55:20.778 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:55:21.083 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:55:21.085 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:55:21.085 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":4}
+2025-12-02 08:55:21.086 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 08:55:21.086 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:59:58.866 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-02 08:59:58.869 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 08:59:59.178 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 08:59:59.181 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 08:59:59.181 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-02 08:59:59.211 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 08:59:59.227 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:86) logmqtt ### Ignorando mensaje: no tiene formato de JSON
+2025-12-02 09:00:07.612 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 09:00:07.918 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 09:00:07.922 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 09:00:07.923 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":0}
+2025-12-02 09:00:07.925 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 09:00:07.926 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 09:00:15.459 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 09:00:15.768 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 09:00:15.770 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 09:00:15.771 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":1}
+2025-12-02 09:00:15.772 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 09:00:15.773 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 09:00:18.090 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 09:00:18.397 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 09:00:18.398 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":2}
+2025-12-02 09:00:18.399 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 09:00:18.399 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 09:00:18.400 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 09:01:18.723 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-02 09:01:18.724 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 09:01:19.030 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 09:01:19.032 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
+2025-12-02 09:01:19.032 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 09:01:19.044 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 09:01:19.061 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:86) logmqtt ### Ignorando mensaje: no tiene formato de JSON
+2025-12-02 09:01:35.135 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 09:01:35.441 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 09:01:35.442 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 09:01:35.442 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":0}
+2025-12-02 09:01:35.443 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 09:01:35.444 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 09:01:36.102 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 09:01:36.410 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 09:01:36.413 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":0}
+2025-12-02 09:01:36.413 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 09:01:36.413 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 09:01:36.415 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 09:01:37.374 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 09:01:37.682 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 09:01:37.684 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":1}
+2025-12-02 09:01:37.684 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 09:01:37.685 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 09:01:37.686 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 09:01:39.115 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 09:01:39.418 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 09:01:39.420 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 09:01:39.420 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":2}
+2025-12-02 09:01:39.420 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 09:01:39.421 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 09:01:40.373 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 09:01:40.679 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 09:01:40.681 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 09:01:40.681 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":3}
+2025-12-02 09:01:40.682 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 09:01:40.682 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 09:01:42.634 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 09:01:42.940 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 09:01:42.942 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":3}
+2025-12-02 09:01:42.942 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 09:01:42.946 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 09:01:42.947 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 09:01:44.504 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 09:01:44.811 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 09:01:44.812 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"alert_level":4}
+2025-12-02 09:01:44.812 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 09:01:44.813 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 09:01:44.815 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-02 09:01:47.937 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-02 09:01:48.245 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-02 09:01:48.248 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-02 09:01:48.248 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### sensors/ST_1617/alerts: {"command":"reset"}
+2025-12-02 09:01:48.248 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:73) logmqtt ### Mensaje de control ignorado (no se guarda en BD)
+2025-12-02 09:01:48.249 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected

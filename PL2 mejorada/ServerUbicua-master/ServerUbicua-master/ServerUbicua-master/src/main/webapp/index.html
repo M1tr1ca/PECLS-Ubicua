@@ -1641,29 +1641,46 @@
                 }
             }
 
-            function sendAlertLevel(level)
-            {
-                $.ajax(
-                {
-                    data: {alert_level: level},
-                    url: "/Server/SendCommand",
-                    type: 'post',
-                    async: false,
-                    success: function (response)
-                    {
-                        var resp = JSON.parse(response);
-                        if (resp.success) {
-                            $('#commandStatus').html('<span style="color:green;">✓ Alerta nivel ' + level + ' enviada</span>');
-                        } else {
-                            $('#commandStatus').html('<span style="color:red;">✗ Error: ' + resp.error + '</span>');
-                        }
-                        setTimeout(function() { $('#commandStatus').html(''); }, 3000);
-                    },
-                    error: function() {
-                        $('#commandStatus').html('<span style="color:red;">✗ Error de conexión</span>');
-                    }
-                });
+            function sendAlertLevel(level) {
+    console.log("Enviando nivel: " + level); // 1. Verificamos que la función arranca
+
+    $.ajax({
+        data: { alert_level: level },
+        url: "/Server/SendCommand", 
+        type: 'post',
+        success: function (response) {
+            console.log("Respuesta bruta del servidor:", response); // 2. Verificamos qué llega
+
+            var resp = response;
+            
+            // CORRECCIÓN CLAVE: Solo parseamos si es texto. Si ya es objeto, lo usamos tal cual.
+            if (typeof response === "string") {
+                try {
+                    resp = JSON.parse(response);
+                } catch (e) {
+                    console.error("Error parseando JSON:", e);
+                    $('#commandStatus').html('<span style="color:red;">Error de datos recibidos</span>');
+                    return;
+                }
             }
+
+            // Ahora validamos la lógica
+            if (resp.success) {
+                $('#commandStatus').html('<span style="color:green;">✓ Alerta nivel ' + level + ' enviada</span>');
+            } else {
+                // Usamos JSON.stringify por si resp.error es un objeto complejo
+                var errorMsg = (typeof resp.error === 'object') ? JSON.stringify(resp.error) : resp.error;
+                $('#commandStatus').html('<span style="color:red;">✗ Error: ' + errorMsg + '</span>');
+            }
+
+            setTimeout(function() { $('#commandStatus').html(''); }, 3000);
+        },
+        error: function(xhr, status, error) {
+            console.error("Error AJAX:", status, error);
+            $('#commandStatus').html('<span style="color:red;">✗ Error de conexión (' + status + ')</span>');
+        }
+    });
+}
 
             function sendReset()
             {
@@ -1673,10 +1690,9 @@
                         data: {command: 'reset'},
                         url: "/Server/SendCommand",
                         type: 'post',
-                        async: false,
                         success: function (response)
                         {
-                            var resp = JSON.parse(response);
+                            var resp = response;
                             if (resp.success) {
                                 $('#commandStatus').html('<span style="color:green;">✓ Comando de reset enviado</span>');
                             } else {
