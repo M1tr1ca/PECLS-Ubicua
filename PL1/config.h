@@ -2,8 +2,8 @@
 #define CONFIG_H
 // CONFIGURACIÓN WIFI
 // ============================================
-const char* ssid = "cubicua";                    // Nombre de tu red WiFi
-const char* password = "";          // Contraseña de tu red WiFi
+const char* ssid = "iPhone de Juan";                    // Nombre de tu red WiFi
+const char* password = "12345678";          // Contraseña de tu red WiFi
 const char* hostname = "cubicua";           //Establece nombre del ESP32 en la red
 IPAddress ip(192, 168, 1, 200);
 IPAddress gateway(192, 168, 1, 1);
@@ -12,8 +12,8 @@ IPAddress subnet(255, 255, 255, 0);
 // ============================================
 // CONFIGURACIÓN MQTT BROKER
 // ============================================
-const char* MQTT_BROKER_ADRESS = "172.29.41.88";  // Broker MQTT público
-const uint16_t MQTT_PORT = 1883;
+const char* MQTT_BROKER_ADRESS = "172.20.10.9";  // Broker MQTT público
+const uint16_t MQTT_PORT = 3000;
 const char* MQTT_CLIENT_NAME = "LAB08JAV-G5";
 const char* MQTT_USER = "ubicua";
 const char* MQTT_PASS = "ubicua1234";
@@ -25,8 +25,8 @@ const char* TOPIC_SUBSCRIBE = "sensors/ST_1617/alerts";
 // ============================================
 // IDENTIFICACIÓN DE LA ESTACIÓN
 // ============================================
-const char* SENSOR_ID = "ST_1617";
-const char* SENSOR_TYPE = "Estación metereológica IoT";
+const char* SENSOR_ID = "LAB08JAV-G5";
+const char* SENSOR_TYPE = "weather";
 const char* STREET_ID = "ST_1617";
 const char* STREET_NAME = "Calle Pepe Hillo";
 
@@ -80,7 +80,7 @@ const bool IS_BIDIRECTIONAL = true;
 // ============================================
 // CONFIGURACIÓN DEL SISTEMA
 // ============================================
-#define READING_INTERVAL 30000  // Intervalo de lectura en ms (30 segundos)
+#define READING_INTERVAL 10000  // Intervalo de lectura en ms (30 segundos)
 
 // Umbrales de alertas
 #define TEMP_HIGH 35.0              // Temperatura alta (°C) para activar alerta LED
