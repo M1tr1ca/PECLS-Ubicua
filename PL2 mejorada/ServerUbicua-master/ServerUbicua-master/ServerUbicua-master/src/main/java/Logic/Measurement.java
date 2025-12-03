@@ -6,7 +6,7 @@ import java.sql.Timestamp;
 public class Measurement 
 {
     private String sensorId;
-    private Timestamp date;
+    private Timestamp timestamp;
     private double temperature;
     private double humidity;
     private double pressure;
@@ -16,7 +16,7 @@ public class Measurement
     public Measurement() 
     {
         this.sensorId = null;
-        this.date = null;
+        this.timestamp = null;
         this.temperature = 0;
         this.humidity = 0;
         this.pressure = 0;
@@ -31,12 +31,12 @@ public class Measurement
         this.sensorId = sensorId;
     }
 
-    public Timestamp getDate() {
-        return date;
+    public Timestamp getTimestamp() {
+        return timestamp;
     }
 
-    public void setDate(Timestamp date) {
-        this.date = date;
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
     }
 
     public double getTemperature() {

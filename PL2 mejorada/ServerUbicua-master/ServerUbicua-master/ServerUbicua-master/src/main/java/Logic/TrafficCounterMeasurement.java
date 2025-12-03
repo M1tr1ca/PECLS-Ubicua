@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 public class TrafficCounterMeasurement 
 {
     private String sensorId;
-    private Timestamp date;
+    private Timestamp timestamp;
     private int vehicleCount;
     private int pedestrianCount;
     private int bicycleCount;
@@ -19,7 +19,7 @@ public class TrafficCounterMeasurement
     public TrafficCounterMeasurement() 
     {
         this.sensorId = null;
-        this.date = null;
+        this.timestamp = null;
         this.vehicleCount = 0;
         this.pedestrianCount = 0;
         this.bicycleCount = 0;
@@ -34,8 +34,8 @@ public class TrafficCounterMeasurement
     public String getSensorId() { return sensorId; }
     public void setSensorId(String sensorId) { this.sensorId = sensorId; }
 
-    public Timestamp getDate() { return date; }
-    public void setDate(Timestamp date) { this.date = date; }
+    public Timestamp getTimestamp() { return timestamp; }
+    public void setTimestamp(Timestamp timestamp) { this.timestamp = timestamp; }
 
     public int getVehicleCount() { return vehicleCount; }
     public void setVehicleCount(int vehicleCount) { this.vehicleCount = vehicleCount; }

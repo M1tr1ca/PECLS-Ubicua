@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 public class TrafficLightMeasurement 
 {
     private String sensorId;
-    private Timestamp date;
+    private Timestamp timestamp;
     private String currentState;
     private int cyclePositionSeconds;
     private int timeRemainingSeconds;
@@ -22,7 +22,7 @@ public class TrafficLightMeasurement
     public TrafficLightMeasurement() 
     {
         this.sensorId = null;
-        this.date = null;
+        this.timestamp = null;
         this.currentState = null;
         this.cyclePositionSeconds = 0;
         this.timeRemainingSeconds = 0;
@@ -40,8 +40,8 @@ public class TrafficLightMeasurement
     public String getSensorId() { return sensorId; }
     public void setSensorId(String sensorId) { this.sensorId = sensorId; }
 
-    public Timestamp getDate() { return date; }
-    public void setDate(Timestamp date) { this.date = date; }
+    public Timestamp getTimestamp() { return timestamp; }
+    public void setTimestamp(Timestamp timestamp) { this.timestamp = timestamp; }
 
     public String getCurrentState() { return currentState; }
     public void setCurrentState(String currentState) { this.currentState = currentState; }

@@ -968,21 +968,14 @@
                             }));
                             console.log("Processed allData:", allData);
                         } else if (currentSensorType === 'trafficCounter' && data.trafficCounter) {
-                            allData = data.trafficCounter.map(item => ({
-                                ...item,
-                                date: item.timestamp
-                            }));
+                            allData = data.trafficCounter;
                         } else if (currentSensorType === 'trafficLight' && data.trafficLight) {
                             allData = data.trafficLight.map(item => ({
                                 ...item,
-                                currentState: item.currentState ? item.currentState.toUpperCase() : null,
-                                date:item.timestamp
+                                currentState: item.currentState ? item.currentState.toUpperCase() : null
                             }));
                         } else if (currentSensorType === 'informationDisplay' && data.informationDisplay) {
-                            allData = data.informationDisplay.map(item => ({
-                                ...item,
-                                date: item.timestamp
-                            }));
+                            allData = data.informationDisplay;
                         } else {
                             allData = [];
                         }
@@ -1375,7 +1368,7 @@
 
                         newRow += "<tr>";
                         newRow += "<td><span class='sensor-badge'><i class='fas fa-thermometer-half'></i>" + (value.sensorId || 'N/A') + "</span></td>";
-                        newRow += "<td>" + (value.date || 'N/A') + "</td>";
+                        newRow += "<td>" + (value.timestamp || 'N/A') + "</td>";
                         newRow += "<td class='" + tempClass + "'>" + tempDisplay + "</td>";
                         newRow += "<td class='humidity-value'>" + (value.humidity != null && value.humidity !== -1 ? value.humidity.toFixed(2) : '--') + " %</td>";
                         newRow += "<td class='pressure-value'>" + (value.pressure != null && value.pressure !== -1 ? value.pressure.toFixed(2) : '--') + " hPa</td>";
@@ -1384,7 +1377,7 @@
                     } else if (currentSensorType === 'trafficCounter') {
                         newRow += "<tr>";
                         newRow += "<td><span class='sensor-badge'><i class='fas fa-car'></i>" + value.sensorId + "</span></td>";
-                        newRow += "<td>" + value.date + "</td>";
+                        newRow += "<td>" + value.timestamp + "</td>";
                         newRow += "<td>" + (value.vehicleCount || 0) + "</td>";
                         newRow += "<td>" + (value.pedestrianCount || 0) + "</td>";
                         newRow += "<td>" + (value.bicycleCount || 0) + "</td>";
@@ -1395,7 +1388,7 @@
                     } else if (currentSensorType === 'trafficLight') {
                         newRow += "<tr>";
                         newRow += "<td><span class='sensor-badge'><i class='fas fa-traffic-light'></i>" + value.sensorId + "</span></td>";
-                        newRow += "<td>" + value.date + "</td>";
+                        newRow += "<td>" + value.timestamp + "</td>";
                         newRow += "<td><strong>" + (value.currentState || 'N/A') + "</strong></td>";
                         newRow += "<td>" + (value.timeRemainingSeconds || 0) + "s</td>";
                         newRow += "<td>" + (value.cycleDurationSeconds || 0) + "s</td>";
@@ -1406,7 +1399,7 @@
                     } else if (currentSensorType === 'informationDisplay') {
                         newRow += "<tr>";
                         newRow += "<td><span class='sensor-badge'><i class='fas fa-tv'></i>" + value.sensorId + "</span></td>";
-                        newRow += "<td>" + value.date + "</td>";
+                        newRow += "<td>" + value.timestamp + "</td>";
                         newRow += "<td>" + (value.displayStatus || 'N/A') + "</td>";
                         newRow += "<td style='max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>" + (value.currentMessage || 'N/A') + "</td>";
                         newRow += "<td>" + (value.contentType || 'N/A') + "</td>";

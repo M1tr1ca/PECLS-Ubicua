@@ -29,7 +29,7 @@ public class Logic
 			{
 				Measurement measure = new Measurement();
 				measure.setSensorId(rs.getString("sensor_id"));
-				measure.setDate(rs.getTimestamp("timestamp"));
+				measure.setTimestamp(rs.getTimestamp("timestamp"));
 				measure.setTemperature(rs.getDouble("temperature_celsius"));
 				measure.setHumidity(rs.getDouble("humidity_percent"));
 				measure.setPressure(rs.getDouble("atmospheric_pressure_hpa"));
@@ -71,7 +71,7 @@ public class Logic
 			{
 				TrafficCounterMeasurement measure = new TrafficCounterMeasurement();
 				measure.setSensorId(rs.getString("sensor_id"));
-				measure.setDate(rs.getTimestamp("timestamp"));
+				measure.setTimestamp(rs.getTimestamp("timestamp"));
 				measure.setVehicleCount(rs.getInt("vehicle_count"));
 				measure.setPedestrianCount(rs.getInt("pedestrian_count"));
 				measure.setBicycleCount(rs.getInt("bicycle_count"));
@@ -118,7 +118,7 @@ public class Logic
 			{
 				TrafficLightMeasurement measure = new TrafficLightMeasurement();
 				measure.setSensorId(rs.getString("sensor_id"));
-				measure.setDate(rs.getTimestamp("timestamp"));
+				measure.setTimestamp(rs.getTimestamp("timestamp"));
 				measure.setCurrentState(rs.getString("current_state"));
 				measure.setCyclePositionSeconds(rs.getInt("cycle_position_seconds"));
 				measure.setTimeRemainingSeconds(rs.getInt("time_remaining_seconds"));
@@ -198,7 +198,7 @@ public class Logic
 			{
 				InformationDisplayMeasurement measure = new InformationDisplayMeasurement();
 				measure.setSensorId(rs.getString("sensor_id"));
-				measure.setDate(rs.getTimestamp("timestamp"));
+				measure.setTimestamp(rs.getTimestamp("timestamp"));
 				measure.setDisplayStatus(rs.getString("display_status"));
 				measure.setCurrentMessage(rs.getString("current_message"));
 				measure.setContentType(rs.getString("content_type"));
