@@ -1368,7 +1368,7 @@
 
                         newRow += "<tr>";
                         newRow += "<td><span class='sensor-badge'><i class='fas fa-thermometer-half'></i>" + (value.sensorId || 'N/A') + "</span></td>";
-                        newRow += "<td>" + (value.timestamp || 'N/A') + "</td>";
+                        newRow += "<td>" + value.timestamp + "</td>";
                         newRow += "<td class='" + tempClass + "'>" + tempDisplay + "</td>";
                         newRow += "<td class='humidity-value'>" + (value.humidity != null && value.humidity !== -1 ? value.humidity.toFixed(2) : '--') + " %</td>";
                         newRow += "<td class='pressure-value'>" + (value.pressure != null && value.pressure !== -1 ? value.pressure.toFixed(2) : '--') + " hPa</td>";
