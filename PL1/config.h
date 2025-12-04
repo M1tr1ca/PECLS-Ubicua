@@ -80,7 +80,7 @@ const bool IS_BIDIRECTIONAL = true;
 // ============================================
 // CONFIGURACIÓN DEL SISTEMA
 // ============================================
-#define READING_INTERVAL 10000  // Intervalo de lectura en ms (30 segundos)
+#define READING_INTERVAL 30000  // Intervalo de lectura en ms (30 segundos)
 
 // Umbrales de alertas
 #define TEMP_HIGH 35.0              // Temperatura alta (°C) para activar alerta LED
