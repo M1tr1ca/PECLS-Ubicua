@@ -102,30 +102,55 @@ public class MapActivity extends AppCompatActivity {
     private void cargarCalles() {
         tvStatus.setText("🔄 Cargando calles de Madrid...");
 
-        // Intentar obtener del servidor, si falla usar datos por defecto
+        // Obtener calles del servidor usando el endpoint GetStreets
         ApiService apiService = RetrofitClient.getRetrofitInstance().create(ApiService.class);
-        Call<AllDataResponse> call = apiService.getAllData();
+        Call<List<Street>> call = apiService.getStreets();
 
-        call.enqueue(new Callback<AllDataResponse>() {
+        call.enqueue(new Callback<List<Street>>() {
             @Override
-            public void onResponse(Call<AllDataResponse> call, Response<AllDataResponse> response) {
-                usarDatosPorDefecto();
+            public void onResponse(Call<List<Street>> call, Response<List<Street>> response) {
+                if (response.isSuccessful() && response.body() != null && !response.body().isEmpty()) {
+                    // Convertir Street (API) a StreetWithSensors (modelo interno)
+                    streetsList.clear();
+                    for (Street street : response.body()) {
+                        StreetWithSensors sws = street.toStreetWithSensors();
+                        // Añadir sensores por defecto basados en el street_id
+                        agregarSensoresPorDefecto(sws);
+                        streetsList.add(sws);
+                    }
+                    tvStatus.setText("✅ " + streetsList.size() + " calles cargadas del servidor");
+                    Log.i("ubicua", "Calles cargadas del servidor: " + streetsList.size());
+                    agregarMarcadoresAlMapa();
+                    configurarSpinner();
+                } else {
+                    Log.w("ubicua", "Respuesta vacía del servidor");
+                    mostrarError("No se encontraron calles en el servidor");
+                }
             }
 
             @Override
-            public void onFailure(Call<AllDataResponse> call, Throwable t) {
-                Log.e("ubicua", "Error de conexión: " + t.getMessage());
-                usarDatosPorDefecto();
+            public void onFailure(Call<List<Street>> call, Throwable t) {
+                Log.e("ubicua", "Error de conexión al obtener calles: " + t.getMessage());
+                mostrarError("Error de conexión: " + t.getMessage());
             }
         });
     }
 
-    private void usarDatosPorDefecto() {
-        streetsList = MadridStreetsData.getDefaultStreets();
-        tvStatus.setText("✅ " + streetsList.size() + " calles cargadas");
+    /**
+     * Añade sensores por defecto a una calle (weather, trafficCounter, trafficLight, display)
+     * basándose en el street_id como identificador base
+     */
+    private void agregarSensoresPorDefecto(StreetWithSensors street) {
+        String baseId = street.getStreetId();
+        street.addSensor(new Sensor(baseId + "-weather", "weather", baseId));
+        street.addSensor(new Sensor(baseId + "-counter", "trafficCounter", baseId));
+        street.addSensor(new Sensor(baseId + "-light", "trafficLight", baseId));
+        street.addSensor(new Sensor(baseId + "-display", "display", baseId));
+    }
 
-        agregarMarcadoresAlMapa();
-        configurarSpinner();
+    private void mostrarError(String mensaje) {
+        tvStatus.setText("❌ " + mensaje);
+        btnSelectStreet.setEnabled(false);
     }
 
     private void agregarMarcadoresAlMapa() {

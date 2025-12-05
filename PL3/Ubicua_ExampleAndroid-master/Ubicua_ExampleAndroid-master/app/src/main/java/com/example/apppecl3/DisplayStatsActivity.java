@@ -88,7 +88,7 @@ public class DisplayStatsActivity extends AppCompatActivity {
             tvStreetName.setText("📍 " + streetName);
             
             // Formato: sensors/{street_id}/{sensor_type}/{sensor_id}
-            String topic = "sensors/" + streetId + "/display/" + sensorId;
+            String topic = "/sensors/" + streetId + "/display/" + sensorId;
             conectarMqtt(topic);
         }
     }

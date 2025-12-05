@@ -89,7 +89,7 @@ public class TrafficLightStatsActivity extends AppCompatActivity {
             tvStreetName.setText("📍 " + streetName);
             
             // Formato: sensors/{street_id}/{sensor_type}/{sensor_id}
-            String topic = "sensors/" + streetId + "/traffic_light/" + sensorId;
+            String topic = "/sensors/" + streetId + "/traffic_light/" + sensorId;
             conectarMqtt(topic);
         }
     }

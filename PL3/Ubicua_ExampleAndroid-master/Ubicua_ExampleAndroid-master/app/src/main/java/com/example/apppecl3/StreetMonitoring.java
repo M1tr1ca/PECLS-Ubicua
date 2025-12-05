@@ -68,7 +68,7 @@ public class StreetMonitoring extends AppCompatActivity {
             
             // Suscribirse al topic del sensor
             // Topic format: sensors/LAB08JAV-G1 (basado en sensor_id)
-            String topic = "sensors/" + sensorId;
+            String topic = "/sensors/" + sensorId;
             conectarMqtt(topic);
         }
     }

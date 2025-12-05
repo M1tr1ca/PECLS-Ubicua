@@ -81,8 +81,8 @@ public class WeatherStatsActivity extends AppCompatActivity {
             
             tvStreetName.setText(streetName);
             
-            // Conectar MQTT - Formato: sensors/{street_id}/{sensor_type}/{sensor_id}
-            String topic = "sensors/" + streetId + "/weather_station/" + sensorId;
+            // Conectar MQTT - Formato: /sensors/{street_id}/{sensor_type}/{sensor_id}
+            String topic = "/sensors/" + streetId + "/weather_station/" + sensorId;
             conectarMqtt(topic);
         }
     }

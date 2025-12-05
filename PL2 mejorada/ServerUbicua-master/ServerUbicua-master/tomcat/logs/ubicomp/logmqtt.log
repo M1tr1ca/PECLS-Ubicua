@@ -225,3 +225,36 @@
 2025-12-05 09:57:13.713 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### test: Hello from Tomcat :)
 2025-12-05 09:57:13.717 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
 2025-12-05 09:57:13.758 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:86) logmqtt ### Ignorando mensaje: no tiene formato de JSON
+2025-12-05 10:05:09.466 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors
+2025-12-05 10:05:09.470 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-05 10:05:09.781 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-05 10:05:09.785 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-05 10:05:09.793 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-05 10:05:32.292 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G2","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 10:05:32.310 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:142) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G2","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 10:05:32.311 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:146) logmqtt ### Error guardando en BD: SQL connection is null
+2025-12-05 10:05:53.771 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G2","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 10:05:53.831 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G2, temp=18.5, humidity=72.3
+2025-12-05 10:24:52.106 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G2","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 10:24:52.170 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G2, temp=18.5, humidity=72.3
+2025-12-05 10:41:35.524 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors/#
+2025-12-05 10:41:35.527 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-05 10:41:35.841 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-05 10:41:35.846 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-05 10:41:35.854 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-05 10:42:39.971 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors: {"sensor_id":"LAB08JAV-G2","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 10:42:40.230 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G2, temp=18.5, humidity=72.3
+2025-12-05 10:44:26.449 WARN  mqtt.MQTTSuscriber.connectionLost(MQTTSuscriber.java:64) logmqtt ### MQTT Connection lost, cause: Connection lost
+2025-12-05 10:46:59.569 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors/#
+2025-12-05 10:46:59.573 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-05 10:46:59.881 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-05 10:46:59.885 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-05 10:46:59.893 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-05 10:50:24.627 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 10:50:24.725 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=18.5, humidity=72.3
+2025-12-05 10:51:01.389 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 10:51:01.403 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=18.5, humidity=72.3
+2025-12-05 10:57:19.875 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 10:57:19.930 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=18.5, humidity=72.3
+2025-12-05 10:57:45.655 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 10:57:45.675 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=18.5, humidity=72.3

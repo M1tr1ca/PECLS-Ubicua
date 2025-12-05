@@ -15,6 +15,12 @@ public class Sensor {
         this.sensorType = sensorType;
     }
 
+    public Sensor(String sensorId, String sensorType, String streetId) {
+        this.sensorId = sensorId;
+        this.sensorType = sensorType;
+        this.streetId = streetId;
+    }
+
     public String getSensorId() { return sensorId; }
     public void setSensorId(String sensorId) { this.sensorId = sensorId; }
 
