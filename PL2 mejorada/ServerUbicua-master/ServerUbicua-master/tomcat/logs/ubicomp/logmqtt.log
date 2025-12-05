@@ -258,3 +258,627 @@
 2025-12-05 10:57:19.930 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=18.5, humidity=72.3
 2025-12-05 10:57:45.655 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
 2025-12-05 10:57:45.675 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=18.5, humidity=72.3
+2025-12-05 11:33:28.480 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors/#
+2025-12-05 11:33:28.486 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-05 11:33:28.801 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-05 11:33:28.806 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-05 11:33:28.815 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-05 11:34:13.763 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 11:34:14.521 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=18.5, humidity=72.3
+2025-12-05 12:36:55.782 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors/#
+2025-12-05 12:36:55.785 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-05 12:36:56.092 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-05 12:36:56.094 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-05 12:36:56.099 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-05 13:29:40.184 INFO  mqtt.MQTTSuscriber.subscribeTopic(MQTTSuscriber.java:55) logmqtt ### Subscribed to /sensors/#
+2025-12-05 13:29:40.188 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:26) logmqtt ### Connecting to broker: tcp://mqtt-broker:1883
+2025-12-05 13:29:40.504 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:28) logmqtt ### Connected
+2025-12-05 13:29:40.507 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:32) logmqtt ### Message published
+2025-12-05 13:29:40.520 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:34) logmqtt ### Disconnected
+2025-12-05 13:31:47.548 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 13:31:47.607 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=18.5, humidity=72.3
+2025-12-05 13:32:41.060 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 13:32:41.087 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=18.5, humidity=72.3
+2025-12-05 13:37:11.318 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 13:37:11.505 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=18.5, humidity=72.3
+2025-12-05 13:59:13.695 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 13:59:13.773 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=18.5, humidity=72.3
+2025-12-05 13:59:28.673 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":30,"humidity_percent":20,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 13:59:29.016 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=30.0, humidity=20.0
+2025-12-05 13:59:46.617 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":-5,"humidity_percent":20,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 13:59:46.651 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=-5.0, humidity=20.0
+2025-12-05 14:01:26.242 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_counter/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-12-05 14:01:26.303 INFO  mqtt.MQTTSuscriber.saveTrafficCounter(MQTTSuscriber.java:214) logmqtt ### Datos traffic_counter guardados: sensor=LAB08JAV-G5, vehicles=55, pedestrians=200
+2025-12-05 14:02:13.912 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_counter/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-12-05 14:02:13.923 INFO  mqtt.MQTTSuscriber.saveTrafficCounter(MQTTSuscriber.java:214) logmqtt ### Datos traffic_counter guardados: sensor=LAB08JAV-G5, vehicles=55, pedestrians=200
+2025-12-05 14:03:20.081 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_counter/LAB08JAV-G5-TC: {
+  "sensor_id": "LAB08JAV-G5-TC",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-12-05 14:03:21.442 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:142) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G5-TC","timestamp":"2025-11-28 10:15:00:000","sensor_type":"traffic_counter","data":{"vehicle_count":55,"pedestrian_count":200,"bicycle_count":15,"direction":"west","counter_type":"mixed","technology":"infrared","average_speed_kmh":35.5,"occupancy_percentage":85,"traffic_density":"medium"},"location":{"altitude_meters":650}}
+2025-12-05 14:03:21.454 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:146) logmqtt ### Error guardando en BD: ERROR: insert or update on table "traffic_counter_readings" violates foreign key constraint "traffic_counter_readings_sensor_id_fkey"
+  Detail: Key (sensor_id)=(LAB08JAV-G5-TC) is not present in table "sensors".
+2025-12-05 14:03:47.189 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_counter/LAB08JAV-G5-TC: {
+  "sensor_id": "LAB08JAV-G5-TC",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "hight"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-12-05 14:03:47.205 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:142) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G5-TC","timestamp":"2025-11-28 10:15:00:000","sensor_type":"traffic_counter","data":{"vehicle_count":55,"pedestrian_count":200,"bicycle_count":15,"direction":"west","counter_type":"mixed","technology":"infrared","average_speed_kmh":35.5,"occupancy_percentage":85,"traffic_density":"hight"},"location":{"altitude_meters":650}}
+2025-12-05 14:03:47.207 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:146) logmqtt ### Error guardando en BD: ERROR: insert or update on table "traffic_counter_readings" violates foreign key constraint "traffic_counter_readings_sensor_id_fkey"
+  Detail: Key (sensor_id)=(LAB08JAV-G5-TC) is not present in table "sensors".
+2025-12-05 14:05:01.074 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_counter/LAB08JAV-G5-TL: {
+  "sensor_id": "LAB08JAV-G5-TL",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:05:01.328 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:142) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G5-TL","timestamp":"2025-11-28 10:16:00:000","sensor_type":"traffic_light","data":{"current_state":"red","cycle_position_seconds":30,"time_remaining_seconds":60,"cycle_duration_seconds":120,"traffic_light_type":"pedestrian_vehicle","circulation_direction":"unidirectional","pedestrian_waiting":true,"pedestrian_button_pressed":true,"malfunction_detected":false,"cycle_count":15,"state_changed":false,"last_state_change":"2025-11-28T10:00:00.000000"}}
+2025-12-05 14:05:01.335 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:146) logmqtt ### Error guardando en BD: ERROR: insert or update on table "traffic_light_readings" violates foreign key constraint "traffic_light_readings_sensor_id_fkey"
+  Detail: Key (sensor_id)=(LAB08JAV-G5-TL) is not present in table "sensors".
+2025-12-05 14:05:26.784 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_light/LAB08JAV-G5-TL: {
+  "sensor_id": "LAB08JAV-G5-TL",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:05:26.802 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:142) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G5-TL","timestamp":"2025-11-28 10:16:00:000","sensor_type":"traffic_light","data":{"current_state":"red","cycle_position_seconds":30,"time_remaining_seconds":60,"cycle_duration_seconds":120,"traffic_light_type":"pedestrian_vehicle","circulation_direction":"unidirectional","pedestrian_waiting":true,"pedestrian_button_pressed":true,"malfunction_detected":false,"cycle_count":15,"state_changed":false,"last_state_change":"2025-11-28T10:00:00.000000"}}
+2025-12-05 14:05:26.808 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:146) logmqtt ### Error guardando en BD: ERROR: insert or update on table "traffic_light_readings" violates foreign key constraint "traffic_light_readings_sensor_id_fkey"
+  Detail: Key (sensor_id)=(LAB08JAV-G5-TL) is not present in table "sensors".
+2025-12-05 14:07:19.958 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_light/LAB08JAV-G5-TL: {
+  "sensor_id": "LAB08JAV-G5-TL",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:07:19.990 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:142) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G5-TL","timestamp":"2025-11-28 10:16:00:000","sensor_type":"traffic_light","data":{"current_state":"red","cycle_position_seconds":30,"time_remaining_seconds":60,"cycle_duration_seconds":120,"traffic_light_type":"pedestrian_vehicle","circulation_direction":"unidirectional","pedestrian_waiting":true,"pedestrian_button_pressed":true,"malfunction_detected":false,"cycle_count":15,"state_changed":false,"last_state_change":"2025-11-28T10:00:00.000000"}}
+2025-12-05 14:07:19.995 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:146) logmqtt ### Error guardando en BD: ERROR: insert or update on table "traffic_light_readings" violates foreign key constraint "traffic_light_readings_sensor_id_fkey"
+  Detail: Key (sensor_id)=(LAB08JAV-G5-TL) is not present in table "sensors".
+2025-12-05 14:07:54.237 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_light/LAB08JAV-G5-TL: {
+  "sensor_id": "LAB08JAV-G5-TL",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:07:54.245 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:142) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G5-TL","timestamp":"2025-11-28 10:16:00:000","sensor_type":"traffic_light","data":{"current_state":"red","cycle_position_seconds":30,"time_remaining_seconds":60,"cycle_duration_seconds":120,"traffic_light_type":"pedestrian_vehicle","circulation_direction":"unidirectional","pedestrian_waiting":true,"pedestrian_button_pressed":true,"malfunction_detected":false,"cycle_count":15,"state_changed":false,"last_state_change":"2025-11-28T10:00:00.000000"}}
+2025-12-05 14:07:54.247 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:146) logmqtt ### Error guardando en BD: ERROR: insert or update on table "traffic_light_readings" violates foreign key constraint "traffic_light_readings_sensor_id_fkey"
+  Detail: Key (sensor_id)=(LAB08JAV-G5-TL) is not present in table "sensors".
+2025-12-05 14:08:47.103 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_light/LAB08JAV-G5-TL: {
+  "sensor_id": "LAB08JAV-G5-TL",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:08:47.168 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:142) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G5-TL","timestamp":"2025-11-28 10:16:00:000","sensor_type":"traffic_light","data":{"current_state":"red","cycle_position_seconds":30,"time_remaining_seconds":60,"cycle_duration_seconds":120,"traffic_light_type":"pedestrian_vehicle","circulation_direction":"unidirectional","pedestrian_waiting":true,"pedestrian_button_pressed":true,"malfunction_detected":false,"cycle_count":15,"state_changed":false,"last_state_change":"2025-11-28T10:00:00.000000"}}
+2025-12-05 14:08:47.175 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:146) logmqtt ### Error guardando en BD: ERROR: insert or update on table "traffic_light_readings" violates foreign key constraint "traffic_light_readings_sensor_id_fkey"
+  Detail: Key (sensor_id)=(LAB08JAV-G5-TL) is not present in table "sensors".
+2025-12-05 14:08:48.528 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_light/LAB08JAV-G5-TL: {
+  "sensor_id": "LAB08JAV-G5-TL",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:08:48.565 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:142) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G5-TL","timestamp":"2025-11-28 10:16:00:000","sensor_type":"traffic_light","data":{"current_state":"red","cycle_position_seconds":30,"time_remaining_seconds":60,"cycle_duration_seconds":120,"traffic_light_type":"pedestrian_vehicle","circulation_direction":"unidirectional","pedestrian_waiting":true,"pedestrian_button_pressed":true,"malfunction_detected":false,"cycle_count":15,"state_changed":false,"last_state_change":"2025-11-28T10:00:00.000000"}}
+2025-12-05 14:08:48.574 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:146) logmqtt ### Error guardando en BD: ERROR: insert or update on table "traffic_light_readings" violates foreign key constraint "traffic_light_readings_sensor_id_fkey"
+  Detail: Key (sensor_id)=(LAB08JAV-G5-TL) is not present in table "sensors".
+2025-12-05 14:10:11.489 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_light/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5-TL",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:10:11.502 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:142) logmqtt ### Formato o tipo de sensor incorrecto, guardando en tabla Other el mensaje {"sensor_id":"LAB08JAV-G5-TL","timestamp":"2025-11-28 10:16:00:000","sensor_type":"traffic_light","data":{"current_state":"red","cycle_position_seconds":30,"time_remaining_seconds":60,"cycle_duration_seconds":120,"traffic_light_type":"pedestrian_vehicle","circulation_direction":"unidirectional","pedestrian_waiting":true,"pedestrian_button_pressed":true,"malfunction_detected":false,"cycle_count":15,"state_changed":false,"last_state_change":"2025-11-28T10:00:00.000000"}}
+2025-12-05 14:10:11.507 ERROR mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:146) logmqtt ### Error guardando en BD: ERROR: insert or update on table "traffic_light_readings" violates foreign key constraint "traffic_light_readings_sensor_id_fkey"
+  Detail: Key (sensor_id)=(LAB08JAV-G5-TL) is not present in table "sensors".
+2025-12-05 14:10:23.819 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_light/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:10:23.835 INFO  mqtt.MQTTSuscriber.saveTrafficLight(MQTTSuscriber.java:258) logmqtt ### Datos traffic_light guardados: sensor=LAB08JAV-G5, state=red, remaining=60s
+2025-12-05 14:11:15.654 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_light/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:11:15.685 INFO  mqtt.MQTTSuscriber.saveTrafficLight(MQTTSuscriber.java:258) logmqtt ### Datos traffic_light guardados: sensor=LAB08JAV-G5, state=red, remaining=60s
+2025-12-05 14:14:13.092 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_light/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:14:13.726 INFO  mqtt.MQTTSuscriber.saveTrafficLight(MQTTSuscriber.java:258) logmqtt ### Datos traffic_light guardados: sensor=LAB08JAV-G5, state=red, remaining=60s
+2025-12-05 14:14:16.615 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_light/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:14:16.636 INFO  mqtt.MQTTSuscriber.saveTrafficLight(MQTTSuscriber.java:258) logmqtt ### Datos traffic_light guardados: sensor=LAB08JAV-G5, state=red, remaining=60s
+2025-12-05 14:15:15.360 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_light/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:15:15.376 INFO  mqtt.MQTTSuscriber.saveTrafficLight(MQTTSuscriber.java:258) logmqtt ### Datos traffic_light guardados: sensor=LAB08JAV-G5, state=red, remaining=60s
+2025-12-05 14:15:31.560 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_light/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:15:31.579 INFO  mqtt.MQTTSuscriber.saveTrafficLight(MQTTSuscriber.java:258) logmqtt ### Datos traffic_light guardados: sensor=LAB08JAV-G5, state=red, remaining=60s
+2025-12-05 14:18:18.886 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_light/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:18:18.933 INFO  mqtt.MQTTSuscriber.saveTrafficLight(MQTTSuscriber.java:258) logmqtt ### Datos traffic_light guardados: sensor=LAB08JAV-G5, state=red, remaining=60s
+2025-12-05 14:18:26.744 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_light/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "green",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:18:26.762 INFO  mqtt.MQTTSuscriber.saveTrafficLight(MQTTSuscriber.java:258) logmqtt ### Datos traffic_light guardados: sensor=LAB08JAV-G5, state=green, remaining=60s
+2025-12-05 14:18:33.329 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_light/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:16:00:000",
+  "sensor_type": "traffic_light",
+  "data": {
+    "current_state": "red",
+    "cycle_position_seconds": 30,
+    "time_remaining_seconds": 60,
+    "cycle_duration_seconds": 120,
+    "traffic_light_type": "pedestrian_vehicle",
+    "circulation_direction": "unidirectional",
+    "pedestrian_waiting": true,
+    "pedestrian_button_pressed": true,
+    "malfunction_detected": false,
+    "cycle_count": 15,
+    "state_changed": false,
+    "last_state_change": "2025-11-28T10:00:00.000000"
+  }
+}
+
+2025-12-05 14:18:33.342 INFO  mqtt.MQTTSuscriber.saveTrafficLight(MQTTSuscriber.java:258) logmqtt ### Datos traffic_light guardados: sensor=LAB08JAV-G5, state=red, remaining=60s
+2025-12-05 14:19:17.238 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_counter/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-12-05 14:19:17.300 INFO  mqtt.MQTTSuscriber.saveTrafficCounter(MQTTSuscriber.java:214) logmqtt ### Datos traffic_counter guardados: sensor=LAB08JAV-G5, vehicles=55, pedestrians=200
+2025-12-05 14:19:55.717 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/display/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:17:00:000",
+  "sensor_type": "information_display",
+  "data": {
+    "display_status": "active",
+    "current_message": "Trafico fluido en zona centro",
+    "content_type": "traffic",
+    "brightness_level": 90,
+    "display_type": "led_matrix",
+    "display_size_inches": 42.0,
+    "supports_color": true,
+    "temperature_celsius": 35.5,
+    "energy_consumption_watts": 120.0,
+    "last_content_update": "2025-11-28T10:01:30.000000"
+  }
+}
+
+2025-12-05 14:19:55.840 INFO  mqtt.MQTTSuscriber.saveInformationDisplay(MQTTSuscriber.java:300) logmqtt ### Datos information_display guardados: sensor=LAB08JAV-G5, status=active, message=Trafico fluido en zona centro
+2025-12-05 14:20:29.304 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_counter/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-12-05 14:20:29.334 INFO  mqtt.MQTTSuscriber.saveTrafficCounter(MQTTSuscriber.java:214) logmqtt ### Datos traffic_counter guardados: sensor=LAB08JAV-G5, vehicles=55, pedestrians=200
+2025-12-05 14:21:33.065 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 14:21:33.099 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=18.5, humidity=72.3
+2025-12-05 14:47:02.383 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":18.5,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 14:47:02.524 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=18.5, humidity=72.3
+2025-12-05 14:47:31.514 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":40,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 14:47:31.721 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=40.0, humidity=72.3
+2025-12-05 14:54:13.071 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":40,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 14:54:13.149 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=40.0, humidity=72.3
+2025-12-05 15:06:39.065 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":40,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 15:06:39.153 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=40.0, humidity=72.3
+2025-12-05 15:06:40.538 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/weather_station/LAB08JAV-G5: {"sensor_id":"LAB08JAV-G5","timestamp":"2025-11-25 20:05:00:000","location":{"altitude_meters":650.0},"data":{"temperature_celsius":40,"humidity_percent":72.3,"atmospheric_pressure_hpa":1015.8}}
+2025-12-05 15:06:40.585 INFO  mqtt.MQTTSuscriber.saveWeatherSensor(MQTTSuscriber.java:179) logmqtt ### Datos weather guardados: sensor=LAB08JAV-G5, temp=40.0, humidity=72.3
+2025-12-05 15:06:53.065 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_counter/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-12-05 15:06:53.099 INFO  mqtt.MQTTSuscriber.saveTrafficCounter(MQTTSuscriber.java:214) logmqtt ### Datos traffic_counter guardados: sensor=LAB08JAV-G5, vehicles=55, pedestrians=200
+2025-12-05 15:06:55.875 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_counter/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-12-05 15:06:56.015 INFO  mqtt.MQTTSuscriber.saveTrafficCounter(MQTTSuscriber.java:214) logmqtt ### Datos traffic_counter guardados: sensor=LAB08JAV-G5, vehicles=55, pedestrians=200
+2025-12-05 15:19:10.457 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_counter/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-12-05 15:19:11.101 INFO  mqtt.MQTTSuscriber.saveTrafficCounter(MQTTSuscriber.java:214) logmqtt ### Datos traffic_counter guardados: sensor=LAB08JAV-G5, vehicles=55, pedestrians=200
+2025-12-05 15:19:12.117 INFO  mqtt.MQTTSuscriber.messageArrived(MQTTSuscriber.java:69) logmqtt ### /sensors/ST_1617/traffic_counter/LAB08JAV-G5: {
+  "sensor_id": "LAB08JAV-G5",
+  "timestamp": "2025-11-28 10:15:00:000",
+  "sensor_type": "traffic_counter",
+  "data": {
+    "vehicle_count": 55,
+    "pedestrian_count": 200,
+    "bicycle_count": 15,
+    "direction": "west",
+    "counter_type": "mixed",
+    "technology": "infrared",
+    "average_speed_kmh": 35.5,
+    "occupancy_percentage": 85,
+    "traffic_density": "medium"
+  },
+  "location": {
+    "altitude_meters": 650
+  }
+}
+
+2025-12-05 15:19:12.168 INFO  mqtt.MQTTSuscriber.saveTrafficCounter(MQTTSuscriber.java:214) logmqtt ### Datos traffic_counter guardados: sensor=LAB08JAV-G5, vehicles=55, pedestrians=200

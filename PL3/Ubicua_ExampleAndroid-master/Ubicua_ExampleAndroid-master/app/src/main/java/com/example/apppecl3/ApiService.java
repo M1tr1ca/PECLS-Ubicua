@@ -23,4 +23,8 @@ public interface ApiService {
     // Obtener lista de calles filtradas por distrito
     @GET("Server/GetStreets")
     Call<List<Street>> getStreetsByDistrict(@Query("district") String district);
+    
+    // Obtener lista de sensores con sus IDs reales
+    @GET("Server/GetSensors")
+    Call<List<SensorInfo>> getSensors();
 }

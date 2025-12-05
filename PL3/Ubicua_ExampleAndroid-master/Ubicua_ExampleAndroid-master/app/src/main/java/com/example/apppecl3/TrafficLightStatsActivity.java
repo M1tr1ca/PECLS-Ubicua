@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -78,20 +79,93 @@ public class TrafficLightStatsActivity extends AppCompatActivity {
         
         mainHandler = new Handler(Looper.getMainLooper());
 
+        // Botón volver
+        ImageButton btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> finish());
+
         // Obtener datos del intent
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            sensorId = extras.getString("sensor_id", "LAB08JAV-G1-TL");
+            sensorId = extras.getString("sensor_id", "LAB08JAV-G1");
             streetId = extras.getString("street_id", "ST_1");
             sensorType = extras.getString("sensor_type", "traffic_light");
             streetName = extras.getString("street_name", "Calle desconocida");
             
             tvStreetName.setText("📍 " + streetName);
             
+            // Cargar datos históricos del servidor
+            cargarDatosHistoricos();
+            
             // Formato: sensors/{street_id}/{sensor_type}/{sensor_id}
             String topic = "/sensors/" + streetId + "/traffic_light/" + sensorId;
+            Log.i("ubicua", "TrafficLight - SensorId: " + sensorId + ", StreetId: " + streetId);
+            Log.i("ubicua", "TrafficLight - Suscribiendo a topic: " + topic);
             conectarMqtt(topic);
         }
+    }
+    
+    private void cargarDatosHistoricos() {
+        tvStatus.setText("🔄 Cargando datos...");
+        
+        ApiService apiService = RetrofitClient.getRetrofitInstance().create(ApiService.class);
+        retrofit2.Call<AllDataResponse> call = apiService.getAllData();
+        
+        call.enqueue(new retrofit2.Callback<AllDataResponse>() {
+            @Override
+            public void onResponse(retrofit2.Call<AllDataResponse> call, retrofit2.Response<AllDataResponse> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    AllDataResponse data = response.body();
+                    procesarDatosHistoricos(data);
+                } else {
+                    Log.w("ubicua", "No se pudieron cargar datos históricos de semáforos");
+                }
+            }
+
+            @Override
+            public void onFailure(retrofit2.Call<AllDataResponse> call, Throwable t) {
+                Log.e("ubicua", "Error cargando históricos semáforos: " + t.getMessage());
+            }
+        });
+    }
+    
+    private void procesarDatosHistoricos(AllDataResponse data) {
+        if (data.getTrafficLight() == null || data.getTrafficLight().isEmpty()) {
+            Log.w("ubicua", "No hay datos de semáforos en la respuesta");
+            return;
+        }
+        
+        java.util.List<AllDataResponse.TrafficLightMeasurement> trafficLightList = data.getTrafficLight();
+        AllDataResponse.TrafficLightMeasurement ultimoDato = null;
+        
+        Log.i("ubicua", "Procesando " + trafficLightList.size() + " registros trafficLight, filtrando por sensorId: " + sensorId);
+        
+        // Filtrar por sensor ID
+        for (AllDataResponse.TrafficLightMeasurement m : trafficLightList) {
+            if (m.getSensorId() != null && m.getSensorId().equals(sensorId)) {
+                ultimoDato = m;
+            }
+        }
+        
+        final AllDataResponse.TrafficLightMeasurement datoFinal = ultimoDato;
+        
+        mainHandler.post(() -> {
+            if (datoFinal != null) {
+                // Mostrar el último dato
+                String state = datoFinal.getCurrentState();
+                tvCurrentState.setText(state != null ? state.toUpperCase() : "--");
+                tvTimeRemaining.setText(datoFinal.getTimeRemainingSeconds() + " s");
+                tvCycleDuration.setText(datoFinal.getCycleDurationSeconds() + " s");
+                tvPedestrianWaiting.setText(datoFinal.isPedestrianWaiting() ? "Sí" : "No");
+                tvMalfunction.setText(datoFinal.isMalfunctionDetected() ? "⚠️ Detectada" : "✅ Normal");
+                tvCirculationDirection.setText(datoFinal.getCirculationDirection() != null ? 
+                        datoFinal.getCirculationDirection() : "--");
+                
+                // Actualizar luces
+                actualizarSemaforo(state);
+                
+                Log.i("ubicua", "Mostrando último dato semáforo: estado=" + state);
+            }
+        });
     }
 
     private void conectarMqtt(String topic) {
@@ -140,6 +214,7 @@ public class TrafficLightStatsActivity extends AppCompatActivity {
 
     private void procesarMensaje(String json) {
         try {
+            Log.i("ubicua", "TrafficLight mensaje recibido: " + json);
             JSONObject obj = new JSONObject(json);
             
             String state = "--";
@@ -147,55 +222,78 @@ public class TrafficLightStatsActivity extends AppCompatActivity {
             boolean pedestrianWaiting = false, malfunction = false;
             String direction = "--";
             
-            // Formato ESP32: {"data":{"state":"green","remaining_seconds":25,...}}
+            // Formato ESP32: {"data":{"current_state":"red","time_remaining_seconds":60,...}}
             if (obj.has("data")) {
                 JSONObject data = obj.getJSONObject("data");
-                state = data.optString("state", data.optString("currentState", "--"));
-                timeRemaining = data.optInt("remaining_seconds", data.optInt("timeRemainingSeconds", 0));
-                cycleDuration = data.optInt("cycle_duration_seconds", data.optInt("cycleDurationSeconds", 0));
-                pedestrianWaiting = data.optBoolean("pedestrian_waiting", data.optBoolean("pedestrianWaiting", false));
-                malfunction = data.optBoolean("malfunction_detected", data.optBoolean("malfunctionDetected", false));
-                direction = data.optString("circulation_direction", data.optString("circulationDirection", "--"));
+                // Soportar snake_case y camelCase
+                state = data.optString("current_state", 
+                        data.optString("state", 
+                        data.optString("currentState", "--")));
+                timeRemaining = data.optInt("time_remaining_seconds", 
+                        data.optInt("remaining_seconds", 
+                        data.optInt("timeRemainingSeconds", 0)));
+                cycleDuration = data.optInt("cycle_duration_seconds", 
+                        data.optInt("cycleDurationSeconds", 0));
+                pedestrianWaiting = data.optBoolean("pedestrian_waiting", 
+                        data.optBoolean("pedestrianWaiting", false));
+                malfunction = data.optBoolean("malfunction_detected", 
+                        data.optBoolean("malfunctionDetected", false));
+                direction = data.optString("circulation_direction", 
+                        data.optString("circulationDirection", "--"));
+                
+                Log.i("ubicua", "Datos parseados - State: " + state + ", TimeRemaining: " + timeRemaining);
             } else {
                 // Fallback formato plano
-                state = obj.optString("currentState", "--");
-                timeRemaining = obj.optInt("timeRemainingSeconds", 0);
-                cycleDuration = obj.optInt("cycleDurationSeconds", 0);
-                pedestrianWaiting = obj.optBoolean("pedestrianWaiting", false);
-                malfunction = obj.optBoolean("malfunctionDetected", false);
-                direction = obj.optString("circulationDirection", "--");
+                state = obj.optString("current_state", 
+                        obj.optString("currentState", "--"));
+                timeRemaining = obj.optInt("time_remaining_seconds", 
+                        obj.optInt("timeRemainingSeconds", 0));
+                cycleDuration = obj.optInt("cycle_duration_seconds", 
+                        obj.optInt("cycleDurationSeconds", 0));
+                pedestrianWaiting = obj.optBoolean("pedestrian_waiting", 
+                        obj.optBoolean("pedestrianWaiting", false));
+                malfunction = obj.optBoolean("malfunction_detected", 
+                        obj.optBoolean("malfunctionDetected", false));
+                direction = obj.optString("circulation_direction", 
+                        obj.optString("circulationDirection", "--"));
             }
             
-            if (!state.equals("--")) {
-                
-                // Actualizar UI
-                tvCurrentState.setText(state.toUpperCase());
-                tvTimeRemaining.setText(String.valueOf(timeRemaining));
-                tvCycleDuration.setText(String.valueOf(cycleDuration));
-                tvPedestrianWaiting.setText(pedestrianWaiting ? "Sí 🚶" : "No");
-                tvMalfunction.setText(malfunction ? "⚠️ Sí" : "✅ No");
-                tvCirculationDirection.setText("Dirección: " + direction);
-                
-                // Actualizar semáforo visual
-                actualizarSemaforo(state);
-                
-                // Agregar al historial
-                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
-                String hora = sdf.format(new Date());
-                
-                String entrada = String.format("[%s] Estado: %s | Restante: %ds\n", 
-                        hora, state.toUpperCase(), timeRemaining);
-                historial.insert(0, entrada);
-                
-                if (historial.length() > 500) {
-                    historial.setLength(500);
-                }
-                
-                tvHistory.setText(historial.toString());
+            // Actualizar UI siempre que llegue un mensaje
+            final String finalState = state;
+            final int finalTimeRemaining = timeRemaining;
+            final int finalCycleDuration = cycleDuration;
+            final boolean finalPedestrianWaiting = pedestrianWaiting;
+            final boolean finalMalfunction = malfunction;
+            final String finalDirection = direction;
+            
+            // Actualizar UI
+            tvCurrentState.setText(finalState.toUpperCase());
+            tvTimeRemaining.setText(String.valueOf(finalTimeRemaining));
+            tvCycleDuration.setText(String.valueOf(finalCycleDuration));
+            tvPedestrianWaiting.setText(finalPedestrianWaiting ? "Sí 🚶" : "No");
+            tvMalfunction.setText(finalMalfunction ? "⚠️ Sí" : "✅ No");
+            tvCirculationDirection.setText("Dirección: " + finalDirection);
+            
+            // Actualizar semáforo visual
+            actualizarSemaforo(finalState);
+            
+            // Agregar al historial
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
+            String hora = sdf.format(new Date());
+            
+            String entrada = String.format("[%s] Estado: %s | Restante: %ds\n", 
+                    hora, finalState.toUpperCase(), finalTimeRemaining);
+            historial.insert(0, entrada);
+            
+            if (historial.length() > 500) {
+                historial.setLength(500);
             }
+            
+            tvHistory.setText(historial.toString());
+            Log.i("ubicua", "UI TrafficLight actualizada");
             
         } catch (Exception e) {
-            Log.e("ubicua", "Error parsing JSON: " + e.getMessage());
+            Log.e("ubicua", "Error parsing JSON TrafficLight: " + e.getMessage() + " - JSON: " + json);
         }
     }
 

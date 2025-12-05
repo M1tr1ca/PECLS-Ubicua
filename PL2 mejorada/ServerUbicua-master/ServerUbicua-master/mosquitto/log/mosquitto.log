@@ -6012,3 +6012,905 @@
 1764932278: Client WheatherStationUAH-subscriber closed its connection.
 1764932279: mosquitto version 2.0.22 terminating
 1764932279: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764934402: mosquitto version 2.0.22 starting
+1764934402: Config loaded from /mosquitto/config/mosquitto.conf.
+1764934402: Opening ipv4 listen socket on port 1883.
+1764934402: Opening ipv6 listen socket on port 1883.
+1764934402: mosquitto version 2.0.22 running
+1764934403: New connection from 172.18.0.1:46142 on port 1883.
+1764934403: New client connected from 172.18.0.1:46142 as mqtt-explorer-d1231145 (p2, c1, k60).
+1764934408: New connection from 172.18.0.4:58646 on port 1883.
+1764934408: New client connected from 172.18.0.4:58646 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764934408: New connection from 172.18.0.4:58658 on port 1883.
+1764934408: New client connected from 172.18.0.4:58658 as WheatherStationUAH-publisher (p2, c1, k60).
+1764934408: Client WheatherStationUAH-publisher disconnected.
+1764934409: New connection from 172.18.0.4:58660 on port 1883.
+1764934409: New client connected from 172.18.0.4:58660 as StatusChecker-1764934409042 (p2, c1, k60).
+1764934409: Client StatusChecker-1764934409042 disconnected.
+1764934412: New connection from 172.18.0.4:57474 on port 1883.
+1764934412: New client connected from 172.18.0.4:57474 as StatusChecker-1764934412001 (p2, c1, k60).
+1764934412: Client StatusChecker-1764934412001 disconnected.
+1764934434: New connection from 172.18.0.4:60112 on port 1883.
+1764934434: New client connected from 172.18.0.4:60112 as StatusChecker-1764934434296 (p2, c1, k60).
+1764934434: Client StatusChecker-1764934434296 disconnected.
+1764934465: New connection from 172.18.0.4:39808 on port 1883.
+1764934465: New client connected from 172.18.0.4:39808 as StatusChecker-1764934465038 (p2, c1, k60).
+1764934465: Client StatusChecker-1764934465038 disconnected.
+1764934474: New connection from 172.18.0.4:56812 on port 1883.
+1764934476: New client connected from 172.18.0.4:56812 as StatusChecker-1764934474985 (p2, c1, k60).
+1764934476: Client StatusChecker-1764934474985 disconnected.
+1764934495: New connection from 172.18.0.4:44012 on port 1883.
+1764934496: New client connected from 172.18.0.4:44012 as StatusChecker-1764934495808 (p2, c1, k60).
+1764934496: Client StatusChecker-1764934495808 disconnected.
+1764934557: New connection from 172.18.0.4:59488 on port 1883.
+1764934557: New client connected from 172.18.0.4:59488 as StatusChecker-1764934557149 (p2, c1, k60).
+1764934557: Client StatusChecker-1764934557149 disconnected.
+1764934592: New connection from 172.18.0.4:48520 on port 1883.
+1764934592: New client connected from 172.18.0.4:48520 as StatusChecker-1764934592472 (p2, c1, k60).
+1764934592: Client StatusChecker-1764934592472 disconnected.
+1764934953: New connection from 172.18.0.4:59644 on port 1883.
+1764934953: New client connected from 172.18.0.4:59644 as StatusChecker-1764934953263 (p2, c1, k60).
+1764934953: Client StatusChecker-1764934953263 disconnected.
+1764935013: New connection from 172.18.0.4:36714 on port 1883.
+1764935013: New client connected from 172.18.0.4:36714 as StatusChecker-1764935013150 (p2, c1, k60).
+1764935013: Client StatusChecker-1764935013150 disconnected.
+1764935132: New connection from 172.18.0.4:36500 on port 1883.
+1764935133: New client connected from 172.18.0.4:36500 as StatusChecker-1764935132779 (p2, c1, k60).
+1764935133: Client StatusChecker-1764935132779 disconnected.
+1764935372: New connection from 172.18.0.4:49876 on port 1883.
+1764935372: New client connected from 172.18.0.4:49876 as StatusChecker-1764935372216 (p2, c1, k60).
+1764935372: Client StatusChecker-1764935372216 disconnected.
+1764935431: New connection from 172.18.0.4:42566 on port 1883.
+1764935432: New client connected from 172.18.0.4:42566 as StatusChecker-1764935431854 (p2, c1, k60).
+1764935432: Client StatusChecker-1764935431854 disconnected.
+1764935492: New connection from 172.18.0.4:51946 on port 1883.
+1764935492: New client connected from 172.18.0.4:51946 as StatusChecker-1764935492282 (p2, c1, k60).
+1764935492: Client StatusChecker-1764935492282 disconnected.
+1764935552: New connection from 172.18.0.4:42712 on port 1883.
+1764935552: New client connected from 172.18.0.4:42712 as StatusChecker-1764935552168 (p2, c1, k60).
+1764935552: Client StatusChecker-1764935552168 disconnected.
+1764935614: New connection from 172.18.0.4:43140 on port 1883.
+1764935614: New client connected from 172.18.0.4:43140 as StatusChecker-1764935614570 (p2, c1, k60).
+1764935614: Client StatusChecker-1764935614570 disconnected.
+1764935672: New connection from 172.18.0.4:45362 on port 1883.
+1764935672: New client connected from 172.18.0.4:45362 as StatusChecker-1764935672599 (p2, c1, k60).
+1764935673: Client StatusChecker-1764935672599 disconnected.
+1764935735: New connection from 172.18.0.4:35698 on port 1883.
+1764935736: New client connected from 172.18.0.4:35698 as StatusChecker-1764935735471 (p2, c1, k60).
+1764935736: Client StatusChecker-1764935735471 disconnected.
+1764936259: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764936468: Client mqtt-explorer-d1231145 has exceeded timeout, disconnecting.
+1764936505: New connection from 172.18.0.1:50814 on port 1883.
+1764936505: New client connected from 172.18.0.1:50814 as mqtt-explorer-d1231145 (p2, c1, k60).
+1764936566: New connection from 172.18.0.4:33188 on port 1883.
+1764936566: New client connected from 172.18.0.4:33188 as StatusChecker-1764936566338 (p2, c1, k60).
+1764936566: Client StatusChecker-1764936566338 disconnected.
+1764937482: New connection from 172.18.0.4:57596 on port 1883.
+1764937483: New client connected from 172.18.0.4:57596 as StatusChecker-1764937482914 (p2, c1, k60).
+1764937483: Client StatusChecker-1764937482914 disconnected.
+1764938208: mosquitto version 2.0.22 starting
+1764938208: Config loaded from /mosquitto/config/mosquitto.conf.
+1764938208: Opening ipv4 listen socket on port 1883.
+1764938208: Opening ipv6 listen socket on port 1883.
+1764938208: mosquitto version 2.0.22 running
+1764938209: New connection from 172.18.0.1:49994 on port 1883.
+1764938209: New client connected from 172.18.0.1:49994 as mqtt-explorer-d1231145 (p2, c1, k60).
+1764938215: New connection from 172.18.0.3:59516 on port 1883.
+1764938215: New client connected from 172.18.0.3:59516 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764938215: New connection from 172.18.0.3:59520 on port 1883.
+1764938216: New client connected from 172.18.0.3:59520 as WheatherStationUAH-publisher (p2, c1, k60).
+1764938216: Client WheatherStationUAH-publisher disconnected.
+1764940080: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764941366: Client WheatherStationUAH-subscriber closed its connection.
+1764941367: mosquitto version 2.0.22 terminating
+1764941367: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764941374: mosquitto version 2.0.22 starting
+1764941374: Config loaded from /mosquitto/config/mosquitto.conf.
+1764941374: Opening ipv4 listen socket on port 1883.
+1764941374: Opening ipv6 listen socket on port 1883.
+1764941374: mosquitto version 2.0.22 running
+1764941379: New connection from 172.18.0.4:41346 on port 1883.
+1764941380: New client connected from 172.18.0.4:41346 as WheatherStationUAH-subscriber (p2, c0, k60).
+1764941380: New connection from 172.18.0.4:41356 on port 1883.
+1764941380: New client connected from 172.18.0.4:41356 as WheatherStationUAH-publisher (p2, c1, k60).
+1764941380: Client WheatherStationUAH-publisher disconnected.
+1764941420: New connection from 172.18.0.4:56826 on port 1883.
+1764941421: New client connected from 172.18.0.4:56826 as StatusChecker-1764941420820 (p2, c1, k60).
+1764941421: Client StatusChecker-1764941420820 disconnected.
+1764941427: New connection from 172.18.0.4:41470 on port 1883.
+1764941427: New client connected from 172.18.0.4:41470 as StatusChecker-1764941427274 (p2, c1, k60).
+1764941427: Client StatusChecker-1764941427274 disconnected.
+1764941455: New connection from 172.18.0.4:47384 on port 1883.
+1764941455: New client connected from 172.18.0.4:47384 as StatusChecker-1764941455565 (p2, c1, k60).
+1764941455: Client StatusChecker-1764941455565 disconnected.
+1764941482: New connection from 172.18.0.1:42754 on port 1883.
+1764941483: New client connected from 172.18.0.1:42754 as paho544643910500 (p2, c1, k60).
+1764941486: New connection from 172.18.0.1:44628 on port 1883.
+1764941486: New client connected from 172.18.0.1:44628 as mqtt-explorer-d1231145 (p2, c1, k60).
+1764941493: New connection from 172.18.0.4:40222 on port 1883.
+1764941493: New client connected from 172.18.0.4:40222 as StatusChecker-1764941493196 (p2, c1, k60).
+1764941493: Client StatusChecker-1764941493196 disconnected.
+1764941552: New connection from 172.18.0.4:36018 on port 1883.
+1764941553: New client connected from 172.18.0.4:36018 as StatusChecker-1764941552896 (p2, c1, k60).
+1764941553: Client StatusChecker-1764941552896 disconnected.
+1764941611: New connection from 172.18.0.4:39924 on port 1883.
+1764941611: New client connected from 172.18.0.4:39924 as StatusChecker-1764941611542 (p2, c1, k60).
+1764941611: Client StatusChecker-1764941611542 disconnected.
+1764941671: New connection from 172.18.0.4:48528 on port 1883.
+1764941672: New client connected from 172.18.0.4:48528 as StatusChecker-1764941671661 (p2, c1, k60).
+1764941672: Client StatusChecker-1764941671661 disconnected.
+1764941731: New connection from 172.18.0.4:39350 on port 1883.
+1764941732: New client connected from 172.18.0.4:39350 as StatusChecker-1764941731815 (p2, c1, k60).
+1764941732: Client StatusChecker-1764941731815 disconnected.
+1764941789: Client paho544643910500 closed its connection.
+1764941791: New connection from 172.18.0.4:54914 on port 1883.
+1764941792: New client connected from 172.18.0.4:54914 as StatusChecker-1764941791851 (p2, c1, k60).
+1764941792: Client StatusChecker-1764941791851 disconnected.
+1764941828: New connection from 172.18.0.1:32910 on port 1883.
+1764941828: New client connected from 172.18.0.1:32910 as paho890409655600 (p2, c1, k60).
+1764941853: New connection from 172.18.0.4:49886 on port 1883.
+1764941854: New client connected from 172.18.0.4:49886 as StatusChecker-1764941853722 (p2, c1, k60).
+1764941854: Client StatusChecker-1764941853722 disconnected.
+1764941880: New connection from 172.18.0.4:35842 on port 1883.
+1764941880: New client connected from 172.18.0.4:35842 as StatusChecker-1764941880138 (p2, c1, k60).
+1764941880: Client StatusChecker-1764941880138 disconnected.
+1764941906: New connection from 172.18.0.4:58660 on port 1883.
+1764941906: New client connected from 172.18.0.4:58660 as StatusChecker-1764941906305 (p2, c1, k60).
+1764941906: Client StatusChecker-1764941906305 disconnected.
+1764941912: New connection from 172.18.0.4:58676 on port 1883.
+1764941912: New client connected from 172.18.0.4:58676 as StatusChecker-1764941912060 (p2, c1, k60).
+1764941912: Client StatusChecker-1764941912060 disconnected.
+1764941936: New connection from 172.18.0.4:35790 on port 1883.
+1764941936: New client connected from 172.18.0.4:35790 as StatusChecker-1764941936643 (p2, c1, k60).
+1764941936: Client StatusChecker-1764941936643 disconnected.
+1764941972: New connection from 172.18.0.4:49940 on port 1883.
+1764941972: New client connected from 172.18.0.4:49940 as StatusChecker-1764941972193 (p2, c1, k60).
+1764941972: Client StatusChecker-1764941972193 disconnected.
+1764941972: New connection from 172.18.0.4:49952 on port 1883.
+1764941972: New client connected from 172.18.0.4:49952 as StatusChecker-1764941972524 (p2, c1, k60).
+1764941972: Client StatusChecker-1764941972524 disconnected.
+1764942032: New connection from 172.18.0.4:52048 on port 1883.
+1764942032: New client connected from 172.18.0.4:52048 as StatusChecker-1764942032266 (p2, c1, k60).
+1764942032: Client StatusChecker-1764942032266 disconnected.
+1764942032: New connection from 172.18.0.4:52056 on port 1883.
+1764942032: New client connected from 172.18.0.4:52056 as StatusChecker-1764942032657 (p2, c1, k60).
+1764942032: Client StatusChecker-1764942032657 disconnected.
+1764942092: New connection from 172.18.0.4:33424 on port 1883.
+1764942092: New client connected from 172.18.0.4:33424 as StatusChecker-1764942092388 (p2, c1, k60).
+1764942092: Client StatusChecker-1764942092388 disconnected.
+1764942092: New connection from 172.18.0.4:33434 on port 1883.
+1764942093: New client connected from 172.18.0.4:33434 as StatusChecker-1764942092724 (p2, c1, k60).
+1764942093: Client StatusChecker-1764942092724 disconnected.
+1764942152: New connection from 172.18.0.4:42810 on port 1883.
+1764942152: New client connected from 172.18.0.4:42810 as StatusChecker-1764942152448 (p2, c1, k60).
+1764942152: Client StatusChecker-1764942152448 disconnected.
+1764942152: New connection from 172.18.0.4:42820 on port 1883.
+1764942153: New client connected from 172.18.0.4:42820 as StatusChecker-1764942152796 (p2, c1, k60).
+1764942153: Client StatusChecker-1764942152796 disconnected.
+1764942212: New connection from 172.18.0.4:51718 on port 1883.
+1764942212: New client connected from 172.18.0.4:51718 as StatusChecker-1764942212673 (p2, c1, k60).
+1764942213: Client StatusChecker-1764942212673 disconnected.
+1764942213: New connection from 172.18.0.4:51728 on port 1883.
+1764942213: New client connected from 172.18.0.4:51728 as StatusChecker-1764942213155 (p2, c1, k60).
+1764942213: Client StatusChecker-1764942213155 disconnected.
+1764942273: New connection from 172.18.0.4:48158 on port 1883.
+1764942273: New client connected from 172.18.0.4:48158 as StatusChecker-1764942273446 (p2, c1, k60).
+1764942273: Client StatusChecker-1764942273446 disconnected.
+1764942273: New connection from 172.18.0.4:48166 on port 1883.
+1764942274: New client connected from 172.18.0.4:48166 as StatusChecker-1764942273841 (p2, c1, k60).
+1764942274: Client StatusChecker-1764942273841 disconnected.
+1764942333: New connection from 172.18.0.4:38302 on port 1883.
+1764942334: New client connected from 172.18.0.4:38302 as StatusChecker-1764942333736 (p2, c1, k60).
+1764942334: Client StatusChecker-1764942333736 disconnected.
+1764942334: New connection from 172.18.0.4:38318 on port 1883.
+1764942334: New client connected from 172.18.0.4:38318 as StatusChecker-1764942334115 (p2, c1, k60).
+1764942334: Client StatusChecker-1764942334115 disconnected.
+1764942391: New connection from 172.18.0.4:58278 on port 1883.
+1764942391: New client connected from 172.18.0.4:58278 as StatusChecker-1764942391536 (p2, c1, k60).
+1764942391: Client StatusChecker-1764942391536 disconnected.
+1764942391: New connection from 172.18.0.4:58290 on port 1883.
+1764942392: New client connected from 172.18.0.4:58290 as StatusChecker-1764942391867 (p2, c1, k60).
+1764942392: Client StatusChecker-1764942391867 disconnected.
+1764942451: New connection from 172.18.0.4:34824 on port 1883.
+1764942452: New client connected from 172.18.0.4:34824 as StatusChecker-1764942451759 (p2, c1, k60).
+1764942452: Client StatusChecker-1764942451759 disconnected.
+1764942452: New connection from 172.18.0.4:34828 on port 1883.
+1764942452: New client connected from 172.18.0.4:34828 as StatusChecker-1764942452205 (p2, c1, k60).
+1764942452: Client StatusChecker-1764942452205 disconnected.
+1764942454: Client paho890409655600 disconnected.
+1764942511: New connection from 172.18.0.4:40298 on port 1883.
+1764942512: New client connected from 172.18.0.4:40298 as StatusChecker-1764942511722 (p2, c1, k60).
+1764942512: Client StatusChecker-1764942511722 disconnected.
+1764942512: New connection from 172.18.0.4:40308 on port 1883.
+1764942512: New client connected from 172.18.0.4:40308 as StatusChecker-1764942512065 (p2, c1, k60).
+1764942512: Client StatusChecker-1764942512065 disconnected.
+1764942572: New connection from 172.18.0.4:49674 on port 1883.
+1764942572: New client connected from 172.18.0.4:49674 as StatusChecker-1764942572320 (p2, c1, k60).
+1764942572: Client StatusChecker-1764942572320 disconnected.
+1764942572: New connection from 172.18.0.4:49676 on port 1883.
+1764942572: New client connected from 172.18.0.4:49676 as StatusChecker-1764942572651 (p2, c1, k60).
+1764942572: Client StatusChecker-1764942572651 disconnected.
+1764942632: New connection from 172.18.0.4:45958 on port 1883.
+1764942633: New client connected from 172.18.0.4:45958 as StatusChecker-1764942632846 (p2, c1, k60).
+1764942633: Client StatusChecker-1764942632846 disconnected.
+1764942633: New connection from 172.18.0.4:45966 on port 1883.
+1764942633: New client connected from 172.18.0.4:45966 as StatusChecker-1764942633208 (p2, c1, k60).
+1764942633: Client StatusChecker-1764942633208 disconnected.
+1764942692: New connection from 172.18.0.4:34204 on port 1883.
+1764942692: New client connected from 172.18.0.4:34204 as StatusChecker-1764942692138 (p2, c1, k60).
+1764942692: Client StatusChecker-1764942692138 disconnected.
+1764942692: New connection from 172.18.0.4:34214 on port 1883.
+1764942692: New client connected from 172.18.0.4:34214 as StatusChecker-1764942692475 (p2, c1, k60).
+1764942692: Client StatusChecker-1764942692475 disconnected.
+1764942752: New connection from 172.18.0.4:33574 on port 1883.
+1764942752: New client connected from 172.18.0.4:33574 as StatusChecker-1764942752252 (p2, c1, k60).
+1764942752: Client StatusChecker-1764942752252 disconnected.
+1764942752: New connection from 172.18.0.4:33584 on port 1883.
+1764942752: New client connected from 172.18.0.4:33584 as StatusChecker-1764942752592 (p2, c1, k60).
+1764942752: Client StatusChecker-1764942752592 disconnected.
+1764942812: New connection from 172.18.0.4:40258 on port 1883.
+1764942812: New client connected from 172.18.0.4:40258 as StatusChecker-1764942812514 (p2, c1, k60).
+1764942812: Client StatusChecker-1764942812514 disconnected.
+1764942812: New connection from 172.18.0.4:40260 on port 1883.
+1764942813: New client connected from 172.18.0.4:40260 as StatusChecker-1764942812895 (p2, c1, k60).
+1764942813: Client StatusChecker-1764942812895 disconnected.
+1764942872: New connection from 172.18.0.4:58500 on port 1883.
+1764942872: New client connected from 172.18.0.4:58500 as StatusChecker-1764942872450 (p2, c1, k60).
+1764942872: Client StatusChecker-1764942872450 disconnected.
+1764942872: New connection from 172.18.0.4:49282 on port 1883.
+1764942873: New client connected from 172.18.0.4:49282 as StatusChecker-1764942872815 (p2, c1, k60).
+1764942873: Client StatusChecker-1764942872815 disconnected.
+1764942932: New connection from 172.18.0.4:36876 on port 1883.
+1764942932: New client connected from 172.18.0.4:36876 as StatusChecker-1764942932659 (p2, c1, k60).
+1764942932: Client StatusChecker-1764942932659 disconnected.
+1764942933: New connection from 172.18.0.4:36892 on port 1883.
+1764942933: New client connected from 172.18.0.4:36892 as StatusChecker-1764942933015 (p2, c1, k60).
+1764942933: Client StatusChecker-1764942933015 disconnected.
+1764942992: New connection from 172.18.0.4:58498 on port 1883.
+1764942992: New client connected from 172.18.0.4:58498 as StatusChecker-1764942992670 (p2, c1, k60).
+1764942992: Client StatusChecker-1764942992670 disconnected.
+1764942993: New connection from 172.18.0.4:58504 on port 1883.
+1764942993: New client connected from 172.18.0.4:58504 as StatusChecker-1764942993019 (p2, c1, k60).
+1764942993: Client StatusChecker-1764942993019 disconnected.
+1764943051: New connection from 172.18.0.4:51512 on port 1883.
+1764943052: New client connected from 172.18.0.4:51512 as StatusChecker-1764943051679 (p2, c1, k60).
+1764943052: Client StatusChecker-1764943051679 disconnected.
+1764943052: New connection from 172.18.0.4:51514 on port 1883.
+1764943053: New client connected from 172.18.0.4:51514 as StatusChecker-1764943052132 (p2, c1, k60).
+1764943053: Client StatusChecker-1764943052132 disconnected.
+1764943111: New connection from 172.18.0.4:34560 on port 1883.
+1764943112: New client connected from 172.18.0.4:34560 as StatusChecker-1764943111725 (p2, c1, k60).
+1764943112: Client StatusChecker-1764943111725 disconnected.
+1764943112: New connection from 172.18.0.4:45312 on port 1883.
+1764943112: New client connected from 172.18.0.4:45312 as StatusChecker-1764943112085 (p2, c1, k60).
+1764943112: Client StatusChecker-1764943112085 disconnected.
+1764943145: New connection from 172.18.0.1:55964 on port 1883.
+1764943145: New connection from 172.18.0.1:55978 on port 1883.
+1764943145: New client connected from 172.18.0.1:55964 as paho2207168515000 (p2, c1, k60).
+1764943145: New client connected from 172.18.0.1:55978 as paho2207678874700 (p2, c1, k60).
+1764943171: New connection from 172.18.0.4:44672 on port 1883.
+1764943172: New client connected from 172.18.0.4:44672 as StatusChecker-1764943171741 (p2, c1, k60).
+1764943172: Client StatusChecker-1764943171741 disconnected.
+1764943172: New connection from 172.18.0.4:44682 on port 1883.
+1764943172: New client connected from 172.18.0.4:44682 as StatusChecker-1764943172091 (p2, c1, k60).
+1764943172: Client StatusChecker-1764943172091 disconnected.
+1764943210: Client paho2207678874700 disconnected.
+1764943212: Client paho2207168515000 disconnected.
+1764943212: New connection from 172.18.0.1:53042 on port 1883.
+1764943213: New client connected from 172.18.0.1:53042 as paho2273971118100 (p2, c1, k60).
+1764943231: New connection from 172.18.0.4:58024 on port 1883.
+1764943232: New client connected from 172.18.0.4:58024 as StatusChecker-1764943231829 (p2, c1, k60).
+1764943232: Client StatusChecker-1764943231829 disconnected.
+1764943232: New connection from 172.18.0.4:58032 on port 1883.
+1764943232: New client connected from 172.18.0.4:58032 as StatusChecker-1764943232169 (p2, c1, k60).
+1764943232: Client StatusChecker-1764943232169 disconnected.
+1764943236: Client paho2273971118100 disconnected.
+1764943250: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764943292: New connection from 172.18.0.4:34760 on port 1883.
+1764943292: New client connected from 172.18.0.4:34760 as StatusChecker-1764943292266 (p2, c1, k60).
+1764943292: Client StatusChecker-1764943292266 disconnected.
+1764943292: New connection from 172.18.0.4:34764 on port 1883.
+1764943293: New client connected from 172.18.0.4:34764 as StatusChecker-1764943292686 (p2, c1, k60).
+1764943293: Client StatusChecker-1764943292686 disconnected.
+1764943305: New connection from 172.18.0.1:48196 on port 1883.
+1764943305: New client connected from 172.18.0.1:48196 as paho2366093888600 (p2, c1, k60).
+1764943312: Client paho2366093888600 disconnected.
+1764943312: New connection from 172.18.0.1:55108 on port 1883.
+1764943313: New client connected from 172.18.0.1:55108 as paho2374153879700 (p2, c1, k60).
+1764943316: Client paho2374153879700 disconnected.
+1764943316: New connection from 172.18.0.4:51040 on port 1883.
+1764943316: New client connected from 172.18.0.4:51040 as StatusChecker-1764943316246 (p2, c1, k60).
+1764943316: New connection from 172.18.0.1:55110 on port 1883.
+1764943316: Client StatusChecker-1764943316246 disconnected.
+1764943316: New client connected from 172.18.0.1:55110 as paho2378178045700 (p2, c1, k60).
+1764943319: Client paho2378178045700 disconnected.
+1764943320: New connection from 172.18.0.1:55126 on port 1883.
+1764943320: New client connected from 172.18.0.1:55126 as paho2382204816800 (p2, c1, k60).
+1764943325: New connection from 172.18.0.4:58714 on port 1883.
+1764943326: New client connected from 172.18.0.4:58714 as StatusChecker-1764943325963 (p2, c1, k60).
+1764943326: Client StatusChecker-1764943325963 disconnected.
+1764943346: New connection from 172.18.0.4:39188 on port 1883.
+1764943346: New client connected from 172.18.0.4:39188 as StatusChecker-1764943346685 (p2, c1, k60).
+1764943346: Client StatusChecker-1764943346685 disconnected.
+1764943356: New connection from 172.18.0.4:44154 on port 1883.
+1764943356: New client connected from 172.18.0.4:44154 as StatusChecker-1764943356165 (p2, c1, k60).
+1764943356: Client StatusChecker-1764943356165 disconnected.
+1764943376: New connection from 172.18.0.4:38352 on port 1883.
+1764943377: New client connected from 172.18.0.4:38352 as StatusChecker-1764943376862 (p2, c1, k60).
+1764943377: Client StatusChecker-1764943376862 disconnected.
+1764943385: New connection from 172.18.0.4:52652 on port 1883.
+1764943386: New client connected from 172.18.0.4:52652 as StatusChecker-1764943385986 (p2, c1, k60).
+1764943386: Client StatusChecker-1764943385986 disconnected.
+1764943412: New connection from 172.18.0.4:52656 on port 1883.
+1764943412: New client connected from 172.18.0.4:52656 as StatusChecker-1764943412376 (p2, c1, k60).
+1764943412: Client StatusChecker-1764943412376 disconnected.
+1764943437: Client paho2382204816800 disconnected.
+1764943438: New connection from 172.18.0.1:54334 on port 1883.
+1764943439: New client connected from 172.18.0.1:54334 as paho2500129063200 (p2, c1, k60).
+1764943449: New connection from 172.18.0.4:36362 on port 1883.
+1764943450: New client connected from 172.18.0.4:36362 as StatusChecker-1764943449849 (p2, c1, k60).
+1764943450: Client StatusChecker-1764943449849 disconnected.
+1764943472: New connection from 172.18.0.4:48322 on port 1883.
+1764943472: New client connected from 172.18.0.4:48322 as StatusChecker-1764943472338 (p2, c1, k60).
+1764943472: Client StatusChecker-1764943472338 disconnected.
+1764943476: New connection from 172.18.0.4:48336 on port 1883.
+1764943476: New client connected from 172.18.0.4:48336 as StatusChecker-1764943476176 (p2, c1, k60).
+1764943476: Client StatusChecker-1764943476176 disconnected.
+1764943506: New connection from 172.18.0.4:46388 on port 1883.
+1764943506: New client connected from 172.18.0.4:46388 as StatusChecker-1764943506463 (p2, c1, k60).
+1764943506: Client StatusChecker-1764943506463 disconnected.
+1764943532: New connection from 172.18.0.4:37874 on port 1883.
+1764943532: New client connected from 172.18.0.4:37874 as StatusChecker-1764943532425 (p2, c1, k60).
+1764943532: Client StatusChecker-1764943532425 disconnected.
+1764943556: New connection from 172.18.0.4:44998 on port 1883.
+1764943556: New client connected from 172.18.0.4:44998 as StatusChecker-1764943556673 (p2, c1, k60).
+1764943556: Client StatusChecker-1764943556673 disconnected.
+1764943570: New connection from 172.18.0.4:45216 on port 1883.
+1764943570: New client connected from 172.18.0.4:45216 as StatusChecker-1764943570056 (p2, c1, k60).
+1764943570: Client StatusChecker-1764943570056 disconnected.
+1764943586: New connection from 172.18.0.4:52920 on port 1883.
+1764943587: New client connected from 172.18.0.4:52920 as StatusChecker-1764943586705 (p2, c1, k60).
+1764943587: Client StatusChecker-1764943586705 disconnected.
+1764943650: New connection from 172.18.0.4:33436 on port 1883.
+1764943650: New client connected from 172.18.0.4:33436 as StatusChecker-1764943650670 (p2, c1, k60).
+1764943650: Client StatusChecker-1764943650670 disconnected.
+1764943652: New connection from 172.18.0.4:33440 on port 1883.
+1764943652: New client connected from 172.18.0.4:33440 as StatusChecker-1764943652390 (p2, c1, k60).
+1764943652: Client StatusChecker-1764943652390 disconnected.
+1764943656: New connection from 172.18.0.4:53612 on port 1883.
+1764943656: New client connected from 172.18.0.4:53612 as StatusChecker-1764943656099 (p2, c1, k60).
+1764943656: Client StatusChecker-1764943656099 disconnected.
+1764943686: New connection from 172.18.0.4:40100 on port 1883.
+1764943686: New client connected from 172.18.0.4:40100 as StatusChecker-1764943686451 (p2, c1, k60).
+1764943686: Client StatusChecker-1764943686451 disconnected.
+1764943712: New connection from 172.18.0.4:57448 on port 1883.
+1764943713: New client connected from 172.18.0.4:57448 as StatusChecker-1764943712656 (p2, c1, k60).
+1764943713: Client StatusChecker-1764943712656 disconnected.
+1764943716: New connection from 172.18.0.4:57464 on port 1883.
+1764943716: New client connected from 172.18.0.4:57464 as StatusChecker-1764943716516 (p2, c1, k60).
+1764943716: Client StatusChecker-1764943716516 disconnected.
+1764943746: New connection from 172.18.0.4:48638 on port 1883.
+1764943746: New client connected from 172.18.0.4:48638 as StatusChecker-1764943746284 (p2, c1, k60).
+1764943746: Client StatusChecker-1764943746284 disconnected.
+1764943771: New connection from 172.18.0.4:34202 on port 1883.
+1764943771: New client connected from 172.18.0.4:34202 as StatusChecker-1764943771451 (p2, c1, k60).
+1764943771: Client StatusChecker-1764943771451 disconnected.
+1764943776: New connection from 172.18.0.4:34210 on port 1883.
+1764943776: New client connected from 172.18.0.4:34210 as StatusChecker-1764943776624 (p2, c1, k60).
+1764943776: Client StatusChecker-1764943776624 disconnected.
+1764943806: New connection from 172.18.0.4:43436 on port 1883.
+1764943806: New client connected from 172.18.0.4:43436 as StatusChecker-1764943806404 (p2, c1, k60).
+1764943806: Client StatusChecker-1764943806404 disconnected.
+1764943840: New connection from 172.18.0.4:39196 on port 1883.
+1764943841: New client connected from 172.18.0.4:39196 as StatusChecker-1764943840832 (p2, c1, k60).
+1764943841: Client StatusChecker-1764943840832 disconnected.
+1764943841: New connection from 172.18.0.4:39210 on port 1883.
+1764943841: New client connected from 172.18.0.4:39210 as StatusChecker-1764943841166 (p2, c1, k60).
+1764943841: Client StatusChecker-1764943841166 disconnected.
+1764943865: New connection from 172.18.0.4:33010 on port 1883.
+1764943865: New client connected from 172.18.0.4:33010 as StatusChecker-1764943865492 (p2, c1, k60).
+1764943865: Client StatusChecker-1764943865492 disconnected.
+1764943891: New connection from 172.18.0.4:40310 on port 1883.
+1764943892: New client connected from 172.18.0.4:40310 as StatusChecker-1764943891695 (p2, c1, k60).
+1764943892: Client StatusChecker-1764943891695 disconnected.
+1764943895: New connection from 172.18.0.4:52420 on port 1883.
+1764943895: New client connected from 172.18.0.4:52420 as StatusChecker-1764943895503 (p2, c1, k60).
+1764943896: Client StatusChecker-1764943895503 disconnected.
+1764943926: New connection from 172.18.0.4:43604 on port 1883.
+1764943926: New client connected from 172.18.0.4:43604 as StatusChecker-1764943926315 (p2, c1, k60).
+1764943926: Client StatusChecker-1764943926315 disconnected.
+1764943951: New connection from 172.18.0.4:48644 on port 1883.
+1764943952: New client connected from 172.18.0.4:48644 as StatusChecker-1764943951835 (p2, c1, k60).
+1764943952: Client StatusChecker-1764943951835 disconnected.
+1764943955: New connection from 172.18.0.4:48654 on port 1883.
+1764943955: New client connected from 172.18.0.4:48654 as StatusChecker-1764943955646 (p2, c1, k60).
+1764943955: Client StatusChecker-1764943955646 disconnected.
+1764943985: New connection from 172.18.0.4:43498 on port 1883.
+1764943986: New client connected from 172.18.0.4:43498 as StatusChecker-1764943985698 (p2, c1, k60).
+1764943986: Client StatusChecker-1764943985698 disconnected.
+1764944003: Client paho2500129063200 closed its connection.
+1764944012: New connection from 172.18.0.4:48212 on port 1883.
+1764944012: New client connected from 172.18.0.4:48212 as StatusChecker-1764944012000 (p2, c1, k60).
+1764944012: Client StatusChecker-1764944012000 disconnected.
+1764944041: New connection from 172.18.0.1:41832 on port 1883.
+1764944042: New client connected from 172.18.0.1:41832 as paho3102624527100 (p2, c1, k60).
+1764944045: Client paho3102624527100 disconnected.
+1764944045: New connection from 172.18.0.1:41842 on port 1883.
+1764944047: New client connected from 172.18.0.1:41842 as paho3107662107000 (p2, c1, k60).
+1764944050: New connection from 172.18.0.4:51180 on port 1883.
+1764944050: New client connected from 172.18.0.4:51180 as StatusChecker-1764944050206 (p2, c1, k60).
+1764944050: Client StatusChecker-1764944050206 disconnected.
+1764944072: New connection from 172.18.0.4:56146 on port 1883.
+1764944072: New client connected from 172.18.0.4:56146 as StatusChecker-1764944072072 (p2, c1, k60).
+1764944072: Client StatusChecker-1764944072072 disconnected.
+1764944082: Client paho3107662107000 disconnected.
+1764944083: New connection from 172.18.0.1:37212 on port 1883.
+1764944083: New client connected from 172.18.0.1:37212 as paho3145356764700 (p2, c1, k60).
+1764944091: Client paho3145356764700 disconnected.
+1764944091: New connection from 172.18.0.1:37220 on port 1883.
+1764944091: New client connected from 172.18.0.1:37220 as paho3152853077800 (p2, c1, k60).
+1764944132: New connection from 172.18.0.4:41086 on port 1883.
+1764944132: New client connected from 172.18.0.4:41086 as StatusChecker-1764944132173 (p2, c1, k60).
+1764944132: Client StatusChecker-1764944132173 disconnected.
+1764944132: New connection from 172.18.0.4:41092 on port 1883.
+1764944132: New client connected from 172.18.0.4:41092 as StatusChecker-1764944132531 (p2, c1, k60).
+1764944132: Client StatusChecker-1764944132531 disconnected.
+1764944192: New connection from 172.18.0.4:36156 on port 1883.
+1764944192: New client connected from 172.18.0.4:36156 as StatusChecker-1764944192377 (p2, c1, k60).
+1764944192: Client StatusChecker-1764944192377 disconnected.
+1764944192: New connection from 172.18.0.4:36158 on port 1883.
+1764944193: New client connected from 172.18.0.4:36158 as StatusChecker-1764944192753 (p2, c1, k60).
+1764944193: Client StatusChecker-1764944192753 disconnected.
+1764944252: New connection from 172.18.0.4:52924 on port 1883.
+1764944252: New client connected from 172.18.0.4:52924 as StatusChecker-1764944252416 (p2, c1, k60).
+1764944252: Client StatusChecker-1764944252416 disconnected.
+1764944252: New connection from 172.18.0.4:52938 on port 1883.
+1764944253: New client connected from 172.18.0.4:52938 as StatusChecker-1764944252781 (p2, c1, k60).
+1764944253: Client StatusChecker-1764944252781 disconnected.
+1764944263: Client paho3152853077800 closed its connection.
+1764944295: New connection from 172.18.0.1:43940 on port 1883.
+1764944296: New client connected from 172.18.0.1:43940 as paho3356742414300 (p2, c1, k60).
+1764944312: New connection from 172.18.0.4:54932 on port 1883.
+1764944312: New client connected from 172.18.0.4:54932 as StatusChecker-1764944312687 (p2, c1, k60).
+1764944313: Client StatusChecker-1764944312687 disconnected.
+1764944313: New connection from 172.18.0.4:54938 on port 1883.
+1764944313: New client connected from 172.18.0.4:54938 as StatusChecker-1764944313035 (p2, c1, k60).
+1764944313: Client StatusChecker-1764944313035 disconnected.
+1764944329: Client paho3356742414300 disconnected.
+1764944330: New connection from 172.18.0.1:46882 on port 1883.
+1764944330: New client connected from 172.18.0.1:46882 as paho3392527652000 (p2, c1, k60).
+1764944360: Client paho3392527652000 disconnected.
+1764944362: New connection from 172.18.0.1:59820 on port 1883.
+1764944363: New client connected from 172.18.0.1:59820 as paho3425004666100 (p2, c1, k60).
+1764944363: New connection from 172.18.0.1:59834 on port 1883.
+1764944363: New client connected from 172.18.0.1:59834 as paho3425326815000 (p2, c1, k60).
+1764944372: New connection from 172.18.0.4:44810 on port 1883.
+1764944373: New client connected from 172.18.0.4:44810 as StatusChecker-1764944372845 (p2, c1, k60).
+1764944373: Client StatusChecker-1764944372845 disconnected.
+1764944373: New connection from 172.18.0.4:44822 on port 1883.
+1764944373: New client connected from 172.18.0.4:44822 as StatusChecker-1764944373359 (p2, c1, k60).
+1764944373: Client StatusChecker-1764944373359 disconnected.
+1764944410: Client paho3425326815000 disconnected.
+1764944415: Client paho3425004666100 disconnected.
+1764944415: New connection from 172.18.0.1:41382 on port 1883.
+1764944416: New client connected from 172.18.0.1:41382 as paho3477580175300 (p2, c1, k60).
+1764944418: Client paho3477580175300 disconnected.
+1764944418: New connection from 172.18.0.1:39918 on port 1883.
+1764944418: New client connected from 172.18.0.1:39918 as paho3480478965700 (p2, c1, k60).
+1764944435: New connection from 172.18.0.4:41444 on port 1883.
+1764944435: New client connected from 172.18.0.4:41444 as StatusChecker-1764944434868 (p2, c1, k60).
+1764944435: Client StatusChecker-1764944434868 disconnected.
+1764944435: New connection from 172.18.0.4:41452 on port 1883.
+1764944435: New client connected from 172.18.0.4:41452 as StatusChecker-1764944435355 (p2, c1, k60).
+1764944435: Client StatusChecker-1764944435355 disconnected.
+1764944446: Client paho3480478965700 disconnected.
+1764944447: New connection from 172.18.0.1:44686 on port 1883.
+1764944448: New client connected from 172.18.0.1:44686 as paho3509332454300 (p2, c1, k60).
+1764944491: New connection from 172.18.0.4:43690 on port 1883.
+1764944491: New client connected from 172.18.0.4:43690 as StatusChecker-1764944491580 (p2, c1, k60).
+1764944491: Client StatusChecker-1764944491580 disconnected.
+1764944491: New connection from 172.18.0.4:43706 on port 1883.
+1764944492: New client connected from 172.18.0.4:43706 as StatusChecker-1764944491911 (p2, c1, k60).
+1764944492: Client StatusChecker-1764944491911 disconnected.
+1764944535: Client paho3509332454300 disconnected.
+1764944551: New connection from 172.18.0.4:55746 on port 1883.
+1764944552: New client connected from 172.18.0.4:55746 as StatusChecker-1764944551798 (p2, c1, k60).
+1764944552: Client StatusChecker-1764944551798 disconnected.
+1764944552: New connection from 172.18.0.4:55752 on port 1883.
+1764944552: New client connected from 172.18.0.4:55752 as StatusChecker-1764944552199 (p2, c1, k60).
+1764944552: Client StatusChecker-1764944552199 disconnected.
+1764944611: New connection from 172.18.0.4:55692 on port 1883.
+1764944612: New client connected from 172.18.0.4:55692 as StatusChecker-1764944611753 (p2, c1, k60).
+1764944612: Client StatusChecker-1764944611753 disconnected.
+1764944612: New connection from 172.18.0.4:55702 on port 1883.
+1764944612: New client connected from 172.18.0.4:55702 as StatusChecker-1764944612106 (p2, c1, k60).
+1764944612: Client StatusChecker-1764944612106 disconnected.
+1764944671: New connection from 172.18.0.4:53166 on port 1883.
+1764944672: New client connected from 172.18.0.4:53166 as StatusChecker-1764944671955 (p2, c1, k60).
+1764944672: Client StatusChecker-1764944671955 disconnected.
+1764944672: New connection from 172.18.0.4:53168 on port 1883.
+1764944672: New client connected from 172.18.0.4:53168 as StatusChecker-1764944672311 (p2, c1, k60).
+1764944672: Client StatusChecker-1764944672311 disconnected.
+1764944732: New connection from 172.18.0.4:33952 on port 1883.
+1764944732: New client connected from 172.18.0.4:33952 as StatusChecker-1764944732248 (p2, c1, k60).
+1764944732: Client StatusChecker-1764944732248 disconnected.
+1764944732: New connection from 172.18.0.4:33956 on port 1883.
+1764944732: New client connected from 172.18.0.4:33956 as StatusChecker-1764944732621 (p2, c1, k60).
+1764944732: Client StatusChecker-1764944732621 disconnected.
+1764944792: New connection from 172.18.0.4:42982 on port 1883.
+1764944792: New client connected from 172.18.0.4:42982 as StatusChecker-1764944792161 (p2, c1, k60).
+1764944792: Client StatusChecker-1764944792161 disconnected.
+1764944792: New connection from 172.18.0.4:42988 on port 1883.
+1764944792: New client connected from 172.18.0.4:42988 as StatusChecker-1764944792522 (p2, c1, k60).
+1764944792: Client StatusChecker-1764944792522 disconnected.
+1764944852: New connection from 172.18.0.4:48908 on port 1883.
+1764944852: New client connected from 172.18.0.4:48908 as StatusChecker-1764944852384 (p2, c1, k60).
+1764944852: Client StatusChecker-1764944852384 disconnected.
+1764944852: New connection from 172.18.0.4:48922 on port 1883.
+1764944853: New client connected from 172.18.0.4:48922 as StatusChecker-1764944852735 (p2, c1, k60).
+1764944853: Client StatusChecker-1764944852735 disconnected.
+1764944912: New connection from 172.18.0.4:43290 on port 1883.
+1764944913: New client connected from 172.18.0.4:43290 as StatusChecker-1764944912732 (p2, c1, k60).
+1764944913: Client StatusChecker-1764944912732 disconnected.
+1764944913: New connection from 172.18.0.4:43304 on port 1883.
+1764944913: New client connected from 172.18.0.4:43304 as StatusChecker-1764944913102 (p2, c1, k60).
+1764944913: Client StatusChecker-1764944913102 disconnected.
+1764944972: New connection from 172.18.0.4:53012 on port 1883.
+1764944972: New client connected from 172.18.0.4:53012 as StatusChecker-1764944972552 (p2, c1, k60).
+1764944972: Client StatusChecker-1764944972552 disconnected.
+1764944972: New connection from 172.18.0.4:53014 on port 1883.
+1764944973: New client connected from 172.18.0.4:53014 as StatusChecker-1764944972941 (p2, c1, k60).
+1764944973: Client StatusChecker-1764944972941 disconnected.
+1764945032: New connection from 172.18.0.4:45282 on port 1883.
+1764945033: New client connected from 172.18.0.4:45282 as StatusChecker-1764945032732 (p2, c1, k60).
+1764945033: Client StatusChecker-1764945032732 disconnected.
+1764945033: New connection from 172.18.0.4:45294 on port 1883.
+1764945033: New client connected from 172.18.0.4:45294 as StatusChecker-1764945033092 (p2, c1, k60).
+1764945033: Client StatusChecker-1764945033092 disconnected.
+1764945092: New connection from 172.18.0.4:57730 on port 1883.
+1764945093: New client connected from 172.18.0.4:57730 as StatusChecker-1764945092756 (p2, c1, k60).
+1764945093: Client StatusChecker-1764945092756 disconnected.
+1764945093: New connection from 172.18.0.4:57746 on port 1883.
+1764945093: New client connected from 172.18.0.4:57746 as StatusChecker-1764945093100 (p2, c1, k60).
+1764945093: Client StatusChecker-1764945093100 disconnected.
+1764945131: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764945151: New connection from 172.18.0.4:41314 on port 1883.
+1764945152: New client connected from 172.18.0.4:41314 as StatusChecker-1764945151551 (p2, c1, k60).
+1764945152: Client StatusChecker-1764945151551 disconnected.
+1764945152: New connection from 172.18.0.4:41316 on port 1883.
+1764945152: New client connected from 172.18.0.4:41316 as StatusChecker-1764945152168 (p2, c1, k60).
+1764945152: Client StatusChecker-1764945152168 disconnected.
+1764945211: New connection from 172.18.0.4:40968 on port 1883.
+1764945211: New client connected from 172.18.0.4:40968 as StatusChecker-1764945211632 (p2, c1, k60).
+1764945211: Client StatusChecker-1764945211632 disconnected.
+1764945211: New connection from 172.18.0.4:40974 on port 1883.
+1764945212: New client connected from 172.18.0.4:40974 as StatusChecker-1764945211994 (p2, c1, k60).
+1764945212: Client StatusChecker-1764945211994 disconnected.
+1764945271: New connection from 172.18.0.4:36306 on port 1883.
+1764945272: New client connected from 172.18.0.4:36306 as StatusChecker-1764945271772 (p2, c1, k60).
+1764945272: Client StatusChecker-1764945271772 disconnected.
+1764945272: New connection from 172.18.0.4:36312 on port 1883.
+1764945272: New client connected from 172.18.0.4:36312 as StatusChecker-1764945272188 (p2, c1, k60).
+1764945272: Client StatusChecker-1764945272188 disconnected.
+1764945331: New connection from 172.18.0.4:55216 on port 1883.
+1764945332: New client connected from 172.18.0.4:55216 as StatusChecker-1764945331903 (p2, c1, k60).
+1764945332: Client StatusChecker-1764945331903 disconnected.
+1764945332: New connection from 172.18.0.4:55220 on port 1883.
+1764945332: New client connected from 172.18.0.4:55220 as StatusChecker-1764945332240 (p2, c1, k60).
+1764945332: Client StatusChecker-1764945332240 disconnected.
+1764945391: New connection from 172.18.0.4:55624 on port 1883.
+1764945392: New client connected from 172.18.0.4:55624 as StatusChecker-1764945391980 (p2, c1, k60).
+1764945392: Client StatusChecker-1764945391980 disconnected.
+1764945392: New connection from 172.18.0.4:55638 on port 1883.
+1764945392: New client connected from 172.18.0.4:55638 as StatusChecker-1764945392315 (p2, c1, k60).
+1764945392: Client StatusChecker-1764945392315 disconnected.
+1764945452: New connection from 172.18.0.4:55782 on port 1883.
+1764945452: New client connected from 172.18.0.4:55782 as StatusChecker-1764945452317 (p2, c1, k60).
+1764945452: Client StatusChecker-1764945452317 disconnected.
+1764945452: New connection from 172.18.0.4:50682 on port 1883.
+1764945452: New client connected from 172.18.0.4:50682 as StatusChecker-1764945452643 (p2, c1, k60).
+1764945452: Client StatusChecker-1764945452643 disconnected.
+1764945512: New connection from 172.18.0.4:45552 on port 1883.
+1764945512: New client connected from 172.18.0.4:45552 as StatusChecker-1764945512334 (p2, c1, k60).
+1764945512: Client StatusChecker-1764945512334 disconnected.
+1764945512: New connection from 172.18.0.4:45568 on port 1883.
+1764945513: New client connected from 172.18.0.4:45568 as StatusChecker-1764945512749 (p2, c1, k60).
+1764945513: Client StatusChecker-1764945512749 disconnected.
+1764945572: New connection from 172.18.0.4:49092 on port 1883.
+1764945572: New client connected from 172.18.0.4:49092 as StatusChecker-1764945572355 (p2, c1, k60).
+1764945572: Client StatusChecker-1764945572355 disconnected.
+1764945572: New connection from 172.18.0.4:49106 on port 1883.
+1764945573: New client connected from 172.18.0.4:49106 as StatusChecker-1764945572761 (p2, c1, k60).
+1764945573: Client StatusChecker-1764945572761 disconnected.
+1764945632: New connection from 172.18.0.4:40390 on port 1883.
+1764945632: New client connected from 172.18.0.4:40390 as StatusChecker-1764945632597 (p2, c1, k60).
+1764945632: Client StatusChecker-1764945632597 disconnected.
+1764945632: New connection from 172.18.0.4:40400 on port 1883.
+1764945633: New client connected from 172.18.0.4:40400 as StatusChecker-1764945632963 (p2, c1, k60).
+1764945633: Client StatusChecker-1764945632963 disconnected.
+1764945692: New connection from 172.18.0.4:49294 on port 1883.
+1764945693: New client connected from 172.18.0.4:49294 as StatusChecker-1764945692760 (p2, c1, k60).
+1764945693: Client StatusChecker-1764945692760 disconnected.
+1764945693: New connection from 172.18.0.4:49302 on port 1883.
+1764945693: New client connected from 172.18.0.4:49302 as StatusChecker-1764945693164 (p2, c1, k60).
+1764945693: Client StatusChecker-1764945693164 disconnected.
+1764945752: New connection from 172.18.0.4:44950 on port 1883.
+1764945753: New client connected from 172.18.0.4:44950 as StatusChecker-1764945752843 (p2, c1, k60).
+1764945753: Client StatusChecker-1764945752843 disconnected.
+1764945753: New connection from 172.18.0.4:44952 on port 1883.
+1764945753: New client connected from 172.18.0.4:44952 as StatusChecker-1764945753169 (p2, c1, k60).
+1764945753: Client StatusChecker-1764945753169 disconnected.
+1764945811: New connection from 172.18.0.4:51186 on port 1883.
+1764945811: New client connected from 172.18.0.4:51186 as StatusChecker-1764945811496 (p2, c1, k60).
+1764945811: Client StatusChecker-1764945811496 disconnected.
+1764945811: New connection from 172.18.0.4:51192 on port 1883.
+1764945812: New client connected from 172.18.0.4:51192 as StatusChecker-1764945811815 (p2, c1, k60).
+1764945812: Client StatusChecker-1764945811815 disconnected.
+1764945871: New connection from 172.18.0.4:57442 on port 1883.
+1764945871: New client connected from 172.18.0.4:57442 as StatusChecker-1764945871624 (p2, c1, k60).
+1764945871: Client StatusChecker-1764945871624 disconnected.
+1764945871: New connection from 172.18.0.4:57456 on port 1883.
+1764945872: New client connected from 172.18.0.4:57456 as StatusChecker-1764945871953 (p2, c1, k60).
+1764945872: Client StatusChecker-1764945871953 disconnected.
+1764945931: New connection from 172.18.0.4:43346 on port 1883.
+1764945932: New client connected from 172.18.0.4:43346 as StatusChecker-1764945931931 (p2, c1, k60).
+1764945932: Client StatusChecker-1764945931931 disconnected.
+1764945932: New connection from 172.18.0.4:43352 on port 1883.
+1764945932: New client connected from 172.18.0.4:43352 as StatusChecker-1764945932270 (p2, c1, k60).
+1764945932: Client StatusChecker-1764945932270 disconnected.
+1764945991: New connection from 172.18.0.4:37758 on port 1883.
+1764945992: New client connected from 172.18.0.4:37758 as StatusChecker-1764945991928 (p2, c1, k60).
+1764945992: Client StatusChecker-1764945991928 disconnected.
+1764945992: New connection from 172.18.0.4:37768 on port 1883.
+1764945992: New client connected from 172.18.0.4:37768 as StatusChecker-1764945992387 (p2, c1, k60).
+1764945992: Client StatusChecker-1764945992387 disconnected.
+1764946012: New connection from 172.18.0.1:39246 on port 1883.
+1764946012: New client connected from 172.18.0.1:39246 as paho5073663193300 (p2, c1, k60).
+1764946052: New connection from 172.18.0.4:44622 on port 1883.
+1764946052: New client connected from 172.18.0.4:44622 as StatusChecker-1764946052007 (p2, c1, k60).
+1764946052: Client StatusChecker-1764946052007 disconnected.
+1764946052: New connection from 172.18.0.4:44626 on port 1883.
+1764946052: New client connected from 172.18.0.4:44626 as StatusChecker-1764946052376 (p2, c1, k60).
+1764946052: Client StatusChecker-1764946052376 disconnected.
+1764946076: New connection from 172.18.0.4:36812 on port 1883.
+1764946076: New client connected from 172.18.0.4:36812 as StatusChecker-1764946076332 (p2, c1, k60).
+1764946076: Client StatusChecker-1764946076332 disconnected.
+1764946106: New connection from 172.18.0.4:35026 on port 1883.
+1764946106: New client connected from 172.18.0.4:35026 as StatusChecker-1764946106358 (p2, c1, k60).
+1764946106: Client StatusChecker-1764946106358 disconnected.
+1764946112: New connection from 172.18.0.4:55720 on port 1883.
+1764946112: New client connected from 172.18.0.4:55720 as StatusChecker-1764946112249 (p2, c1, k60).
+1764946112: Client StatusChecker-1764946112249 disconnected.
+1764946143: New connection from 172.18.0.4:59210 on port 1883.
+1764946144: New client connected from 172.18.0.4:59210 as StatusChecker-1764946143967 (p2, c1, k60).
+1764946144: Client StatusChecker-1764946143967 disconnected.
+1764946166: New connection from 172.18.0.4:56272 on port 1883.
+1764946166: New client connected from 172.18.0.4:56272 as StatusChecker-1764946166478 (p2, c1, k60).
+1764946166: Client StatusChecker-1764946166478 disconnected.
+1764946172: New connection from 172.18.0.4:56286 on port 1883.
+1764946172: New client connected from 172.18.0.4:56286 as StatusChecker-1764946172242 (p2, c1, k60).
+1764946172: Client StatusChecker-1764946172242 disconnected.
+1764946196: New connection from 172.18.0.4:52070 on port 1883.
+1764946196: New client connected from 172.18.0.4:52070 as StatusChecker-1764946196560 (p2, c1, k60).
+1764946196: Client StatusChecker-1764946196560 disconnected.
+1764946232: New connection from 172.18.0.4:39200 on port 1883.
+1764946232: New client connected from 172.18.0.4:39200 as StatusChecker-1764946232512 (p2, c1, k60).
+1764946232: Client StatusChecker-1764946232512 disconnected.
+1764946232: New connection from 172.18.0.4:39206 on port 1883.
+1764946233: New client connected from 172.18.0.4:39206 as StatusChecker-1764946232896 (p2, c1, k60).
+1764946233: Client StatusChecker-1764946232896 disconnected.
+1764946292: New connection from 172.18.0.4:36426 on port 1883.
+1764946292: New client connected from 172.18.0.4:36426 as StatusChecker-1764946292564 (p2, c1, k60).
+1764946292: Client StatusChecker-1764946292564 disconnected.
+1764946292: New connection from 172.18.0.4:36432 on port 1883.
+1764946293: New client connected from 172.18.0.4:36432 as StatusChecker-1764946292950 (p2, c1, k60).
+1764946293: Client StatusChecker-1764946292950 disconnected.
+1764946352: New connection from 172.18.0.4:35736 on port 1883.
+1764946353: New client connected from 172.18.0.4:35736 as StatusChecker-1764946352717 (p2, c1, k60).
+1764946353: Client StatusChecker-1764946352717 disconnected.
+1764946353: New connection from 172.18.0.4:35748 on port 1883.
+1764946353: New client connected from 172.18.0.4:35748 as StatusChecker-1764946353066 (p2, c1, k60).
+1764946353: Client StatusChecker-1764946353066 disconnected.
+1764946407: Client paho5073663193300 closed its connection.
+1764946412: New connection from 172.18.0.4:42656 on port 1883.
+1764946413: New client connected from 172.18.0.4:42656 as StatusChecker-1764946412738 (p2, c1, k60).
+1764946413: Client StatusChecker-1764946412738 disconnected.
+1764946413: New connection from 172.18.0.4:42658 on port 1883.
+1764946413: New client connected from 172.18.0.4:42658 as StatusChecker-1764946413089 (p2, c1, k60).
+1764946413: Client StatusChecker-1764946413089 disconnected.
+1764946447: New connection from 172.18.0.1:53852 on port 1883.
+1764946447: New client connected from 172.18.0.1:53852 as paho5508151725000 (p2, c1, k60).
+1764946458: Client paho5508151725000 disconnected.
+1764946459: New connection from 172.18.0.1:59028 on port 1883.
+1764946459: New client connected from 172.18.0.1:59028 as paho5521185553300 (p2, c1, k60).
+1764946462: Client paho5521185553300 disconnected.
+1764946471: New connection from 172.18.0.4:40266 on port 1883.
+1764946471: New client connected from 172.18.0.4:40266 as StatusChecker-1764946471511 (p2, c1, k60).
+1764946471: Client StatusChecker-1764946471511 disconnected.
+1764946471: New connection from 172.18.0.4:40280 on port 1883.
+1764946472: New client connected from 172.18.0.4:40280 as StatusChecker-1764946471852 (p2, c1, k60).
+1764946472: Client StatusChecker-1764946471852 disconnected.
+1764946531: New connection from 172.18.0.4:55464 on port 1883.
+1764946532: New client connected from 172.18.0.4:55464 as StatusChecker-1764946531686 (p2, c1, k60).
+1764946532: Client StatusChecker-1764946531686 disconnected.
+1764946532: New connection from 172.18.0.4:55468 on port 1883.
+1764946532: New client connected from 172.18.0.4:55468 as StatusChecker-1764946532027 (p2, c1, k60).
+1764946532: Client StatusChecker-1764946532027 disconnected.
+1764946555: New connection from 172.18.0.4:57922 on port 1883.
+1764946555: New client connected from 172.18.0.4:57922 as StatusChecker-1764946555139 (p2, c1, k60).
+1764946555: Client StatusChecker-1764946555139 disconnected.
+1764946585: New connection from 172.18.0.4:33752 on port 1883.
+1764946586: New client connected from 172.18.0.4:33752 as StatusChecker-1764946585989 (p2, c1, k60).
+1764946586: Client StatusChecker-1764946585989 disconnected.
+1764946591: New connection from 172.18.0.4:33754 on port 1883.
+1764946592: New client connected from 172.18.0.4:33754 as StatusChecker-1764946591697 (p2, c1, k60).
+1764946592: Client StatusChecker-1764946591697 disconnected.
+1764946650: New connection from 172.18.0.4:38608 on port 1883.
+1764946650: New client connected from 172.18.0.4:38608 as StatusChecker-1764946650234 (p2, c1, k60).
+1764946650: Client StatusChecker-1764946650234 disconnected.
+1764946651: New connection from 172.18.0.4:38610 on port 1883.
+1764946652: New client connected from 172.18.0.4:38610 as StatusChecker-1764946651817 (p2, c1, k60).
+1764946652: Client StatusChecker-1764946651817 disconnected.
+1764946711: New connection from 172.18.0.4:56826 on port 1883.
+1764946711: New client connected from 172.18.0.4:56826 as StatusChecker-1764946711064 (p2, c1, k60).
+1764946711: Client StatusChecker-1764946711064 disconnected.
+1764946712: New connection from 172.18.0.4:56832 on port 1883.
+1764946712: New client connected from 172.18.0.4:56832 as StatusChecker-1764946712016 (p2, c1, k60).
+1764946712: Client StatusChecker-1764946712016 disconnected.
+1764946772: New connection from 172.18.0.4:54964 on port 1883.
+1764946772: New client connected from 172.18.0.4:54964 as StatusChecker-1764946772276 (p2, c1, k60).
+1764946772: Client StatusChecker-1764946772276 disconnected.
+1764946772: New connection from 172.18.0.4:54968 on port 1883.
+1764946772: New client connected from 172.18.0.4:54968 as StatusChecker-1764946772650 (p2, c1, k60).
+1764946772: Client StatusChecker-1764946772650 disconnected.
+1764946832: New connection from 172.18.0.4:56348 on port 1883.
+1764946832: New client connected from 172.18.0.4:56348 as StatusChecker-1764946832263 (p2, c1, k60).
+1764946832: Client StatusChecker-1764946832263 disconnected.
+1764946892: New connection from 172.18.0.4:50680 on port 1883.
+1764946892: New client connected from 172.18.0.4:50680 as StatusChecker-1764946892377 (p2, c1, k60).
+1764946892: Client StatusChecker-1764946892377 disconnected.
+1764946952: New connection from 172.18.0.4:60606 on port 1883.
+1764946952: New client connected from 172.18.0.4:60606 as StatusChecker-1764946952558 (p2, c1, k60).
+1764946952: Client StatusChecker-1764946952558 disconnected.
+1764947012: New connection from 172.18.0.4:38622 on port 1883.
+1764947012: New client connected from 172.18.0.4:38622 as StatusChecker-1764947012648 (p2, c1, k60).
+1764947012: Client StatusChecker-1764947012648 disconnected.
+1764947016: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764947073: New connection from 172.18.0.4:51994 on port 1883.
+1764947073: New client connected from 172.18.0.4:51994 as StatusChecker-1764947073014 (p2, c1, k60).
+1764947073: Client StatusChecker-1764947073014 disconnected.
+1764947131: New connection from 172.18.0.4:57086 on port 1883.
+1764947131: New client connected from 172.18.0.4:57086 as StatusChecker-1764947131541 (p2, c1, k60).
+1764947132: Client StatusChecker-1764947131541 disconnected.
+1764947191: New connection from 172.18.0.4:34468 on port 1883.
+1764947191: New client connected from 172.18.0.4:34468 as StatusChecker-1764947191616 (p2, c1, k60).
+1764947191: Client StatusChecker-1764947191616 disconnected.
+1764947193: New connection from 172.18.0.1:46854 on port 1883.
+1764947193: New client connected from 172.18.0.1:46854 as paho6255725207800 (p2, c1, k60).
+1764947203: Client paho6255725207800 disconnected.
+1764947204: New connection from 172.18.0.1:38186 on port 1883.
+1764947204: New client connected from 172.18.0.1:38186 as paho6265385228400 (p2, c1, k60).
+1764947251: New connection from 172.18.0.4:33764 on port 1883.
+1764947252: New client connected from 172.18.0.4:33764 as StatusChecker-1764947251877 (p2, c1, k60).
+1764947252: Client StatusChecker-1764947251877 disconnected.
+1764947276: New connection from 172.18.0.4:38430 on port 1883.
+1764947276: New client connected from 172.18.0.4:38430 as StatusChecker-1764947276071 (p2, c1, k60).
+1764947276: Client StatusChecker-1764947276071 disconnected.
+1764947306: New connection from 172.18.0.4:40990 on port 1883.
+1764947306: New client connected from 172.18.0.4:40990 as StatusChecker-1764947306318 (p2, c1, k60).
+1764947306: Client StatusChecker-1764947306318 disconnected.
+1764947336: New connection from 172.18.0.4:59008 on port 1883.
+1764947336: New client connected from 172.18.0.4:59008 as StatusChecker-1764947336194 (p2, c1, k60).
+1764947336: Client StatusChecker-1764947336194 disconnected.
+1764947372: New connection from 172.18.0.4:35174 on port 1883.
+1764947372: New client connected from 172.18.0.4:35174 as StatusChecker-1764947372049 (p2, c1, k60).
+1764947372: Client StatusChecker-1764947372049 disconnected.
+1764947432: New connection from 172.18.0.4:60554 on port 1883.
+1764947432: New client connected from 172.18.0.4:60554 as StatusChecker-1764947432291 (p2, c1, k60).
+1764947432: Client StatusChecker-1764947432291 disconnected.
+1764947492: New connection from 172.18.0.4:40340 on port 1883.
+1764947492: New client connected from 172.18.0.4:40340 as StatusChecker-1764947492363 (p2, c1, k60).
+1764947492: Client StatusChecker-1764947492363 disconnected.
+1764947552: New connection from 172.18.0.4:41240 on port 1883.
+1764947552: New client connected from 172.18.0.4:41240 as StatusChecker-1764947552405 (p2, c1, k60).
+1764947552: Client StatusChecker-1764947552405 disconnected.
+1764947612: New connection from 172.18.0.4:43952 on port 1883.
+1764947612: New client connected from 172.18.0.4:43952 as StatusChecker-1764947612554 (p2, c1, k60).
+1764947612: Client StatusChecker-1764947612554 disconnected.
+1764947672: New connection from 172.18.0.4:54348 on port 1883.
+1764947673: New client connected from 172.18.0.4:54348 as StatusChecker-1764947672702 (p2, c1, k60).
+1764947673: Client StatusChecker-1764947672702 disconnected.
+1764947731: New connection from 172.18.0.4:53350 on port 1883.
+1764947733: New client connected from 172.18.0.4:53350 as StatusChecker-1764947731510 (p2, c1, k60).
+1764947733: Client StatusChecker-1764947731510 disconnected.
+1764947793: New connection from 172.18.0.4:44082 on port 1883.
+1764947793: New client connected from 172.18.0.4:44082 as StatusChecker-1764947793231 (p2, c1, k60).
+1764947793: Client StatusChecker-1764947793231 disconnected.
+1764947851: New connection from 172.18.0.4:55590 on port 1883.
+1764947852: New client connected from 172.18.0.4:55590 as StatusChecker-1764947851758 (p2, c1, k60).
+1764947852: Client StatusChecker-1764947851758 disconnected.
+1764947902: Client paho6265385228400 closed its connection.
+1764947911: New connection from 172.18.0.4:35048 on port 1883.
+1764947912: New client connected from 172.18.0.4:35048 as StatusChecker-1764947911878 (p2, c1, k60).
+1764947912: Client StatusChecker-1764947911878 disconnected.
+1764947938: New connection from 172.18.0.1:36698 on port 1883.
+1764947938: New client connected from 172.18.0.1:36698 as paho6999915277700 (p2, c1, k60).
+1764947940: Client paho6999915277700 disconnected.
+1764947941: New connection from 172.18.0.1:36712 on port 1883.
+1764947941: New client connected from 172.18.0.1:36712 as paho7003402730100 (p2, c1, k60).
+1764947941: New connection from 172.18.0.1:36722 on port 1883.
+1764947942: New client connected from 172.18.0.1:36722 as paho7003878846400 (p2, c1, k60).
+1764947944: Client paho7003878846400 disconnected.
+1764947946: Client paho7003402730100 disconnected.
+1764947947: New connection from 172.18.0.1:32828 on port 1883.
+1764947947: New client connected from 172.18.0.1:32828 as paho7009586881000 (p2, c1, k60).
+1764947947: New connection from 172.18.0.1:32830 on port 1883.
+1764947948: New client connected from 172.18.0.1:32830 as paho7010016963600 (p2, c1, k60).
+1764947972: New connection from 172.18.0.4:36370 on port 1883.
+1764947972: New client connected from 172.18.0.4:36370 as StatusChecker-1764947972045 (p2, c1, k60).
+1764947972: Client StatusChecker-1764947972045 disconnected.
+1764948033: New connection from 172.18.0.4:36272 on port 1883.
+1764948033: New client connected from 172.18.0.4:36272 as StatusChecker-1764948033600 (p2, c1, k60).
+1764948033: Client StatusChecker-1764948033600 disconnected.
+1764948092: New connection from 172.18.0.4:59878 on port 1883.
+1764948092: New client connected from 172.18.0.4:59878 as StatusChecker-1764948092224 (p2, c1, k60).
+1764948092: Client StatusChecker-1764948092224 disconnected.
+1764948114: Client paho7010016963600 closed its connection.
+1764948115: Client paho7009586881000 closed its connection.
+1764948152: New connection from 172.18.0.4:43068 on port 1883.
+1764948152: New client connected from 172.18.0.4:43068 as StatusChecker-1764948152357 (p2, c1, k60).
+1764948152: Client StatusChecker-1764948152357 disconnected.
+1764948197: New connection from 172.18.0.1:43296 on port 1883.
+1764948197: New connection from 172.18.0.1:43308 on port 1883.
+1764948197: New client connected from 172.18.0.1:43296 as paho7259023964200 (p2, c1, k60).
+1764948198: New client connected from 172.18.0.1:43308 as paho7259939517200 (p2, c1, k60).
+1764948200: Client paho7259939517200 disconnected.
+1764948202: Client paho7259023964200 disconnected.
+1764948202: New connection from 172.18.0.1:43322 on port 1883.
+1764948203: New client connected from 172.18.0.1:43322 as paho7265309927200 (p2, c1, k60).
+1764948207: Client paho7265309927200 disconnected.
+1764948212: New connection from 172.18.0.4:60250 on port 1883.
+1764948212: New client connected from 172.18.0.4:60250 as StatusChecker-1764948212513 (p2, c1, k60).
+1764948212: Client StatusChecker-1764948212513 disconnected.
+1764948269: New connection from 172.18.0.4:53510 on port 1883.
+1764948270: New client connected from 172.18.0.4:53510 as StatusChecker-1764948269812 (p2, c1, k60).
+1764948270: Client StatusChecker-1764948269812 disconnected.
+1764948295: New connection from 172.18.0.4:39086 on port 1883.
+1764948296: New client connected from 172.18.0.4:39086 as StatusChecker-1764948295784 (p2, c1, k60).
+1764948296: Client StatusChecker-1764948295784 disconnected.
+1764948325: New connection from 172.18.0.4:55906 on port 1883.
+1764948325: New client connected from 172.18.0.4:55906 as StatusChecker-1764948325545 (p2, c1, k60).
+1764948325: Client StatusChecker-1764948325545 disconnected.
+1764948389: New connection from 172.18.0.4:41058 on port 1883.
+1764948389: New client connected from 172.18.0.4:41058 as StatusChecker-1764948389478 (p2, c1, k60).
+1764948389: Client StatusChecker-1764948389478 disconnected.
+1764948450: New connection from 172.18.0.4:46416 on port 1883.
+1764948451: New client connected from 172.18.0.4:46416 as StatusChecker-1764948450729 (p2, c1, k60).
+1764948451: Client StatusChecker-1764948450729 disconnected.
+1764948458: New connection from 172.18.0.1:39628 on port 1883.
+1764948458: New client connected from 172.18.0.1:39628 as paho7519372723800 (p2, c1, k60).
+1764948464: Client paho7519372723800 disconnected.
+1764948465: New connection from 172.18.0.1:33970 on port 1883.
+1764948465: New client connected from 172.18.0.1:33970 as paho7526742837400 (p2, c1, k60).
+1764948470: Client paho7526742837400 disconnected.
+1764948470: New connection from 172.18.0.1:49064 on port 1883.
+1764948471: New client connected from 172.18.0.1:49064 as paho7532379739100 (p2, c1, k60).
+1764948473: Client paho7532379739100 disconnected.
+1764948474: New connection from 172.18.0.1:49068 on port 1883.
+1764948474: New client connected from 172.18.0.1:49068 as paho7535984416100 (p2, c1, k60).
+1764948476: Client paho7535984416100 disconnected.
+1764948513: New connection from 172.18.0.4:43400 on port 1883.
+1764948513: New client connected from 172.18.0.4:43400 as StatusChecker-1764948512306 (p2, c1, k60).
+1764948514: Client StatusChecker-1764948512306 disconnected.
+1764948543: New connection from 172.18.0.1:48762 on port 1883.
+1764948543: New client connected from 172.18.0.1:48762 as paho7605755303700 (p2, c1, k60).
+1764948544: New connection from 172.18.0.1:48766 on port 1883.
+1764948544: New client connected from 172.18.0.1:48766 as paho7606799828800 (p2, c1, k60).
+1764948548: Client paho7606799828800 disconnected.
+1764948573: New connection from 172.18.0.4:38376 on port 1883.
+1764948573: New client connected from 172.18.0.4:38376 as StatusChecker-1764948573068 (p2, c1, k60).
+1764948573: Client StatusChecker-1764948573068 disconnected.
+1764948588: Client paho7605755303700 closed its connection.
+1764948606: Client WheatherStationUAH-subscriber closed its connection.
+1764948607: mosquitto version 2.0.22 terminating
+1764948607: Saving in-memory database to /mosquitto/data//mosquitto.db.

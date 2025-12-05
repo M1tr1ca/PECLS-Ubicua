@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -71,6 +72,10 @@ public class TrafficCounterStatsActivity extends AppCompatActivity {
         tvHistory = findViewById(R.id.tvHistory);
         mainHandler = new Handler(Looper.getMainLooper());
 
+        // Botón volver
+        ImageButton btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> finish());
+
         // Obtener datos del intent
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -81,10 +86,79 @@ public class TrafficCounterStatsActivity extends AppCompatActivity {
             
             tvStreetName.setText("📍 " + streetName);
             
+            Log.i("ubicua", "TrafficCounter - SensorId recibido: " + sensorId);
+            Log.i("ubicua", "TrafficCounter - StreetId: " + streetId);
+            
+            // Cargar datos históricos del servidor
+            cargarDatosHistoricos();
+            
             // Formato: sensors/{street_id}/{sensor_type}/{sensor_id}
             String topic = "/sensors/" + streetId + "/traffic_counter/" + sensorId;
+            Log.i("ubicua", "TrafficCounter - Topic MQTT: " + topic);
             conectarMqtt(topic);
         }
+    }
+    
+    private void cargarDatosHistoricos() {
+        tvStatus.setText("🔄 Cargando datos...");
+        
+        ApiService apiService = RetrofitClient.getRetrofitInstance().create(ApiService.class);
+        retrofit2.Call<AllDataResponse> call = apiService.getAllData();
+        
+        call.enqueue(new retrofit2.Callback<AllDataResponse>() {
+            @Override
+            public void onResponse(retrofit2.Call<AllDataResponse> call, retrofit2.Response<AllDataResponse> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    AllDataResponse data = response.body();
+                    procesarDatosHistoricos(data);
+                } else {
+                    Log.w("ubicua", "No se pudieron cargar datos históricos de contador tráfico");
+                }
+            }
+
+            @Override
+            public void onFailure(retrofit2.Call<AllDataResponse> call, Throwable t) {
+                Log.e("ubicua", "Error cargando históricos contador: " + t.getMessage());
+            }
+        });
+    }
+    
+    private void procesarDatosHistoricos(AllDataResponse data) {
+        if (data.getTrafficCounter() == null || data.getTrafficCounter().isEmpty()) {
+            Log.w("ubicua", "No hay datos de contador de tráfico en la respuesta");
+            return;
+        }
+        
+        java.util.List<AllDataResponse.TrafficCounterMeasurement> trafficList = data.getTrafficCounter();
+        AllDataResponse.TrafficCounterMeasurement ultimoDato = null;
+        
+        Log.i("ubicua", "Procesando " + trafficList.size() + " registros trafficCounter, filtrando por sensorId: " + sensorId);
+        
+        // Filtrar por sensor ID y sumar totales
+        for (AllDataResponse.TrafficCounterMeasurement m : trafficList) {
+            if (m.getSensorId() != null && m.getSensorId().equals(sensorId)) {
+                ultimoDato = m;
+                totalVehicles += m.getVehicleCount();
+                totalPedestrians += m.getPedestrianCount();
+                totalBicycles += m.getBicycleCount();
+            }
+        }
+        
+        final AllDataResponse.TrafficCounterMeasurement datoFinal = ultimoDato;
+        
+        mainHandler.post(() -> {
+            if (datoFinal != null) {
+                // Mostrar totales y último dato
+                tvVehicleCount.setText(String.valueOf(totalVehicles));
+                tvPedestrianCount.setText(String.valueOf(totalPedestrians));
+                tvBicycleCount.setText(String.valueOf(totalBicycles));
+                tvAverageSpeed.setText(String.format(java.util.Locale.US, "%.1f km/h", datoFinal.getAverageSpeedKmh()));
+                tvTrafficDensity.setText(datoFinal.getTrafficDensity() != null ? datoFinal.getTrafficDensity() : "--");
+                tvDirection.setText(datoFinal.getDirection() != null ? datoFinal.getDirection() : "--");
+                
+                Log.i("ubicua", "Mostrando datos contador: V=" + totalVehicles + ", P=" + totalPedestrians);
+            }
+        });
     }
 
     private void conectarMqtt(String topic) {
@@ -108,12 +182,16 @@ public class TrafficCounterStatsActivity extends AppCompatActivity {
                 client.setCallback(new MqttCallback() {
                     @Override
                     public void connectionLost(Throwable cause) {
+                        Log.e("ubicua", "TrafficCounter - Conexión perdida: " + (cause != null ? cause.getMessage() : "unknown"));
                         mainHandler.post(() -> tvStatus.setText("❌ Conexión perdida"));
                     }
 
                     @Override
                     public void messageArrived(String receivedTopic, MqttMessage message) {
                         String msg = new String(message.getPayload());
+                        Log.i("ubicua", "*** TrafficCounter MENSAJE RECIBIDO ***");
+                        Log.i("ubicua", "Topic: " + receivedTopic);
+                        Log.i("ubicua", "Payload: " + msg);
                         mainHandler.post(() -> procesarMensaje(msg));
                     }
 
@@ -122,7 +200,7 @@ public class TrafficCounterStatsActivity extends AppCompatActivity {
                 });
 
                 client.subscribe(topic, 1);
-                Log.i("ubicua", "Suscrito al topic: " + topic);
+                Log.i("ubicua", "*** TrafficCounter SUSCRITO a: " + topic + " ***");
                 
             } catch (MqttException e) {
                 Log.e("ubicua", "Error MQTT: " + e.getMessage());
@@ -133,6 +211,7 @@ public class TrafficCounterStatsActivity extends AppCompatActivity {
 
     private void procesarMensaje(String json) {
         try {
+            Log.i("ubicua", "TrafficCounter - Procesando JSON: " + json);
             JSONObject obj = new JSONObject(json);
             
             int vehicles = 0, pedestrians = 0, bicycles = 0;
@@ -148,48 +227,49 @@ public class TrafficCounterStatsActivity extends AppCompatActivity {
                 speed = data.optDouble("average_speed_kmh", data.optDouble("averageSpeedKmh", 0));
                 density = data.optString("traffic_density", data.optString("trafficDensity", "--"));
                 direction = data.optString("direction", "--");
+                Log.i("ubicua", "TrafficCounter - Parseado de data: V=" + vehicles + ", P=" + pedestrians + ", B=" + bicycles);
             } else {
                 // Fallback formato plano
-                vehicles = obj.optInt("vehicleCount", 0);
-                pedestrians = obj.optInt("pedestrianCount", 0);
-                bicycles = obj.optInt("bicycleCount", 0);
-                speed = obj.optDouble("averageSpeedKmh", 0);
-                density = obj.optString("trafficDensity", "--");
+                vehicles = obj.optInt("vehicleCount", obj.optInt("vehicle_count", 0));
+                pedestrians = obj.optInt("pedestrianCount", obj.optInt("pedestrian_count", 0));
+                bicycles = obj.optInt("bicycleCount", obj.optInt("bicycle_count", 0));
+                speed = obj.optDouble("averageSpeedKmh", obj.optDouble("average_speed_kmh", 0));
+                density = obj.optString("trafficDensity", obj.optString("traffic_density", "--"));
                 direction = obj.optString("direction", "--");
+                Log.i("ubicua", "TrafficCounter - Parseado plano: V=" + vehicles + ", P=" + pedestrians + ", B=" + bicycles);
             }
             
-            if (vehicles > 0 || pedestrians > 0 || bicycles > 0) {
-                
-                // Acumular conteos
-                totalVehicles += vehicles;
-                totalPedestrians += pedestrians;
-                totalBicycles += bicycles;
-                
-                // Actualizar UI
-                tvVehicleCount.setText(String.valueOf(totalVehicles));
-                tvPedestrianCount.setText(String.valueOf(totalPedestrians));
-                tvBicycleCount.setText(String.valueOf(totalBicycles));
-                tvAverageSpeed.setText(String.format("%.0f", speed));
-                tvTrafficDensity.setText(density);
-                tvDirection.setText("Dirección: " + direction);
-                
-                // Agregar al historial
-                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
-                String hora = sdf.format(new Date());
-                
-                String entrada = String.format("[%s] 🚗%d 🚶%d 🚲%d | %s\n", 
-                        hora, vehicles, pedestrians, bicycles, density);
-                historial.insert(0, entrada);
-                
-                if (historial.length() > 500) {
-                    historial.setLength(500);
-                }
-                
-                tvHistory.setText(historial.toString());
+            // Actualizar UI aunque sean 0 (para mostrar que llegó el mensaje)
+            // Acumular conteos
+            totalVehicles += vehicles;
+            totalPedestrians += pedestrians;
+            totalBicycles += bicycles;
+            
+            // Actualizar UI
+            tvVehicleCount.setText(String.valueOf(totalVehicles));
+            tvPedestrianCount.setText(String.valueOf(totalPedestrians));
+            tvBicycleCount.setText(String.valueOf(totalBicycles));
+            tvAverageSpeed.setText(String.format("%.0f", speed));
+            tvTrafficDensity.setText(density);
+            tvDirection.setText("Dirección: " + direction);
+            
+            // Agregar al historial
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
+            String hora = sdf.format(new Date());
+            
+            String entrada = String.format("[%s] 🚗%d 🚶%d 🚲%d | %s\n", 
+                    hora, vehicles, pedestrians, bicycles, density);
+            historial.insert(0, entrada);
+            
+            if (historial.length() > 500) {
+                historial.setLength(500);
             }
+            
+            tvHistory.setText(historial.toString());
+            Log.i("ubicua", "TrafficCounter - UI actualizada correctamente");
             
         } catch (Exception e) {
-            Log.e("ubicua", "Error parsing JSON: " + e.getMessage());
+            Log.e("ubicua", "TrafficCounter - Error parsing JSON: " + e.getMessage() + " - JSON: " + json);
         }
     }
 

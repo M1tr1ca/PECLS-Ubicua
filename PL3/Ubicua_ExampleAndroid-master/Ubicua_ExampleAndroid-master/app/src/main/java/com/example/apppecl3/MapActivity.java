@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -49,7 +48,7 @@ public class MapActivity extends AppCompatActivity {
         
         // Configurar OSMDroid antes de inflar el layout
         Context ctx = getApplicationContext();
-        Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
+        Configuration.getInstance().load(ctx, ctx.getSharedPreferences("osmdroid", Context.MODE_PRIVATE));
         Configuration.getInstance().setUserAgentValue(getPackageName());
         
         EdgeToEdge.enable(this);
@@ -114,14 +113,12 @@ public class MapActivity extends AppCompatActivity {
                     streetsList.clear();
                     for (Street street : response.body()) {
                         StreetWithSensors sws = street.toStreetWithSensors();
-                        // Añadir sensores por defecto basados en el street_id
-                        agregarSensoresPorDefecto(sws);
                         streetsList.add(sws);
                     }
-                    tvStatus.setText("✅ " + streetsList.size() + " calles cargadas del servidor");
                     Log.i("ubicua", "Calles cargadas del servidor: " + streetsList.size());
-                    agregarMarcadoresAlMapa();
-                    configurarSpinner();
+                    
+                    // Cargar los sensores reales desde GetAllData
+                    cargarSensoresDesdeAllData();
                 } else {
                     Log.w("ubicua", "Respuesta vacía del servidor");
                     mostrarError("No se encontraron calles en el servidor");
@@ -132,6 +129,80 @@ public class MapActivity extends AppCompatActivity {
             public void onFailure(Call<List<Street>> call, Throwable t) {
                 Log.e("ubicua", "Error de conexión al obtener calles: " + t.getMessage());
                 mostrarError("Error de conexión: " + t.getMessage());
+            }
+        });
+    }
+    
+    /**
+     * Carga los sensores reales desde GetAllData y los asigna a todas las calles
+     * Ya que todos los datos usan el mismo sensorId (LAB08JAV-G5)
+     */
+    private void cargarSensoresDesdeAllData() {
+        tvStatus.setText("🔄 Cargando sensores...");
+        
+        ApiService apiService = RetrofitClient.getRetrofitInstance().create(ApiService.class);
+        Call<AllDataResponse> call = apiService.getAllData();
+        
+        call.enqueue(new Callback<AllDataResponse>() {
+            @Override
+            public void onResponse(Call<AllDataResponse> call, Response<AllDataResponse> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    AllDataResponse data = response.body();
+                    
+                    // Extraer el sensorId del primer registro disponible
+                    String sensorId = null;
+                    
+                    if (data.getWeather() != null && !data.getWeather().isEmpty()) {
+                        sensorId = data.getWeather().get(0).getSensorId();
+                    } else if (data.getTrafficCounter() != null && !data.getTrafficCounter().isEmpty()) {
+                        sensorId = data.getTrafficCounter().get(0).getSensorId();
+                    } else if (data.getTrafficLight() != null && !data.getTrafficLight().isEmpty()) {
+                        sensorId = data.getTrafficLight().get(0).getSensorId();
+                    } else if (data.getInformationDisplay() != null && !data.getInformationDisplay().isEmpty()) {
+                        sensorId = data.getInformationDisplay().get(0).getSensorId();
+                    }
+                    
+                    if (sensorId != null) {
+                        Log.i("ubicua", "SensorId real encontrado en GetAllData: " + sensorId);
+                        
+                        // Asignar el sensor real a todas las calles
+                        for (StreetWithSensors street : streetsList) {
+                            Sensor sensor = new Sensor(sensorId, "generic", street.getStreetId());
+                            street.addSensor(sensor);
+                            Log.i("ubicua", "Sensor " + sensorId + " asignado a calle " + street.getStreetId());
+                        }
+                        
+                        tvStatus.setText("✅ " + streetsList.size() + " calles, sensor: " + sensorId);
+                    } else {
+                        Log.w("ubicua", "No se encontró sensorId en GetAllData, usando por defecto");
+                        for (StreetWithSensors street : streetsList) {
+                            agregarSensoresPorDefecto(street);
+                        }
+                        tvStatus.setText("✅ " + streetsList.size() + " calles (sensores por defecto)");
+                    }
+                    
+                    agregarMarcadoresAlMapa();
+                    configurarSpinner();
+                } else {
+                    Log.w("ubicua", "No se pudieron cargar datos, usando sensores por defecto");
+                    for (StreetWithSensors street : streetsList) {
+                        agregarSensoresPorDefecto(street);
+                    }
+                    tvStatus.setText("✅ " + streetsList.size() + " calles (sensores por defecto)");
+                    agregarMarcadoresAlMapa();
+                    configurarSpinner();
+                }
+            }
+            
+            @Override
+            public void onFailure(Call<AllDataResponse> call, Throwable t) {
+                Log.e("ubicua", "Error al cargar GetAllData: " + t.getMessage());
+                for (StreetWithSensors street : streetsList) {
+                    agregarSensoresPorDefecto(street);
+                }
+                tvStatus.setText("✅ " + streetsList.size() + " calles (sensores por defecto)");
+                agregarMarcadoresAlMapa();
+                configurarSpinner();
             }
         });
     }
@@ -243,25 +314,18 @@ public class MapActivity extends AppCompatActivity {
         intent.putExtra("latitude", street.getCenterLatitude());
         intent.putExtra("longitude", street.getCenterLongitude());
 
-        // Pasar IDs de sensores
+        // Pasar IDs de sensores - Los sensores son "generic" en la BD
+        // Usamos el mismo sensor_id para todos los tipos de datos
         List<Sensor> sensors = street.getSensors();
         if (!sensors.isEmpty()) {
-            for (Sensor sensor : sensors) {
-                switch (sensor.getSensorType()) {
-                    case "weather":
-                        intent.putExtra("sensor_weather", sensor.getSensorId());
-                        break;
-                    case "trafficCounter":
-                        intent.putExtra("sensor_traffic_counter", sensor.getSensorId());
-                        break;
-                    case "trafficLight":
-                        intent.putExtra("sensor_traffic_light", sensor.getSensorId());
-                        break;
-                    case "display":
-                        intent.putExtra("sensor_display", sensor.getSensorId());
-                        break;
-                }
-            }
+            // Usar el primer sensor disponible para todos los tipos
+            String sensorId = sensors.get(0).getSensorId();
+            Log.i("ubicua", "Usando sensor genérico: " + sensorId + " para calle " + street.getStreetId());
+            
+            intent.putExtra("sensor_weather", sensorId);
+            intent.putExtra("sensor_traffic_counter", sensorId);
+            intent.putExtra("sensor_traffic_light", sensorId);
+            intent.putExtra("sensor_display", sensorId);
         }
 
         startActivity(intent);

@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -77,6 +78,10 @@ public class DisplayStatsActivity extends AppCompatActivity {
         
         mainHandler = new Handler(Looper.getMainLooper());
 
+        // Botón volver
+        ImageButton btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> finish());
+
         // Obtener datos del intent
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -87,10 +92,81 @@ public class DisplayStatsActivity extends AppCompatActivity {
             
             tvStreetName.setText("📍 " + streetName);
             
+            // Cargar datos históricos del servidor
+            cargarDatosHistoricos();
+            
             // Formato: sensors/{street_id}/{sensor_type}/{sensor_id}
             String topic = "/sensors/" + streetId + "/display/" + sensorId;
             conectarMqtt(topic);
         }
+    }
+    
+    private void cargarDatosHistoricos() {
+        tvStatus.setText("🔄 Cargando datos...");
+        
+        ApiService apiService = RetrofitClient.getRetrofitInstance().create(ApiService.class);
+        retrofit2.Call<AllDataResponse> call = apiService.getAllData();
+        
+        call.enqueue(new retrofit2.Callback<AllDataResponse>() {
+            @Override
+            public void onResponse(retrofit2.Call<AllDataResponse> call, retrofit2.Response<AllDataResponse> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    AllDataResponse data = response.body();
+                    procesarDatosHistoricos(data);
+                } else {
+                    Log.w("ubicua", "No se pudieron cargar datos históricos de pantallas");
+                }
+            }
+
+            @Override
+            public void onFailure(retrofit2.Call<AllDataResponse> call, Throwable t) {
+                Log.e("ubicua", "Error cargando históricos pantallas: " + t.getMessage());
+            }
+        });
+    }
+    
+    private void procesarDatosHistoricos(AllDataResponse data) {
+        if (data.getInformationDisplay() == null || data.getInformationDisplay().isEmpty()) {
+            Log.w("ubicua", "No hay datos de pantallas en la respuesta");
+            return;
+        }
+        
+        java.util.List<AllDataResponse.DisplayMeasurement> displayList = data.getInformationDisplay();
+        AllDataResponse.DisplayMeasurement ultimoDato = null;
+        
+        Log.i("ubicua", "Procesando " + displayList.size() + " registros informationDisplay, filtrando por sensorId: " + sensorId);
+        
+        // Filtrar por sensor ID
+        for (AllDataResponse.DisplayMeasurement m : displayList) {
+            if (m.getSensorId() != null && m.getSensorId().equals(sensorId)) {
+                ultimoDato = m;
+            }
+        }
+        
+        final AllDataResponse.DisplayMeasurement datoFinal = ultimoDato;
+        
+        mainHandler.post(() -> {
+            if (datoFinal != null) {
+                // Mostrar el último dato
+                tvDisplayStatus.setText(datoFinal.getDisplayStatus() != null ? datoFinal.getDisplayStatus() : "--");
+                tvCurrentMessage.setText(datoFinal.getCurrentMessage() != null ? datoFinal.getCurrentMessage() : "--");
+                tvContentType.setText(datoFinal.getContentType() != null ? datoFinal.getContentType() : "--");
+                tvBrightness.setText(datoFinal.getBrightnessLevel() + "%");
+                tvTemperature.setText(String.format(java.util.Locale.US, "%.1f°C", datoFinal.getTemperatureCelsius()));
+                tvEnergyConsumption.setText(String.format(java.util.Locale.US, "%.0f W", datoFinal.getEnergyConsumptionWatts()));
+                tvDisplaySize.setText(String.format(java.util.Locale.US, "%.0f\"", datoFinal.getDisplaySizeInches()));
+                progressBrightness.setProgress(datoFinal.getBrightnessLevel());
+                
+                // Actualizar indicador de estado
+                if ("active".equalsIgnoreCase(datoFinal.getDisplayStatus())) {
+                    statusIndicator.setBackgroundResource(R.drawable.status_active);
+                } else {
+                    statusIndicator.setBackgroundResource(R.drawable.status_inactive);
+                }
+                
+                Log.i("ubicua", "Mostrando datos pantalla: status=" + datoFinal.getDisplayStatus());
+            }
+        });
     }
 
     private void conectarMqtt(String topic) {

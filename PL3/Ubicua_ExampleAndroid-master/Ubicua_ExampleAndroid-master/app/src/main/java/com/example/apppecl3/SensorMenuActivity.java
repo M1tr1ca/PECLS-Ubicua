@@ -2,11 +2,13 @@ package com.example.apppecl3;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.LinearLayout;
+import android.util.Log;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -19,7 +21,7 @@ public class SensorMenuActivity extends AppCompatActivity {
     private double latitude;
     private double longitude;
     
-    // IDs de sensores para cada tipo
+    // IDs de sensores para cada tipo (obtenidos del intent, no hardcodeados)
     private String sensorWeather;
     private String sensorTrafficCounter;
     private String sensorTrafficLight;
@@ -46,10 +48,33 @@ public class SensorMenuActivity extends AppCompatActivity {
             latitude = extras.getDouble("latitude", 0);
             longitude = extras.getDouble("longitude", 0);
             
-            sensorWeather = extras.getString("sensor_weather", streetId.replace("ST_", "LAB08JAV-G"));
-            sensorTrafficCounter = extras.getString("sensor_traffic_counter", sensorWeather + "-TC");
-            sensorTrafficLight = extras.getString("sensor_traffic_light", sensorWeather + "-TL");
-            sensorDisplay = extras.getString("sensor_display", sensorWeather + "-DP");
+            // Obtener los sensor_id directamente del intent (ya vienen del servidor vía MapActivity)
+            sensorWeather = extras.getString("sensor_weather", null);
+            sensorTrafficCounter = extras.getString("sensor_traffic_counter", null);
+            sensorTrafficLight = extras.getString("sensor_traffic_light", null);
+            sensorDisplay = extras.getString("sensor_display", null);
+            
+            Log.i("ubicua", "SensorMenu - Recibido del intent:");
+            Log.i("ubicua", "  sensor_weather: " + sensorWeather);
+            Log.i("ubicua", "  sensor_traffic_counter: " + sensorTrafficCounter);
+            Log.i("ubicua", "  sensor_traffic_light: " + sensorTrafficLight);
+            Log.i("ubicua", "  sensor_display: " + sensorDisplay);
+            
+            // Si no hay sensor específico, usar uno genérico basado en el primero disponible
+            String fallbackSensor = sensorWeather != null ? sensorWeather :
+                                   sensorTrafficCounter != null ? sensorTrafficCounter :
+                                   sensorTrafficLight != null ? sensorTrafficLight :
+                                   sensorDisplay != null ? sensorDisplay : "LAB08JAV-G1";
+            
+            // Usar el fallback si alguno es null
+            if (sensorWeather == null) sensorWeather = fallbackSensor;
+            if (sensorTrafficCounter == null) sensorTrafficCounter = fallbackSensor;
+            if (sensorTrafficLight == null) sensorTrafficLight = fallbackSensor;
+            if (sensorDisplay == null) sensorDisplay = fallbackSensor;
+            
+            Log.i("ubicua", "StreetId: " + streetId);
+            Log.i("ubicua", "Sensors - Weather: " + sensorWeather + ", TrafficCounter: " + sensorTrafficCounter + 
+                          ", TrafficLight: " + sensorTrafficLight + ", Display: " + sensorDisplay);
         }
 
         // Actualizar UI
@@ -57,20 +82,24 @@ public class SensorMenuActivity extends AppCompatActivity {
         TextView tvStreetDistrict = findViewById(R.id.tvStreetDistrict);
         TextView tvCoordinates = findViewById(R.id.tvCoordinates);
 
-        tvStreetName.setText("📍 " + streetName);
+        tvStreetName.setText(streetName);
         tvStreetDistrict.setText(streetDistrict + " - " + streetNeighborhood);
         tvCoordinates.setText(String.format("📌 Lat: %.4f, Lon: %.4f", latitude, longitude));
 
-        // Configurar botones del menú
-        LinearLayout btnWeather = findViewById(R.id.btnWeather);
-        LinearLayout btnTrafficCounter = findViewById(R.id.btnTrafficCounter);
-        LinearLayout btnTrafficLight = findViewById(R.id.btnTrafficLight);
-        LinearLayout btnDisplay = findViewById(R.id.btnDisplay);
+        // Botón de volver
+        ImageButton btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> finish());
 
-        btnWeather.setOnClickListener(v -> abrirEstadisticas(WeatherStatsActivity.class, sensorWeather, "weather"));
-        btnTrafficCounter.setOnClickListener(v -> abrirEstadisticas(TrafficCounterStatsActivity.class, sensorTrafficCounter, "trafficCounter"));
-        btnTrafficLight.setOnClickListener(v -> abrirEstadisticas(TrafficLightStatsActivity.class, sensorTrafficLight, "trafficLight"));
-        btnDisplay.setOnClickListener(v -> abrirEstadisticas(DisplayStatsActivity.class, sensorDisplay, "display"));
+        // Configurar botones del menú (CardViews en el layout)
+        CardView cardWeather = findViewById(R.id.btnWeather);
+        CardView cardTrafficCounter = findViewById(R.id.btnTrafficCounter);
+        CardView cardTrafficLight = findViewById(R.id.btnTrafficLight);
+        CardView cardDisplay = findViewById(R.id.btnDisplay);
+
+        cardWeather.setOnClickListener(v -> abrirEstadisticas(WeatherStatsActivity.class, sensorWeather, "weather"));
+        cardTrafficCounter.setOnClickListener(v -> abrirEstadisticas(TrafficCounterStatsActivity.class, sensorTrafficCounter, "trafficCounter"));
+        cardTrafficLight.setOnClickListener(v -> abrirEstadisticas(TrafficLightStatsActivity.class, sensorTrafficLight, "trafficLight"));
+        cardDisplay.setOnClickListener(v -> abrirEstadisticas(DisplayStatsActivity.class, sensorDisplay, "display"));
     }
 
     private void abrirEstadisticas(Class<?> activityClass, String sensorId, String sensorType) {
