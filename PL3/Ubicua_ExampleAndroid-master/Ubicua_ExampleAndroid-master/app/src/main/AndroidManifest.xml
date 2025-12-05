@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" 
+        android:maxSdkVersion="28"/>
 
 
     <application
@@ -14,14 +19,56 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppPECL3"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="true">
+        
+        <!-- Pantalla de monitoreo de sensores (legado) -->
         <activity
             android:name=".StreetMonitoring"
             android:exported="false"
             android:theme="@style/Theme.AppPECL3" />
+        
+        <!-- Selector de calles (legado) -->
         <activity
             android:name=".StreetSelection"
             android:exported="false" />
+        
+        <!-- Mapa de Madrid con calles -->
+        <activity
+            android:name=".MapActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppPECL3" />
+        
+        <!-- Menú de sensores por calle -->
+        <activity
+            android:name=".SensorMenuActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppPECL3" />
+        
+        <!-- Estadísticas Meteorológicas -->
+        <activity
+            android:name=".WeatherStatsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppPECL3" />
+        
+        <!-- Estadísticas Contador de Tráfico -->
+        <activity
+            android:name=".TrafficCounterStatsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppPECL3" />
+        
+        <!-- Estadísticas Semáforos -->
+        <activity
+            android:name=".TrafficLightStatsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppPECL3" />
+        
+        <!-- Estadísticas Pantallas de Información -->
+        <activity
+            android:name=".DisplayStatsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppPECL3" />
+            
         <activity
             android:name=".MainActivity"
             android:exported="true">

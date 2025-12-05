@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".SensorMenuActivity">
+
+    <!-- Header con info de la calle -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="#1565C0"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvStreetName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📍 Calle seleccionada"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/tvStreetDistrict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distrito - Barrio"
+            android:textSize="14sp"
+            android:textColor="#B3E5FC"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvCoordinates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📌 Lat: 40.4168, Lon: -3.7038"
+            android:textSize="12sp"
+            android:textColor="#81D4FA"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+    <!-- Título menú -->
+    <TextView
+        android:id="@+id/tvMenuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona tipo de sensor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Grid de 4 opciones -->
+    <LinearLayout
+        android:id="@+id/menuGrid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvMenuTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Meteorológico -->
+        <LinearLayout
+            android:id="@+id/btnWeather"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/menu_button_blue"
+            android:layout_margin="6dp"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌡️"
+                android:textSize="36sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meteorológico"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temp, Humedad, Presión"
+                android:textSize="9sp"
+                android:textColor="#B3E5FC"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- Contador Tráfico -->
+        <LinearLayout
+            android:id="@+id/btnTrafficCounter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/menu_button_orange"
+            android:layout_margin="6dp"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🚗"
+                android:textSize="36sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contador Tráfico"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehículos, Peatones"
+                android:textSize="9sp"
+                android:textColor="#FFE0B2"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- Semáforos -->
+        <LinearLayout
+            android:id="@+id/btnTrafficLight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/menu_button_red"
+            android:layout_margin="6dp"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🚦"
+                android:textSize="36sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Semáforos"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estado, Ciclos"
+                android:textSize="9sp"
+                android:textColor="#FFCDD2"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- Pantallas Info -->
+        <LinearLayout
+            android:id="@+id/btnDisplay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/menu_button_purple"
+            android:layout_margin="6dp"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📺"
+                android:textSize="36sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pantallas Info"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Displays, Mensajes"
+                android:textSize="9sp"
+                android:textColor="#E1BEE7"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

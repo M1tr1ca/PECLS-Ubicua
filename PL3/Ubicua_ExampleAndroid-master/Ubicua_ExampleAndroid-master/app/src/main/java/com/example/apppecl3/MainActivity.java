@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, StreetSelection.class);
+                // Ir al mapa de Madrid con las calles
+                Intent intent = new Intent(MainActivity.this, MapActivity.class);
                 startActivity(intent);
                 finish();
             }

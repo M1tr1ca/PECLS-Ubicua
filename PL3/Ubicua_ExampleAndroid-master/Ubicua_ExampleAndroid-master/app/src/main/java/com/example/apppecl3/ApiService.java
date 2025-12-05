@@ -7,6 +7,11 @@ import retrofit2.http.GET;
 
 public interface ApiService {
 
-    @GET("UbicompServerExample/GetData")   // ruta del endpoint
-    Call<List<Street>> getItems();
+    // Obtener todos los datos de todos los sensores
+    @GET("ServerExampleUbicomp-1.0-SNAPSHOT/GetAllData")
+    Call<AllDataResponse> getAllData();
+
+    // Obtener lista de sensores (datos meteorológicos)
+    @GET("ServerExampleUbicomp-1.0-SNAPSHOT/GetData")
+    Call<List<AllDataResponse.WeatherMeasurement>> getWeatherData();
 }

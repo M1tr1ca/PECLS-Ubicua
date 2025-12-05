@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    <!-- Colores de chips para el gráfico -->
+    <color name="chip_temperature_color">#FF5722</color>
+    <color name="chip_humidity_color">#2196F3</color>
+    <color name="chip_pressure_color">#9C27B0</color>
+    <color name="chip_altitude_color">#4CAF50</color>
 </resources>

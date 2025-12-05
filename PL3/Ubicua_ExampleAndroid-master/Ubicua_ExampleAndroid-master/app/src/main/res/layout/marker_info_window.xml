@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/info_window_background"
+    android:padding="12dp"
+    android:minWidth="220dp">
+
+    <!-- Header con título y botón cerrar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvInfoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/btnClose"
+            android:text="Nombre de Calle"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#2E7D32"
+            android:layout_centerVertical="true"
+            android:paddingEnd="8dp" />
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_close"
+            android:background="@drawable/close_button_background"
+            android:contentDescription="Cerrar"
+            android:scaleType="centerInside"
+            android:padding="4dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvInfoSnippet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distrito - Barrio"
+        android:textSize="14sp"
+        android:textColor="#424242"
+        android:layout_marginTop="6dp" />
+
+    <Button
+        android:id="@+id/btnOpenSensors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Sensores"
+        android:backgroundTint="#4CAF50"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp" />
+
+</LinearLayout>

@@ -1,8 +1,15 @@
 <resources>
-    <string name="app_name">AppPECL3</string>
-    <string name="welcome">Bienvenido a mi aplicación!\nArrancamos en unos segundos....</string>
-    <string name="selector_txt">Selecciona la calle</string>
+    <string name="app_name">UbiComp Monitor</string>
+    <string name="app_title">Monitor de Sensores</string>
+    <string name="welcome">Sistema de Monitorización\nComputación Ubicua - PL3</string>
+    <string name="loading_text">Conectando con el servidor...</string>
+    <string name="selector_txt">Selecciona un sensor</string>
+    <string name="selector_description">Elige el sensor que deseas monitorizar.\nLos datos se recibirán en tiempo real vía MQTT.</string>
     <string name="boton_txt">Continuar</string>
+    
+    <!-- Google Maps API Key - Reemplaza con tu API Key -->
+    <string name="google_maps_key">TU_API_KEY_DE_GOOGLE_MAPS</string>
+    
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
