@@ -97,7 +97,7 @@ public class TrafficLightStatsActivity extends AppCompatActivity {
             cargarDatosHistoricos();
             
             // Formato: sensors/{street_id}/{sensor_type}/{sensor_id}
-            String topic = "/sensors/" + streetId + "/traffic_light/" + sensorId;
+            String topic = "/sensors/" + streetId + "/traffic_light/" + "#";
             Log.i("ubicua", "TrafficLight - SensorId: " + sensorId + ", StreetId: " + streetId);
             Log.i("ubicua", "TrafficLight - Suscribiendo a topic: " + topic);
             conectarMqtt(topic);
@@ -137,13 +137,15 @@ public class TrafficLightStatsActivity extends AppCompatActivity {
         java.util.List<AllDataResponse.TrafficLightMeasurement> trafficLightList = data.getTrafficLight();
         AllDataResponse.TrafficLightMeasurement ultimoDato = null;
         
-        Log.i("ubicua", "Procesando " + trafficLightList.size() + " registros trafficLight, filtrando por sensorId: " + sensorId);
+        Log.i("ubicua", "Procesando " + trafficLightList.size() + " registros trafficLight");
         
-        // Filtrar por sensor ID
+
         for (AllDataResponse.TrafficLightMeasurement m : trafficLightList) {
-            if (m.getSensorId() != null && m.getSensorId().equals(sensorId)) {
-                ultimoDato = m;
-            }
+                if(m.getStreet_id().equals(streetId)){
+                    ultimoDato = m;
+                }
+
+
         }
         
         final AllDataResponse.TrafficLightMeasurement datoFinal = ultimoDato;

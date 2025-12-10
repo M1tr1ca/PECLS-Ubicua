@@ -123,14 +123,14 @@ public class WeatherStatsActivity extends AppCompatActivity {
             
             tvStreetName.setText(streetName);
             
-            Log.i("ubicua", "Topic de suscripción: /sensors/" + streetId + "/weather_station/" + sensorId);
-            Log.i("ubicua", "SensorId: " + sensorId + ", StreetId: " + streetId);
+            Log.i("ubicua", "Topic de suscripción: /sensors/" + streetId + "/weather_station/" + "#");
+            //Log.i("ubicua", "SensorId: " + sensorId + ", StreetId: " + streetId);
             
             // Cargar datos históricos del servidor
             cargarDatosHistoricos();
             
             // Conectar MQTT - Formato: /sensors/{street_id}/{sensor_type}/{sensor_id}
-            String topic = "/sensors/" + streetId + "/weather_station/" + sensorId;
+            String topic = "/sensors/" + streetId + "/weather_station/" + "#";
             conectarMqtt(topic);
         }
     }
@@ -229,11 +229,13 @@ public class WeatherStatsActivity extends AppCompatActivity {
         int count = 0;
         AllDataResponse.WeatherMeasurement ultimoDato = null;
         
-        Log.i("ubicua", "Procesando " + weatherList.size() + " registros weather, filtrando por sensorId: " + sensorId);
-        
-        // Filtrar por sensor ID y añadir a las gráficas
+        Log.i("ubicua", "Procesando " + weatherList.size() + " registros weather");
+
+        // Añadir a las gráficas
         for (AllDataResponse.WeatherMeasurement m : weatherList) {
-            if (m.getSensorId() != null && m.getSensorId().equals(sensorId)) {
+                if(m.getStreet_id().equals(streetId)){
+
+
                 count++;
                 ultimoDato = m;
                 
@@ -242,16 +244,17 @@ public class WeatherStatsActivity extends AppCompatActivity {
                     float index = temperatureEntries.size();
                     temperatureEntries.add(new Entry(index, (float) m.getTemperature()));
                     humidityEntries.add(new Entry(index, (float) m.getHumidity()));
-                    
+
                     // Extraer hora del timestamp
                     String time = extraerHora(m.getTimestamp());
                     timeLabels.add(time);
+
+
+                    // Añadir al historial
+                    String entrada = String.format(Locale.US, "[%s]  T: %.1f°C  |  H: %.0f%%  |  P: %.0f hPa\n",
+                            extraerHora(m.getTimestamp()), m.getTemperature(), m.getHumidity(), m.getPressure());
+                    historial.append(entrada);
                 }
-                
-                // Añadir al historial
-                String entrada = String.format(Locale.US, "[%s]  T: %.1f°C  |  H: %.0f%%  |  P: %.0f hPa\n", 
-                        extraerHora(m.getTimestamp()), m.getTemperature(), m.getHumidity(), m.getPressure());
-                historial.append(entrada);
             }
         }
         

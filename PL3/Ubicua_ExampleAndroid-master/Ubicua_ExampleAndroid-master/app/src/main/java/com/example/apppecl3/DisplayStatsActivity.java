@@ -96,7 +96,7 @@ public class DisplayStatsActivity extends AppCompatActivity {
             cargarDatosHistoricos();
             
             // Formato: sensors/{street_id}/{sensor_type}/{sensor_id}
-            String topic = "/sensors/" + streetId + "/display/" + sensorId;
+            String topic = "/sensors/" + streetId + "/display/" + "#";
             conectarMqtt(topic);
         }
     }
@@ -134,13 +134,15 @@ public class DisplayStatsActivity extends AppCompatActivity {
         java.util.List<AllDataResponse.DisplayMeasurement> displayList = data.getInformationDisplay();
         AllDataResponse.DisplayMeasurement ultimoDato = null;
         
-        Log.i("ubicua", "Procesando " + displayList.size() + " registros informationDisplay, filtrando por sensorId: " + sensorId);
+        Log.i("ubicua", "Procesando " + displayList.size() + " registros informationDisplay");
         
         // Filtrar por sensor ID
         for (AllDataResponse.DisplayMeasurement m : displayList) {
-            if (m.getSensorId() != null && m.getSensorId().equals(sensorId)) {
+            if(m.getStreet_id().equals(streetId)){
                 ultimoDato = m;
             }
+
+
         }
         
         final AllDataResponse.DisplayMeasurement datoFinal = ultimoDato;

@@ -93,7 +93,7 @@ public class TrafficCounterStatsActivity extends AppCompatActivity {
             cargarDatosHistoricos();
             
             // Formato: sensors/{street_id}/{sensor_type}/{sensor_id}
-            String topic = "/sensors/" + streetId + "/traffic_counter/" + sensorId;
+            String topic = "/sensors/" + streetId + "/traffic_counter/" + "#";
             Log.i("ubicua", "TrafficCounter - Topic MQTT: " + topic);
             conectarMqtt(topic);
         }
@@ -132,16 +132,19 @@ public class TrafficCounterStatsActivity extends AppCompatActivity {
         java.util.List<AllDataResponse.TrafficCounterMeasurement> trafficList = data.getTrafficCounter();
         AllDataResponse.TrafficCounterMeasurement ultimoDato = null;
         
-        Log.i("ubicua", "Procesando " + trafficList.size() + " registros trafficCounter, filtrando por sensorId: " + sensorId);
+        Log.i("ubicua", "Procesando " + trafficList.size() + " registros trafficCounter");
         
         // Filtrar por sensor ID y sumar totales
         for (AllDataResponse.TrafficCounterMeasurement m : trafficList) {
-            if (m.getSensorId() != null && m.getSensorId().equals(sensorId)) {
+            if(m.getStreet_id().equals(streetId)) {
+
+
                 ultimoDato = m;
                 totalVehicles += m.getVehicleCount();
                 totalPedestrians += m.getPedestrianCount();
                 totalBicycles += m.getBicycleCount();
             }
+
         }
         
         final AllDataResponse.TrafficCounterMeasurement datoFinal = ultimoDato;

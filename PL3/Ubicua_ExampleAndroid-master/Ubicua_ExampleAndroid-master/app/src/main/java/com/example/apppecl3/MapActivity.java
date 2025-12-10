@@ -245,6 +245,7 @@ public class MapActivity extends AppCompatActivity {
 
             // Click en el marcador
             marker.setOnMarkerClickListener((m, map) -> {
+                CustomInfoWindow.closeAllInfoWindowsOn(map);
                 m.showInfoWindow();
                 // Buscar la calle correspondiente
                 for (StreetWithSensors s : streetsList) {
@@ -269,22 +270,28 @@ public class MapActivity extends AppCompatActivity {
 
         // Ajustar zoom para ver todos los marcadores
         if (!streetsList.isEmpty()) {
-            double minLat = Double.MAX_VALUE, maxLat = Double.MIN_VALUE;
-            double minLon = Double.MAX_VALUE, maxLon = Double.MIN_VALUE;
-            
+            // 1. Inicializamos con valores extremos inversos
+            double minLat = Double.MAX_VALUE;
+            double maxLat = -Double.MAX_VALUE; //No usamos MIN_VALUE porque daría 00000, y las coordenadas de Madrid pueden ser negativas
+            double minLon = Double.MAX_VALUE;
+            double maxLon = -Double.MAX_VALUE;
+
+            // 2. Encontramos los límites
             for (StreetWithSensors street : streetsList) {
-                minLat = Math.min(minLat, street.getCenterLatitude());
-                maxLat = Math.max(maxLat, street.getCenterLatitude());
-                minLon = Math.min(minLon, street.getCenterLongitude());
-                maxLon = Math.max(maxLon, street.getCenterLongitude());
+                double lat = street.getCenterLatitude();
+                double lon = street.getCenterLongitude();
+
+                if (lat < minLat) minLat = lat;
+                if (lat > maxLat) maxLat = lat;
+                if (lon < minLon) minLon = lon;
+                if (lon > maxLon) maxLon = lon;
             }
-            
-            double centerLat = (minLat + maxLat) / 2;
-            double centerLon = (minLon + maxLon) / 2;
-            
-            IMapController mapController = mapView.getController();
-            mapController.setCenter(new GeoPoint(centerLat, centerLon));
-            mapController.setZoom(11.5);
+
+            // 3. Creamos la caja delimitadora (Norte, Este, Sur, Oeste)
+            org.osmdroid.util.BoundingBox box = new org.osmdroid.util.BoundingBox(maxLat, maxLon, minLat, minLon);
+
+            // 4. Hacemos zoom a esa caja (con una animación de 1 segundo y 50px de margen)
+            mapView.zoomToBoundingBox(box, true);
         }
     }
 

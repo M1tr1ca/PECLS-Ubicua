@@ -30,6 +30,9 @@ public class AllDataResponse {
     public static class WeatherMeasurement {
         @SerializedName("sensorId")
         private String sensorId;
+
+        @SerializedName("street_id")
+        private String street_id;
         
         @SerializedName("timestamp")
         private String timestamp;
@@ -47,6 +50,8 @@ public class AllDataResponse {
         private double altitude;
 
         public String getSensorId() { return sensorId; }
+
+        public String getStreet_id(){return street_id; }
         public String getTimestamp() { return timestamp; }
         public double getTemperature() { return temperature; }
         public double getHumidity() { return humidity; }
@@ -58,6 +63,9 @@ public class AllDataResponse {
     public static class TrafficCounterMeasurement {
         @SerializedName("sensorId")
         private String sensorId;
+
+        @SerializedName("street_id")
+        private String street_id;
         
         @SerializedName("timestamp")
         private String timestamp;
@@ -90,6 +98,7 @@ public class AllDataResponse {
         private String trafficDensity;
 
         public String getSensorId() { return sensorId; }
+        public String getStreet_id(){return street_id; }
         public String getTimestamp() { return timestamp; }
         public int getVehicleCount() { return vehicleCount; }
         public int getPedestrianCount() { return pedestrianCount; }
@@ -106,7 +115,8 @@ public class AllDataResponse {
     public static class TrafficLightMeasurement {
         @SerializedName("sensorId")
         private String sensorId;
-        
+        @SerializedName("street_id")
+        private String street_id;
         @SerializedName("timestamp")
         private String timestamp;
         
@@ -147,6 +157,7 @@ public class AllDataResponse {
         private String lastStateChange;
 
         public String getSensorId() { return sensorId; }
+        public String getStreet_id(){ return street_id; }
         public String getTimestamp() { return timestamp; }
         public String getCurrentState() { return currentState; }
         public int getCyclePositionSeconds() { return cyclePositionSeconds; }
@@ -166,7 +177,8 @@ public class AllDataResponse {
     public static class DisplayMeasurement {
         @SerializedName("sensorId")
         private String sensorId;
-        
+        @SerializedName("street_id")
+        private String street_id;
         @SerializedName("timestamp")
         private String timestamp;
         
@@ -201,6 +213,7 @@ public class AllDataResponse {
         private String lastContentUpdate;
 
         public String getSensorId() { return sensorId; }
+        public String getStreet_id(){ return street_id; }
         public String getTimestamp() { return timestamp; }
         public String getDisplayStatus() { return displayStatus; }
         public String getCurrentMessage() { return currentMessage; }

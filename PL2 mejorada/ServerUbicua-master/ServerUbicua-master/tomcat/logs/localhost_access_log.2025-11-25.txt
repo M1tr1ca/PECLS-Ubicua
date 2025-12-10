@@ -1,9 +1,0 @@
-172.18.0.1 - - [25/Nov/2025:18:58:21 +0000] "GET /Server/?id=4a9f73ab-562e-4000-891b-c8821d0aaeda&vscodeBrowserReqId=1764097101169 HTTP/1.1" 200 2727
-172.18.0.1 - - [25/Nov/2025:18:58:22 +0000] "POST /ServerExampleUbicomp/GetData HTTP/1.1" 404 611
-172.18.0.1 - - [25/Nov/2025:19:01:44 +0000] "GET /Server/?id=4a9f73ab-562e-4000-891b-c8821d0aaeda&vscodeBrowserReqId=1764097305028 HTTP/1.1" 200 2700
-172.18.0.1 - - [25/Nov/2025:19:01:44 +0000] "POST /Server/GetData HTTP/1.1" 200 51
-172.18.0.1 - - [25/Nov/2025:19:02:47 +0000] "POST /Server/GetData HTTP/1.1" 200 51
-172.18.0.1 - - [25/Nov/2025:19:04:52 +0000] "GET /Server/?id=4a9f73ab-562e-4000-891b-c8821d0aaeda&vscodeBrowserReqId=1764097492798 HTTP/1.1" 200 2695
-172.18.0.1 - - [25/Nov/2025:19:04:52 +0000] "POST /Server/GetData HTTP/1.1" 200 51
-172.18.0.1 - - [25/Nov/2025:19:06:19 +0000] "GET /Server/?id=4a9f73ab-562e-4000-891b-c8821d0aaeda&vscodeBrowserReqId=1764097579445 HTTP/1.1" 200 2695
-172.18.0.1 - - [25/Nov/2025:19:06:19 +0000] "POST /Server/GetData HTTP/1.1" 200 100
