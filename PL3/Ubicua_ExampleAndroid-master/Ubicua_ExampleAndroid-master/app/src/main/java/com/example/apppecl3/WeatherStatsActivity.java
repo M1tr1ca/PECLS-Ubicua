@@ -122,6 +122,7 @@ public class WeatherStatsActivity extends AppCompatActivity {
             streetName = extras.getString("street_name", "Calle desconocida");
             
             tvStreetName.setText(streetName);
+            Log.i("ubicua", "RECIBIDO: " + streetId);
             
             Log.i("ubicua", "Topic de suscripción: /sensors/" + streetId + "/weather_station/" + "#");
             //Log.i("ubicua", "SensorId: " + sensorId + ", StreetId: " + streetId);
@@ -233,7 +234,7 @@ public class WeatherStatsActivity extends AppCompatActivity {
 
         // Añadir a las gráficas
         for (AllDataResponse.WeatherMeasurement m : weatherList) {
-                if(m.getStreet_id().equals(streetId)){
+                if(m.getSensorId().equals(sensorId)){ //Cada sensor tiene asignado una calle, si ese sensor pertenece a esa calle
 
 
                 count++;

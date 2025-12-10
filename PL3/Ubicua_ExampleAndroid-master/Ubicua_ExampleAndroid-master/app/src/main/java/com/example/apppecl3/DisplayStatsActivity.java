@@ -138,7 +138,7 @@ public class DisplayStatsActivity extends AppCompatActivity {
         
         // Filtrar por sensor ID
         for (AllDataResponse.DisplayMeasurement m : displayList) {
-            if(m.getStreet_id().equals(streetId)){
+            if(m.getSensorId().equals(sensorId)){
                 ultimoDato = m;
             }
 

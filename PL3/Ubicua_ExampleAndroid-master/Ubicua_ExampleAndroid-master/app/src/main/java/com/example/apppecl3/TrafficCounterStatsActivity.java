@@ -136,7 +136,7 @@ public class TrafficCounterStatsActivity extends AppCompatActivity {
         
         // Filtrar por sensor ID y sumar totales
         for (AllDataResponse.TrafficCounterMeasurement m : trafficList) {
-            if(m.getStreet_id().equals(streetId)) {
+            if(m.getSensorId().equals(sensorId)) {
 
 
                 ultimoDato = m;

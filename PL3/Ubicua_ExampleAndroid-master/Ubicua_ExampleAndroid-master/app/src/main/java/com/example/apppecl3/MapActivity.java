@@ -188,7 +188,7 @@ public class MapActivity extends AppCompatActivity {
                     for (StreetWithSensors street : streetsList) {
                         agregarSensoresPorDefecto(street);
                     }
-                    tvStatus.setText("✅ " + streetsList.size() + " calles (sensores por defecto)");
+                    tvStatus.setText(streetsList.size() + " calles (sensores por defecto)");
                     agregarMarcadoresAlMapa();
                     configurarSpinner();
                 }

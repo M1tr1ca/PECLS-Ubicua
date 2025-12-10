@@ -141,7 +141,7 @@ public class TrafficLightStatsActivity extends AppCompatActivity {
         
 
         for (AllDataResponse.TrafficLightMeasurement m : trafficLightList) {
-                if(m.getStreet_id().equals(streetId)){
+                if(m.getSensorId().equals(sensorId)){
                     ultimoDato = m;
                 }
 
