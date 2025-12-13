@@ -226,17 +226,22 @@ public class WeatherStatsActivity extends AppCompatActivity {
             return;
         }
         
+        // Limpiar datos previos antes de cargar nuevos
+        temperatureEntries.clear();
+        humidityEntries.clear();
+        timeLabels.clear();
+        historial.setLength(0);
+        
         List<AllDataResponse.WeatherMeasurement> weatherList = data.getWeather();
         int count = 0;
         AllDataResponse.WeatherMeasurement ultimoDato = null;
         
-        Log.i("ubicua", "Procesando " + weatherList.size() + " registros weather");
-
+        Log.i("ubicua", "Procesando " + weatherList.size() + " registros weather totales");
+        Log.i("ubicua", "Filtrando por sensorId: " + sensorId);
+        
         // Añadir a las gráficas
         for (AllDataResponse.WeatherMeasurement m : weatherList) {
-                if(m.getSensorId().equals(sensorId)){ //Cada sensor tiene asignado una calle, si ese sensor pertenece a esa calle
-
-
+            if (m.getSensorId().equals(sensorId)) { // Filtrar por sensor específico
                 count++;
                 ultimoDato = m;
                 
@@ -250,14 +255,15 @@ public class WeatherStatsActivity extends AppCompatActivity {
                     String time = extraerHora(m.getTimestamp());
                     timeLabels.add(time);
 
-
                     // Añadir al historial
                     String entrada = String.format(Locale.US, "[%s]  T: %.1f°C  |  H: %.0f%%  |  P: %.0f hPa\n",
-                            extraerHora(m.getTimestamp()), m.getTemperature(), m.getHumidity(), m.getPressure());
+                            time, m.getTemperature(), m.getHumidity(), m.getPressure());
                     historial.append(entrada);
                 }
             }
         }
+        
+        Log.i("ubicua", "Encontrados " + count + " registros para sensor " + sensorId);
         
         totalDataCount = count;
         final int finalCount = count;
@@ -272,8 +278,10 @@ public class WeatherStatsActivity extends AppCompatActivity {
                 tvAltitude.setText(String.format(Locale.US, "%.0f m", datoFinal.getAltitude()));
                 progressHumidity.setProgress((int) datoFinal.getHumidity());
                 
-                Log.i("ubicua", "Mostrando último dato: T=" + datoFinal.getTemperature() + 
-                              ", H=" + datoFinal.getHumidity() + ", P=" + datoFinal.getPressure());
+                Log.i("ubicua", "UI actualizada - Último dato: T=" + datoFinal.getTemperature() + 
+                              "°C, H=" + datoFinal.getHumidity() + "%, P=" + datoFinal.getPressure() + " hPa");
+            } else {
+                Log.w("ubicua", "No hay datos históricos para el sensor " + sensorId);
             }
             
             // Actualizar gráficas
@@ -283,12 +291,15 @@ public class WeatherStatsActivity extends AppCompatActivity {
             // Actualizar historial
             if (historial.length() > 0) {
                 tvHistory.setText(historial.toString());
+            } else {
+                tvHistory.setText("No hay datos históricos disponibles");
             }
+            
             if (tvDataCount != null) {
                 tvDataCount.setText(totalDataCount + " registros");
             }
             
-            Log.i("ubicua", "Cargados " + finalCount + " registros históricos para " + sensorId);
+            Log.i("ubicua", "✓ Cargados " + finalCount + " registros históricos para sensor " + sensorId);
         });
     }
     
