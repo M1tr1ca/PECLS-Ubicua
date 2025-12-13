@@ -424,3 +424,104 @@
 1765632684: Client WheatherStationUAH-subscriber closed its connection.
 1765632685: mosquitto version 2.0.22 terminating
 1765632685: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1765633488: mosquitto version 2.0.22 starting
+1765633488: Config loaded from /mosquitto/config/mosquitto.conf.
+1765633488: Opening ipv4 listen socket on port 1883.
+1765633488: Opening ipv6 listen socket on port 1883.
+1765633488: mosquitto version 2.0.22 running
+1765633488: New connection from 172.18.0.1:39226 on port 1883.
+1765633489: New client connected from 172.18.0.1:39226 as mqtt-explorer-d1231145 (p2, c1, k60).
+1765633494: New connection from 172.18.0.4:44090 on port 1883.
+1765633494: New client connected from 172.18.0.4:44090 as WheatherStationUAH-subscriber (p2, c0, k60).
+1765633494: New connection from 172.18.0.4:44096 on port 1883.
+1765633494: New client connected from 172.18.0.4:44096 as WheatherStationUAH-publisher (p2, c1, k60).
+1765633494: Client WheatherStationUAH-publisher disconnected.
+1765633534: New connection from 172.18.0.4:54614 on port 1883.
+1765633535: New client connected from 172.18.0.4:54614 as StatusChecker-1765633534742 (p2, c1, k60).
+1765633535: Client StatusChecker-1765633534742 disconnected.
+1765633594: New connection from 172.18.0.4:57306 on port 1883.
+1765633595: New client connected from 172.18.0.4:57306 as StatusChecker-1765633594753 (p2, c1, k60).
+1765633595: Client StatusChecker-1765633594753 disconnected.
+1765633709: New connection from 172.18.0.1:35634 on port 1883.
+1765633710: New client connected from 172.18.0.1:35634 as paho13978009037100 (p2, c1, k60).
+1765633712: Client paho13978009037100 disconnected.
+1765633712: New connection from 172.18.0.1:39726 on port 1883.
+1765633712: New client connected from 172.18.0.1:39726 as paho13981510978700 (p2, c1, k60).
+1765633715: Client paho13981510978700 disconnected.
+1765633715: New connection from 172.18.0.4:56188 on port 1883.
+1765633715: New client connected from 172.18.0.4:56188 as StatusChecker-1765633715583 (p2, c1, k60).
+1765633715: Client StatusChecker-1765633715583 disconnected.
+1765633720: New connection from 172.18.0.1:39742 on port 1883.
+1765633720: New client connected from 172.18.0.1:39742 as paho13990374026200 (p2, c1, k60).
+1765633776: New connection from 172.18.0.4:54866 on port 1883.
+1765633776: New client connected from 172.18.0.4:54866 as StatusChecker-1765633776273 (p2, c1, k60).
+1765633776: Client StatusChecker-1765633776273 disconnected.
+1765633782: Client paho13990374026200 disconnected.
+1765633782: New connection from 172.18.0.1:57466 on port 1883.
+1765633782: New client connected from 172.18.0.1:57466 as paho14051862919500 (p2, c1, k60).
+1765633833: New connection from 172.18.0.4:58480 on port 1883.
+1765633834: New client connected from 172.18.0.4:58480 as StatusChecker-1765633833800 (p2, c1, k60).
+1765633834: Client StatusChecker-1765633833800 disconnected.
+1765634041: Client paho14051862919500 closed its connection.
+1765634112: New connection from 172.18.0.1:32836 on port 1883.
+1765634113: New client connected from 172.18.0.1:32836 as paho14380370108800 (p2, c1, k60).
+1765634333: Client paho14380370108800 closed its connection.
+1765634379: New connection from 172.18.0.1:43670 on port 1883.
+1765634380: New client connected from 172.18.0.1:43670 as paho14648161317800 (p2, c1, k60).
+1765634390: Client paho14648161317800 disconnected.
+1765634390: New connection from 172.18.0.1:58696 on port 1883.
+1765634391: New client connected from 172.18.0.1:58696 as paho14660738946800 (p2, c1, k60).
+1765634396: New connection from 172.18.0.4:60418 on port 1883.
+1765634396: New client connected from 172.18.0.4:60418 as WheatherStationUAH-publisher (p2, c1, k60).
+1765634396: Client WheatherStationUAH-publisher disconnected.
+1765634897: Client WheatherStationUAH-subscriber closed its connection.
+1765634899: mosquitto version 2.0.22 terminating
+1765634899: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1765634946: mosquitto version 2.0.22 starting
+1765634946: Config loaded from /mosquitto/config/mosquitto.conf.
+1765634946: Opening ipv4 listen socket on port 1883.
+1765634946: Opening ipv6 listen socket on port 1883.
+1765634946: mosquitto version 2.0.22 running
+1765634947: New connection from 172.18.0.1:47672 on port 1883.
+1765634947: New client connected from 172.18.0.1:47672 as mqtt-explorer-d1231145 (p2, c1, k60).
+1765634950: New connection from 172.18.0.1:47682 on port 1883.
+1765634950: New client connected from 172.18.0.1:47682 as paho14660738946800 (p2, c1, k60).
+1765634953: New connection from 172.18.0.4:40396 on port 1883.
+1765634953: New client connected from 172.18.0.4:40396 as WheatherStationUAH-subscriber (p2, c0, k60).
+1765634953: New connection from 172.18.0.4:40408 on port 1883.
+1765634953: New client connected from 172.18.0.4:40408 as WheatherStationUAH-publisher (p2, c1, k60).
+1765634953: Client WheatherStationUAH-publisher disconnected.
+1765634972: Client paho14660738946800 closed its connection.
+1765635069: New connection from 172.18.0.1:43580 on port 1883.
+1765635069: New client connected from 172.18.0.1:43580 as paho15339989695800 (p2, c1, k60).
+1765635080: New connection from 172.18.0.4:58216 on port 1883.
+1765635081: New client connected from 172.18.0.4:58216 as WheatherStationUAH-publisher (p2, c1, k60).
+1765635081: Client WheatherStationUAH-publisher disconnected.
+1765635108: New connection from 172.18.0.4:33740 on port 1883.
+1765635109: New client connected from 172.18.0.4:33740 as WheatherStationUAH-publisher (p2, c1, k60).
+1765635109: Client WheatherStationUAH-publisher disconnected.
+1765635121: Client paho15339989695800 disconnected.
+1765635129: New connection from 172.18.0.1:33384 on port 1883.
+1765635130: New client connected from 172.18.0.1:33384 as paho15399721087200 (p2, c1, k60).
+1765635134: New connection from 172.18.0.4:58604 on port 1883.
+1765635134: New client connected from 172.18.0.4:58604 as WheatherStationUAH-publisher (p2, c1, k60).
+1765635134: Client WheatherStationUAH-publisher disconnected.
+1765635352: New connection from 172.18.0.4:39738 on port 1883.
+1765635352: New client connected from 172.18.0.4:39738 as StatusChecker-1765635351956 (p2, c1, k60).
+1765635352: Client StatusChecker-1765635351956 disconnected.
+1765635379: New connection from 172.18.0.4:53960 on port 1883.
+1765635379: New client connected from 172.18.0.4:53960 as StatusChecker-1765635379197 (p2, c1, k60).
+1765635379: Client StatusChecker-1765635379197 disconnected.
+1765635409: Client paho15399721087200 disconnected.
+1765635409: New connection from 172.18.0.4:59638 on port 1883.
+1765635409: New client connected from 172.18.0.4:59638 as StatusChecker-1765635409588 (p2, c1, k60).
+1765635409: Client StatusChecker-1765635409588 disconnected.
+1765635421: New connection from 172.18.0.1:42964 on port 1883.
+1765635421: New client connected from 172.18.0.1:42964 as paho15689906294500 (p2, c1, k60).
+1765635424: Client paho15689906294500 disconnected.
+1765635439: New connection from 172.18.0.4:52656 on port 1883.
+1765635440: New client connected from 172.18.0.4:52656 as StatusChecker-1765635439905 (p2, c1, k60).
+1765635440: Client StatusChecker-1765635439905 disconnected.
+1765635452: Client WheatherStationUAH-subscriber closed its connection.
+1765635453: mosquitto version 2.0.22 terminating
+1765635453: Saving in-memory database to /mosquitto/data//mosquitto.db.

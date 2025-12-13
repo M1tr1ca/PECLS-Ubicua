@@ -552,6 +552,261 @@
 
             </androidx.cardview.widget.CardView>
 
+            <!-- Card Panel de Control de Alertas -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Título del panel -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_warning"
+                            app:tint="#FF5722"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Control de Alertas ESP32"
+                            android:textSize="16sp"
+                            android:textColor="#37474F"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp"/>
+
+                        <!-- Indicador nivel actual -->
+                        <TextView
+                            android:id="@+id/tvCurrentAlertLevel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nivel: 0"
+                            android:textSize="12sp"
+                            android:textColor="#4CAF50"
+                            android:textStyle="bold"
+                            android:background="@drawable/alert_level_indicator"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="4dp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#ECEFF1"
+                        android:layout_marginVertical="12dp"/>
+
+                    <!-- Descripción -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Selecciona un nivel de alerta para enviar al dispositivo:"
+                        android:textSize="12sp"
+                        android:textColor="#78909C"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Botones de niveles de alerta -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <!-- Nivel 0 - Normal -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/btnAlert0"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@drawable/btn_alert_normal"
+                                android:src="@drawable/ic_check"
+                                android:scaleType="centerInside"
+                                android:padding="12dp"
+                                android:contentDescription="Normal"
+                                app:tint="@android:color/white"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Normal"
+                                android:textSize="10sp"
+                                android:textColor="#4CAF50"
+                                android:layout_marginTop="4dp"/>
+
+                        </LinearLayout>
+
+                        <!-- Nivel 1 - Bajo -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/btnAlert1"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@drawable/btn_alert_low"
+                                android:src="@drawable/ic_info"
+                                android:scaleType="centerInside"
+                                android:padding="12dp"
+                                android:contentDescription="Bajo"
+                                app:tint="@android:color/white"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bajo"
+                                android:textSize="10sp"
+                                android:textColor="#8BC34A"
+                                android:layout_marginTop="4dp"/>
+
+                        </LinearLayout>
+
+                        <!-- Nivel 2 - Medio -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/btnAlert2"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@drawable/btn_alert_medium"
+                                android:src="@drawable/ic_warning"
+                                android:scaleType="centerInside"
+                                android:padding="12dp"
+                                android:contentDescription="Medio"
+                                app:tint="@android:color/white"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Medio"
+                                android:textSize="10sp"
+                                android:textColor="#FFC107"
+                                android:layout_marginTop="4dp"/>
+
+                        </LinearLayout>
+
+                        <!-- Nivel 3 - Alto -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/btnAlert3"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@drawable/btn_alert_high"
+                                android:src="@drawable/ic_warning"
+                                android:scaleType="centerInside"
+                                android:padding="12dp"
+                                android:contentDescription="Alto"
+                                app:tint="@android:color/white"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Alto"
+                                android:textSize="10sp"
+                                android:textColor="#FF9800"
+                                android:layout_marginTop="4dp"/>
+
+                        </LinearLayout>
+
+                        <!-- Nivel 4 - Crítico -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/btnAlert4"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@drawable/btn_alert_critical"
+                                android:src="@drawable/ic_error"
+                                android:scaleType="centerInside"
+                                android:padding="12dp"
+                                android:contentDescription="Crítico"
+                                app:tint="@android:color/white"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Crítico"
+                                android:textSize="10sp"
+                                android:textColor="#F44336"
+                                android:layout_marginTop="4dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#ECEFF1"
+                        android:layout_marginVertical="16dp"/>
+
+                    <!-- Botón de Restart -->
+                    <Button
+                        android:id="@+id/btnRestart"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="🔄  Reiniciar Sensor ESP32"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        android:background="@drawable/btn_restart"/>
+
+                    <!-- Estado del envío -->
+                    <TextView
+                        android:id="@+id/tvAlertStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12sp"
+                        android:textColor="#78909C"
+                        android:gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
             <!-- Card Historial de Lecturas -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"

@@ -5,10 +5,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +36,10 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -65,6 +72,16 @@ public class WeatherStatsActivity extends AppCompatActivity {
     // Gráficas
     private LineChart chartTemperature;
     private LineChart chartHumidity;
+    
+    // Control de alertas
+    private TextView tvCurrentAlertLevel;
+    private TextView tvAlertStatus;
+    private ImageButton btnAlert0, btnAlert1, btnAlert2, btnAlert3, btnAlert4;
+    private Button btnRestart;
+    private int currentAlertLevel = 0;
+    
+    // URL base del servidor (10.0.2.2 es localhost desde el emulador Android, puerto 3002 es Tomcat)
+    private static final String SERVER_BASE_URL = "http://10.0.2.2:3002/Server";
     
     // Datos para las gráficas
     private ArrayList<Entry> temperatureEntries = new ArrayList<>();
@@ -105,6 +122,19 @@ public class WeatherStatsActivity extends AppCompatActivity {
         chartHumidity = findViewById(R.id.chartHumidity);
         mainHandler = new Handler(Looper.getMainLooper());
 
+        // Inicializar controles de alertas
+        tvCurrentAlertLevel = findViewById(R.id.tvCurrentAlertLevel);
+        tvAlertStatus = findViewById(R.id.tvAlertStatus);
+        btnAlert0 = findViewById(R.id.btnAlert0);
+        btnAlert1 = findViewById(R.id.btnAlert1);
+        btnAlert2 = findViewById(R.id.btnAlert2);
+        btnAlert3 = findViewById(R.id.btnAlert3);
+        btnAlert4 = findViewById(R.id.btnAlert4);
+        btnRestart = findViewById(R.id.btnRestart);
+        
+        // Configurar listeners de botones de alerta
+        setupAlertButtons();
+
         // Configurar gráficas
         setupChart(chartTemperature, "Temperatura (°C)", Color.parseColor("#EF5350"));
         setupChart(chartHumidity, "Humedad (%)", Color.parseColor("#42A5F5"));
@@ -136,11 +166,167 @@ public class WeatherStatsActivity extends AppCompatActivity {
         }
     }
     
+    private void setupAlertButtons() {
+        // Botones de nivel de alerta
+        btnAlert0.setOnClickListener(v -> enviarNivelAlerta(0));
+        btnAlert1.setOnClickListener(v -> enviarNivelAlerta(1));
+        btnAlert2.setOnClickListener(v -> enviarNivelAlerta(2));
+        btnAlert3.setOnClickListener(v -> enviarNivelAlerta(3));
+        btnAlert4.setOnClickListener(v -> enviarNivelAlerta(4));
+        
+        // Botón de reinicio
+        btnRestart.setOnClickListener(v -> enviarComandoRestart());
+    }
+    
+    private void enviarNivelAlerta(int level) {
+        String[] levelNames = {"Normal", "Bajo", "Medio", "Alto", "Crítico"};
+        String levelName = level < levelNames.length ? levelNames[level] : "Desconocido";
+        
+        Log.i("ubicua", "Enviando nivel de alerta: " + level + " (" + levelName + ") a calle " + streetId);
+        mostrarEstadoAlerta("Enviando alerta nivel " + level + "...", false);
+        
+        new Thread(() -> {
+            try {
+                String urlStr = SERVER_BASE_URL + "/SendCommand?street_id=" + streetId + "&alert_level=" + level;
+                URL url = new URL(urlStr);
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setRequestMethod("GET");
+                conn.setConnectTimeout(5000);
+                conn.setReadTimeout(5000);
+                
+                int responseCode = conn.getResponseCode();
+                
+                BufferedReader reader = new BufferedReader(new InputStreamReader(
+                        responseCode == 200 ? conn.getInputStream() : conn.getErrorStream()));
+                StringBuilder response = new StringBuilder();
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    response.append(line);
+                }
+                reader.close();
+                
+                final String responseStr = response.toString();
+                Log.i("ubicua", "Respuesta servidor: " + responseStr);
+                
+                mainHandler.post(() -> {
+                    if (responseCode == 200 && responseStr.contains("\"success\":true")) {
+                        currentAlertLevel = level;
+                        actualizarIndicadorAlerta(level);
+                        mostrarEstadoAlerta("✓ Alerta nivel " + level + " enviada", true);
+                        Toast.makeText(WeatherStatsActivity.this, 
+                                "Alerta " + levelName + " enviada correctamente", 
+                                Toast.LENGTH_SHORT).show();
+                    } else {
+                        mostrarEstadoAlerta("✗ Error al enviar alerta", false);
+                        Toast.makeText(WeatherStatsActivity.this, 
+                                "Error al enviar alerta", 
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+                
+                conn.disconnect();
+            } catch (Exception e) {
+                Log.e("ubicua", "Error enviando alerta: " + e.getMessage());
+                mainHandler.post(() -> {
+                    mostrarEstadoAlerta("✗ Error de conexión", false);
+                    Toast.makeText(WeatherStatsActivity.this, 
+                            "Error de conexión: " + e.getMessage(), 
+                            Toast.LENGTH_SHORT).show();
+                });
+            }
+        }).start();
+    }
+    
+    private void enviarComandoRestart() {
+        Log.i("ubicua", "Enviando comando restart al ESP32 de calle " + streetId);
+        mostrarEstadoAlerta("Enviando comando restart...", false);
+        
+        new Thread(() -> {
+            try {
+                String urlStr = SERVER_BASE_URL + "/SendCommand?street_id=" + streetId + "&command=restart";
+                URL url = new URL(urlStr);
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setRequestMethod("GET");
+                conn.setConnectTimeout(5000);
+                conn.setReadTimeout(5000);
+                
+                int responseCode = conn.getResponseCode();
+                
+                BufferedReader reader = new BufferedReader(new InputStreamReader(
+                        responseCode == 200 ? conn.getInputStream() : conn.getErrorStream()));
+                StringBuilder response = new StringBuilder();
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    response.append(line);
+                }
+                reader.close();
+                
+                final String responseStr = response.toString();
+                Log.i("ubicua", "Respuesta servidor restart: " + responseStr);
+                
+                mainHandler.post(() -> {
+                    if (responseCode == 200 && responseStr.contains("\"success\":true")) {
+                        mostrarEstadoAlerta("✓ Comando restart enviado", true);
+                        Toast.makeText(WeatherStatsActivity.this, 
+                                "Comando restart enviado correctamente", 
+                                Toast.LENGTH_SHORT).show();
+                        // Resetear nivel de alerta visual
+                        currentAlertLevel = 0;
+                        actualizarIndicadorAlerta(0);
+                    } else {
+                        mostrarEstadoAlerta("✗ Error al enviar restart", false);
+                        Toast.makeText(WeatherStatsActivity.this, 
+                                "Error al enviar restart", 
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+                
+                conn.disconnect();
+            } catch (Exception e) {
+                Log.e("ubicua", "Error enviando restart: " + e.getMessage());
+                mainHandler.post(() -> {
+                    mostrarEstadoAlerta("✗ Error de conexión", false);
+                    Toast.makeText(WeatherStatsActivity.this, 
+                            "Error de conexión: " + e.getMessage(), 
+                            Toast.LENGTH_SHORT).show();
+                });
+            }
+        }).start();
+    }
+    
+    private void actualizarIndicadorAlerta(int level) {
+        String[] levelNames = {"Normal", "Bajo", "Medio", "Alto", "Crítico"};
+        int[] levelColors = {
+            Color.parseColor("#4CAF50"), // Normal - Verde
+            Color.parseColor("#8BC34A"), // Bajo - Verde claro
+            Color.parseColor("#FFC107"), // Medio - Amarillo
+            Color.parseColor("#FF9800"), // Alto - Naranja
+            Color.parseColor("#F44336")  // Crítico - Rojo
+        };
+        
+        String levelName = level < levelNames.length ? levelNames[level] : "?";
+        int color = level < levelColors.length ? levelColors[level] : Color.GRAY;
+        
+        tvCurrentAlertLevel.setText("Nivel: " + level + " (" + levelName + ")");
+        tvCurrentAlertLevel.setTextColor(color);
+    }
+    
+    private void mostrarEstadoAlerta(String mensaje, boolean exito) {
+        tvAlertStatus.setVisibility(View.VISIBLE);
+        tvAlertStatus.setText(mensaje);
+        tvAlertStatus.setTextColor(exito ? Color.parseColor("#4CAF50") : Color.parseColor("#FF9800"));
+        
+        // Ocultar después de 3 segundos
+        mainHandler.postDelayed(() -> {
+            tvAlertStatus.setVisibility(View.GONE);
+        }, 3000);
+    }
+    
     private void setupChart(LineChart chart, String label, int color) {
         chart.getDescription().setEnabled(false);
         chart.setTouchEnabled(true);
         chart.setDragEnabled(true);
-        chart.setScaleEnabled(true);
+        chart.setScaleEnabled(true);;
         chart.setPinchZoom(true);
         chart.setDrawGridBackground(false);
         chart.setBackgroundColor(Color.WHITE);
