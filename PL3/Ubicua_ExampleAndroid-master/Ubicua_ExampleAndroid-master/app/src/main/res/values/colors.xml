@@ -3,9 +3,41 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     
+    <!-- Paleta de colores del logo - Azules -->
+    <color name="primary_blue">#1E88E5</color>
+    <color name="primary_blue_dark">#1565C0</color>
+    <color name="primary_blue_light">#42A5F5</color>
+    <color name="accent_blue">#64B5F6</color>
+    <color name="light_blue">#90CAF9</color>
+    <color name="very_light_blue">#BBDEFB</color>
+    <color name="ultra_light_blue">#E3F2FD</color>
+    
+    <!-- Glassmorphism -->
+    <color name="glass_white">#CCFFFFFF</color>
+    <color name="glass_white_light">#E6FFFFFF</color>
+    <color name="glass_blue">#80BBDEFB</color>
+    <color name="glass_blue_light">#60E3F2FD</color>
+    
+    <!-- Colores de fondo -->
+    <color name="background_gradient_start">#E3F2FD</color>
+    <color name="background_gradient_end">#BBDEFB</color>
+    <color name="card_background">#F5F9FF</color>
+    
+    <!-- Colores de texto -->
+    <color name="text_primary">#1A237E</color>
+    <color name="text_secondary">#455A64</color>
+    <color name="text_hint">#90A4AE</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    
     <!-- Colores de chips para el gráfico -->
     <color name="chip_temperature_color">#FF5722</color>
     <color name="chip_humidity_color">#2196F3</color>
     <color name="chip_pressure_color">#9C27B0</color>
     <color name="chip_altitude_color">#4CAF50</color>
+    
+    <!-- Colores de estado -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FFC107</color>
+    <color name="error">#F44336</color>
+    <color name="info">#2196F3</color>
 </resources>

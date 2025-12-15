@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0F4F8"
+    android:background="@drawable/bg_gradient_main"
     tools:context=".SensorMenuActivity">
 
-    <!-- Header con gradiente -->
+    <!-- Header con gradiente mejorado - más compacto -->
     <View
         android:id="@+id/headerBg"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="190dp"
         android:background="@drawable/header_gradient_menu"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -32,29 +32,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <!-- Icono de ubicación grande -->
-    <TextView
-        android:id="@+id/iconLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="📍"
-        android:textSize="48sp"
-        android:layout_marginTop="50dp"
+    <!-- Logo mejorado con borde y sombra -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logoCard"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent">
+        
+        <ImageView
+            android:id="@+id/iconLocation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/app_logo"
+            android:scaleType="centerCrop"
+            android:padding="8dp"/>
+    </androidx.cardview.widget.CardView>
 
     <!-- Nombre de la calle -->
     <TextView
         android:id="@+id/tvStreetName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Calle Pepe Hillo"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/iconLocation"
+        android:gravity="center"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/logoCard"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -64,22 +79,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hortaleza - Hortaleza"
-        android:textSize="14sp"
+        android:textSize="13sp"
         android:textColor="#B8C5E0"
         android:layout_marginTop="4dp"
         app:layout_constraintTop_toBottomOf="@id/tvStreetName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Coordenadas -->
+    <!-- Coordenadas con mejor visibilidad -->
     <TextView
         android:id="@+id/tvCoordinates"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="📌 Lat: 40.4515, Lon: -3.6401"
-        android:textSize="11sp"
+        android:textSize="10sp"
         android:textColor="#8899BB"
-        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:ellipsize="middle"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintTop_toBottomOf="@id/tvStreetDistrict"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -106,7 +126,7 @@
                 android:text="Selecciona un sensor"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="#1a237e"
+                android:textColor="@color/text_on_primary"
                 android:layout_marginBottom="16dp"
                 android:layout_marginStart="8dp"/>
 

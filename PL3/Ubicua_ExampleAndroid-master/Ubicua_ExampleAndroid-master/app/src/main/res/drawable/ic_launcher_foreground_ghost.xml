@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Fantasma adorable -->
+    <group
+        android:translateX="54"
+        android:translateY="54">
+        
+        <!-- Sombra suave -->
+        <path
+            android:fillColor="#20000000"
+            android:pathData="M-18,22 Q-18,22 -15,24 Q-12,26 -9,27 Q-6,28 -3,28 Q0,28 3,28 Q6,28 9,27 Q12,26 15,24 Q18,22 18,22 L18,20 Q18,18 17,16 L-17,16 Q-18,18 -18,20 Z"/>
+        
+        <!-- Cuerpo principal del fantasma -->
+        <path
+            android:fillColor="#E3F2FD"
+            android:pathData="M-20,-8 Q-20,-24 -12,-32 Q-4,-40 8,-40 Q20,-32 20,-24 L20,-8 Q20,0 20,8 Q20,12 20,16 L18,16 Q16,18 14,19 Q12,20 10,20 Q8,20 6,18 Q4,16 4,14 Q4,12 2,12 Q0,12 -2,12 Q-4,12 -4,14 Q-4,16 -6,18 Q-8,20 -10,20 Q-12,20 -14,19 Q-16,18 -18,16 L-20,16 Q-20,12 -20,8 Q-20,0 -20,-8 Z"/>
+        
+        <!-- Contorno del fantasma -->
+        <path
+            android:strokeColor="#1E88E5"
+            android:strokeWidth="2"
+            android:fillColor="#00000000"
+            android:pathData="M-20,-8 Q-20,-24 -12,-32 Q-4,-40 8,-40 Q20,-32 20,-24 L20,-8 Q20,0 20,8 Q20,12 20,16 L18,16 Q16,18 14,19 Q12,20 10,20 Q8,20 6,18 Q4,16 4,14 Q4,12 2,12 Q0,12 -2,12 Q-4,12 -4,14 Q-4,16 -6,18 Q-8,20 -10,20 Q-12,20 -14,19 Q-16,18 -18,16 L-20,16 Q-20,12 -20,8 Q-20,0 -20,-8 Z"/>
+        
+        <!-- Ojo izquierdo -->
+        <path
+            android:fillColor="#1E88E5"
+            android:pathData="M-8,-16 Q-8,-20 -6,-22 Q-4,-24 0,-24 Q4,-24 6,-22 Q8,-20 8,-16 Q8,-12 6,-10 Q4,-8 0,-8 Q-4,-8 -6,-10 Q-8,-12 -8,-16 Z"/>
+        
+        <!-- Brillo ojo izquierdo -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M-4,-18 Q-4,-20 -2,-22 Q0,-24 2,-22 Q4,-20 4,-18 Q4,-16 2,-14 Q0,-12 -2,-14 Q-4,-16 -4,-18 Z"/>
+        
+        <!-- Ojo derecho -->
+        <path
+            android:fillColor="#1E88E5"
+            android:pathData="M8,-16 Q8,-20 10,-22 Q12,-24 16,-24 Q20,-24 22,-22 Q24,-20 24,-16 Q24,-12 22,-10 Q20,-8 16,-8 Q12,-8 10,-10 Q8,-12 8,-16 Z"/>
+        
+        <!-- Brillo ojo derecho -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M12,-18 Q12,-20 14,-22 Q16,-24 18,-22 Q20,-20 20,-18 Q20,-16 18,-14 Q16,-12 14,-14 Q12,-16 12,-18 Z"/>
+        
+        <!-- Sonrisa adorable -->
+        <path
+            android:strokeColor="#1E88E5"
+            android:strokeWidth="2.5"
+            android:fillColor="#00000000"
+            android:strokeLineCap="round"
+            android:pathData="M-10,0 Q-8,6 -4,8 Q0,10 4,8 Q8,6 10,0"/>
+        
+        <!-- Mejillas sonrojadas izquierda -->
+        <path
+            android:fillColor="#90CAF9"
+            android:pathData="M-16,-4 Q-16,-6 -14,-8 Q-12,-10 -10,-10 Q-8,-10 -6,-8 Q-4,-6 -4,-4 Q-4,-2 -6,0 Q-8,2 -10,2 Q-12,2 -14,0 Q-16,-2 -16,-4 Z"
+            android:fillAlpha="0.4"/>
+        
+        <!-- Mejillas sonrojadas derecha -->
+        <path
+            android:fillColor="#90CAF9"
+            android:pathData="M12,-4 Q12,-6 14,-8 Q16,-10 18,-10 Q20,-10 22,-8 Q24,-6 24,-4 Q24,-2 22,0 Q20,2 18,2 Q16,2 14,0 Q12,-2 12,-4 Z"
+            android:fillAlpha="0.4"/>
+    </group>
+</vector>
+

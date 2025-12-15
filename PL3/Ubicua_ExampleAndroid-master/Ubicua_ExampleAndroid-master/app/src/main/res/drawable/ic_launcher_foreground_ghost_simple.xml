@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Fantasma simple para el icono -->
+    <group
+        android:translateX="54"
+        android:translateY="54">
+        
+        <!-- Cuerpo principal del fantasma - color celeste claro -->
+        <path
+            android:fillColor="#B3E5FC"
+            android:pathData="M-20,-8 Q-20,-22 -11,-31 Q-2,-39 8,-39 Q18,-31 20,-22 L20,-8 Q20,2 20,12 Q20,17 20,21 L18,21 Q16,22 14,23 Q12,23 10,23 Q8,23 7,22 Q5,20 5,18 Q5,16 3,16 Q1,16 -1,16 Q-3,16 -3,18 Q-3,20 -5,22 Q-6,23 -8,23 Q-10,23 -12,23 Q-14,22 -16,21 L-20,21 Q-20,17 -20,12 Q-20,2 -20,-8 Z"/>
+        
+        <!-- Contorno del fantasma -->
+        <path
+            android:strokeColor="#1E88E5"
+            android:strokeWidth="2"
+            android:fillColor="#00000000"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M-20,-8 Q-20,-22 -11,-31 Q-2,-39 8,-39 Q18,-31 20,-22 L20,-8 Q20,2 20,12 Q20,17 20,21 L18,21 Q16,22 14,23 Q12,23 10,23 Q8,23 7,22 Q5,20 5,18 Q5,16 3,16 Q1,16 -1,16 Q-3,16 -3,18 Q-3,20 -5,22 Q-6,23 -8,23 Q-10,23 -12,23 Q-14,22 -16,21 L-20,21 Q-20,17 -20,12 Q-20,2 -20,-8 Z"/>
+        
+        <!-- Ojo izquierdo -->
+        <path
+            android:fillColor="#1E88E5"
+            android:pathData="M-12,-18 Q-12,-24 -8,-24 Q-4,-24 -4,-18 Q-4,-12 -8,-12 Q-12,-12 -12,-18 Z"/>
+        
+        <!-- Brillo ojo izquierdo -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M-8.5,-20 Q-8.5,-22 -7,-22 Q-5.5,-22 -5.5,-20 Q-5.5,-18 -7,-18 Q-8.5,-18 -8.5,-20 Z"/>
+        
+        <!-- Ojo derecho -->
+        <path
+            android:fillColor="#1E88E5"
+            android:pathData="M4,-18 Q4,-24 8,-24 Q12,-24 12,-18 Q12,-12 8,-12 Q4,-12 4,-18 Z"/>
+        
+        <!-- Brillo ojo derecho -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M7.5,-20 Q7.5,-22 9,-22 Q10.5,-22 10.5,-20 Q10.5,-18 9,-18 Q7.5,-18 7.5,-20 Z"/>
+        
+        <!-- Sonrisa -->
+        <path
+            android:strokeColor="#1E88E5"
+            android:strokeWidth="2"
+            android:fillColor="#00000000"
+            android:strokeLineCap="round"
+            android:pathData="M-8,-4 Q-5,1 0,2 Q5,1 8,-4"/>
+    </group>
+</vector>

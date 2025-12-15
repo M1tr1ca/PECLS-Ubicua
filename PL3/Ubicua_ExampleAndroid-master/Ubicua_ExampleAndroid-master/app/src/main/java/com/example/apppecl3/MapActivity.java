@@ -243,8 +243,8 @@ public class MapActivity extends AppCompatActivity {
             marker.setTitle(street.getStreetName());
             marker.setSnippet("📍 " + street.getDistrict() + "\nPulsa para ver sensores");
             
-            // Icono verde personalizado
-            Drawable icon = ContextCompat.getDrawable(this, R.drawable.ic_marker_green);
+            // Icono azul personalizado
+            Drawable icon = ContextCompat.getDrawable(this, R.drawable.ic_marker_blue);
             if (icon != null) {
                 marker.setIcon(icon);
             }

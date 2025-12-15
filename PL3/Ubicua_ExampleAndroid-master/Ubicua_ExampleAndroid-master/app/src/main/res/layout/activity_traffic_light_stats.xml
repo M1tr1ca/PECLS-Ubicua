@@ -5,8 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFEBEE"
+    android:background="@drawable/bg_gradient_main"
     tools:context=".TrafficLightStatsActivity">
+
+    <!-- Header con gradiente -->
+    <View
+        android:id="@+id/headerBg"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/header_gradient_menu"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <!-- Header -->
     <LinearLayout
@@ -15,7 +23,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
-        android:background="#C62828"
         app:layout_constraintTop_toTopOf="parent">
 
         <!-- Fila con botón volver y título -->
@@ -87,8 +94,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="6dp">
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="@color/glass_white_light">
 
                 <LinearLayout
                     android:layout_width="match_parent"

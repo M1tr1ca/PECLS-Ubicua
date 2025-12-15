@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Fantasma simple y adorable -->
+    <group
+        android:translateX="100"
+        android:translateY="100">
+        
+        <!-- Sombra suave del fantasma -->
+        <path
+            android:fillColor="#20000000"
+            android:pathData="M-38,52 Q-38,46 -27,46 Q-16,46 0,46 Q16,46 27,46 Q38,46 38,52 Q38,58 27,58 Q16,58 0,58 Q-16,58 -27,58 Q-38,58 -38,52 Z"/>
+        
+        <!-- Cuerpo principal del fantasma - color celeste claro -->
+        <path
+            android:fillColor="#B3E5FC"
+            android:pathData="M-40,-15 Q-40,-45 -22,-62 Q-5,-78 15,-78 Q35,-62 40,-45 L40,-15 Q40,5 40,25 Q40,35 40,42 L35,42 Q32,44 28,45 Q24,46 20,46 Q16,46 13,43 Q10,40 10,36 Q10,32 6,32 Q2,32 -2,32 Q-6,32 -6,36 Q-6,40 -9,43 Q-12,46 -16,46 Q-20,46 -24,45 Q-28,44 -31,42 L-40,42 Q-40,35 -40,25 Q-40,5 -40,-15 Z"/>
+        
+        <!-- Contorno del fantasma con color azul -->
+        <path
+            android:strokeColor="#1E88E5"
+            android:strokeWidth="3.5"
+            android:fillColor="#00000000"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M-40,-15 Q-40,-45 -22,-62 Q-5,-78 15,-78 Q35,-62 40,-45 L40,-15 Q40,5 40,25 Q40,35 40,42 L35,42 Q32,44 28,45 Q24,46 20,46 Q16,46 13,43 Q10,40 10,36 Q10,32 6,32 Q2,32 -2,32 Q-6,32 -6,36 Q-6,40 -9,43 Q-12,46 -16,46 Q-20,46 -24,45 Q-28,44 -31,42 L-40,42 Q-40,35 -40,25 Q-40,5 -40,-15 Z"/>
+        
+        <!-- Ojo izquierdo - grande y expresivo -->
+        <path
+            android:fillColor="#1E88E5"
+            android:pathData="M-23,-35 Q-23,-47 -15,-47 Q-7,-47 -7,-35 Q-7,-23 -15,-23 Q-23,-23 -23,-35 Z"/>
+        
+        <!-- Brillo ojo izquierdo -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M-16,-38 Q-16,-42 -13,-42 Q-10,-42 -10,-38 Q-10,-34 -13,-34 Q-16,-34 -16,-38 Z"/>
+        
+        <!-- Ojo derecho - simple y expresivo -->
+        <path
+            android:fillColor="#1E88E5"
+            android:pathData="M7,-35 Q7,-47 15,-47 Q23,-47 23,-35 Q23,-23 15,-23 Q7,-23 7,-35 Z"/>
+        
+        <!-- Brillo ojo derecho -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M14,-38 Q14,-42 17,-42 Q20,-42 20,-38 Q20,-34 17,-34 Q14,-34 14,-38 Z"/>
+        
+        <!-- Sonrisa simple y adorable -->
+        <path
+            android:strokeColor="#1E88E5"
+            android:strokeWidth="3.5"
+            android:fillColor="#00000000"
+            android:strokeLineCap="round"
+            android:pathData="M-15,-8 Q-10,2 0,5 Q10,2 15,-8"/>
+    </group>
+</vector>

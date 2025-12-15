@@ -8,7 +8,7 @@
         </shape>
     </item>
     
-    <!-- Fondo glass -->
+    <!-- Fondo glass azul claro -->
     <item
         android:top="1dp"
         android:bottom="1dp"
@@ -16,15 +16,11 @@
         android:right="1dp">
         <shape android:shape="rectangle">
             <corners android:radius="16dp"/>
-            <solid android:color="@color/glass_white_light"/>
+            <solid android:color="#FFFFFF"/>
             <stroke
                 android:width="1.5dp"
-                android:color="#60FFFFFF"/>
-            <padding
-                android:left="16dp"
-                android:right="16dp"
-                android:top="12dp"
-                android:bottom="12dp"/>
+                android:color="@color/primary_blue_light"/>
         </shape>
     </item>
 </layer-list>
+

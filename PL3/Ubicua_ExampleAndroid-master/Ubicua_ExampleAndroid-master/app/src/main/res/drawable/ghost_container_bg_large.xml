@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Sombra exterior grande -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#35000000"/>
+            <size android:width="120dp" android:height="120dp"/>
+        </shape>
+    </item>
+    
+    <!-- Círculo glass con gradiente -->
+    <item
+        android:top="4dp"
+        android:bottom="4dp"
+        android:left="4dp"
+        android:right="4dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="60"
+                android:startColor="#EDFFFFFF"
+                android:centerColor="#D9FFFFFF"
+                android:endColor="#BFFFFFFF"/>
+            <stroke
+                android:width="2.5dp"
+                android:color="#90FFFFFF"/>
+            <size android:width="112dp" android:height="112dp"/>
+        </shape>
+    </item>
+    
+    <!-- Brillo superior grande -->
+    <item
+        android:top="12dp"
+        android:left="20dp"
+        android:right="55dp"
+        android:bottom="75dp">
+        <shape android:shape="oval">
+            <solid android:color="#70FFFFFF"/>
+        </shape>
+    </item>
+    
+    <!-- Brillo secundario -->
+    <item
+        android:top="70dp"
+        android:left="65dp"
+        android:right="30dp"
+        android:bottom="25dp">
+        <shape android:shape="oval">
+            <solid android:color="#40FFFFFF"/>
+        </shape>
+    </item>
+</layer-list>
+
