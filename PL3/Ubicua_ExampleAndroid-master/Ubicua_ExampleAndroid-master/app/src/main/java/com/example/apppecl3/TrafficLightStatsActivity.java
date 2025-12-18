@@ -97,7 +97,7 @@ public class TrafficLightStatsActivity extends AppCompatActivity {
             cargarDatosHistoricos();
             
             // Formato: sensors/{street_id}/{sensor_type}/{sensor_id}
-            String topic = "/sensors/" + streetId + "/traffic_light/" + "#";
+            String topic = "sensors/" + streetId + "/traffic_light/" + "#";
             Log.i("ubicua", "TrafficLight - SensorId: " + sensorId + ", StreetId: " + streetId);
             Log.i("ubicua", "TrafficLight - Suscribiendo a topic: " + topic);
             conectarMqtt(topic);
@@ -174,7 +174,7 @@ public class TrafficLightStatsActivity extends AppCompatActivity {
         new Thread(() -> {
             try {
                 client = new MqttClient(
-                        "tcp://10.0.2.2:3000",
+                        "tcp://172.20.10.9:3000",
                         MqttClient.generateClientId(),
                         new MemoryPersistence()
                 );

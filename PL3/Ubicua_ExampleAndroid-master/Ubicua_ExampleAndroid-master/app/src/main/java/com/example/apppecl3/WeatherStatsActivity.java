@@ -81,7 +81,7 @@ public class WeatherStatsActivity extends AppCompatActivity {
     private int currentAlertLevel = 0;
     
     // URL base del servidor (10.0.2.2 es localhost desde el emulador Android, puerto 3002 es Tomcat)
-    private static final String SERVER_BASE_URL = "http://10.0.2.2:3002/Server";
+    private static final String SERVER_BASE_URL = "http://172.20.10.9:3002/Server";
     
     // Datos para las gráficas
     private ArrayList<Entry> temperatureEntries = new ArrayList<>();
@@ -154,14 +154,14 @@ public class WeatherStatsActivity extends AppCompatActivity {
             tvStreetName.setText(streetName);
             Log.i("ubicua", "RECIBIDO: " + streetId);
             
-            Log.i("ubicua", "Topic de suscripción: /sensors/" + streetId + "/weather_station/" + "#");
+            Log.i("ubicua", "Topic de suscripción: sensors/" + streetId + "/weather_station/" + "#");
             //Log.i("ubicua", "SensorId: " + sensorId + ", StreetId: " + streetId);
             
             // Cargar datos históricos del servidor
             cargarDatosHistoricos();
             
             // Conectar MQTT - Formato: /sensors/{street_id}/{sensor_type}/{sensor_id}
-            String topic = "/sensors/" + streetId + "/weather_station/" + "#";
+            String topic = "sensors/" + streetId + "/weather_station/" + "#";
             conectarMqtt(topic);
         }
     }
@@ -243,7 +243,7 @@ public class WeatherStatsActivity extends AppCompatActivity {
         
         new Thread(() -> {
             try {
-                String urlStr = SERVER_BASE_URL + "/SendCommand?street_id=" + streetId + "&command=restart";
+                String urlStr = SERVER_BASE_URL + "/SendCommand?street_id=" + streetId + "&command=reset";
                 URL url = new URL(urlStr);
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("GET");
@@ -530,7 +530,7 @@ public class WeatherStatsActivity extends AppCompatActivity {
         new Thread(() -> {
             try {
                 client = new MqttClient(
-                        "tcp://10.0.2.2:3000",
+                        "tcp://172.20.10.9:3000",
                         MqttClient.generateClientId(),
                         new MemoryPersistence()
                 );

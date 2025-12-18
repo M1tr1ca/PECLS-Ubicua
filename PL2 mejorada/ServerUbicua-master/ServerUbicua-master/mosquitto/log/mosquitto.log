@@ -657,3 +657,229 @@
 1765835519: Client WheatherStationUAH-subscriber closed its connection.
 1765835521: mosquitto version 2.0.22 terminating
 1765835521: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1766059308: mosquitto version 2.0.22 starting
+1766059308: Config loaded from /mosquitto/config/mosquitto.conf.
+1766059308: Opening ipv4 listen socket on port 1883.
+1766059308: Opening ipv6 listen socket on port 1883.
+1766059308: mosquitto version 2.0.22 running
+1766059309: New connection from 172.18.0.4:38004 on port 1883.
+1766059309: New client connected from 172.18.0.4:38004 as WheatherStationUAH-subscriber (p2, c0, k60).
+1766059309: New connection from 172.18.0.4:38006 on port 1883.
+1766059309: New client connected from 172.18.0.4:38006 as WheatherStationUAH-publisher (p2, c1, k60).
+1766059309: Client WheatherStationUAH-publisher disconnected.
+1766059342: New connection from 172.20.10.2:65113 on port 1883.
+1766059342: New client connected from 172.20.10.2:65113 as LAB08JAV-G5 (p2, c1, k15, u'ubicua').
+1766059436: New connection from 172.20.10.3:36714 on port 1883.
+1766059437: New client connected from 172.20.10.3:36714 as paho403818372561 (p2, c1, k60).
+1766059442: New connection from 172.18.0.4:52746 on port 1883.
+1766059442: New client connected from 172.18.0.4:52746 as WheatherStationUAH-publisher (p2, c1, k60).
+1766059442: Client WheatherStationUAH-publisher disconnected.
+1766059443: New connection from 172.18.0.4:52752 on port 1883.
+1766059443: New client connected from 172.18.0.4:52752 as WheatherStationUAH-publisher (p2, c1, k60).
+1766059443: Client WheatherStationUAH-publisher disconnected.
+1766059446: Client paho403818372561 disconnected.
+1766059454: New connection from 172.20.10.3:36746 on port 1883.
+1766059454: New client connected from 172.20.10.3:36746 as paho421402845485 (p2, c1, k60).
+1766059462: New connection from 172.18.0.4:41706 on port 1883.
+1766059462: New client connected from 172.18.0.4:41706 as WheatherStationUAH-publisher (p2, c1, k60).
+1766059462: Client WheatherStationUAH-publisher disconnected.
+1766059465: New connection from 172.18.0.4:41718 on port 1883.
+1766059465: New client connected from 172.18.0.4:41718 as WheatherStationUAH-publisher (p2, c1, k60).
+1766059465: Client WheatherStationUAH-publisher disconnected.
+1766059467: New connection from 172.18.0.4:41724 on port 1883.
+1766059467: New client connected from 172.18.0.4:41724 as WheatherStationUAH-publisher (p2, c1, k60).
+1766059467: Client WheatherStationUAH-publisher disconnected.
+1766059469: New connection from 172.18.0.4:41740 on port 1883.
+1766059469: New client connected from 172.18.0.4:41740 as WheatherStationUAH-publisher (p2, c1, k60).
+1766059469: Client WheatherStationUAH-publisher disconnected.
+1766059472: New connection from 172.18.0.4:49568 on port 1883.
+1766059473: New client connected from 172.18.0.4:49568 as WheatherStationUAH-publisher (p2, c1, k60).
+1766059473: Client WheatherStationUAH-publisher disconnected.
+1766059476: New connection from 172.20.10.2:63028 on port 1883.
+1766059476: Client LAB08JAV-G5 already connected, closing old connection.
+1766059476: New client connected from 172.20.10.2:63028 as LAB08JAV-G5 (p2, c1, k15, u'ubicua').
+1766059529: Client WheatherStationUAH-subscriber closed its connection.
+1766059529: mosquitto version 2.0.22 terminating
+1766059529: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1766059575: mosquitto version 2.0.22 starting
+1766059575: Config loaded from /mosquitto/config/mosquitto.conf.
+1766059575: Opening ipv4 listen socket on port 1883.
+1766059575: Opening ipv6 listen socket on port 1883.
+1766059575: mosquitto version 2.0.22 running
+1766059576: New connection from 172.18.0.4:46958 on port 1883.
+1766059576: New client connected from 172.18.0.4:46958 as WheatherStationUAH-subscriber (p2, c0, k60).
+1766059576: New connection from 172.18.0.4:46968 on port 1883.
+1766059577: New client connected from 172.18.0.4:46968 as WheatherStationUAH-publisher (p2, c1, k60).
+1766059577: Client WheatherStationUAH-publisher disconnected.
+1766059580: New connection from 172.20.10.2:63039 on port 1883.
+1766059580: New client connected from 172.20.10.2:63039 as LAB08JAV-G5 (p2, c1, k15, u'ubicua').
+1766059594: New connection from 172.18.0.4:46680 on port 1883.
+1766059594: New client connected from 172.18.0.4:46680 as WheatherStationUAH-publisher (p2, c1, k60).
+1766059594: Client WheatherStationUAH-publisher disconnected.
+1766059596: New connection from 172.20.10.3:36790 on port 1883.
+1766059597: New client connected from 172.20.10.3:36790 as paho421402845485 (p2, c1, k60).
+1766059597: Client paho421402845485 disconnected.
+1766059599: New connection from 172.20.10.3:36792 on port 1883.
+1766059599: New client connected from 172.20.10.3:36792 as paho566328804571 (p2, c1, k60).
+1766059633: New connection from 172.18.0.4:38760 on port 1883.
+1766059633: New client connected from 172.18.0.4:38760 as WheatherStationUAH-publisher (p2, c1, k60).
+1766059633: Client WheatherStationUAH-publisher disconnected.
+1766059635: New connection from 172.18.0.4:38766 on port 1883.
+1766059636: New client connected from 172.18.0.4:38766 as WheatherStationUAH-publisher (p2, c1, k60).
+1766059636: Client WheatherStationUAH-publisher disconnected.
+1766059645: Client paho566328804571 disconnected.
+1766059646: New connection from 172.20.10.3:36800 on port 1883.
+1766059646: New client connected from 172.20.10.3:36800 as paho613381938035 (p2, c1, k60).
+1766059713: Client paho613381938035 disconnected.
+1766059713: New connection from 172.20.10.3:36812 on port 1883.
+1766059714: New client connected from 172.20.10.3:36812 as paho680513809424 (p2, c1, k60).
+1766059723: Client paho680513809424 disconnected.
+1766059723: New connection from 172.20.10.3:36814 on port 1883.
+1766059723: New client connected from 172.20.10.3:36814 as paho690069107655 (p2, c1, k60).
+1766059728: Client paho690069107655 disconnected.
+1766059729: New connection from 172.20.10.3:36816 on port 1883.
+1766059729: New client connected from 172.20.10.3:36816 as paho695988412502 (p2, c1, k60).
+1766059745: Client paho695988412502 disconnected.
+1766059745: New connection from 172.20.10.3:36820 on port 1883.
+1766059746: New client connected from 172.20.10.3:36820 as paho712721616503 (p2, c1, k60).
+1766059752: New connection from 172.18.0.4:33630 on port 1883.
+1766059752: New client connected from 172.18.0.4:33630 as WheatherStationUAH-publisher (p2, c1, k60).
+1766059752: Client WheatherStationUAH-publisher disconnected.
+1766059760: New connection from 172.18.0.4:38590 on port 1883.
+1766059760: New client connected from 172.18.0.4:38590 as WheatherStationUAH-publisher (p2, c1, k60).
+1766059760: Client WheatherStationUAH-publisher disconnected.
+1766059772: Client paho712721616503 disconnected.
+1766059772: New connection from 172.20.10.3:36828 on port 1883.
+1766059772: New client connected from 172.20.10.3:36828 as paho739241898658 (p2, c1, k60).
+1766059795: New connection from 172.18.0.1:38072 on port 1883.
+1766059795: New client connected from 172.18.0.1:38072 as mqtt-explorer-c89c95ca (p2, c1, k60).
+1766059886: Client paho739241898658 disconnected.
+1766059910: New connection from 172.20.10.3:36844 on port 1883.
+1766059911: New client connected from 172.20.10.3:36844 as paho877666985128 (p2, c1, k60).
+1766059937: Client paho877666985128 disconnected.
+1766059938: New connection from 172.20.10.3:36850 on port 1883.
+1766059938: New client connected from 172.20.10.3:36850 as paho904933137437 (p2, c1, k60).
+1766059944: Client paho904933137437 disconnected.
+1766059944: New connection from 172.20.10.3:36852 on port 1883.
+1766059944: New client connected from 172.20.10.3:36852 as paho911301342669 (p2, c1, k60).
+1766060004: Client paho911301342669 disconnected.
+1766060004: New connection from 172.20.10.3:36858 on port 1883.
+1766060004: New client connected from 172.20.10.3:36858 as paho970993371057 (p2, c1, k60).
+1766060008: Client paho970993371057 disconnected.
+1766060009: New connection from 172.20.10.3:36862 on port 1883.
+1766060009: New client connected from 172.20.10.3:36862 as paho976134122442 (p2, c1, k60).
+1766060022: Client paho976134122442 disconnected.
+1766060026: New connection from 172.20.10.3:36864 on port 1883.
+1766060026: New client connected from 172.20.10.3:36864 as paho993119513827 (p2, c1, k60).
+1766060030: Client paho993119513827 disconnected.
+1766060036: New connection from 172.20.10.3:36866 on port 1883.
+1766060037: New client connected from 172.20.10.3:36866 as paho1003760905520 (p2, c1, k60).
+1766060050: New connection from 172.20.10.9:55974 on port 1883.
+1766060050: New client connected from 172.20.10.9:55974 as paho5928278296196 (p2, c1, k60).
+1766060057: New connection from 172.18.0.4:56934 on port 1883.
+1766060057: Client paho1003760905520 disconnected.
+1766060057: New client connected from 172.18.0.4:56934 as WheatherStationUAH-publisher (p2, c1, k60).
+1766060057: Client WheatherStationUAH-publisher disconnected.
+1766060057: New connection from 172.20.10.3:36868 on port 1883.
+1766060058: New client connected from 172.20.10.3:36868 as paho1024703509829 (p2, c1, k60).
+1766060058: Client paho1024703509829 disconnected.
+1766060058: New connection from 172.20.10.3:36870 on port 1883.
+1766060059: New client connected from 172.20.10.3:36870 as paho1025780761829 (p2, c1, k60).
+1766060069: New connection from 172.18.0.4:52848 on port 1883.
+1766060069: New client connected from 172.18.0.4:52848 as WheatherStationUAH-publisher (p2, c1, k60).
+1766060069: Client WheatherStationUAH-publisher disconnected.
+1766060075: Client paho1025780761829 disconnected.
+1766060075: New connection from 172.20.10.3:36874 on port 1883.
+1766060075: New client connected from 172.20.10.3:36874 as paho1042248823599 (p2, c1, k60).
+1766060117: Client paho1042248823599 disconnected.
+1766060117: New connection from 172.20.10.3:36880 on port 1883.
+1766060117: New client connected from 172.20.10.3:36880 as paho1084316420217 (p2, c1, k60).
+1766060130: Client paho1084316420217 disconnected.
+1766060130: New connection from 172.20.10.3:36884 on port 1883.
+1766060130: New client connected from 172.20.10.3:36884 as paho1097096088603 (p2, c1, k60).
+1766060130: Client paho1097096088603 disconnected.
+1766060131: New connection from 172.20.10.3:36886 on port 1883.
+1766060131: New client connected from 172.20.10.3:36886 as paho1097955430757 (p2, c1, k60).
+1766060132: Client paho1097955430757 disconnected.
+1766060133: New connection from 172.20.10.3:36888 on port 1883.
+1766060133: New client connected from 172.20.10.3:36888 as paho1100354233141 (p2, c1, k60).
+1766060259: Client paho5928278296196 closed its connection.
+1766060281: New connection from 172.20.10.9:43462 on port 1883.
+1766060282: New client connected from 172.20.10.9:43462 as paho6159668491174 (p2, c1, k60).
+1766060307: Client paho6159668491174 closed its connection.
+1766060320: Client paho1100354233141 closed its connection.
+1766060388: New connection from 172.20.10.3:36978 on port 1883.
+1766060389: New client connected from 172.20.10.3:36978 as paho1355604102772 (p2, c1, k60).
+1766060397: Client paho1355604102772 disconnected.
+1766060435: New connection from 172.20.10.3:36986 on port 1883.
+1766060435: New client connected from 172.20.10.3:36986 as paho1402373641852 (p2, c1, k60).
+1766060471: Client paho1402373641852 disconnected.
+1766060472: New connection from 172.20.10.3:36990 on port 1883.
+1766060473: New client connected from 172.20.10.3:36990 as paho1439677318777 (p2, c1, k60).
+1766060481: Client paho1439677318777 disconnected.
+1766060482: New connection from 172.20.10.3:36992 on port 1883.
+1766060482: New client connected from 172.20.10.3:36992 as paho1449304632239 (p2, c1, k60).
+1766060661: Client paho1449304632239 disconnected.
+1766060661: New connection from 172.20.10.3:37004 on port 1883.
+1766060662: New client connected from 172.20.10.3:37004 as paho1628775315711 (p2, c1, k60).
+1766060667: Client paho1628775315711 disconnected.
+1766060668: New connection from 172.20.10.3:37008 on port 1883.
+1766060668: New client connected from 172.20.10.3:37008 as paho1634996525558 (p2, c1, k60).
+1766060670: Client paho1634996525558 disconnected.
+1766060670: New connection from 172.20.10.3:37010 on port 1883.
+1766060671: New client connected from 172.20.10.3:37010 as paho1637682441558 (p2, c1, k60).
+1766060693: New connection from 172.20.10.9:59746 on port 1883.
+1766060693: New client connected from 172.20.10.9:59746 as paho6571365090338 (p2, c1, k60).
+1766060755: Client paho1637682441558 disconnected.
+1766060761: New connection from 172.20.10.3:37016 on port 1883.
+1766060761: New client connected from 172.20.10.3:37016 as paho1728415747333 (p2, c1, k60).
+1766060764: Client paho6571365090338 disconnected.
+1766060765: New connection from 172.20.10.9:38186 on port 1883.
+1766060765: New client connected from 172.20.10.9:38186 as paho6643525169672 (p2, c1, k60).
+1766060790: Client paho1728415747333 disconnected.
+1766060797: New connection from 172.20.10.3:37026 on port 1883.
+1766060798: New client connected from 172.20.10.3:37026 as paho1764472911950 (p2, c1, k60).
+1766060803: Client paho1764472911950 disconnected.
+1766060804: New connection from 172.20.10.3:37028 on port 1883.
+1766060804: New client connected from 172.20.10.3:37028 as paho1770890933797 (p2, c1, k60).
+1766060824: Client paho1770890933797 disconnected.
+1766060832: New connection from 172.20.10.3:37030 on port 1883.
+1766060832: New client connected from 172.20.10.3:37030 as paho1799042401491 (p2, c1, k60).
+1766060841: Client paho1799042401491 disconnected.
+1766060846: New connection from 172.20.10.3:37034 on port 1883.
+1766060847: New client connected from 172.20.10.3:37034 as paho1813696655338 (p2, c1, k60).
+1766060848: Client paho1813696655338 disconnected.
+1766060848: New connection from 172.20.10.3:37036 on port 1883.
+1766060849: New client connected from 172.20.10.3:37036 as paho1815745819030 (p2, c1, k60).
+1766060851: Client paho1815745819030 disconnected.
+1766060851: New connection from 172.20.10.3:37038 on port 1883.
+1766060851: New client connected from 172.20.10.3:37038 as paho1818285680953 (p2, c1, k60).
+1766060854: Client paho1818285680953 disconnected.
+1766060855: New connection from 172.20.10.3:37040 on port 1883.
+1766060856: New client connected from 172.20.10.3:37040 as paho1822667319338 (p2, c1, k60).
+1766060858: Client paho1822667319338 disconnected.
+1766060863: New connection from 172.20.10.3:37042 on port 1883.
+1766060863: New client connected from 172.20.10.3:37042 as paho1830151666185 (p2, c1, k60).
+1766060872: Client paho1830151666185 disconnected.
+1766060872: New connection from 172.20.10.3:37044 on port 1883.
+1766060873: New client connected from 172.20.10.3:37044 as paho1839814751416 (p2, c1, k60).
+1766060873: Client paho1839814751416 disconnected.
+1766060873: New connection from 172.20.10.3:37046 on port 1883.
+1766060874: New client connected from 172.20.10.3:37046 as paho1840919026801 (p2, c1, k60).
+1766060875: Client paho1840919026801 disconnected.
+1766060876: New connection from 172.20.10.3:37048 on port 1883.
+1766060877: New client connected from 172.20.10.3:37048 as paho1843678532032 (p2, c1, k60).
+1766060885: Client paho6643525169672 disconnected.
+1766060888: New connection from 172.20.10.9:47702 on port 1883.
+1766060888: New client connected from 172.20.10.9:47702 as paho6766276117413 (p2, c1, k60).
+1766060924: Client paho1843678532032 disconnected.
+1766060926: New connection from 172.20.10.3:37052 on port 1883.
+1766060926: New client connected from 172.20.10.3:37052 as paho1892912171650 (p2, c1, k60).
+1766060933: Client paho1892912171650 disconnected.
+1766060936: New connection from 172.20.10.3:37056 on port 1883.
+1766060937: New client connected from 172.20.10.3:37056 as paho1903777409266 (p2, c1, k60).
+1766060949: Client paho1903777409266 closed its connection.
+1766060952: Client mqtt-explorer-c89c95ca disconnected.
+1766060960: Client WheatherStationUAH-subscriber closed its connection.
+1766060960: mosquitto version 2.0.22 terminating
+1766060960: Saving in-memory database to /mosquitto/data//mosquitto.db.

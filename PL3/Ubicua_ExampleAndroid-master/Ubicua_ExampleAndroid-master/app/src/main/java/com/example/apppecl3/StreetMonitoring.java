@@ -77,7 +77,7 @@ public class StreetMonitoring extends AppCompatActivity {
         new Thread(() -> {
             try {
                 client = new MqttClient(
-                        "tcp://10.0.2.2:3000",
+                        "tcp://172.20.10.9:3000",
                         MqttClient.generateClientId(),
                         new MemoryPersistence()
                 );
