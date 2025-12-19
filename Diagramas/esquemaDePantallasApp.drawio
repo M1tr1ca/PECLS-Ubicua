@@ -1,0 +1,142 @@
+<mxfile host="65bd71144e">
+    <diagram name="Esquema de Pantallas" id="esquema-pantallas">
+        <mxGraphModel dx="934" dy="676" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2339" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="titulo" value="&lt;b&gt;&lt;font style=&quot;font-size: 28px;&quot;&gt;ESQUEMA DE PANTALLAS&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Aplicación Android - Sistema IoT Smart City&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Navegación y Flujo de Pantallas&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="427" y="40" width="800" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="screen-main" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="200" width="280" height="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="main-header" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;PANTALLA 1&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;b&gt;MainActivity&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#82b366;strokeColor=#82b366;strokeWidth=2;fontColor=#FFFFFF;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="200" width="280" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="main-content" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;SPLASH SCREEN&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;Pantalla de bienvenida&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left; padding: 10px;&quot;&gt;&lt;b&gt;Componentes:&lt;/b&gt;&lt;br&gt;• Logo de la aplicación&lt;br&gt;• Nombre del proyecto&lt;br&gt;• Indicador de carga&lt;br&gt;&lt;br&gt;&lt;b&gt;Funcionalidad:&lt;/b&gt;&lt;br&gt;• Mostrar durante 5 segundos&lt;br&gt;• Transición automática a MapActivity&lt;br&gt;&lt;br&gt;&lt;b&gt;Layout:&lt;/b&gt; activity_main.xml&lt;br&gt;&lt;b&gt;Java:&lt;/b&gt; MainActivity.java&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;spacing=5;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="270" width="260" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="screen-map" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="200" width="340" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="map-header" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;PANTALLA 2&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;b&gt;MapActivity&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6c8ebf;strokeColor=#6c8ebf;strokeWidth=2;fontColor=#FFFFFF;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="200" width="340" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="map-content" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;MAPA DE MADRID&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;Vista principal con mapa interactivo&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left; padding: 10px;&quot;&gt;&lt;b&gt;Componentes:&lt;/b&gt;&lt;br&gt;• Mapa OpenStreetMap (OSMDroid)&lt;br&gt;• Spinner selector de calles&lt;br&gt;• Botón &quot;Seleccionar Calle&quot;&lt;br&gt;• TextView estado de conexión&lt;br&gt;• Marcadores en cada calle&lt;br&gt;• Info windows personalizadas&lt;br&gt;&lt;br&gt;&lt;b&gt;Funcionalidad:&lt;/b&gt;&lt;br&gt;• Cargar calles desde servidor (GetStreets)&lt;br&gt;• Cargar sensores (GetSensors)&lt;br&gt;• Mostrar marcadores con info de sensores&lt;br&gt;• Centrado en Madrid (40.4168, -3.7038)&lt;br&gt;• Zoom nivel 11&lt;br&gt;• Navegación al menú de sensores&lt;br&gt;&lt;br&gt;&lt;b&gt;Layout:&lt;/b&gt; activity_map.xml&lt;br&gt;&lt;b&gt;Java:&lt;/b&gt; MapActivity.java&lt;br&gt;&lt;b&gt;API:&lt;/b&gt; GetStreets, GetSensors&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;spacing=5;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="270" width="320" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow-main-map" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=3;strokeColor=#82b366;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.004;entryY=0.407;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="screen-main" target="screen-map" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="700" y="600" as="sourcePoint"/>
+                        <mxPoint x="750" y="550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arrow-label-1" value="&lt;b&gt;5 segundos&lt;/b&gt;&lt;br&gt;(automático)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#82b366;" parent="arrow-main-map" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint y="-21" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="screen-menu" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="200" width="340" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="menu-header" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;PANTALLA 3&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;b&gt;SensorMenuActivity&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d6b656;strokeColor=#d6b656;strokeWidth=2;fontColor=#FFFFFF;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="200" width="340" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="menu-content" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;MENÚ DE SENSORES&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;Selección de tipo de sensor&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left; padding: 10px;&quot;&gt;&lt;b&gt;Componentes:&lt;/b&gt;&lt;br&gt;• 4 CardView con iconos&lt;br&gt;• TextView nombre de calle&lt;br&gt;• TextView información de distrito&lt;br&gt;• ImageButton volver&lt;br&gt;&lt;br&gt;&lt;b&gt;Cards disponibles:&lt;/b&gt;&lt;br&gt;Estación Meteorológica&lt;br&gt;Contador de Tráfico&lt;br&gt;Semáforo Inteligente&lt;br&gt;Pantalla de Información&lt;br&gt;&lt;br&gt;&lt;b&gt;Funcionalidad:&lt;/b&gt;&lt;br&gt;• Recibe datos de calle seleccionada&lt;br&gt;• Recibe IDs de sensores disponibles&lt;br&gt;• Navega a estadísticas específicas&lt;br&gt;• Deshabilita cards sin sensores&lt;br&gt;&lt;br&gt;&lt;b&gt;Layout:&lt;/b&gt; activity_sensor_menu.xml&lt;br&gt;&lt;b&gt;Java:&lt;/b&gt; SensorMenuActivity.java&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;spacing=5;" parent="1" vertex="1">
+                    <mxGeometry x="930" y="270" width="320" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow-map-menu" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=3;strokeColor=#6c8ebf;exitX=1.012;exitY=0.527;exitDx=0;exitDy=0;entryX=-0.011;entryY=0.529;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;" parent="1" source="screen-map" target="screen-menu" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="700" y="600" as="sourcePoint"/>
+                        <mxPoint x="750" y="550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arrow-label-2" value="&lt;b&gt;Click en calle&lt;/b&gt;&lt;br&gt;(botón seleccionar)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#6c8ebf;" parent="arrow-map-menu" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint y="-21" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="screen-weather" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="810.0000000000001" width="360" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="weather-header" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;PANTALLA 4&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;b&gt;WeatherStatsActivity&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9673a6;strokeColor=#9673a6;strokeWidth=2;fontColor=#FFFFFF;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="810.0000000000001" width="360" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="weather-content" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;ESTACIÓN METEOROLÓGICA&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;Monitorización en tiempo real&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left; padding: 10px;&quot;&gt;&lt;b&gt;Componentes:&lt;/b&gt;&lt;br&gt;• TextView temperatura (grande)&lt;br&gt;• TextView humedad&lt;br&gt;• TextView presión atmosférica&lt;br&gt;• TextView altitud&lt;br&gt;• ProgressBar humedad&lt;br&gt;• 2 LineChart (temperatura y humedad)&lt;br&gt;• 5 ImageButton control alertas (0-4)&lt;br&gt;• Button reiniciar ESP32&lt;br&gt;• TextView historial mensajes&lt;br&gt;• ImageView estado conexión&lt;br&gt;&lt;br&gt;&lt;b&gt;Funcionalidad:&lt;/b&gt;&lt;br&gt;• Suscripción MQTT en tiempo real&lt;br&gt;• Gráficas interactivas (MPAndroidChart)&lt;br&gt;• Envío comandos vía HTTP (SendCommand)&lt;br&gt;• Control niveles alerta (0-4)&lt;br&gt;• Comando restart ESP32&lt;br&gt;• Historial últimas 50 lecturas&lt;br&gt;• Actualización automática cada lectura&lt;br&gt;&lt;br&gt;&lt;b&gt;Layout:&lt;/b&gt; activity_weather_stats.xml&lt;br&gt;&lt;b&gt;Java:&lt;/b&gt; WeatherStatsActivity.java&lt;br&gt;&lt;b&gt;MQTT:&lt;/b&gt; sensors/{street_id}/weather_station/{sensor_id}&lt;br&gt;&lt;b&gt;API:&lt;/b&gt; SendCommand&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;spacing=5;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="880.0000000000001" width="340" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="screen-traffic-counter" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="810.0000000000001" width="360" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="traffic-counter-header" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;PANTALLA 5&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;b&gt;TrafficCounterStatsActivity&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b85450;strokeColor=#b85450;strokeWidth=2;fontColor=#FFFFFF;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="810.0000000000001" width="360" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="traffic-counter-content" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;CONTADOR DE TRÁFICO&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;Análisis de flujo vehicular&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left; padding: 10px;&quot;&gt;&lt;b&gt;Componentes:&lt;/b&gt;&lt;br&gt;• TextView conteo vehículos&lt;br&gt;• TextView conteo peatones&lt;br&gt;• TextView conteo bicicletas&lt;br&gt;• TextView velocidad promedio&lt;br&gt;• TextView ocupación (%)&lt;br&gt;• TextView densidad tráfico&lt;br&gt;• TextView dirección&lt;br&gt;• TextView tipo contador&lt;br&gt;• TextView tecnología&lt;br&gt;• TextView historial&lt;br&gt;• ImageButton volver&lt;br&gt;&lt;br&gt;&lt;b&gt;Funcionalidad:&lt;/b&gt;&lt;br&gt;• Suscripción MQTT en tiempo real&lt;br&gt;• Visualización datos de tráfico&lt;br&gt;• Historial de lecturas&lt;br&gt;• Indicadores visuales&lt;br&gt;&lt;br&gt;&lt;b&gt;Layout:&lt;/b&gt; activity_traffic_counter_stats.xml&lt;br&gt;&lt;b&gt;Java:&lt;/b&gt; TrafficCounterStatsActivity.java&lt;br&gt;&lt;b&gt;MQTT:&lt;/b&gt; sensors/{street_id}/traffic_counter/{sensor_id}&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;spacing=5;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="880.0000000000001" width="340" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="screen-traffic-light" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="810.0000000000001" width="360" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="traffic-light-header" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;PANTALLA 6&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;b&gt;TrafficLightStatsActivity&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d79b00;strokeColor=#d79b00;strokeWidth=2;fontColor=#FFFFFF;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="810.0000000000001" width="360" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="traffic-light-content" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;SEMÁFORO INTELIGENTE&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;Control de intersecciones&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left; padding: 10px;&quot;&gt;&lt;b&gt;Componentes:&lt;/b&gt;&lt;br&gt;• TextView estado actual (verde/amarillo/rojo)&lt;br&gt;• TextView posición en ciclo (segundos)&lt;br&gt;• TextView tiempo restante&lt;br&gt;• TextView duración ciclo&lt;br&gt;• TextView tipo semáforo&lt;br&gt;• TextView dirección circulación&lt;br&gt;• TextView peatón esperando (sí/no)&lt;br&gt;• TextView botón peatón presionado&lt;br&gt;• TextView falla detectada&lt;br&gt;• TextView contador de ciclos&lt;br&gt;• TextView historial&lt;br&gt;• ImageView indicador estado&lt;br&gt;• ImageButton volver&lt;br&gt;&lt;br&gt;&lt;b&gt;Funcionalidad:&lt;/b&gt;&lt;br&gt;• Suscripción MQTT en tiempo real&lt;br&gt;• Cambio color según estado&lt;br&gt;• Monitorización ciclo semáforo&lt;br&gt;• Detección fallos&lt;br&gt;&lt;br&gt;&lt;b&gt;Layout:&lt;/b&gt; activity_traffic_light_stats.xml&lt;br&gt;&lt;b&gt;Java:&lt;/b&gt; TrafficLightStatsActivity.java&lt;br&gt;&lt;b&gt;MQTT:&lt;/b&gt; sensors/{street_id}/traffic_light/{sensor_id}&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;spacing=5;" parent="1" vertex="1">
+                    <mxGeometry x="910" y="880.0000000000001" width="340" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="screen-display" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="1340" y="810.0000000000001" width="360" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="display-header" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;PANTALLA 7&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;b&gt;DisplayStatsActivity&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#666666;strokeColor=#666666;strokeWidth=2;fontColor=#FFFFFF;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="1340" y="810.0000000000001" width="360" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="display-content" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;PANTALLA DE INFORMACIÓN&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;Gestión de displays públicos&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left; padding: 10px;&quot;&gt;&lt;b&gt;Componentes:&lt;/b&gt;&lt;br&gt;• TextView estado display (activo/inactivo)&lt;br&gt;• TextView mensaje actual&lt;br&gt;• TextView tipo contenido&lt;br&gt;• TextView nivel brillo&lt;br&gt;• ProgressBar brillo&lt;br&gt;• TextView temperatura display&lt;br&gt;• TextView consumo energía (watts)&lt;br&gt;• TextView tamaño pantalla (pulgadas)&lt;br&gt;• TextView soporte color (sí/no)&lt;br&gt;• TextView historial&lt;br&gt;• View indicador estado&lt;br&gt;• ImageButton volver&lt;br&gt;&lt;br&gt;&lt;b&gt;Funcionalidad:&lt;/b&gt;&lt;br&gt;• Suscripción MQTT en tiempo real&lt;br&gt;• Visualización mensaje actual&lt;br&gt;• Monitorización estado operativo&lt;br&gt;• Control de brillo y temperatura&lt;br&gt;• Seguimiento consumo energético&lt;br&gt;&lt;br&gt;&lt;b&gt;Layout:&lt;/b&gt; activity_display_stats.xml&lt;br&gt;&lt;b&gt;Java:&lt;/b&gt; DisplayStatsActivity.java&lt;br&gt;&lt;b&gt;MQTT:&lt;/b&gt; sensors/{street_id}/display/{sensor_id}&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;spacing=5;" parent="1" vertex="1">
+                    <mxGeometry x="1350" y="880.0000000000001" width="340" height="460" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow-menu-weather" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#9673a6;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" parent="1" source="screen-menu" target="screen-weather" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="700" y="900" as="sourcePoint"/>
+                        <mxPoint x="750" y="850" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arrow-label-3" value="&lt;b&gt;Card Weather&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#9673a6;" parent="arrow-menu-weather" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint x="-25" y="-5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arrow-menu-counter" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#b85450;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" parent="1" source="screen-menu" target="screen-traffic-counter" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="700" y="900" as="sourcePoint"/>
+                        <mxPoint x="750" y="850" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arrow-label-4" value="&lt;b&gt;Card Counter&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#b85450;" parent="arrow-menu-counter" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint y="5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arrow-menu-light" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#d79b00;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" parent="1" source="screen-menu" target="screen-traffic-light" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="700" y="900" as="sourcePoint"/>
+                        <mxPoint x="750" y="850" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arrow-label-5" value="&lt;b&gt;Card Light&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#d79b00;" parent="arrow-menu-light" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint y="5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arrow-menu-display" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#666666;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" parent="1" source="screen-menu" target="screen-display" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="700" y="900" as="sourcePoint"/>
+                        <mxPoint x="750" y="850" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arrow-label-6" value="&lt;b&gt;Card Display&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#666666;" parent="arrow-menu-display" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint x="25" y="-5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

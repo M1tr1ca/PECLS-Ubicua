@@ -1,0 +1,236 @@
+<mxfile host="65bd71144e">
+    <diagram name="Arquitectura del Sistema" id="arquitectura-sistema">
+        <mxGraphModel dx="1584" dy="795" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2339" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="titulo" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;ARQUITECTURA DEL SISTEMA IoT&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistema de Monitorización de Ciudad Inteligente&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;UAH - Computación Ubicua - PECL1, PECL2, PECL3&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="427" y="40" width="800" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="capa1-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;dashPattern=8 8;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="160" width="420" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="capa1-titulo" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;CAPA 1: HARDWARE (IoT Devices)&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="170" width="300" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="esp32" value="&lt;b&gt;ESP32&lt;/b&gt;&lt;br&gt;Microcontrolador&lt;br&gt;&lt;br&gt;• WiFi 802.11 b/g/n&lt;br&gt;• FreeRTOS&lt;br&gt;• Cliente MQTT&lt;br&gt;• 4 Tareas LED&lt;br&gt;• NTP Client" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="390" width="180" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="sensor-bme280" value="&lt;b&gt;BME280&lt;/b&gt;&lt;br&gt;Sensor I²C (0x76)&lt;br&gt;&lt;br&gt;• Temperatura&lt;br&gt;• Humedad&lt;br&gt;• Presión&lt;br&gt;• Altitud" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="220" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="actuador-leds" value="&lt;b&gt;LEDs de Alarma (3)&lt;/b&gt;&lt;br&gt;&lt;br&gt;• GPIO 4, 5, 13&lt;br&gt;• Resistencias 220Ω&lt;br&gt;• Control FreeRTOS&lt;br&gt;• 4 patrones parpadeo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="220" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="actuador-display" value="&lt;b&gt;Display 7 Segmentos&lt;/b&gt;&lt;br&gt;SA52-11EWA&lt;br&gt;&lt;br&gt;• Cátodo común&lt;br&gt;• 7 GPIOs (26,25,19,18,23,27,14)&lt;br&gt;• Muestra alertas 0-4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="560" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="actuador-led-rojo" value="&lt;b&gt;LED Indicador&lt;/b&gt;&lt;br&gt;&lt;br&gt;• GPIO 12&lt;br&gt;• Alerta local&lt;br&gt;• Temp &gt; 35°C&lt;br&gt;• Hum &gt; 80%" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="560" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="conexion-i2c" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#6c8ebf;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" parent="1" source="esp32" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="290" y="500" as="sourcePoint"/>
+                        <mxPoint x="220" y="340" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-i2c" value="I²C (SDA/SCL)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1" parent="conexion-i2c" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint x="-41" y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="conexion-gpio-leds" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#b85450;exitX=0.798;exitY=0.017;exitDx=0;exitDy=0;entryX=0.029;entryY=0.947;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;" parent="1" source="esp32" target="actuador-leds" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="290" y="500" as="sourcePoint"/>
+                        <mxPoint x="340" y="450" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-gpio-leds" value="GPIO Digital" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1" parent="conexion-gpio-leds" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint x="38" y="4" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="conexion-gpio-display" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#b85450;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="esp32" target="actuador-display" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="199.92000000000007" y="520" as="sourcePoint"/>
+                        <mxPoint x="181" y="631.76" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="conexion-gpio-led-rojo" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#b85450;exitX=0.924;exitY=1.012;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="esp32" target="actuador-led-rojo" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="290" y="500" as="sourcePoint"/>
+                        <mxPoint x="340" y="450" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="capa2-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;dashPattern=8 8;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="160" width="320" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="capa2-titulo" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;CAPA 2: COMUNICACIÓN&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="170" width="240" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="wifi" value="&lt;b&gt;WiFi 802.11 b/g/n&lt;/b&gt;&lt;br&gt;&lt;br&gt;SSID: iPhone de Juan&lt;br&gt;IP: 192.168.1.200&lt;br&gt;Gateway: 192.168.1.1&lt;br&gt;Subnet: 255.255.255.0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="220" width="240" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="mqtt-broker" value="&lt;b&gt;Eclipse Mosquitto&lt;/b&gt;&lt;br&gt;MQTT Broker v3.1&lt;br&gt;&lt;br&gt;Host: 172.20.10.9&lt;br&gt;Puerto: 3000 (externo)&lt;br&gt;Puerto: 1883 (interno)&lt;br&gt;&lt;br&gt;Usuario: ubicua&lt;br&gt;Password: ubicua1234&lt;br&gt;&lt;br&gt;QoS: 1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=3;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="360" width="240" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="topics-mqtt" value="&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Tópicos MQTT&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Publicación (ESP32 → Servidor):&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;sensors/ST_1617/weather_station/LAB08JAV-G5&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Suscripción (Servidor → ESP32):&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;sensors/ST_1617/alerts&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Servidor suscrito a:&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;sensors/#" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;verticalAlign=top;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="582.5" y="560" width="295" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="conexion-wifi" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeWidth=3;strokeColor=#9673a6;entryX=0.006;entryY=0.926;entryDx=0;entryDy=0;dashed=1;entryPerimeter=0;" parent="1" target="wifi" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="380" y="425" as="sourcePoint"/>
+                        <mxPoint x="580" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-wifi" value="WiFi Connection" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#9673A6;" parent="conexion-wifi" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint x="35" y="17" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="conexion-mqtt-wifi" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeWidth=3;strokeColor=#9673a6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="wifi" target="mqtt-broker" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="500" y="400" as="sourcePoint"/>
+                        <mxPoint x="550" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-mqtt" value="TCP/IP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#9673A6;" parent="conexion-mqtt-wifi" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint y="-9" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="capa3-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;dashPattern=8 8;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="915" y="170" width="650" height="700" as="geometry"/>
+                </mxCell>
+                <mxCell id="capa3-titulo" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;CAPA 3: BACKEND (Servidor Java)&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="170" width="450" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="docker" value="&lt;b&gt;Docker Container&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="950" y="220" width="580" height="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="tomcat" value="&lt;b&gt;Apache Tomcat 10&lt;/b&gt;&lt;br&gt;Servidor de Aplicaciones&lt;br&gt;&lt;br&gt;Puerto: 3002:8080&lt;br&gt;WAR: ServerExampleUbicomp-1.0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="980" y="260" width="240" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="java-app" value="&lt;b&gt;Aplicación Java&lt;/b&gt;&lt;br&gt;&lt;br&gt;• Jakarta EE 11&lt;br&gt;• Maven Project&lt;br&gt;• Java 21&lt;br&gt;• GSON (JSON)&lt;br&gt;• Paho MQTT Client&lt;br&gt;• Log4j2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1260" y="260" width="240" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="servlets" value="&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Servlets (REST API)&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• GetData&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• GetAllData&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• GetSensors&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• GetStreets&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• SendCommand&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• PublishMQTT&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• SystemStatus" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;verticalAlign=top;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="980" y="410" width="240" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="logic" value="&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Capa de Lógica&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Logic.java&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Measurement.java&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• TrafficCounterMeasurement&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• TrafficLightMeasurement&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• InformationDisplayMeasurement&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Log.java" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;verticalAlign=top;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1260" y="410" width="240" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="postgres" value="&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;PostgreSQL 16&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Base de Datos&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;DB: ubicua&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;User: admin&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Password: admin&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Tablas:&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• streets&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• sensors&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• sensor_readings&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• traffic_counter_readings&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• traffic_light_readings&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• information_display_readings" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;verticalAlign=top;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1250" y="610" width="280" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="mqtt-client" value="&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;MQTT Client&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• MQTTBroker.java&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• MQTTSuscriber.java&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• MQTTPublisher.java&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Suscrito a: sensors/#&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Publica en: sensors/ST_*/alerts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;verticalAlign=top;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="950" y="610" width="260" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="conexion-tomcat-mqtt" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeWidth=3;strokeColor=#9673a6;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mqtt-client" target="mqtt-broker" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="900" y="500" as="sourcePoint"/>
+                        <mxPoint x="950" y="450" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-mqtt-connection" value="MQTT Protocol&lt;br&gt;(Subscribe/Publish)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#9673A6;" parent="conexion-tomcat-mqtt" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint x="15" y="-21" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="conexion-servlets-db" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#6c8ebf;exitX=1.011;exitY=0.883;exitDx=0;exitDy=0;entryX=0.041;entryY=0.03;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" parent="1" source="servlets" target="postgres" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="900" y="500" as="sourcePoint"/>
+                        <mxPoint x="950" y="450" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-jdbc" value="JDBC&lt;br&gt;SQL Queries" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1;fontColor=#6C8EBF;" parent="conexion-servlets-db" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint x="-10" y="-11" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="conexion-logic-db" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#6c8ebf;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.47;entryY=0.016;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="logic" target="postgres" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="900" y="500" as="sourcePoint"/>
+                        <mxPoint x="950" y="450" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="capa4-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;dashPattern=8 8;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="915" y="910" width="650" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="capa4-titulo" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;CAPA 4: FRONTEND (Aplicación Android)&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="915" width="450" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="android-app" value="&lt;b&gt;Aplicación Android&lt;/b&gt;&lt;br&gt;&lt;br&gt;• Java 11&lt;br&gt;• Android SDK 24-36&lt;br&gt;• Gradle 8.13&lt;br&gt;• Material Design" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=3;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="950" y="965" width="590" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="activities" value="&lt;b&gt;Activities&lt;/b&gt;&lt;br&gt;&lt;br&gt;• MainActivity (Splash)&lt;br&gt;• MapActivity (Mapa OSM)&lt;br&gt;• SensorMenuActivity&lt;br&gt;• WeatherStatsActivity&lt;br&gt;• TrafficCounterStatsActivity&lt;br&gt;• TrafficLightStatsActivity&lt;br&gt;• DisplayStatsActivity" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;verticalAlign=top;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="970" y="1095" width="250" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="retrofit" value="&lt;b&gt;Retrofit 2.9&lt;/b&gt;&lt;br&gt;Cliente HTTP REST&lt;br&gt;&lt;br&gt;Base URL:&lt;br&gt;http://172.20.10.9:3002/&lt;br&gt;&lt;br&gt;• ApiService (interface)&lt;br&gt;• RetrofitClient&lt;br&gt;• GSON Converter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;verticalAlign=top;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1260" y="1095" width="260" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="libraries" value="&lt;b&gt;Bibliotecas&lt;/b&gt;&lt;br&gt;&lt;br&gt;• Eclipse Paho MQTT 1.2.5&lt;br&gt;• OSMDroid 6.1.18 (mapas)&lt;br&gt;• MPAndroidChart 3.1.0 (gráficas)&lt;br&gt;• Material Components&lt;br&gt;• AndroidX Navigation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;verticalAlign=top;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="970" y="1275" width="250" height="135" as="geometry"/>
+                </mxCell>
+                <mxCell id="funciones-android" value="&lt;b&gt;Funcionalidades&lt;/b&gt;&lt;br&gt;&lt;br&gt;• Visualización mapa Madrid (OpenStreetMap)&lt;br&gt;• Consulta datos sensores en tiempo real&lt;br&gt;• Gráficas interactivas&lt;br&gt;• Envío comandos MQTT&lt;br&gt;• Control niveles alerta (0-4)&lt;br&gt;• Monitorización múltiples tipos sensores" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;verticalAlign=top;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1260" y="1275" width="260" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="conexion-android-rest" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeWidth=3;strokeColor=#d79b00;exitX=0.217;exitY=0.027;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.914;entryY=0.991;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="retrofit" target="servlets" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1266.0400000000004" y="1100" as="sourcePoint"/>
+                        <mxPoint x="1200" y="570" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-rest" value="HTTP REST API&lt;br&gt;(JSON)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#D79B00;" parent="conexion-android-rest" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint x="-36" y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="flujo-datos-sensor" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=4;strokeColor=#00CC00;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;dashed=1;" parent="1" source="esp32" target="mqtt-broker" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="700" y="600" as="sourcePoint"/>
+                        <mxPoint x="750" y="550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-flujo-sensor" value="Datos Sensores (JSON)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#00CC00;" parent="flujo-datos-sensor" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint x="15" y="-11" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="flujo-comandos" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=4;strokeColor=#CC0000;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.998;entryY=0.45;entryDx=0;entryDy=0;dashed=1;entryPerimeter=0;" parent="1" source="mqtt-broker" target="esp32" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="700" y="600" as="sourcePoint"/>
+                        <mxPoint x="750" y="550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-flujo-comandos" value="&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;Comandos/Alertas&lt;/span&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#CC0000;" parent="flujo-comandos" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint x="-15" y="-11" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="leyenda-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="820" width="450" height="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="leyenda-titulo" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;LEYENDA Y DETALLES&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="830" width="300" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="info-sensores" value="&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;SENSORES (ESP32)&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;BME280:&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;•&amp;nbsp;Dirección I²C: 0x76&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Temperatura: -40°C a 85°C&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Humedad: 0% a 100%&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;•&amp;nbsp;Presión: 800-1200 hPa&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Oversampling: 16x&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Umbrales de Alerta:&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Temperatura &amp;gt; 35°C&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Humedad &amp;gt; 80%" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;verticalAlign=top;align=left;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="880" width="180" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="info-comunicacion" value="&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;PROTOCOLOS&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;I²C:&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• SDA: GPIO 21&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• SCL: GPIO 22&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Pull-up: 4.7kΩ&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;MQTT:&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Protocolo: MQTT v3.1&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• QoS: 1 (At least once)&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Buffer: 1024 bytes&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Keepalive: 60s&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;HTTP:&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• REST API (JSON)&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Puerto: 3002" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=1;verticalAlign=top;align=left;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="880" width="180" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="info-alertas" value="&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;SISTEMA DE ALERTAS&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Nivel 0:&lt;/b&gt; LEDs apagados&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Nivel 1:&lt;/b&gt; Parpadeo lento (1 Hz)&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Nivel 2:&lt;/b&gt; Parpadeo medio (2 Hz)&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Nivel 3:&lt;/b&gt; Parpadeo rápido (4 Hz)&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Nivel 4:&lt;/b&gt; Parpadeo muy rápido (10 Hz)&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Cada nivel usa FreeRTOS&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;con tareas independientes&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;para control de LEDs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1;verticalAlign=top;align=left;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="1100" width="200" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="info-json" value="&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;FORMATO JSON&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Publicación ESP32:&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;{&lt;br&gt;  &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&quot;sensor_id&quot;: &quot;LAB08JAV-G5&quot;,&lt;br&gt;  &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&quot;timestamp&quot;: &quot;2025-12-19T...&quot;,&lt;br&gt;  &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&quot;data&quot;: {&lt;br&gt;    &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&quot;temperature_celsius&quot;: 22.5,&lt;br&gt;    &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&quot;humidity_percent&quot;: 65.0,&lt;br&gt;    &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&quot;atmospheric_pressure_hpa&quot;: 1013.25,&lt;br&gt;    &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&quot;altitude_meters&quot;: 588.5&lt;br&gt;  &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;},&lt;br&gt;  &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&quot;metadata&quot;: {...}&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;}&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Comandos (Servidor → ESP32):&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;{&quot;alert_level&quot;: 0-4}&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;{&quot;command&quot;: &quot;reset&quot;}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=1;verticalAlign=top;align=left;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="1100" width="190" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="info-intervalos" value="&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;INTERVALOS Y TIEMPOS&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ESP32:&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;•&amp;nbsp;Lectura sensores: 30s&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Publicación MQTT: 30s&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;•&amp;nbsp;Reconexión WiFi: automática&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;•&amp;nbsp;Reconexión MQTT: automática&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• NTP sync: al inicio&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Servidor:&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Procesa mensajes en tiempo real&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Almacena en PostgreSQL&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Log4j2 para trazas&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Android:&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Actualización gráficas: tiempo real&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;• Suscripción MQTT: continua" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=1;verticalAlign=top;align=left;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="1370" width="400" height="240" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
